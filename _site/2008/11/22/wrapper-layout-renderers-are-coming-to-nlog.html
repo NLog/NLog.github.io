@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset"utf-8" />
+	<title>  Wrapper Layout Renderers are coming to NLog 2.0 |  NLog</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css" media="screen">
+</head>
+<body>
+	<div id="header">
+		<div>
+			<a href="/"><img src="/images/NLog.png" title="NLog - Advanced .NET Logging" alt="NLog - Advanced .NET Logging"></a>
+		</div>
+	</div>
+	<div id="sidebar">
+		<nav role="navigation" id="menu">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/">Download</a></li>
+				<li><a href="/">Documentation</a></li>
+				<li><a href="/">Forum</a></li>
+				<li><a href="http://github.com/NLog/NLog/issues">Issue Tracker</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div id="content">
+		<h1>Wrapper Layout Renderers are coming to NLog 2.0</h1>
+<p>NLog v2 branch has a new cool feature called Wrapper Layout Renderers which would help me restructure code to make it more maintainable and testable. I&#8217;d like to hear your opinion about it.</p>
+
+<h2 id='what_are_wrapper_layout_renderers_wlrs'>What are Wrapper Layout Renderers (WLRs)?</h2>
+
+<p>Similar to wrapper targets, WLRs can modify output of other layout renderers, by doing textual transformations like:</p>
+
+<ul>
+<li>uppercase/lowercase conversion</li>
+
+<li>padding, trimming, alignment</li>
+
+<li>search/replace</li>
+
+<li>elision of excessive text</li>
+
+<li>encryption / masking of sensitive information</li>
+
+<li>cryptographic transformations (calculating MD5, SHA1 hashes, HMAC checksums)</li>
+
+<li>encoding: base64/uuencode, etc.</li>
+</ul>
+
+<p>Note that in NLog v1 many of those concerns are handled by LayoutRenderer itself. Being able to separate them into standalone, extensible classes is very convenient as you can add them separately and all existing layout renderers will be able to benefit from them.</p>
+
+<p>Here&#8217;s how you use them:</p>
+
+<ul>
+<li><strong>${uppercase:${level}}</strong> - will print log level in uppercase</li>
+
+<li><strong>${rot13:${message}}</strong> - will print ROT13 &#8220;encrypted&#8221; message</li>
+</ul>
+
+<p>For configuration file compatibility, you will still be able to use uppercase, lowercase, padding attributes that you know from NLog v1 directly on layout renderers etc.</p>
+
+<p>To implement a wrapper, all you have to do is to create a class derived from WrapperLayoutRendererBase that overrides the Transform() method and apply the usual LayoutRenderer attribute. Here&#8217;s the ROT13 wrapper, which implements Caesar&#8217;s cipher.</p>
+<code>
+<pre>
+[LayoutRenderer("rot13")]
+public sealed class Rot13LayoutRendererWrapper: WrapperLayoutRendererBase
+{
+    protected override string Transform(string text)
+    {
+        return DecodeRot13(text);
+    }
+}
+</pre>
+</code>
+<p>You can of course define public properties as be able to set their values as with regular layout renderers. I&#8217;m planning to add an additional concept called ambient properties which will help maintain NLog v1 compatibility while being very extensible. Ambient properties are properties that appear as if they were present on all layout renderers and when you actually use them, they add an implicit wrapper. This allows you to write: <strong>${level:uppercase=true:padding=-10}</strong> instead of <strong>${padding:padding=-10:${uppercase:${level}}}</strong></p>
+
+<p>Whenever layout parser encounters an unknown property (such as &#8220;uppercase&#8221; which doesn&#8217;t exist on LevelLayoutRenderer anymore) it will look for layout renderers which define <strong>[AmbientProperty(&#8220;UpperCase&#8221;)]</strong> and will instantiate them and use to wrap the original layout renderer:</p>
+<code>
+<pre>
+[LayoutRenderer("uppercase")]
+[AmbientProperty("UpperCase")]
+public sealed class UpperCaseLayoutRendererWrapper : WrapperLayoutRendererBase
+{
+    private bool _upperCase = false;
+    public bool UpperCase
+    {
+        get { return _upperCase; }
+        set { _upperCase = value; }
+    }
+    protected override string Transform(string text)
+    {
+        return UpperCase ? text.ToUpperInvariant() : text;
+    }
+}
+</pre>
+</code>
+	</div>
+</body>
+</html>

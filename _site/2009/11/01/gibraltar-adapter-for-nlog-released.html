@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset"utf-8" />
+	<title>  Gibraltar adapter for NLog released |  NLog</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css" media="screen">
+</head>
+<body>
+	<div id="header">
+		<div>
+			<a href="/"><img src="/images/NLog.png" title="NLog - Advanced .NET Logging" alt="NLog - Advanced .NET Logging"></a>
+		</div>
+	</div>
+	<div id="sidebar">
+		<nav role="navigation" id="menu">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/">Download</a></li>
+				<li><a href="/">Documentation</a></li>
+				<li><a href="/">Forum</a></li>
+				<li><a href="http://github.com/NLog/NLog/issues">Issue Tracker</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div id="content">
+		<h1>Gibraltar adapter for NLog released</h1>
+<p>The Gibraltar Adapter for NLog provides log management and analysis for NLog data. With Gibraltar you can easily send logs from your applications to a central location where they can be analyzed in Gibraltar Analyst.</p>
+
+<p>If you are need a powerful log analyzer for NLog that goes beyond simple filtering and grouping and can scale as your application grows, you should check out Gibraltar.</p>
+
+<p>I found this tool to be a really awesome complement to NLog. The guys behind Gibraltar were generous enough to offer me a commission if any NLog users buy their tool. So, check it out, and if you like it and decide to buy it, you&#8217;ll be supporting NLog development too, which I&#8217;d be grateful for.</p>
+
+<h2 id='configuring_the_adapter'>Configuring the adapter</h2>
+
+<p>Integrating the adapter into your application is trivial and can be done without even having to recompile it. If you want to route all your logs through Gibraltar all you have to do is put the following XML in your NLog.config:</p>
+<pre>
+&lt;nlog&gt;
+  &lt;extensions&gt;
+    &lt;add assembly="Gibraltar.Agent.NLog" /&gt;
+  &lt;/extensions&gt;
+  &lt;targets&gt;
+    &lt;target name="Gibraltar" xsi:type="Gibraltar" /&gt;
+  &lt;/targets&gt;
+  &lt;rules&gt;
+    &lt;logger name="*" minlevel="Trace" writeTo="Gibraltar" /&gt;
+  &lt;/rules&gt;
+&lt;/nlog&gt;
+</pre>
+<p>If you prefer not to ship the configuration file, just add this code to your Main() method instead:</p>
+<pre>
+NLog.Config.SimpleConfigurator.ConfigureForTargetLogging(NLog.LogLevel.Trace,
+    new Gibraltar.Agent.NLog.GibraltarTarget());
+</pre>
+	</div>
+</body>
+</html>

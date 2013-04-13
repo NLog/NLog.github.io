@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset"utf-8" />
+	<title>  Development of NLog 2.0 has started |  NLog</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css" media="screen">
+</head>
+<body>
+	<div id="header">
+		<div>
+			<a href="/"><img src="/images/NLog.png" title="NLog - Advanced .NET Logging" alt="NLog - Advanced .NET Logging"></a>
+		</div>
+	</div>
+	<div id="sidebar">
+		<nav role="navigation" id="menu">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/">Download</a></li>
+				<li><a href="/">Documentation</a></li>
+				<li><a href="/">Forum</a></li>
+				<li><a href="http://github.com/NLog/NLog/issues">Issue Tracker</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div id="content">
+		<p>Main focus of this release will be extending support to new platforms (such as .NET Framework 3.5/LINQ, Silverlight 2.0, .NET Compact Framework 3.5) and environments (ASP.NET, WCF, etc) as well as code cleanup and improved robustness and internal architecture. Support for .NET 1.x will be removed, but config-file compatibility and basic binary compatibility will be preserved.</p>
+
+<p>I am thinking of serious cleanup of NLog code base and build process to make entire product easier to maintain in the future and more approachable. Here are the changes I&#8217;m planning to make:</p>
+
+<ol>
+<li>Replace the use of NDoc (which is essentially dead) with Sandcastle for documentation generation.</li>
+
+<li>Deprecate/Remove suppport .NET 1.x and .NET Compact Framework 1.x (NLog 1.0 will stay around to support older frameworks, I don&#8217;t want legacy code to remain there in NLog 2.0).</li>
+
+<li>No more “universal” release (which was built with .NET 1.0 and used many runtime tricks to detect and compensate for platform differences). Instead targeted builds will be available for all frameworks.</li>
+
+<li>Add generics to Logger (replace generated code with generic methods) - will maintain source-level compatibility but will break IL-level compatibility.</li>
+
+<li>Move to a single build system (MSBuild). Remove NAnt, VS2003 and compact framework projects. Simple msbuild techniques will be used to produce builds for all supported platforms instead.</li>
+
+<li>Evaluate the possibility of using LINQ-style lambdas to do deferred evaluation of layouts and/or log messages, something like:<br /> logger.Debug(()=&gt; &#8220;asdasd&#8221; + i); // lambda here will not be evaluated if logging is disabled for Debug level.<br /> <strong>Rationale</strong>: Many people still try to use string concatenation (which kills performance) instead of String.Format-style when passing log messages. Lambdas have the potential to make that easier while maitaining high speed.</li>
+
+<li>Simplify website/documentation generation. Sandcastle may help here.</li>
+
+<li>Switch to MSI installers generated using Wix</li>
+</ol>
+	</div>
+</body>
+</html>
