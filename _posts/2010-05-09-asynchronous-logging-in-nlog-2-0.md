@@ -13,7 +13,7 @@ Exception Handling in NLog 1.0
 ------------------------------
 NLog 1.0 uses very simple, synchronous exception handling pattern:
 
-{% highlight c# %}
+{% highlight csharp %}
 try
 {
     // do something
@@ -26,7 +26,7 @@ catch (Exception ex)
 
 The problem arises if the code block inside try { } clause performs an asynchronous operation such as network call which may result in an exception, as in the following example:
 
-{% highlight c# %}
+{% highlight csharp %}
 try
 {
     WebClient client = new WebClient();
@@ -62,7 +62,7 @@ Asynchronous Exception Handling in NLog 2.0
 -------------------------------------------
 In order to implement proper asynchronous exception handling we need to let asynchronous methods know what to do in case of success and failure. This is typically done through [continuation](http://en.wikipedia.org/wiki/Continuation) functions. There are many ways to represent continuation information, I’ve decided to represent it as an interface with two methods:
 
-{% highlight c# %}
+{% highlight csharp %}
 public interface IAsyncContinuation
 {
     void OnSuccess();
@@ -72,7 +72,7 @@ public interface IAsyncContinuation
 
 The Target.Write() API will be refactored to look like this:
 
-{% highlight c# %}
+{% highlight csharp %}
 public void WriteLogEvent(LogEventInfo logEvent, IAsyncContinuation asyncContinuation)
 {
     try
@@ -105,7 +105,7 @@ protected abstract void Write(LogEventInfo logEvent);
 
 As you can see, by default the asynchronous code gets forwarded to the synchronous Write method. This lets us keep the existing extensibility interface for targets. If you want to implement asynchronous target, you need to override both synchronous and asynchronous write methods:
 
-{% highlight c# %}
+{% highlight csharp %}
 public class MyAsyncTarget : TargetWithLayout
 {
     [RequiredParameter]
@@ -139,7 +139,7 @@ public class MyAsyncTarget : TargetWithLayout
 
 Target.Flush() method will be changed in a similar way, except it will be asynchronous only:
 
-{% highlight c# %}
+{% highlight csharp %}
 public void Flush(IAsyncContinuation asyncContinuation)
 {
     try
@@ -160,7 +160,7 @@ protected virtual void FlushAsync(IAsyncContinuation asyncContinuation)
 
 LogManager and LogFactory will also be enhanced with asynchronous Flush() methods. Their synchronous overloads will not be available in Silverlight, since there is no way to wait on a potential network call without causing a deadlock:
 
-{% highlight c# %}
+{% highlight csharp %}
 public class LogFactory
 {
 #if !SILVERLIGHT
@@ -179,7 +179,7 @@ Working with continuations
 --------------------------
 NLog 2.0 will provide default implementation of continuations creatable through AsyncHelpers.MakeContinuation() factory method:
 
-{% highlight c# %}
+{% highlight csharp %}
 IAsyncContinuation continuation = AsyncHelpers.MakeContinuation(
     () => { /* code to execute on success */ }
     ex => { /* code to execute on failure */ });
@@ -187,7 +187,7 @@ IAsyncContinuation continuation = AsyncHelpers.MakeContinuation(
 
 In addition to this I am planning to expose helpers which will make working with and composing continuations easier:
 
-{% highlight c# %}
+{% highlight csharp %}
 public delegate void AsynchronousAction(IAsyncContinuation asyncContinuation);
 public delegate void AsynchronousAction<T>(IAsyncContinuation asyncContinuation, T argument);
 
@@ -208,7 +208,7 @@ Because of the way the API is designed, the impact on existing targets should be
 
 For example, the code for [retrying wrapper](https://github.com/NLog/NLog/wiki/RetryingWrapper-target) in NLog 1.0 looked like this:
 
-{% highlight c# %}
+{% highlight csharp %}
 protected internal override void Write(LogEventInfo logEvent)
 {
     for (int i = 0; i < RetryCount; ++i)
@@ -234,7 +234,7 @@ protected internal override void Write(LogEventInfo logEvent)
 
 The code for the same operation in NLog 2.0 is much more complex:
 
-{% highlight c# %}
+{% highlight csharp %}
 protected override void Write(LogEventInfo logEvent, IAsyncContinuation asyncContinuation)
 {
     FailureAction failure = null;
