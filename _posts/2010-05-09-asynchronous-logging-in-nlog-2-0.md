@@ -60,7 +60,7 @@ You can probably see why swallowing exceptions prevents wrappers, such as [Retry
 
 Asynchronous Exception Handling in NLog 2.0
 -------------------------------------------
-In order to implement proper asynchronous exception handling we need to let asynchronous methods know what to do in case of success and failure. This is typically done through [continuation](http://en.wikipedia.org/wiki/Continuation) functions. There are many ways to represent continuation information, I’ve decided to represent it as an interface with two methods:
+In order to implement proper asynchronous exception handling we need to let asynchronous methods know what to do in case of success and failure. This is typically done through [continuation](http://en.wikipedia.org/wiki/Continuation) functions. There are many ways to represent continuation information, I've decided to represent it as an interface with two methods:
 
 {% highlight csharp %}
 public interface IAsyncContinuation
