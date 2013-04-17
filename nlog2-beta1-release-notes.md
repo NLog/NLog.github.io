@@ -1,6 +1,7 @@
 ---
 layout: post
 title: NLog 2.0 Beta 1 Release Notes
+alias: /nlog2-beta1-release-notes
 ---
 
 NLog 2.0 Beta 1 has been released and is available for download from <http://nlog-project.org/download>

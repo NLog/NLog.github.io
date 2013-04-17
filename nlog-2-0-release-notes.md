@@ -1,6 +1,7 @@
 ---
 layout: post
 title: NLog 2.0 Release Notes
+alias: /nlog-2-0-release-notes
 ---
 
 NLog 2.0 has been released and is available for download from <http://nlog.codeplex.com/releases/view/32639>.

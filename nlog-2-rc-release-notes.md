@@ -1,6 +1,7 @@
 ---
 layout: post
 title: NLog 2.0 RC Release Notes
+alias: /nlog-2-rc-release-notes
 ---
 
 NLog 2.0 Release Candidate (RC) has been released and is available for download from <http://nlog.codeplex.com/releases/view/68535>.
