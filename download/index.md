@@ -3,7 +3,7 @@ layout: default
 ---
 
 Downloading NLog
-################
+================
 
 Binary Releases
 ---------------
