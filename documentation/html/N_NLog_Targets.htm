@@ -1,0 +1,115 @@
+﻿<html xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" /><META NAME="save" CONTENT="history" /><title>NLog.Targets Namespace</title><link rel="stylesheet" type="text/css" href="../styles/presentation.css" /><link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" /><script type="text/javascript" src="../scripts/EventUtilities.js"> </script><script type="text/javascript" src="../scripts/SplitScreen.js"> </script><script type="text/javascript" src="../scripts/Dropdown.js"> </script><script type="text/javascript" src="../scripts/script_manifold.js"> </script><script type="text/javascript" src="../scripts/script_feedBack.js"> </script><script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script><script type="text/javascript" src="../scripts/CommonUtilities.js"> </script><meta name="container" content="NLog.Targets" /><meta name="file" content="N_NLog_Targets" /><meta name="guid" content="N_NLog_Targets" /><xml><MSHelp:Attr Name="AssetID" Value="N:NLog.Targets" /><MSHelp:TOCTitle Title="NLog.Targets Namespace" /><MSHelp:RLTitle Title="NLog.Targets Namespace ()" /><MSHelp:Keyword Index="A" Term="N:NLog.Targets" /><MSHelp:Keyword Index="A" Term="frlrfNLogTargets" /><MSHelp:Keyword Index="K" Term="NLog.Targets namespace" /><MSHelp:Keyword Index="F" Term="NLog.Targets" /><MSHelp:Attr Name="HelpPriority" Value="1" /><MSHelp:Attr Name="DevLang" Value="CSharp" /><MSHelp:Attr Name="DevLang" Value="VB" /><MSHelp:Attr Name="DevLang" Value="VB" /><MSHelp:Attr Name="Locale" Value="en-us" /><MSHelp:Attr Name="TopicType" Value="kbSyntax" /><MSHelp:Attr Name="TopicType" Value="apiref" /><MSHelp:Attr Name="Abstract" Value="Contains implementation of log targets." /></xml></head><body><input type="hidden" id="userDataCache" class="userDataStyle" /><input type="hidden" id="hiddenScrollOffset" /><img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" title="Collapse image" /><img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" title="Expand Image" /><img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" /><img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" /><img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" /><img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" /><img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" title="Copy image" /><img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" title="CopyHover image" /><div id="header"><table cellspacing="0" cellpadding="0"><tr><td align="center" style="width: 1px; padding: 0px"><img src="../images/NLogo.gif" /></td><td><table id="topTable" cellspacing="0" cellpadding="0"><tr><td><span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0"><img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span><span>    </span><span id="devlangsDropdown" class="filter" tabindex="0"><img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuVisualBasicLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Visual Basic </nobr></label><label id="devlangsMenuVisualBasicUsageLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Visual Basic (Usage) </nobr></label></span></td></tr></table><div id="devlangsMenu"><input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" /><label class="checkboxLabel" for="CSharpCheckbox">C#</label><br /><input id="VisualBasicCheckbox" type="checkbox" data="VisualBasic,vb,'persist'" value="on" onClick="SetLanguage(this)" /><label class="checkboxLabel" for="VisualBasicCheckbox">Visual Basic</label><br /><input id="VisualBasicUsageCheckbox" type="checkbox" data="VisualBasicUsage,vb,'persist'" value="on" onClick="SetLanguage(this)" /><label class="checkboxLabel" for="VisualBasicUsageCheckbox">Visual Basic (Usage)</label><br /></div><table id="bottomTable" cellpadding="0" cellspacing="0"><tr id="headerTableRow1"><td align="left"><span id="runningHeaderText">NLog v2.0.1(PrivateBuild)</span></td></tr><tr id="headerTableRow2"><td align="left"><span id="nsrTitle">NLog.Targets Namespace</span></td></tr><tr id="headerTableRow3"><td align="left">
+  <span id="headfeedbackarea" class="feedbackhead">
+      <a href="javascript:SubmitFeedback('feedback@nlog-project.org','NLog v2.0.1(PrivateBuild)','','','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">
+        
+        Send Feedback
+      </a>
+	</span>
+</td></tr></table></td></tr></table><table id="gradientTable"><tr><td class="nsrBottom" background="../icons/gradient.gif" /></tr></table></div><div id="mainSection"><div id="mainBody"><div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" /><span style="color: DarkGray"> <p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[This is preliminary documentation and is subject to change.]</p></span><div class="summary">
+        Contains implementation of log targets.
+      </div><h1 class="heading"><span onclick="ExpandCollapse(classToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(classToggle, event)" tabindex="0"><img id="classToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Classes</span></h1><div id="classSection" class="section" name="collapseableSection" style=""><table id="typeList" class="members" frame="lhs" cellpadding="2"><col width="10%" /><tr><th class="iconColumn">
+           
+       </th><th class="nameColumn">Class</th><th class="descriptionColumn">Description</th></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_AspNetTraceTarget.htm">AspNetTraceTarget</a></td><td><div class="summary">
+            Writes log messages to the ASP.NET trace.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_AspResponseTarget.htm">AspResponseTarget</a></td><td><div class="summary">
+            Outputs log messages through the ASP Response object.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_ChainsawTarget.htm">ChainsawTarget</a></td><td><div class="summary">
+            Sends log messages to the remote instance of Chainsaw application from log4j. 
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_ColoredConsoleTarget.htm">ColoredConsoleTarget</a></td><td><div class="summary">
+            Writes log messages to the console with customizable coloring.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_ConsoleRowHighlightingRule.htm">ConsoleRowHighlightingRule</a></td><td><div class="summary">
+            The row-highlighting condition.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_ConsoleTarget.htm">ConsoleTarget</a></td><td><div class="summary">
+            Writes log messages to the console.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_ConsoleWordHighlightingRule.htm">ConsoleWordHighlightingRule</a></td><td><div class="summary">
+            Highlighting rule for Win32 colorful console.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_DatabaseCommandInfo.htm">DatabaseCommandInfo</a></td><td><div class="summary">
+            Information about database command + parameters.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_DatabaseParameterInfo.htm">DatabaseParameterInfo</a></td><td><div class="summary">
+            Represents a parameter to a Database target.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_DatabaseTarget.htm">DatabaseTarget</a></td><td><div class="summary">
+            Writes log messages to the database using an ADO.NET provider.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_DebuggerTarget.htm">DebuggerTarget</a></td><td><div class="summary">
+            Writes log messages to the attached managed debugger.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_DebugTarget.htm">DebugTarget</a></td><td><div class="summary">
+            Mock target - useful for testing.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_EventLogTarget.htm">EventLogTarget</a></td><td><div class="summary">
+            Writes log message to the Event Log.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_FileTarget.htm">FileTarget</a></td><td><div class="summary">
+            Writes log messages to one or more files.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_FormControlTarget.htm">FormControlTarget</a></td><td><div class="summary">
+            Logs text to Windows.Forms.Control.Text property control of specified Name.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_LogReceiverWebServiceTarget.htm">LogReceiverWebServiceTarget</a></td><td><div class="summary">
+            Sends log messages to a NLog Receiver Service (using WCF or Web Services).
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_MailTarget.htm">MailTarget</a></td><td><div class="summary">
+            Sends log messages by email using SMTP protocol.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_MemoryTarget.htm">MemoryTarget</a></td><td><div class="summary">
+            Writes log messages to an ArrayList in memory for programmatic retrieval.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_MessageBoxTarget.htm">MessageBoxTarget</a></td><td><div class="summary">
+            Pops up log messages as message boxes.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_MessageQueueTarget.htm">MessageQueueTarget</a></td><td><div class="summary">
+            Writes log message to the specified message queue handled by MSMQ.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_MethodCallParameter.htm">MethodCallParameter</a></td><td><div class="summary">
+            A parameter to MethodCall.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_MethodCallTarget.htm">MethodCallTarget</a></td><td><div class="summary">
+            Calls the specified static method on each log message and passes contextual parameters to it.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_MethodCallTargetBase.htm">MethodCallTargetBase</a></td><td><div class="summary">
+            The base class for all targets which call methods (local or remote). 
+            Manages parameters and type coercion.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_NetworkTarget.htm">NetworkTarget</a></td><td><div class="summary">
+            Sends log messages over the network.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_NLogViewerParameterInfo.htm">NLogViewerParameterInfo</a></td><td><div class="summary">
+            Represents a parameter to a NLogViewer target.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_NLogViewerTarget.htm">NLogViewerTarget</a></td><td><div class="summary">
+            Sends log messages to the remote instance of NLog Viewer. 
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_NullTarget.htm">NullTarget</a></td><td><div class="summary">
+            Discards log messages. Used mainly for debugging and benchmarking.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_OutputDebugStringTarget.htm">OutputDebugStringTarget</a></td><td><div class="summary">
+            Outputs log messages through the <span class="code">OutputDebugString()</span> Win32 API.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_PerformanceCounterTarget.htm">PerformanceCounterTarget</a></td><td><div class="summary">
+            Increments specified performance counter on each write.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_RichTextBoxRowColoringRule.htm">RichTextBoxRowColoringRule</a></td><td><div class="summary">
+            The row-coloring condition.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_RichTextBoxTarget.htm">RichTextBoxTarget</a></td><td><div class="summary">
+            Log text a Rich Text Box control in an existing or new form.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_RichTextBoxWordColoringRule.htm">RichTextBoxWordColoringRule</a></td><td><div class="summary">
+            Highlighting rule for Win32 colorful console.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_Target.htm">Target</a></td><td><div class="summary">
+            Represents logging target.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_TargetAttribute.htm">TargetAttribute</a></td><td><div class="summary">
+            Marks class as a logging target and assigns a name to it.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_TargetWithLayout.htm">TargetWithLayout</a></td><td><div class="summary">
+            Represents target that supports string formatting using layouts.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_TargetWithLayoutHeaderAndFooter.htm">TargetWithLayoutHeaderAndFooter</a></td><td><div class="summary">
+            Represents target that supports string formatting using layouts.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_TraceTarget.htm">TraceTarget</a></td><td><div class="summary">
+            Sends log messages through System.Diagnostics.Trace.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_Targets_WebServiceTarget.htm">WebServiceTarget</a></td><td><div class="summary">
+            Calls the specified web service on each log message.
+            </div></td></tr></table></div><h1 class="heading"><span onclick="ExpandCollapse(enumerationToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(enumerationToggle, event)" tabindex="0"><img id="enumerationToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Enumerations</span></h1><div id="enumerationSection" class="section" name="collapseableSection" style=""><table id="typeList" class="members" frame="lhs" cellpadding="2"><col width="10%" /><tr><th class="iconColumn">
+           
+       </th><th class="nameColumn">Enumeration</th><th class="descriptionColumn">Description</th></tr><tr data="enumeration; public"><td><img src="../icons/pubenumeration.gif" title="Public enumeration" /></td><td><a href="T_NLog_Targets_ArchiveNumberingMode.htm">ArchiveNumberingMode</a></td><td><div class="summary">
+            Specifies the way archive numbering is performed.
+            </div></td></tr><tr data="enumeration; public"><td><img src="../icons/pubenumeration.gif" title="Public enumeration" /></td><td><a href="T_NLog_Targets_ConsoleOutputColor.htm">ConsoleOutputColor</a></td><td><div class="summary">
+            Colored console output color.
+            </div></td></tr><tr data="enumeration; public"><td><img src="../icons/pubenumeration.gif" title="Public enumeration" /></td><td><a href="T_NLog_Targets_FileArchivePeriod.htm">FileArchivePeriod</a></td><td><div class="summary">
+            Modes of archiving files based on time.
+            </div></td></tr><tr data="enumeration; public"><td><img src="../icons/pubenumeration.gif" title="Public enumeration" /></td><td><a href="T_NLog_Targets_LineEndingMode.htm">LineEndingMode</a></td><td><div class="summary">
+            Line ending mode.
+            </div></td></tr><tr data="enumeration; public"><td><img src="../icons/pubenumeration.gif" title="Public enumeration" /></td><td><a href="T_NLog_Targets_NetworkTargetOverflowAction.htm">NetworkTargetOverflowAction</a></td><td><div class="summary">
+            Action that should be taken if the message overflows.
+            </div></td></tr><tr data="enumeration; public"><td><img src="../icons/pubenumeration.gif" title="Public enumeration" /></td><td><a href="T_NLog_Targets_SmtpAuthenticationMode.htm">SmtpAuthenticationMode</a></td><td><div class="summary">
+            SMTP authentication modes.
+            </div></td></tr><tr data="enumeration; public"><td><img src="../icons/pubenumeration.gif" title="Public enumeration" /></td><td><a href="T_NLog_Targets_WebServiceProtocol.htm">WebServiceProtocol</a></td><td><div class="summary">
+            Web service protocol.
+            </div></td></tr><tr data="enumeration; public"><td><img src="../icons/pubenumeration.gif" title="Public enumeration" /></td><td><a href="T_NLog_Targets_Win32FileAttributes.htm">Win32FileAttributes</a></td><td><div class="summary">
+            Win32 file attributes.
+            </div></td></tr></table></div></div><div id="footer"><div class="footerLine"><img width="100%" height="3px" src="../icons/footer.gif" title="Footer image" /></div><A NAME="feedback"></A><span id="fb" class="feedbackcss"> </span>
+<p />Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:feedback%40nlog-project.org?Subject=NLog v2.0.1(PrivateBuild)">feedback@nlog-project.org</a>
+        <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title;
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script> <p /><a href="http://nlog-project.org/" target="_blank">Copyright (c) 2004-2010 by Jaroslaw Kowalski</a></div></div></body></html>
