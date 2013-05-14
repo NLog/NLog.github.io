@@ -24,3 +24,7 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
+div.banner {
+	padding-top: 50px;
+}
