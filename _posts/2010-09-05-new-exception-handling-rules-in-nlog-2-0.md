@@ -6,7 +6,7 @@ title: New exception handling rules in NLog 2.0
 NLog will introduce a change to logging exception handling and suppression. In NLog 1.0 all exceptions were disabled by default, but could be enabled by setting
 
 {% highlight xml %}
-<nlog throwExceptions=”true”>
+<nlog throwExceptions="true">
 
 </nlog>
 {% endhighlight %}
