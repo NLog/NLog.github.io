@@ -40,7 +40,7 @@ After all these moves and renames, the root "NLog" namespace became really clean
 
  * LogEventInfo
  * LogFactory
- * LogFactory<T>
+ * LogFactory&lt;T&gt;
  * Logger
  * LogLevel
  * LogManager 

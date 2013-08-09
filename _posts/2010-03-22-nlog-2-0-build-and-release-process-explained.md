@@ -32,7 +32,7 @@ The API dump includes information about each target in a format that's friendly 
 
 Step 3: Conceptual documentation generation
 -------------------------------------------
-Before NLog.chm can be generated we need to generate conceptual documentation which explains configuration file format for each target, layout renderer, etc. This is all done by MakeApiDoc.exe and uses NLog.api for each platform, generated in the previous step. The result is a bunch of *.aml files which will be used by SHFB later. (Note that MakeApiDoc.exe is not checked in into public NLog repository yet).
+Before NLog.chm can be generated we need to generate conceptual documentation which explains configuration file format for each target, layout renderer, etc. This is all done by MakeApiDoc.exe and uses NLog.api for each platform, generated in the previous step. The result is a bunch of \*.aml files which will be used by SHFB later. (Note that MakeApiDoc.exe is not checked in into public NLog repository yet).
 
 Step 4: XSD schema generation
 -----------------------------

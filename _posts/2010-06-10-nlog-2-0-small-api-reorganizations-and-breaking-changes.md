@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NLog 2.0: Small API reorganizations and breaking changes
+title: NLog 2.0 - Small API reorganizations and breaking changes
 ---
 
 I just checked a set of API changes, which may break code which uses recent nightly builds from NLog 2.0 branch. If you are upgrading to the latest build (2010.06.11.01 or newer) you may need to update your code:
