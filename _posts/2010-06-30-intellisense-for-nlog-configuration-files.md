@@ -102,7 +102,7 @@ from command line. This will build NLog and the tools necessary to customize XSD
   -ref "D:\Work\NLog\build\bin\Debug\.NET Framework 4.0" -output &lt;path&gt;\SampleExtensions.api
 </pre>
 
-Once we have the SampleExtensions.api project, we need to convert it to XSD using MakeNLogXSD. It accepts multiple *.api files and can produce XSD files with custom namespaces:
+Once we have the SampleExtensions.api project, we need to convert it to XSD using MakeNLogXSD. It accepts multiple \*.api files and can produce XSD files with custom namespaces:
 
 <pre>
 &lt;nlog-dir&gt;\tools\MakeNLogXSD\bin\Debug\MakeNLogXSD.exe -api "&lt;nlog-dir&gt;\build\bin\Debug\.NET Framework 4.0\API\NLog.api"
