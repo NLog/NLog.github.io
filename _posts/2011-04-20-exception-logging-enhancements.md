@@ -11,7 +11,7 @@ Conditional logging allows you to make your layouts somewhat more dynamic - you 
 
 **${onexception:INNER} -  output**
 
-To render a layout when the exception is being logged, use **${onexception:INNER}**, it will output INNER only when current log event includes an exception (in other words when it was emitted using any of the Logger.*Exception() methods. INNER can include other layouts, for example:
+To render a layout when the exception is being logged, use **${onexception:INNER}**, it will output INNER only when current log event includes an exception (in other words when it was emitted using any of the Logger.\*Exception() methods. INNER can include other layouts, for example:
 
 {% highlight xml %}
 <targets>
