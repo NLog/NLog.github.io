@@ -1,6 +1,7 @@
 ---
 layout: post
 title: NLog Contrib
+excerpt: Introducing the NLog-Contrib repository
 ---
 
 Almost 8 months ago, I silently created a the [NLog-Contrib](https://github.com/NLog/NLog-Contrib) repository. It has been empty most of the time, probably affected by the silent creation.

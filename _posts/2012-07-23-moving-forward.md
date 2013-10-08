@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Moving NLog Forward
+excerpt: NLog clearly needs your help to remain the coolest logging library for .NET
 ---
 
 Dear NLog Community,
@@ -13,4 +14,4 @@ NLog clearly needs your help to remain the coolest logging library for .NET: I'm
 
 It involves planning, managing automated builds, releases, bugs, forums, wiki, running website, NuGet, tools, integrating community contributions, etc. The reward is huge: thousands of satisfied developers, who have downloaded NLog 2.0 about 100.000 times in the last year alone!
 
-Please contact me if you're interested in owning part of NLog's future at [jaak@jkowalski.net](mailto:jaak@jkowalski.net) or post on the [Forum](http://nlog-project.org/forum).
+Please contact me if you're interested in owning part of NLog's future in the [Forum](http://nlog-project.org/forum).

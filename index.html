@@ -1,6 +1,15 @@
 ---
 layout: default
 ---
+<div class="news" style="border:2px solid; border-radius:10px;padding:0.5em">
+	<h3 style="margin-top: 0">Newest posts</h3>
+	{% for post in site.posts limit:2 %}
+		<div>
+			<a href="{{ post.url }}">{{ post.title }}</a> - {{ post.excerpt }}
+		</div>
+	{% endfor %}
+	<p><a href="/archives">See more news...</a></p>
+</div>
 <section class="content">
 	<h2>Welcome to NLog</h2>
 	<p>
