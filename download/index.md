@@ -8,6 +8,7 @@ Downloading NLog
 Binary Releases
 ---------------
 Binary releases can be downloaded from GitHub. Only zip packages are available.
+
  * [NLog 2.1.0](https://github.com/NLog/NLog/releases/tag/2.1.0) - <img src="/images/recommended.png">
 
 Older binary releases can be downloaded from CodePlex. Installer and zip packages are available.
