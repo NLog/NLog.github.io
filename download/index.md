@@ -27,7 +27,3 @@ NLog can be downloaded directly into your project in Visual Studio by using [NuG
 Source Code
 -----------
 Source code for NLog is available on [GitHub](http://github.com/nlog/NLog/). You can download a [zip file](http://github.com/nlog/NLog/archives/master) or use Git client such as [TortoiseGit](http://code.google.com/p/tortoisegit/) or [msysGit](http://code.google.com/p/msysgit/). To learn more about Git, click [here](http://git-scm.com/).
-
-RSS Feed 
---------
-You can subscribe to [NLog Releases RSS Feed](http://feeds.feedburner.com/nlogreleases) to be notified about newest builds.
