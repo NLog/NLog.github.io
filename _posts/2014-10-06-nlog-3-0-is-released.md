@@ -1,7 +1,6 @@
 ---
 layout: post
 title: NLog 3.0 has been released
-excerpt: NLog 3.0 has been released
 ---
 
 At long last NLog 3.0 has been released, and is available at [NuGet](https://www.nuget.org/packages/NLog/ "NuGet - NLog"), the binaries is available at [GitHub release page](https://github.com/NLog/NLog/releases/tag/v3.0 "GitHub release page").
