@@ -4,9 +4,6 @@ title: NLog 3.0 has been released
 excerpt: NLog 3.0 has been released
 ---
 
-https://github.com/NLog/NLog/issues?milestone=3&page=1&state=closed
-https://github.com/NLog/NLog/releases/tag/v3.0
-
 At long last NLog 3.0 has been released, and is available at [NuGet](https://www.nuget.org/packages/NLog/ "NuGet - NLog"), the binaries is available at [GitHub release page](https://github.com/NLog/NLog/releases/tag/v3.0 "GitHub release page").
 
 As warned in about in the [last post](http://nlog-project.org/2013/12/14/nlog-3-0-will-soon-be-released.html "NLog 3.0 will soon be released"), support for the following frameworks have been dropped:
