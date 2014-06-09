@@ -29,40 +29,33 @@ For configuration file compatibility, you will still be able to use uppercase, l
 To implement a wrapper, all you have to do is to create a class derived from WrapperLayoutRendererBase that overrides the Transform() method and apply the usual LayoutRenderer attribute.
 Here's the ROT13 wrapper, which implements Caesar's cipher.
  
-<code>
-<pre>
-[LayoutRenderer("rot13")]
-public sealed class Rot13LayoutRendererWrapper: WrapperLayoutRendererBase
-{
-    protected override string Transform(string text)
+    [LayoutRenderer("rot13")]
+    public sealed class Rot13LayoutRendererWrapper: WrapperLayoutRendererBase
     {
-        return DecodeRot13(text);
+        protected override string Transform(string text)
+        {
+            return DecodeRot13(text);
+        }
     }
-}
-</pre>
-</code>
  
 You can of course define public properties as be able to set their values as with regular layout renderers.
 I'm planning to add an additional concept called ambient properties which will help maintain NLog v1 compatibility while being very extensible. Ambient properties are properties that appear as if they were present on all layout renderers and when you actually use them, they add an implicit wrapper. This allows you to write: **${level:uppercase=true:padding=-10}** instead of **${padding:padding=-10:${uppercase:${level}}}**
 
 Whenever layout parser encounters an unknown property (such as "uppercase" which doesn't exist on LevelLayoutRenderer anymore) it will look for layout renderers which define **\[AmbientProperty("UpperCase")\]** and will instantiate them and use to wrap the original layout renderer:
 
-<code>
-<pre>
-[LayoutRenderer("uppercase")]
-[AmbientProperty("UpperCase")]
-public sealed class UpperCaseLayoutRendererWrapper : WrapperLayoutRendererBase
-{
-    private bool _upperCase = false;
-    public bool UpperCase
+
+    [LayoutRenderer("uppercase")]
+    [AmbientProperty("UpperCase")]
+    public sealed class UpperCaseLayoutRendererWrapper : WrapperLayoutRendererBase
     {
-        get { return _upperCase; }
-        set { _upperCase = value; }
+        private bool _upperCase = false;
+        public bool UpperCase
+        {
+            get { return _upperCase; }
+            set { _upperCase = value; }
+        }
+        protected override string Transform(string text)
+        {
+            return UpperCase ? text.ToUpperInvariant() : text;
+        }
     }
-    protected override string Transform(string text)
-    {
-        return UpperCase ? text.ToUpperInvariant() : text;
-    }
-}
-</pre>
-</code>
