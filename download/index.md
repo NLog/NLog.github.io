@@ -10,9 +10,9 @@ Binary Releases
 Binary releases can be downloaded from GitHub. Only zip packages are available.
 
  * [NLog 3.0.0](https://github.com/NLog/NLog/releases/tag/v3.0) <img src="/images/recommended.png">
+ * [NLog 2.1.0](https://github.com/NLog/NLog/releases/tag/2.1.0)
 
 Older binary releases can be downloaded from CodePlex. Installer and zip packages are available.
- * [NLog 2.1.0](https://github.com/NLog/NLog/releases/tag/2.1.0)
  * [NLog 2.0](http://nlog.codeplex.com/releases/view/32639)
  * [NLog 1.0 Refresh](http://nlog.codeplex.com/releases/view/32601) - original release from 2006, updated with support for Visual Studio 2008 and 2010
 
