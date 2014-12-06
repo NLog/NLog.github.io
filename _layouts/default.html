@@ -3,36 +3,36 @@
 <head>
 	<meta charset"utf-8" />
 	<title> {% if page.title %} {{ page.title }} | {% endif %} NLog</title>
-	<link rel="stylesheet" type="text/css" href="/css/style.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="/css/syntax.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/syntax.css" media="screen">
 </head>
 <body>
 	<div id="header">
 		<div>
-			<a href="/"><img src="/images/NLog.png" title="NLog - Advanced .NET Logging" alt="NLog - Advanced .NET Logging"></a>
+			<a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/NLog.png" title="NLog - Advanced .NET Logging" alt="NLog - Advanced .NET Logging"></a>
 		</div>
 	</div>
 	<div id="sidebar">
 		<nav role="navigation" id="menu">
 			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/download">Download</a></li>
+				<li><a href="{{ site.baseurl }}/">Home</a></li>
+				<li><a href="{{ site.baseurl }}/download">Download</a></li>
 				<li><a href="https://github.com/nlog/nlog/wiki">Wiki</a></li>
-				<!-- <li><a href="/documentation">Documentation</a></li> -->
+				<!-- <li><a href="{{ site.baseurl }}/documentation">Documentation</a></li> -->
 				<li><a href="https://groups.google.com/forum/#!forum/nlog-users">Forum</a></li>
 				<li><a href="https://github.com/NLog/NLog/issues">Issue Tracker</a></li>
-				<li><a href="/archives">News Archive</a></li>
+				<li><a href="{{ site.baseurl }}/archives">News Archive</a></li>
 			</ul>
 		</nav>
 		<div class="banner">
 			<a href="https://www.gibraltarsoftware.com/loupe/extensions/nlog">
-                <img src="/images/LoupeForNLog.png" alt="Gibraltar Loupe – The free log viewer and log analysis tool for NLog" style="width: 162px"/>
+                <img src="{{ site.baseurl }}/images/LoupeForNLog.png" alt="Gibraltar Loupe – The free log viewer and log analysis tool for NLog" style="width: 162px"/>
             </a>
 			<a href="https://www.ndepend.com/">
-				<img src="/images/PoweredByNDepend.png" alt="Powered by NDepend" style="width: 162px" />
+				<img src="{{ site.baseurl }}/images/PoweredByNDepend.png" alt="Powered by NDepend" style="width: 162px" />
 			</a>
 			<a href=" https://papertrailapp.com/">
-				<img src="/images/papertrail.png" alt="Papertrail - Frustration-free log management" style="width: 162px" />
+				<img src="{{ site.baseurl }}/images/papertrail.png" alt="Papertrail - Frustration-free log management" style="width: 162px" />
 			</a>
 		</div>
 	</div>

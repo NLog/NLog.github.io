@@ -9,7 +9,7 @@ Binary Releases
 ---------------
 Binary releases can be downloaded from GitHub. Only zip packages are available.
 
- * [NLog 3.1.0](https://github.com/NLog/NLog/releases/tag/v3.1.0) <img src="/images/recommended.png">
+ * [NLog 3.1.0](https://github.com/NLog/NLog/releases/tag/v3.1.0) <img src="{{ site.baseurl }}/images/recommended.png">
  * [NLog 3.0.0](https://github.com/NLog/NLog/releases/tag/v3.0) 
  * [NLog 2.1.0](https://github.com/NLog/NLog/releases/tag/2.1.0)
 
