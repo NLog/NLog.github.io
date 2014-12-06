@@ -8,7 +8,7 @@ layout: default
 			{{ post.date | date: '%Y-%m-%d' }} - <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.excerpt }}
 		</div>
 	{% endfor %}
-	<p><a href="/archives">See more news...</a></p>
+	<p><a href="{{ site.baseurl }}/archives">See more news...</a></p>
 </div>
 <section class="content">
 	<h2>Welcome to NLog</h2>
@@ -19,10 +19,10 @@ layout: default
 		Support for NLog is available via <a href="https://groups.google.com/forum/#!forum/nlog-users">NLog-Users</a> group.
 	</p>
 	<p>
-		NLog is an open source project hosted on <a href="http://github.com/nlog/NLog/">GitHub</a> and source code is available under the terms of <a href="https://github.com/NLog/NLog/blob/master/LICENSE.txt">BSD license</a>.
+		NLog is an open source project hosted on <a href="https://github.com/nlog/NLog/">GitHub</a> and source code is available under the terms of <a href="https://github.com/NLog/NLog/blob/master/LICENSE.txt">BSD license</a>.
 	</p>
 	<p>
-		Binary packages are available via <a href="http://nuget.org/List/Packages/NLog">NuGet</a>.
+		Binary packages are available via <a href="https://nuget.org/List/Packages/NLog">NuGet</a>.
 	</p>
 	<p>
 		If you're interested in joining NLog development efforts, go to <a href="https://groups.google.com/forum/#!forum/nlog-development">NLog-Development</a> group.
