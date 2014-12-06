@@ -60,9 +60,17 @@
     <div class="" id="docs-header">
         <div class="container">
 
+            {% if page.title %}
+            <h1 class="content-title">
+                {{ page.title }}
+            </h1>
+            {% else %}
+
             <img alt="NLog - Advanced .NET Logging" title="NLog - Advanced .NET Logging" src="{{ site.baseurl }}/images/NLog-logo-only-inverse.png">
-            {% if page.lead %}
-            <h1 class="content-title">Flexible &amp; free open-source logging for .Net</h1>
+
+            <h1 class="content-title">
+                Flexible &amp; free open-source logging for .Net
+            </h1>
 
             <p class="lead">
                 <a href="#download" class="btn btn-outline-inverse btn-lg">Download NLog</a>
