@@ -32,10 +32,13 @@
             <div class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#support">Getting started</a>
+                        <a href="{{ site.baseurl }}">Home</a>
                     </li>
                     <li>
-                        <a href="#">News</a>
+                        <a href="{{ site.baseurl }}#support">Getting started</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.baseurl }}/archives">News</a>
                     </li>
 
 
@@ -58,11 +61,13 @@
         <div class="container">
 
             <img alt="NLog - Advanced .NET Logging" title="NLog - Advanced .NET Logging" src="{{ site.baseurl }}/images/NLog-logo-only-inverse.png">
+            {% if page.lead %}
             <h1 class="content-title">Flexible &amp; free open-source logging for .Net</h1>
 
             <p class="lead">
                 <a href="#download" class="btn btn-outline-inverse btn-lg">Download NLog</a>
             </p>
+            {% endif %}
             <p class="version">Version v3.1.0</p>
 
 
