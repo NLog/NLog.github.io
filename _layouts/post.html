@@ -5,7 +5,7 @@ header: news
 ---
 
 <h1 class="post-title">{{ page.title }}</h1>
-<small> <span>{{ post.date   }}</span> <span>{{ page.date   }}</span></small>
+<small> {{ page.date | date_to_string  }}</small>
 <div>
     <a href="{{ site.baseurl }}/archives">Back</a>
 </div>
