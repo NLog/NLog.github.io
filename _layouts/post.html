@@ -5,19 +5,18 @@ header: News
 ---
 
 <article>
-
     <h1 class="post-title page-header">{{ page.title }}</h1>
-    <small>
-
+    <small class="pull-right news-date ">
         {% if page.date %}
         {{ page.date | date_to_string  }}
         {% endif %}
     </small>
-    <div>
-        <a href="{{ site.baseurl }}/archives">Back to news</a>
-    </div>
+    {{ content }}
 </article>
-{{ content }}
+<div class="news-back-bar">
+    <a href="{{ site.baseurl }}/archives">Return to news</a>
+</div>
+
 {% if page.comments %}
 <div id="disqus_thread"></div>
 <script type="text/javascript">

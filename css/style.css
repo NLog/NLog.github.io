@@ -58,6 +58,9 @@
 .news-date {
   font-style: italic;
 }
+.news-back-bar {
+  padding-top: 10px;
+}
 .bold {
   font-weight: bold;
 }
