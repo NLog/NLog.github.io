@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -57,7 +57,7 @@
 
 
 
-    <div class="" id="docs-header">
+    <div class="{% if page.header %}large-header{% endif %}" id="docs-header">
         <div class="container">
 
             {% if page.header %}
@@ -69,14 +69,15 @@
             <img alt="NLog - Advanced .NET Logging" title="NLog - Advanced .NET Logging" src="{{ site.baseurl }}/images/NLog-logo-only-inverse.png">
 
             <h1 class="content-title">
-                Flexible &amp; free open-source logging for .Net
+                Flexible &amp; free open-source logging for .NET
             </h1>
 
             <p class="lead">
                 <a href="{{ site.baseurl }}/download" class="btn btn-outline-inverse btn-lg">Download NLog</a>
             </p>
+            <p class="version">Lastest version: 3.1.0</p>
             {% endif %}
-            <p class="version">Lasted version: 3.1.0</p>
+
 
 
         </div>

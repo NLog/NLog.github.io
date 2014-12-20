@@ -3,371 +3,78 @@ layout: default
 ---
 
 <section class="content">
-    <h1>
-        Welcome to NLog
-    </h1>
+    <section>
+        <h1 class="page-header">
+            Welcome to NLog
+        </h1>
 
-    <p class="lead">
-        NLog is a free logging platform for .NET, Silverlight and Windows Phone with rich log routing and management capabilities.
-        It makes it easy to produce and manage high-quality logs for your application regardless of its size or complexity.
-    </p>
-    <p>
-        NLog can process diagnostic messages emitted from any .NET language (such as C# or Visual Basic), augment them
-        with contextual information (such as date and time, severity, thread, process, environment enviroment),
-        format them according to your preference and send them to one or more targets such as file or database.
-    </p><p>
-        .NET, C/C++ and COM interop APIs are supported so that all your application components including legacy modules written in
-        C++/COM can route their log messages through a common engine.
-    </p>
-    
-    <h1 class="">Features</h1>
-
-
-
-
-    <div class="row">
+        <p class="lead">
+            NLog is a free logging platform for .NET, Silverlight and Windows Phone with rich log routing and management capabilities.
+            NLog makes it easy to produce and manage high-quality logs for your application regardless of its size or complexity.
+        </p>
+        <p>
+            NLog can process diagnostic messages emitted from any .NET language (C# or Visual Basic .NET etc.), augment them
+            with contextual information (date and time, severity, thread, process, environment),
+            format according to your preferences and send to one or more <a href="#targets">targets</a>.
+        </p><p>
+            .NET, C/C++ and COM interop APIs are supported so that all your application components including legacy modules written in
+            C++/COM can route their log messages through a common engine.
+        </p>
+    </section>
+    <section>
+        <h1 class="page-header">Features</h1>
 
 
 
-        <div class="col-sm-4">
+
+        <div class="row">
 
 
-            <h4>Easy to configure</h4>
-            <p>
-                NLog is very easy to configure,  both through <a href="https://github.com/nlog/NLog/wiki/Configuration-file">configuration file</a>
-                and <a href="https://github.com/nlog/NLog/wiki/Configuration-API">programmatically</a>. The easy-to-use logger pattern known from log4net.
-            </p>
-        </div>
-        <div class="col-sm-4">
-            <h4>Extensible</h4>
-            <p>
-                Even though NLog has targets and pre-defined layouts, you can write <a href="https://github.com/nlog/nlog/wiki/How-to-write-a-Target"> custom targets</a> or pass <a href="https://github.com/nlog/nlog/wiki/Event-Context-Layout-Renderer"> custom values</a>
 
-            </p>
+            <div class="col-sm-4">
 
-        </div>
-        <div class="col-sm-4">
-            <h4>Cross platform</h4>
-            <p>
-                Nlog has cross-platform support: .NET Framework, .NET Compact Framework and Mono (on Windows and Unix)
-            </p>
-        </div>
-    </div>
-    
-    
 
-    <h1>Targets (option 1)</h1>
-    <p class="lead">
-        Targets are used to display, store, or pass log messages to another destination.
+                <h4>Easy to configure</h4>
+                <p>
+                    NLog is very easy to configure,  both through <a href="https://github.com/nlog/NLog/wiki/Configuration-file">configuration file</a>
+                    and <a href="https://github.com/nlog/NLog/wiki/Configuration-API">programmatically</a>. The easy-to-use logger pattern known from log4net.
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <h4>Extensible</h4>
+                <p>
+                    Even though NLog has targets and pre-defined layouts, you can write <a href="https://github.com/nlog/nlog/wiki/How-to-write-a-Target"> custom targets</a> or pass <a href="https://github.com/nlog/nlog/wiki/Event-Context-Layout-Renderer"> custom values</a>
 
-    </p>
-    <p> Default inluded targets:</p>
-    <div class="row">
-        <div class="col-sm-4">
+                </p>
 
-            <h4>
-                <i class="fa fa-file"></i>
-                Files
-            </h4>
-            Write logs to a single file or multiple, with <a href="https://github.com/nlog/NLog/wiki/File-target">automatic file naming and archival</a>
-        </div>
-        <div class="col-sm-4">
-
-            <h4>
-                <i class="fa fa-warning"></i>
-                Event Log
-            </h4> Write to event log <a href="https://github.com/nlog/NLog/wiki/EventLog-target">local or remote</a>
-
-        </div>
-        <div class="col-sm-4">
-
-            <h4>
-                <i class="fa fa-database"></i>
-                Database
-            </h4>
-
-            Store your logs in <a href="https://github.com/nlog/NLog/wiki/Database-target">databases</a> supported by .NET
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4">
-            <h4>
-                <i class="fa fa-terminal"></i>
-                Console
-            </h4>
-            Write real-time to the command-line console
-            including <a href="https://github.com/nlog/NLog/wiki/ColoredConsole-target">color coding</a> of messages
-        </div>
-        <div class="col-sm-4">
-            <h4><i class="fa fa-envelope "></i> E-mail</h4>
-
-            You can send <a href="https://github.com/nlog/NLog/wiki/Mail-target">emails</a> whenever application errors occur
-        </div>
-        <div class="col-sm-4">
-            <h4> <i class="fa fa-file-o "></i> ASP.NET trace, advanced routing</h4>
-            Advanced routing using <a href="https://github.com/nlog/NLog/wiki/BufferingWrapper-target">buffering</a>, <a href="https://github.com/nlog/NLog/wiki/AsyncWrapper-target">asynchronous logging</a>, <a href="https://github.com/nlog/NLog/wiki/RoundRobinGroup-target">load balancing</a>, <a href="https://github.com/nlog/NLog/wiki/FallbackGroup-target">failover</a>,
-            and <a href="https://github.com/nlog/NLog/wiki/Targets">more</a>
-        </div>
-    </div>
-    The full list of targets is available on the <a href="https://github.com/nlog/NLog/wiki/Targets">wiki</a>
-    
-    <h1>Targets (option 2)</h1>
-    <div class="row">
-        <div class="col-sm-4">
-            <p>
-                Targets are used to display, store, or pass log messages to another destination. There are two kinds of target; those that receive and handle the messages, and those that buffer or route the messages to another target. The second group are called 'wrapper' targets.
-                <br><br>
-                Advanced routing using <a href="https://github.com/nlog/NLog/wiki/BufferingWrapper-target">buffering</a>, <a href="https://github.com/nlog/NLog/wiki/AsyncWrapper-target">asynchronous logging</a>, <a href="https://github.com/nlog/NLog/wiki/RoundRobinGroup-target">load balancing</a>, <a href="https://github.com/nlog/NLog/wiki/FallbackGroup-target">failover</a>
-                <br><br>
-                <strong> The full list of targets is available on the <a href="https://github.com/nlog/NLog/wiki/Targets">wiki</a></strong>
-            </p>
-        </div>
-        <div class="col-sm-4">
-            <ul class="wiki-pages" data-filterable-for="wiki-pages-filter" data-filterable-type="substring">
-                <li>
-                    <strong><a href="/NLog/NLog/wiki/AspApplication-layout-renderer">AspApplication layout renderer</a></strong>
-                </li>
-                <li>
-                    <strong><a href="/NLog/NLog/wiki/AspNetApplication-layout-renderer">AspNetApplication layout renderer</a></strong>
-                </li>
-                <li>
-                    <strong><a href="/NLog/NLog/wiki/AspNetBufferingWrapper-target">AspNetBufferingWrapper target</a></strong>
-                </li>
-                <li>
-                    <strong><a href="/NLog/NLog/wiki/AspNetRequest-layout-renderer">AspNetRequest layout renderer</a></strong>
-                </li>
-                <li>
-                    <strong><a href="/NLog/NLog/wiki/AspNetSession-layout-renderer">AspNetSession layout renderer</a></strong>
-                </li>
-                <li>
-                    <strong><a href="/NLog/NLog/wiki/AspNetSessionId-layout-renderer">AspNetSessionId layout renderer</a></strong>
-                </li>
-                <li>
-                    <strong><a href="/NLog/NLog/wiki/AspNetTrace-target">AspNetTrace target</a></strong>
-                </li>
-                <li>
-                    <strong><a href="/NLog/NLog/wiki/AspNetUserAuthType-layout-renderer">AspNetUserAuthType layout renderer</a></strong>
-                </li>
-                <li>
-                    <strong><a href="/NLog/NLog/wiki/AspNetUserIdentity-layout-renderer">AspNetUserIdentity layout renderer</a></strong>
-                </li>
-                <li>
-                    <strong><a href="/NLog/NLog/wiki/AspRequest-layout-renderer">AspRequest layout renderer</a></strong>
-                </li>
-                <li>
-                    <strong><a href="/NLog/NLog/wiki/AspResponse-target">AspResponse target</a></strong>
-                </li>
-                <li>
-                    <strong><a href="/NLog/NLog/wiki/AspSession-layout-renderer">AspSession layout renderer</a></strong>
-                </li>
-                <li>
-                    <strong><a href="/NLog/NLog/wiki/AssemblyVersion-Layout-Renderer">AssemblyVersion Layout Renderer</a></strong>
-                </li>
-                <li>
-                    <strong><a href="/NLog/NLog/wiki/AsyncWrapper-target">AsyncWrapper target</a></strong>
-                </li>
-                <li>
-                    <strong><a href="/NLog/NLog/wiki/AutoFlushWrapper-target">AutoFlushWrapper target</a></strong>
-                </li>
-            </ul>
-        </div>
-
-        <div class="col-sm-4">
-            <ul>
-                <li class="wiki-more-pages">
-                    <strong><a href="/NLog/NLog/wiki/Basedir-layout-renderer">Basedir layout renderer</a></strong>
-                </li>
-                <li class="wiki-more-pages">
-                    <strong><a href="/NLog/NLog/wiki/BufferingWrapper-target">BufferingWrapper target</a></strong>
-                </li>
-                <li class="wiki-more-pages">
-                    <strong><a href="/NLog/NLog/wiki/Cached-Layout-Renderer">Cached Layout Renderer</a></strong>
-                </li>
-                <li class="wiki-more-pages">
-                    <strong><a href="/NLog/NLog/wiki/Callsite-layout-renderer">Callsite layout renderer</a></strong>
-                </li>
-                <li class="wiki-more-pages">
-                    <strong><a href="/NLog/NLog/wiki/Chainsaw-target">Chainsaw target</a></strong>
-                </li>
-                <li class="wiki-more-pages">
-                    <strong><a href="/NLog/NLog/wiki/ColoredConsole-target">ColoredConsole target</a></strong>
-                </li>
-                <li class="wiki-more-pages">
-                    <strong><a href="/NLog/NLog/wiki/Conditions">Conditions</a></strong>
-                </li>
-                <li class="wiki-more-pages">
-                    <strong><a href="/NLog/NLog/wiki/Configuration-API">Configuration API</a></strong>
-                </li>
-                <li class="wiki-more-pages">
-                    <strong><a href="/NLog/NLog/wiki/Configuration-file">Configuration file</a></strong>
-                </li>
-                <li class="wiki-more-pages">
-                    <strong><a href="/NLog/NLog/wiki/Configure-component-logging">Configure component logging</a></strong>
-                </li>
-                <li class="wiki-more-pages">
-                    <strong><a href="/NLog/NLog/wiki/Console-target">Console target</a></strong>
-                </li>
-                <li class="wiki-more-pages">
-                    <strong><a href="/NLog/NLog/wiki/Counter-layout-renderer">Counter layout renderer</a></strong>
-                </li>
-                <li class="wiki-more-pages">
-                    <strong><a href="/NLog/NLog/wiki/CsvLayout">CsvLayout</a></strong>
-                </li>
-                <li class="wiki-more-pages">
-                    <strong><a href="/NLog/NLog/wiki/Database-target">Database target</a></strong>
-                </li>
-                <li class="wiki-more-pages">
-                    <strong><a href="/NLog/NLog/wiki/Date-layout-renderer">Date layout renderer</a></strong>
-                </li>
-                <li class="wiki-more-pages">
-                    <strong><a href="/NLog/NLog/wiki/Debug-target">Debug target</a></strong>
-                </li>
-            </ul>
-        </div>
-    </div>
-    
-    <h1>Targets (option 3)</h1>
-    <div class="row">
-        <div class="col-sm-4">
-            <p>
-                Targets are used to display, store, or pass log messages to another destination. There are two kinds of target; those that receive and handle the messages, and those that buffer or route the messages to another target. The second group are called 'wrapper' targets.
-                <br><br>
-                Advanced routing using <a href="https://github.com/nlog/NLog/wiki/BufferingWrapper-target">buffering</a>, <a href="https://github.com/nlog/NLog/wiki/AsyncWrapper-target">asynchronous logging</a>, <a href="https://github.com/nlog/NLog/wiki/RoundRobinGroup-target">load balancing</a>, <a href="https://github.com/nlog/NLog/wiki/FallbackGroup-target">failover</a>
-                <br><br>
-                <strong> The full list of targets is available on the <a href="https://github.com/nlog/NLog/wiki/Targets">wiki</a></strong>
-            </p>
-        </div>
-        <div class="col-sm-8">
-            <div aria-multiselectable="true" role="tablist" id="accordion" class="panel-group">
-                <div class="panel panel-default">
-                    <div id="headingOne" role="tab" class="panel-heading">
-                        <h4 class="panel-title">
-                            <a aria-controls="collapseOne" aria-expanded="true" href="#collapseOne" data-parent="#accordion" data-toggle="collapse">
-                                <i class="fa fa-file"></i>
-                                Files
-                            </a>
-                        </h4>
-                    </div>
-                    <div aria-labelledby="headingOne" role="tabpanel" class="panel-collapse collapse in" id="collapseOne">
-                        <div class="panel-body">
-                            Write logs to a single file or multiple, with <a href="https://github.com/nlog/NLog/wiki/File-target">automatic file naming and archival</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div id="headingTwo" role="tab" class="panel-heading">
-                        <h4 class="panel-title">
-                            <a aria-controls="collapseTwo" aria-expanded="false" href="#collapseTwo" data-parent="#accordion" data-toggle="collapse" class="collapsed">
-
-                                <i class="fa fa-warning"></i>
-                                Event Log
-                            </a>
-                        </h4>
-                    </div>
-                    <div aria-labelledby="headingTwo" role="tabpanel" class="panel-collapse collapse" id="collapseTwo">
-                        <div class="panel-body">
-                            Write to event log <a href="https://github.com/nlog/NLog/wiki/EventLog-target">local or remote</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div id="headingThree" role="tab" class="panel-heading">
-                        <h4 class="panel-title">
-                            <a aria-controls="collapseThree" aria-expanded="false" href="#collapseThree" data-parent="#accordion" data-toggle="collapse" class="collapsed">
-
-                                <i class="fa fa-database"></i>
-                                Database
-                            </a>
-                        </h4>
-                    </div>
-                    <div aria-labelledby="headingThree" role="tabpanel" class="panel-collapse collapse" id="collapseThree">
-                        <div class="panel-body">
-
-                            Store your logs in <a href="https://github.com/nlog/NLog/wiki/Database-target">databases</a> supported by .NET
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div id="headingFour" role="tab" class="panel-heading">
-                        <h4 class="panel-title">
-                            <a aria-controls="collapseFour" aria-expanded="false" href="#collapseFour" data-parent="#accordion" data-toggle="collapse" class="collapsed">
-
-                                <i class="fa fa-terminal"></i>
-                                Console
-                            </a>
-                        </h4>
-                    </div>
-                    <div aria-labelledby="headingFour" role="tabpanel" class="panel-collapse collapse" id="collapseFour">
-                        <div class="panel-body">
-
-                            Write real-time to the command-line console
-                            including <a href="https://github.com/nlog/NLog/wiki/ColoredConsole-target">color coding</a> of messages
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div id="headingFive" role="tab" class="panel-heading">
-                        <h4 class="panel-title">
-                            <a aria-controls="collapseFive" aria-expanded="false" href="#collapseFive" data-parent="#accordion" data-toggle="collapse" class="collapsed">
-                                <i class="fa fa-envelope "></i> E-mail
-                            </a>
-                        </h4>
-                    </div>
-                    <div aria-labelledby="headingFive" role="tabpanel" class="panel-collapse collapse" id="collapseFive">
-                        <div class="panel-body">
-
-                            You can send <a href="https://github.com/nlog/NLog/wiki/Mail-target">emails</a> whenever application errors occur
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div id="headingSix" role="tab" class="panel-heading">
-                        <h4 class="panel-title">
-                            <a aria-controls="collapseSix" aria-expanded="false" href="#collapseSix" data-parent="#accordion" data-toggle="collapse" class="collapsed">
-                                <i class="fa fa-file-o "></i> ASP.NET trace
-                            </a>
-                        </h4>
-                    </div>
-                    <div aria-labelledby="headingSix" role="tabpanel" class="panel-collapse collapse" id="collapseSix">
-                        <div class="panel-body">
-                            Writes log messages to the ASP.NET trace.
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div class="col-sm-4">
+                <h4>Cross platform</h4>
+                <p>
+                    NLog has cross-platform support: .NET Framework, .NET Compact Framework and Mono (on Windows and Unix)
+                </p>
             </div>
         </div>
-    </div>
 
-    <h1>Targets (option 4)</h1>
 
-    <div class="row h4-16px">
-        <div class="col-sm-4">
-            <p>
-                Targets are used to display, store, or pass log messages to another destination. There are over 30 different targets!
+    </section>
+    <section>
+        <h1 class="page-header" id="targets">Targets</h1>
+        <p class="lead">
+            Targets are used to display, store or pass log messages to another destination.
 
-            </p>
-            <p>
-                Advanced routing using
-                <a href="https://github.com/nlog/NLog/wiki/BufferingWrapper-target">buffering</a>,
-                <a href="https://github.com/nlog/NLog/wiki/AsyncWrapper-target">asynchronous logging</a>,
-                <a href="https://github.com/nlog/NLog/wiki/RoundRobinGroup-target">load balancing</a>,
-                <a href="https://github.com/nlog/NLog/wiki/FallbackGroup-target">failover</a>
-            </p>
-            <p class="bold">
-                The full list of targets is available on the <a href="https://github.com/nlog/NLog/wiki/Targets">wiki</a>
-            </p>
-
-        </div>
-        <div class="col-sm-8">
-            <div class="">
+        </p>
+        <p> Default inluded targets:</p>
+        <div class="row">
+            <div class="col-sm-4">
 
                 <h4>
                     <i class="fa fa-file"></i>
                     Files
                 </h4>
-                Write logs to a single file or multiple, with <a href="https://github.com/nlog/NLog/wiki/File-target">automatic file naming and archival</a>
+                Write logs to any number of files, with <a href="https://github.com/nlog/NLog/wiki/File-target">automatic file naming and archival</a>
             </div>
-            <div class="">
+            <div class="col-sm-4">
 
                 <h4>
                     <i class="fa fa-warning"></i>
@@ -375,7 +82,7 @@ layout: default
                 </h4> Write to event log <a href="https://github.com/nlog/NLog/wiki/EventLog-target">local or remote</a>
 
             </div>
-            <div class="">
+            <div class="col-sm-4">
 
                 <h4>
                     <i class="fa fa-database"></i>
@@ -384,7 +91,9 @@ layout: default
 
                 Store your logs in <a href="https://github.com/nlog/NLog/wiki/Database-target">databases</a> supported by .NET
             </div>
-            <div class="">
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
                 <h4>
                     <i class="fa fa-terminal"></i>
                     Console
@@ -392,112 +101,29 @@ layout: default
                 Write real-time to the command-line console
                 including <a href="https://github.com/nlog/NLog/wiki/ColoredConsole-target">color coding</a> of messages
             </div>
-            <div class="">
+            <div class="col-sm-4">
                 <h4><i class="fa fa-envelope "></i> E-mail</h4>
 
                 You can send <a href="https://github.com/nlog/NLog/wiki/Mail-target">emails</a> whenever application errors occur
             </div>
-            <div class="">
-                <h4> <i class="fa fa-file-o "></i> ASP.NET trace</h4>
-                <a href="http://msdn.microsoft.com/en-us/library/y13fw6we%28v=vs.85%29.aspx">ASP.NET built in trace</a>
+            <div class="col-sm-4">
+                <h4> <i class="fa fa-file-o "></i> ASP.NET trace</h4> 
+                Write log messages to the 
+                <a href="http://msdn.microsoft.com/en-us/library/y13fw6we%28v=vs.85%29.aspx">built in trace in ASP.NET</a>
             </div>
         </div>
-    </div>
-
-    <h1>Targets (option 5)</h1>
-
-    <div class="row h4-14px">
-        <div class="col-sm-3">
-            <p>
-                Targets are used to display, store, or pass log messages to another destination. There are over 30 different targets!
-
-            </p>
-            <p>
-                Advanced routing using
-                <a href="https://github.com/nlog/NLog/wiki/BufferingWrapper-target">buffering</a>,
-                <a href="https://github.com/nlog/NLog/wiki/AsyncWrapper-target">asynchronous logging</a>,
-                <a href="https://github.com/nlog/NLog/wiki/RoundRobinGroup-target">load balancing</a>,
-                <a href="https://github.com/nlog/NLog/wiki/FallbackGroup-target">failover</a>
-            </p>
-            <p class="bold">
-                The full list of targets is available on the <a href="https://github.com/nlog/NLog/wiki/Targets">wiki</a>
-            </p>
-
-        </div>
-        <div class="col-sm-9">
-            <div class="row">
-
-                <p class="header col-md-3">
-                    <i class="fa fa-file"></i>
-                    Files
-                </p>
-                <p class="col-md-9">
-                    Write logs to a single file or multiple, with <a href="https://github.com/nlog/NLog/wiki/File-target">automatic file naming and archival</a>
-                </p>
-            </div>
-            <div class="row">
-
-                <p class="header col-md-3">
-                    <i class="fa fa-warning"></i>
-                    Event Log
-                </p>
-                <p class="col-md-9">
-                    Write to event log <a href="https://github.com/nlog/NLog/wiki/EventLog-target">local or remote</a>
-
-                </p>
-            </div>
-            <div class="row">
-
-                <p class="header col-md-3">
-                    <i class="fa fa-database"></i>
-                    Database
-                </p>
-                <p class="col-md-9">
-
-                    Store your logs in <a href="https://github.com/nlog/NLog/wiki/Database-target">databases</a> supported by .NET
-                </p>
-            </div>
-            <div class="row">
-                <p class="header col-md-3">
-                    <i class="fa fa-terminal"></i>
-                    Console
-                </p>
-                <p class="col-md-9">
-                    Write real-time to the command-line console
-                    including <a href="https://github.com/nlog/NLog/wiki/ColoredConsole-target">color coding</a> of messages
-                </p>
-            </div>
-            <div class="row">
-                <p class="header col-md-3">
-                    <i class="fa fa-envelope "></i> E-mail
-                </p>
-                <p class="col-md-9">
-
-                    You can send <a href="https://github.com/nlog/NLog/wiki/Mail-target">emails</a> whenever application errors occur
-                </p>
-            </div>
-            <div class="row">
-                <p class="header col-md-3">
-                    <i class="fa fa-file-o "></i> ASP.NET trace
-                </p>
-                <p class="col-md-9">
-                    <a href="http://msdn.microsoft.com/en-us/library/y13fw6we%28v=vs.85%29.aspx">ASP.NET built in trace</a>
-                </p>
-            </div>
-        </div>
-    </div>
+        The full list of targets is available on the <a href="https://github.com/nlog/NLog/wiki/Targets">wiki</a>
 
 
-    <!--<p>Other key features:</p>
-    <ul>
-        <li>very easy to configure, both through <a href="https://github.com/nlog/NLog/wiki/Configuration-file">configuration file</a> and <a href="https://github.com/nlog/NLog/wiki/Configuration-API">programmatically</a></li>
-        <li>easy-to-use logger pattern known from log4xxx</li>
-        <li>advanced routing using <a href="https://github.com/nlog/NLog/wiki/BufferingWrapper-target">buffering</a>, <a href="https://github.com/nlog/NLog/wiki/AsyncWrapper-target">asynchronous logging</a>, <a href="https://github.com/nlog/NLog/wiki/RoundRobinGroup-target">load balancing</a>, <a href="https://github.com/nlog/NLog/wiki/FallbackGroup-target">failover</a>, and <a href="https://github.com/nlog/NLog/wiki/Targets">more</a></li>
-        <li>cross-platform support: .NET Framework, .NET Compact Framework and Mono (on Windows and Unix)</li>
-    </ul>-->
+        <!--Advanced routing using <a href="https://github.com/nlog/NLog/wiki/BufferingWrapper-target">buffering</a>, <a href="https://github.com/nlog/NLog/wiki/AsyncWrapper-target">asynchronous logging</a>, <a href="https://github.com/nlog/NLog/wiki/RoundRobinGroup-target">load balancing</a>, <a href="https://github.com/nlog/NLog/wiki/FallbackGroup-target">failover</a>,
+            and <a href="https://github.com/nlog/NLog/wiki/Targets">more</a>-->
 
-    <h1 class="">License</h1>
-    <p>
-        The source code is available under the terms of <a href="https://github.com/NLog/NLog/blob/master/LICENSE.txt">BSD license</a>.
-    </p>
+    </section>
+    <section>
+
+        <h1 class="page-header">License</h1>
+        <p>
+            The source code is available under the terms of <a href="https://github.com/NLog/NLog/blob/master/LICENSE.txt">BSD license</a>.
+        </p>
+    </section>
 </section>

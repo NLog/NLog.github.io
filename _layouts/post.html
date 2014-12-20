@@ -4,16 +4,19 @@ comments: true
 header: News
 ---
 
-<h1 class="post-title">{{ page.title }}</h1>
-<small>
+<article>
 
-    {% if page.date %}
-    {{ page.date | date_to_string  }}
-    {% endif %}
-</small>
-<div>
-    <a href="{{ site.baseurl }}/archives">Back</a>
-</div>
+    <h1 class="post-title page-header">{{ page.title }}</h1>
+    <small>
+
+        {% if page.date %}
+        {{ page.date | date_to_string  }}
+        {% endif %}
+    </small>
+    <div>
+        <a href="{{ site.baseurl }}/archives">Back to news</a>
+    </div>
+</article>
 {{ content }}
 {% if page.comments %}
 <div id="disqus_thread"></div>
