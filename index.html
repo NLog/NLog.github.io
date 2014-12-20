@@ -49,54 +49,56 @@ layout: default
             Targets are used to display, store or pass log messages to another destination.
         </p>
         <p>There are more then 30 targets out-of the box, including:</p>
-        <div class="row">
-            <div class="col-sm-4">
-                <h4>
-                    <i class="fa fa-file"></i>
-                    Files
-                </h4>
-                Write logs to any number of files, with <a href="https://github.com/nlog/NLog/wiki/File-target">automatic file naming and archival</a>
+        <div id="features-list">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4>
+                        <i class="fa fa-file fa-fw"></i>
+                        Files
+                    </h4>
+                    Write logs to any number of files, with <a href="https://github.com/nlog/NLog/wiki/File-target">automatic file naming and archival</a>
+                </div>
+                <div class="col-sm-4">
+                    <h4>
+                        <i class="fa fa-warning fa-fw"></i>
+                        Event Log
+                    </h4> Write to event log <a href="https://github.com/nlog/NLog/wiki/EventLog-target">local or remote</a>
+                </div>
+                <div class="col-sm-4">
+                    <h4>
+                        <i class="fa fa-database fa-fw"></i>
+                        Database
+                    </h4>
+                    Store your logs in <a href="https://github.com/nlog/NLog/wiki/Database-target">databases</a> supported by .NET
+                </div>
             </div>
-            <div class="col-sm-4">
-                <h4>
-                    <i class="fa fa-warning"></i>
-                    Event Log
-                </h4> Write to event log <a href="https://github.com/nlog/NLog/wiki/EventLog-target">local or remote</a>
-            </div>
-            <div class="col-sm-4">
-                <h4>
-                    <i class="fa fa-database"></i>
-                    Database
-                </h4>
-                Store your logs in <a href="https://github.com/nlog/NLog/wiki/Database-target">databases</a> supported by .NET
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4>
+                        <i class="fa fa-terminal fa-fw"></i>
+                        Console
+                    </h4>
+                    Write real-time to the command-line console
+                    including <a href="https://github.com/nlog/NLog/wiki/ColoredConsole-target">color coding</a> of messages
+                </div>
+                <div class="col-sm-4">
+                    <h4><i class="fa fa-envelope fa-fw"></i> E-mail</h4>
+                    You can send <a href="https://github.com/nlog/NLog/wiki/Mail-target">emails</a> whenever application errors occur
+                </div>
+                <div class="col-sm-4">
+                    <h4> <i class="fa fa-file-o fa-fw"></i> ASP.NET trace</h4>
+                    Write log messages to the
+                    <a href="http://msdn.microsoft.com/en-us/library/y13fw6we%28v=vs.85%29.aspx">built in trace in ASP.NET</a>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <h4>
-                    <i class="fa fa-terminal"></i>
-                    Console
-                </h4>
-                Write real-time to the command-line console
-                including <a href="https://github.com/nlog/NLog/wiki/ColoredConsole-target">color coding</a> of messages
-            </div>
-            <div class="col-sm-4">
-                <h4><i class="fa fa-envelope "></i> E-mail</h4>
-                You can send <a href="https://github.com/nlog/NLog/wiki/Mail-target">emails</a> whenever application errors occur
-            </div>
-            <div class="col-sm-4">
-                <h4> <i class="fa fa-file-o "></i> ASP.NET trace</h4>
-                Write log messages to the
-                <a href="http://msdn.microsoft.com/en-us/library/y13fw6we%28v=vs.85%29.aspx">built in trace in ASP.NET</a>
-            </div>
-        </div>
-        <div class="row">
+        <p id="features-after">
             It is also possible to write to these targets with <a href="https://github.com/nlog/NLog/wiki/BufferingWrapper-target">buffering</a>,
             <a href="https://github.com/nlog/NLog/wiki/AsyncWrapper-target">asynchronously</a>,
-            <a href="https://github.com/nlog/NLog/wiki/RoundRobinGroup-target">with loadbalacing</a>,
-            <a href="https://github.com/nlog/NLog/wiki/FallbackGroup-target">and failovering</a>.
+            with <a href="https://github.com/nlog/NLog/wiki/RoundRobinGroup-target">loadbalacing</a>,
+            and <a href="https://github.com/nlog/NLog/wiki/FallbackGroup-target">failovering</a>.
             The full list of targets is available on the <a href="https://github.com/nlog/NLog/wiki/Targets">wiki</a>.
-        </div>
+        </p>
     </section>
     <section>
         <h1 class="page-header">License</h1>
