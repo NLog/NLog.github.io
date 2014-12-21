@@ -34,10 +34,10 @@
                     <li>
                         <a href="{{ site.baseurl }}/">Home</a>
                     </li>
-                    <li>
+                    <li id="gettingStartedNavItem">
                         <a href="{{ site.baseurl }}/download">Getting started</a>
                     </li>
-                    <li>
+                    <li id="newNavItem">
                         <a href="{{ site.baseurl }}/archives">News</a>
                     </li>
 
@@ -140,13 +140,7 @@
 
     <script>
         
-        $(function () {
-            // Highlight the active nav link.
-            var url = window.location.pathname;
-            var filename = url.substr(url.lastIndexOf('/') + 1);
-            $('.navbar a[href$="' + filename + '"]').parent().addClass("active");
-        });
-        
+
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
