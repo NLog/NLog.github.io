@@ -9,6 +9,8 @@
 }
 #docs-header.large-header .content-title {
   font-size: 45px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 #docs-header .content-title {
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
