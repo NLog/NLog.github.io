@@ -80,4 +80,7 @@
 header.navbar {
   border-bottom: none;
 }
+.nav > li.active {
+  background: #eee;
+}
 /*# sourceMappingURL=style.css.map */
