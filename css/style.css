@@ -75,4 +75,7 @@
   border: none;
   color: #fff;
 }
+header.navbar {
+  border-bottom: none;
+}
 /*# sourceMappingURL=style.css.map */
