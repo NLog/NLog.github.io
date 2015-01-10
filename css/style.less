@@ -1,0 +1,117 @@
+@color1: #DA6821;
+@color2: #fff;
+
+
+#docs-header {
+    background: @color1;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+
+    &.large-header {
+         padding: 35px 0;
+        .content-title {
+                 font-size: 45px;
+                 margin-top: 20px;
+                 margin-bottom: 20px;
+        }
+    }
+
+    .content-title {
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+        font-size: 33px;
+    }
+}
+
+
+
+#top {
+    margin-bottom: 0;
+}
+
+#content {
+    padding-top: 10px;
+}
+
+.logoLink {
+    display: inline-block;
+    background: @color2;
+}
+
+.navbar-brand {
+    padding-top: 5px;
+}
+
+.btn-outline-inverse {
+    border: 1px solid @color2;
+    color: @color2;
+
+    &:hover {
+        background: @color2;
+        color: @color1;
+    }
+}
+
+.btn-outline {
+    border: 1px solid @color1;
+    color: @color1;
+
+    &:hover {
+        background: @color1;
+        color: @color2;
+    }
+}
+
+#banners-right {
+    .banner-item {
+        padding-top: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .download-text {
+        min-height: 44px;
+    }
+}
+
+.navbar-header .icon-bar {
+    background: #333;
+}
+
+
+
+
+.news-date {
+    font-style: italic;
+}
+.news-back-bar
+{
+    padding-top:10px;
+}
+
+.bold {
+    font-weight: bold;
+}
+#targets-after{
+    padding-top: 20px;
+}
+#targets-list
+{
+    padding:0 20px;
+}
+.highlight pre
+{
+    //reset style because of bootstrap3 clash
+      background-color: transparent;
+      border:none;
+      color:#fff;
+}
+header.navbar 
+{
+    border-bottom:none;
+}
+.nav > li.active{
+    background:#eee;
+}

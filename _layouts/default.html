@@ -1,57 +1,156 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta charset"utf-8" />
-	<title> {% if page.title %} {{ page.title }} | {% endif %} NLog</title>
-	<link rel="stylesheet" type="text/css" href="/css/style.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="/css/syntax.css" media="screen">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> {% if page.title %} {{ page.title }} | {% endif %} NLog</title>
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/font-awesome.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/syntax.css" media="screen">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" ></script>
 </head>
 <body>
-	<div id="header">
-		<div>
-			<a href="/"><img src="/images/NLog.png" title="NLog - Advanced .NET Logging" alt="NLog - Advanced .NET Logging"></a>
-		</div>
-	</div>
-	<div id="sidebar">
-		<nav role="navigation" id="menu">
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/download">Download</a></li>
-				<li><a href="http://github.com/nlog/nlog/wiki">Wiki</a></li>
-				<!-- <li><a href="/documentation">Documentation</a></li> -->
-				<li><a href="https://groups.google.com/forum/#!forum/nlog-users">Forum</a></li>
-				<li><a href="http://github.com/NLog/NLog/issues">Issue Tracker</a></li>
-				<li><a href="/archives">News Archive</a></li>
-			</ul>
-		</nav>
-		<div class="banner">
-			<a href="http://www.gibraltarsoftware.com/loupe/extensions/nlog">
-                <img src="/images/LoupeForNLog.png" alt="Gibraltar Loupe – The free log viewer and log analysis tool for NLog" style="width: 162px"/>
-            </a>
-			<a href="http://www.ndepend.com/">
-				<img src="/images/PoweredByNDepend.png" alt="Powered by NDepend" style="width: 162px" />
-			</a>
-			<a href=" https://papertrailapp.com/">
-				<img src="/images/papertrail.png" alt="Papertrail - Frustration-free log management" style="width: 162px" />
-			</a>
-		</div>
-	</div>
-	<div id="content">
-		{{ content }}
-	</div>
-	<div style="background: #00578e url('http://www.jetbrains.com/img/banners/Codebetter300x250.png') no-repeat 0 50%; margin-left:auto;margin-right:auto;padding:0;text-decoration:none;text-indent:0;letter-spacing:-0.001em; width:300px; height:250px">
-		<a href="http://www.jetbrains.com/youtrack" title="YouTrack by JetBrains" style="margin: 52px 0 0 58px;padding: 0; float: left;font-size: 14px; background-image:none;border:0;color: #acc4f9; font-family: trebuchet ms,arial,sans-serif;font-weight: normal;text-align:left;">keyboard-centric bug tracker</a>
-		<a href="http://www.jetbrains.com/teamcity" title="TeamCity by Jet  Brains" style="margin:0 0 0 58px;padding:122px 0 0 0;font-size:14px; background-image:none;border:0;display:block; color: #acc4f9; font-family: trebuchet ms,arial,sans-serif;font-weight: normal;text-align:left;">continuous integration server</a>
-	</div>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-41761907-1', 'nlog-project.org');
-	  ga('send', 'pageview');
 
-	</script>
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="logoLink navbar-brand" href="{{ site.baseurl }}/"><img alt="NLog - Advanced .NET Logging" title="NLog - Advanced .NET Logging" src="{{ site.baseurl }}/images/NLog-logo-only_small.png"></a>
+            </div>
+            <div class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li id="homeNavItem">
+                        <a href="{{ site.baseurl }}/">Home</a>
+                    </li>
+                    <li id="gettingStartedNavItem">
+                        <a href="{{ site.baseurl }}/download">Getting started</a>
+                    </li>
+                    <li id="newNavItem">
+                        <a href="{{ site.baseurl }}/archives">News</a>
+                    </li>
+
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li><a href="https://github.com/nlog/nlog/wiki">Wiki</a></li>
+                    <li><a href="https://groups.google.com/forum/#!forum/nlog-users">Forum</a></li>
+                    <li><a href="https://github.com/NLog/NLog/issues">Issues</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="{% if page.header %}large-header{% endif %}" id="docs-header">
+        <div class="container">
+
+            {% if page.header %}
+            <h1 class="content-title">
+                {{ page.header }}
+            </h1>
+            {% else %}
+
+            <img alt="NLog - Advanced .NET Logging" title="NLog - Advanced .NET Logging" src="{{ site.baseurl }}/images/NLog-logo-only-inverse.png">
+
+            <h1 class="content-title">
+                Flexible &amp; free open-source logging for .NET
+            </h1>
+
+            <p class="lead">
+                <a href="{{ site.baseurl }}/download" class="btn btn-outline-inverse btn-lg">Download NLog</a>
+            </p>
+            <p class="version">Latest version: 3.1.0</p>
+            {% endif %}
+
+
+
+        </div>
+    </div>
+
+    <main class="" role="main">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-10">
+                    <div id="content">
+                        {{ content }}
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="ads row" id="banners-right">
+                        <div class="banner-item col-md-12 col-xs-12 col-sm-3">
+                            <a href="https://www.gibraltarsoftware.com/loupe/extensions/nlog">
+                                <img src="{{ site.baseurl }}/images/LoupeForNLog.png" alt="Gibraltar Loupe – The free log viewer and log analysis tool for NLog" style="width: 162px" />
+                            </a>
+                        </div>
+                        <div class="banner-item col-md-12 col-xs-12 col-sm-3">
+                            <a href="https://www.ndepend.com/">
+                                <img src="{{ site.baseurl }}/images/PoweredByNDepend.png" alt="Powered by NDepend" style="width: 162px" />
+                            </a>
+                        </div>
+                        <div class="banner-item col-md-12 col-xs-12 col-sm-3">
+                            <a href="https://papertrailapp.com/">
+                                <img src="{{ site.baseurl }}/images/papertrail.png" alt="Papertrail - Frustration-free log management" style="width: 162px" />
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+    <div class="container">
+        <div class="row">
+            <div class="ads" id="banners-bottom">
+                <div class="banner-item">
+                    <div style="background: #00578e url('https://www.jetbrains.com/img/banners/Codebetter300x250.png') no-repeat 0 50%; margin-left:auto;margin-right:auto;margin-top:10px;padding:0;text-decoration:none;text-indent:0;letter-spacing:-0.001em; width:300px; height:250px">
+                        <a href="https://www.jetbrains.com/youtrack" title="YouTrack by JetBrains" style="margin: 52px 0 0 58px;padding: 0; float: left;font-size: 14px; background-image:none;border:0;color: #acc4f9; font-family: trebuchet ms,arial,sans-serif;font-weight: normal;text-align:left;">keyboard-centric bug tracker</a>
+                        <a href="https://www.jetbrains.com/teamcity" title="TeamCity by Jet  Brains" style="margin:0 0 0 58px;padding:122px 0 0 0;font-size:14px; background-image:none;border:0;display:block; color: #acc4f9; font-family: trebuchet ms,arial,sans-serif;font-weight: normal;text-align:left;">continuous integration server</a>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+ 
+
+    <script>
+   
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-41761907-1', 'nlog-project.org');
+        ga('send', 'pageview');
+
+    </script>
 </body>
 </html>

@@ -1,30 +1,86 @@
-body {
-	font-size: 12pt;
-	font-family: Segoe UI, Verdana;
+﻿#docs-header {
+  background: #da6821;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
 }
-
-#sidebar {
-	float: left;
-	width: 162px;
+#docs-header.large-header {
+  padding: 35px 0;
 }
-
-#sidebar #menu {
-	text-align:  right;
-	font-size: 20px;
-	line-height: 24px;
+#docs-header.large-header .content-title {
+  font-size: 45px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-
+#docs-header .content-title {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  font-size: 33px;
+}
+#top {
+  margin-bottom: 0;
+}
 #content {
-	margin-left: 165px;
-	padding-left: 15px;
+  padding-top: 10px;
 }
-
-#menu ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+.logoLink {
+  display: inline-block;
+  background: #ffffff;
 }
-
-div.banner {
-	padding-top: 50px;
+.navbar-brand {
+  padding-top: 5px;
 }
+.btn-outline-inverse {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+.btn-outline-inverse:hover {
+  background: #ffffff;
+  color: #da6821;
+}
+.btn-outline {
+  border: 1px solid #da6821;
+  color: #da6821;
+}
+.btn-outline:hover {
+  background: #da6821;
+  color: #ffffff;
+}
+#banners-right .banner-item {
+  padding-top: 40px;
+  padding-right: 40px;
+}
+@media (min-width: 768px) {
+  .download-text {
+    min-height: 44px;
+  }
+}
+.navbar-header .icon-bar {
+  background: #333;
+}
+.news-date {
+  font-style: italic;
+}
+.news-back-bar {
+  padding-top: 10px;
+}
+.bold {
+  font-weight: bold;
+}
+#targets-after {
+  padding-top: 20px;
+}
+#targets-list {
+  padding: 0 20px;
+}
+.highlight pre {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+header.navbar {
+  border-bottom: none;
+}
+.nav > li.active {
+  background: #eee;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,15 +1,23 @@
 ---
 layout: default
-title: News Archive
+title: News
+header: News
 ---
 
 <section id="archive">
-	<h2>News Archive</h2>
-	<ul>
-		{% for post in site.posts %}
-			<li>
-				<strong>{{ post.date | date: '%Y-%m-%d' }}</strong> <a href="{{ post.url }}">{{ post.title }}</a>
-			</li>
-		{% endfor %}
-	</ul>
+    <h2>News</h2>
+    <ul class="">
+        {% for post in site.posts %}
+        <li>
+            <a href="{{ post.url }}">{{ post.title }}</a> (<span class="news-date">{{ post.date | date_to_string  }}</span>)
+        </li>
+        {% endfor %}
+    </ul>
 </section>
+
+<script>
+    $(function () {
+        // Highlight the nav link.
+        $('#newNavItem').addClass("active");
+    });
+</script>
