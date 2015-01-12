@@ -23,7 +23,7 @@ Archive files by date and sequence
 ----------------------------------
 A new ArchiveNumberMode have been íntroduce for the File target. It is called DateAndSequence and can be set like this:
 {% highlight xml %}
-&lt;target type='File' archiveNumberMode='DateAndSequence' ...&gt;
+<target type='File' archiveNumberMode='DateAndSequence' ...>
 {% endhighlight %}
 As the name says, it "numbers" the archive using both date and sequence number.
 
@@ -31,7 +31,7 @@ Archive old file on startup
 ---------------------------
 A new attribute called archiveOldFileOnStartup has been added to the File target. It allow users to define if an existing old file should be archive every time the application starts. It can be set like this:
 {% highlight xml %}
-&lt;target type='File' archiveOldFileOnStartup='true' ...&gt;
+<target type='File' archiveOldFileOnStartup='true' ...>
 {% endhighlight %}
 
 Programmatic access to variable defined in configuration file
