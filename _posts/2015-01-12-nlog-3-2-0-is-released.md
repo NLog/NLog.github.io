@@ -5,7 +5,7 @@ excerpt: NLog 3.2.0 has been released
 ---
 
 NLog 3.2.0 has been released, and is available at [NuGet](https://www.nuget.org/packages/NLog/ "NuGet - NLog"), 
-the binaries are available at [GitHub release page](https://github.com/NLog/NLog/releases/tag/v3.2.0 "GitHub release page").
+the binaries are available at [GitHub release page](https://github.com/NLog/NLog/releases/tag/v3.2.0.0 "GitHub release page").
 
 This release contains mostly bug fixes, but also a couple of enhancements and new features.
 
