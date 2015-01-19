@@ -1,4 +1,4 @@
-This is the official NLog GitHub page, [nlog-project.org/](http://nlog-project.org/).
+This is the official NLog GitHub page, [nlog-project.org](http://nlog-project.org/).
 
 Add a news post 
 ===
