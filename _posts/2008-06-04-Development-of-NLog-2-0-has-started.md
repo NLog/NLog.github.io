@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Development of NLog 2.0 has started
 ---
 
