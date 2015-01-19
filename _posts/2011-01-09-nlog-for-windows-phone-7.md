@@ -29,8 +29,6 @@ Add NLog  to your Windows Phone app project
 * Open your project
 * Add **NLog.config** to your project - the easiest way is to select '**Add new item**' and choose '**Empty NLog Configuration File**' from the '**NLog**' section. 
 
-<img src="/images/posts/2011/01/NLogWP7AddNewItem.png">
-
 * This will also add a reference to NLog: 
 
 <img src="/images/posts/2011/01/NLogWP7WithReference_thumb.png">
