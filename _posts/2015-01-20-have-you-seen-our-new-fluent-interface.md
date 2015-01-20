@@ -1,11 +1,10 @@
 ---
 layout: post
 title: Have you seen our new fluent interface? (3.2.0 feature)
-excerpt: 
 ---
 
-With the release of 3.2.0 also a new [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface) is introduced. 
-This feature makes it really easy to write complex logging statements and can be extended with [Extension methods](http://msdn.microsoft.com/en-us//library/bb383977.aspx).
+With the release of 3.2.0 a new [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface) has also been  introduced. 
+This feature simplifies writing complex logging statements and can be extended with [extension methods](http://msdn.microsoft.com/en-us//library/bb383977.aspx).
 
 {% highlight csharp %}
 var logger = LogManager.GetCurrentClassLogger();
@@ -19,7 +18,7 @@ To start with the fluent interface:
 
 1. Import the namespace `NLog.Fluent`
 2. Create a `Logger` as regular
-3. Start the fluent interface with `logger.Log(LogLevel...)` or `logger.Debug()`, `logger.Error()` etc.
+3. Start the fluent interface with `logger.Log(LogLevel...)`, `logger.Debug()`, `logger.Error()` etc.
 4. Use the fluent interface
 5. Finish the chain with `.Write()`
 
@@ -63,3 +62,4 @@ class Program
 }
 
 {% endhighlight %}
+
