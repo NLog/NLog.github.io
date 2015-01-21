@@ -21,7 +21,7 @@ LogManager.HiddenAssemblies = new Assembly[] { Assembly.GetExecutingAssembly(), 
 
 Archive files by date and sequence
 ----------------------------------
-A new `ArchiveNumberMode` have been introduced for the File target. It is called `DateAndSequence` and can be set like this:
+A new `ArchiveNumberMode` have been introduced for the `File` target. It is called `DateAndSequence` and can be set like this:
 {% highlight xml %}
 <target type='File' archiveNumberMode='DateAndSequence' ...>
 {% endhighlight %}
