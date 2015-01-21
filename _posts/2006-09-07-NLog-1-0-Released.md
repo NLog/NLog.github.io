@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: NLog 1.0 Released
 ---
 After 2 years of work, we're proud to announce the availability of NLog 1.0.
