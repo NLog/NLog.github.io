@@ -14,14 +14,14 @@ Features
 
 Support for blacklisted assemblies
 -----------------------------
-NLog assemblies are skipped by default, when the calling method is determined, using the callsite renderer. This release adds support for manually specifing other assemblies which should be skipped. This is done by set the assemblies to be skipped like this:
+NLog assemblies are skipped by default, when the calling method is determined, using the callsite renderer. This release adds support for manually specifing assemblies which should be skipped. This is done by set the assemblies to be skipped like this:
 {% highlight csharp %}
 LogManager.HiddenAssemblies = new Assembly[] { Assembly.GetExecutingAssembly(), Assembly.GetEntryAssembly() };
 {% endhighlight %}
 
 Archive files by date and sequence
 ----------------------------------
-A new ArchiveNumberMode have been introduced for the File target. It is called DateAndSequence and can be set like this:
+A new `ArchiveNumberMode` have been introduced for the File target. It is called `DateAndSequence` and can be set like this:
 {% highlight xml %}
 <target type='File' archiveNumberMode='DateAndSequence' ...>
 {% endhighlight %}
@@ -29,12 +29,12 @@ As the name says, it "numbers" the archive using both date and sequence number.
 
 Archive old file on startup
 ---------------------------
-A new attribute called archiveOldFileOnStartup has been added to the File target. It allows users to define if an existing old file should be archived every time the application starts. It can be set like this:
+A new attribute called `archiveOldFileOnStartup` has been added to the `File` target. It allows users to define if an existing file should be archived every time the application starts. It can be set like this:
 {% highlight xml %}
 <target type='File' archiveOldFileOnStartup='true' ...>
 {% endhighlight %}
 
-Programmatic access to variable defined in configuration file
+Programmatic access to variables defined in configuration file
 ---------------------------------------------------------
 It is now possible to access variables defined in configuration files like this:
 {% highlight csharp %}
