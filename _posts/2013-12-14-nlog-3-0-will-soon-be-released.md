@@ -7,6 +7,7 @@ excerpt: NLog 3.0 will soon be released
 Since NLog 2.1 was released, I've focused on moving to a new build server and deciding what frameworks should be supported in future releases. The move to the new build server is almost complete, and support for some of the older frameworks will be dropped.
 
 I've decided that the following no longer will be supported from NLog 3.0:
+
  * Compact Framework (all versions)
  * Silverlight 2 and 3
  * .NET 2.0
