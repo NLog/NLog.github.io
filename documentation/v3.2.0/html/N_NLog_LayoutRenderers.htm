@@ -1,0 +1,138 @@
+﻿<html xmlns:MSHelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" /><META NAME="save" CONTENT="history" /><title>NLog.LayoutRenderers Namespace</title><link rel="stylesheet" type="text/css" href="../styles/presentation.css" /><link rel="stylesheet" type="text/css" href="ms-help://Hx/HxRuntime/HxLink.css" /><script type="text/javascript" src="../scripts/EventUtilities.js"> </script><script type="text/javascript" src="../scripts/SplitScreen.js"> </script><script type="text/javascript" src="../scripts/Dropdown.js"> </script><script type="text/javascript" src="../scripts/script_manifold.js"> </script><script type="text/javascript" src="../scripts/script_feedBack.js"> </script><script type="text/javascript" src="../scripts/CheckboxMenu.js"> </script><script type="text/javascript" src="../scripts/CommonUtilities.js"> </script><meta name="container" content="NLog.LayoutRenderers" /><meta name="file" content="N_NLog_LayoutRenderers" /><meta name="guid" content="N_NLog_LayoutRenderers" /><xml><MSHelp:Attr Name="AssetID" Value="N:NLog.LayoutRenderers" /><MSHelp:TOCTitle Title="NLog.LayoutRenderers Namespace" /><MSHelp:RLTitle Title="NLog.LayoutRenderers Namespace ()" /><MSHelp:Keyword Index="A" Term="N:NLog.LayoutRenderers" /><MSHelp:Keyword Index="A" Term="frlrfNLogLayoutRenderers" /><MSHelp:Keyword Index="K" Term="NLog.LayoutRenderers namespace" /><MSHelp:Keyword Index="F" Term="NLog.LayoutRenderers" /><MSHelp:Attr Name="HelpPriority" Value="1" /><MSHelp:Attr Name="DevLang" Value="CSharp" /><MSHelp:Attr Name="DevLang" Value="VB" /><MSHelp:Attr Name="DevLang" Value="VB" /><MSHelp:Attr Name="Locale" Value="en-us" /><MSHelp:Attr Name="TopicType" Value="kbSyntax" /><MSHelp:Attr Name="TopicType" Value="apiref" /><MSHelp:Attr Name="Abstract" Value="Contains implementation of layout renderers." /></xml></head><body><input type="hidden" id="userDataCache" class="userDataStyle" /><input type="hidden" id="hiddenScrollOffset" /><img id="collapseImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" title="Collapse image" /><img id="expandImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" title="Expand Image" /><img id="collapseAllImage" style="display:none; height:0; width:0;" src="../icons/collapse_all.gif" /><img id="expandAllImage" style="display:none; height:0; width:0;" src="../icons/expand_all.gif" /><img id="dropDownImage" style="display:none; height:0; width:0;" src="../icons/dropdown.gif" /><img id="dropDownHoverImage" style="display:none; height:0; width:0;" src="../icons/dropdownHover.gif" /><img id="copyImage" style="display:none; height:0; width:0;" src="../icons/copycode.gif" title="Copy image" /><img id="copyHoverImage" style="display:none; height:0; width:0;" src="../icons/copycodeHighlight.gif" title="CopyHover image" /><div id="header"><table cellspacing="0" cellpadding="0"><tr><td align="center" style="width: 1px; padding: 0px"><img src="../images/NLogo.gif" /></td><td><table id="topTable" cellspacing="0" cellpadding="0"><tr><td><span onclick="ExpandCollapseAll(toggleAllImage)" style="cursor:default;" onkeypress="ExpandCollapseAll_CheckKey(toggleAllImage, event)" tabindex="0"><img ID="toggleAllImage" class="toggleAll" src="../icons/collapse_all.gif" /> <label id="collapseAllLabel" for="toggleAllImage" style="display: none;">Collapse All</label><label id="expandAllLabel" for="toggleAllImage" style="display: none;">Expand All</label> </span><span>    </span><span id="devlangsDropdown" class="filter" tabindex="0"><img id="devlangsDropdownImage" src="../icons/dropdown.gif" /> <label id="devlangsMenuAllLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: All </nobr></label><label id="devlangsMenuMultipleLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Multiple </nobr></label><label id="devlangsMenuCSharpLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: C# </nobr></label><label id="devlangsMenuVisualBasicLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Visual Basic </nobr></label><label id="devlangsMenuVisualBasicUsageLabel" for="devlangsDropdownImage" style="display: none;"><nobr>Code: Visual Basic (Usage) </nobr></label></span></td></tr></table><div id="devlangsMenu"><input id="CSharpCheckbox" type="checkbox" data="CSharp,cs,'persist'" value="on" onClick="SetLanguage(this)" /><label class="checkboxLabel" for="CSharpCheckbox">C#</label><br /><input id="VisualBasicCheckbox" type="checkbox" data="VisualBasic,vb,'persist'" value="on" onClick="SetLanguage(this)" /><label class="checkboxLabel" for="VisualBasicCheckbox">Visual Basic</label><br /><input id="VisualBasicUsageCheckbox" type="checkbox" data="VisualBasicUsage,vb,'persist'" value="on" onClick="SetLanguage(this)" /><label class="checkboxLabel" for="VisualBasicUsageCheckbox">Visual Basic (Usage)</label><br /></div><table id="bottomTable" cellpadding="0" cellspacing="0"><tr id="headerTableRow1"><td align="left"><span id="runningHeaderText">NLog v3.2.0.0</span></td></tr><tr id="headerTableRow2"><td align="left"><span id="nsrTitle">NLog.LayoutRenderers Namespace</span></td></tr><tr id="headerTableRow3"><td align="left">
+  <span id="headfeedbackarea" class="feedbackhead">
+      <a href="javascript:SubmitFeedback('','NLog v3.2.0.0','','','','%0\dYour%20feedback%20is%20used%20to%20improve%20the%20documentation%20and%20the%20product.%20Your%20e-mail%20address%20will%20not%20be%20used%20for%20any%20other%20purpose%20and%20is%20disposed%20of%20after%20the%20issue%20you%20report%20is%20resolved.%20%20While%20working%20to%20resolve%20the%20issue%20that%20you%20report,%20you%20may%20be%20contacted%20via%20e-mail%20to%20get%20further%20details%20or%20clarification%20on%20the%20feedback%20you%20sent.%20After%20the%20issue%20you%20report%20has%20been%20addressed,%20you%20may%20receive%20an%20e-mail%20to%20let%20you%20know%20that%20your%20feedback%20has%20been%20addressed.%0\A%0\d','Customer%20Feedback');">
+        
+        Send Feedback
+      </a>
+	</span>
+</td></tr></table></td></tr></table><table id="gradientTable"><tr><td class="nsrBottom" background="../icons/gradient.gif" /></tr></table></div><div id="mainSection"><div id="mainBody"><div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()" /><span style="color: DarkGray"> </span><div class="summary">
+        Contains implementation of layout renderers.
+      </div><h1 class="heading"><span onclick="ExpandCollapse(classToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(classToggle, event)" tabindex="0"><img id="classToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Classes</span></h1><div id="classSection" class="section" name="collapseableSection" style=""><table id="typeList" class="members" frame="lhs" cellpadding="2"><col width="10%" /><tr><th class="iconColumn">
+           
+       </th><th class="nameColumn">Class</th><th class="descriptionColumn">Description</th></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_AmbientPropertyAttribute.htm">AmbientPropertyAttribute</a></td><td><div class="summary">
+            Designates a property of the class as an ambient property.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_AppSettingLayoutRenderer.htm">AppSettingLayoutRenderer</a></td><td><div class="summary">
+            Application setting.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_AspApplicationValueLayoutRenderer.htm">AspApplicationValueLayoutRenderer</a></td><td><div class="summary">
+            ASP Application variable.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_AspNetApplicationValueLayoutRenderer.htm">AspNetApplicationValueLayoutRenderer</a></td><td><div class="summary">
+            ASP.NET Application variable.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_AspNetRequestValueLayoutRenderer.htm">AspNetRequestValueLayoutRenderer</a></td><td><div class="summary">
+            ASP.NET Request variable.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_AspNetSessionIDLayoutRenderer.htm">AspNetSessionIDLayoutRenderer</a></td><td><div class="summary">
+            ASP.NET Session ID.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_AspNetSessionValueLayoutRenderer.htm">AspNetSessionValueLayoutRenderer</a></td><td><div class="summary">
+            ASP.NET Session variable.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_AspNetUserAuthTypeLayoutRenderer.htm">AspNetUserAuthTypeLayoutRenderer</a></td><td><div class="summary">
+            ASP.NET User variable.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_AspNetUserIdentityLayoutRenderer.htm">AspNetUserIdentityLayoutRenderer</a></td><td><div class="summary">
+            ASP.NET User variable.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_AspRequestValueLayoutRenderer.htm">AspRequestValueLayoutRenderer</a></td><td><div class="summary">
+            ASP Request variable.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_AspSessionValueLayoutRenderer.htm">AspSessionValueLayoutRenderer</a></td><td><div class="summary">
+            ASP Session variable.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_AssemblyVersionLayoutRenderer.htm">AssemblyVersionLayoutRenderer</a></td><td><div class="summary">
+            Assembly version.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_BaseDirLayoutRenderer.htm">BaseDirLayoutRenderer</a></td><td><div class="summary">
+            The current application domain's base directory.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_CallSiteLayoutRenderer.htm">CallSiteLayoutRenderer</a></td><td><div class="summary">
+            The call site (class name, method name and source information).
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_CounterLayoutRenderer.htm">CounterLayoutRenderer</a></td><td><div class="summary">
+            A counter value (increases on each layout rendering).
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_DateLayoutRenderer.htm">DateLayoutRenderer</a></td><td><div class="summary">
+            Current date and time.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_DocumentUriLayoutRenderer.htm">DocumentUriLayoutRenderer</a></td><td><div class="summary">
+            URI of the HTML page which hosts the current Silverlight application.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_EnvironmentLayoutRenderer.htm">EnvironmentLayoutRenderer</a></td><td><div class="summary">
+            The environment variable.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_EventContextLayoutRenderer.htm">EventContextLayoutRenderer</a></td><td> <font color="red"><b>Obsolete. </b></font><div class="summary">
+            Log event context data.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_EventPropertiesLayoutRenderer.htm">EventPropertiesLayoutRenderer</a></td><td><div class="summary">
+            Log event context data.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_ExceptionLayoutRenderer.htm">ExceptionLayoutRenderer</a></td><td><div class="summary">
+            Exception information provided through 
+            a call to one of the Logger.*Exception() methods.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_FileContentsLayoutRenderer.htm">FileContentsLayoutRenderer</a></td><td><div class="summary">
+            Renders contents of the specified file.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_GarbageCollectorInfoLayoutRenderer.htm">GarbageCollectorInfoLayoutRenderer</a></td><td><div class="summary">
+            The information about the garbage collector.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_GdcLayoutRenderer.htm">GdcLayoutRenderer</a></td><td><div class="summary">
+            Global Diagnostics Context item. Provided for compatibility with log4net.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_GuidLayoutRenderer.htm">GuidLayoutRenderer</a></td><td><div class="summary">
+            Globally-unique identifier (GUID).
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_IdentityLayoutRenderer.htm">IdentityLayoutRenderer</a></td><td><div class="summary">
+            Thread identity information (name and authentication information).
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_InstallContextLayoutRenderer.htm">InstallContextLayoutRenderer</a></td><td><div class="summary">
+            Installation parameter (passed to InstallNLogConfig).
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_LayoutRenderer.htm">LayoutRenderer</a></td><td><div class="summary">
+            Render environmental information related to logging events.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_LayoutRendererAttribute.htm">LayoutRendererAttribute</a></td><td><div class="summary">
+            Marks class as a layout renderer and assigns a format string to it.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_LevelLayoutRenderer.htm">LevelLayoutRenderer</a></td><td><div class="summary">
+            The log level.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_LiteralLayoutRenderer.htm">LiteralLayoutRenderer</a></td><td><div class="summary">
+            A string literal.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_Log4JXmlEventLayoutRenderer.htm">Log4JXmlEventLayoutRenderer</a></td><td><div class="summary">
+            XML event description compatible with log4j, Chainsaw and NLogViewer.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_LoggerNameLayoutRenderer.htm">LoggerNameLayoutRenderer</a></td><td><div class="summary">
+            The logger name.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_LongDateLayoutRenderer.htm">LongDateLayoutRenderer</a></td><td><div class="summary">
+            The date and time in a long, sortable format yyyy-MM-dd HH:mm:ss.mmm.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_MachineNameLayoutRenderer.htm">MachineNameLayoutRenderer</a></td><td><div class="summary">
+            The machine name that the process is running on.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_MdcLayoutRenderer.htm">MdcLayoutRenderer</a></td><td><div class="summary">
+            Mapped Diagnostic Context item. Provided for compatibility with log4net.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_MessageLayoutRenderer.htm">MessageLayoutRenderer</a></td><td><div class="summary">
+            The formatted log message.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_NdcLayoutRenderer.htm">NdcLayoutRenderer</a></td><td><div class="summary">
+            Nested Diagnostic Context item. Provided for compatibility with log4net.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_NewLineLayoutRenderer.htm">NewLineLayoutRenderer</a></td><td><div class="summary">
+            A newline literal.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_NLogDirLayoutRenderer.htm">NLogDirLayoutRenderer</a></td><td><div class="summary">
+            The directory where NLog.dll is located.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_PerformanceCounterLayoutRenderer.htm">PerformanceCounterLayoutRenderer</a></td><td><div class="summary">
+            The performance counter.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_ProcessIdLayoutRenderer.htm">ProcessIdLayoutRenderer</a></td><td><div class="summary">
+            The identifier of the current process.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_ProcessInfoLayoutRenderer.htm">ProcessInfoLayoutRenderer</a></td><td><div class="summary">
+            The information about the running process.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_ProcessNameLayoutRenderer.htm">ProcessNameLayoutRenderer</a></td><td><div class="summary">
+            The name of the current process.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_ProcessTimeLayoutRenderer.htm">ProcessTimeLayoutRenderer</a></td><td><div class="summary">
+            The process time in format HH:mm:ss.mmm.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_QueryPerformanceCounterLayoutRenderer.htm">QueryPerformanceCounterLayoutRenderer</a></td><td><div class="summary">
+            High precision timer, based on the value returned from QueryPerformanceCounter() optionally converted to seconds.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_RegistryLayoutRenderer.htm">RegistryLayoutRenderer</a></td><td><div class="summary">
+            A value from the Registry.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_ShortDateLayoutRenderer.htm">ShortDateLayoutRenderer</a></td><td><div class="summary">
+            The short date in a sortable format yyyy-MM-dd.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_SilverlightApplicationInfoLayoutRenderer.htm">SilverlightApplicationInfoLayoutRenderer</a></td><td><div class="summary">
+            Information about Silverlight application.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_SpecialFolderLayoutRenderer.htm">SpecialFolderLayoutRenderer</a></td><td><div class="summary">
+            System special folder path (includes My Documents, My Music, Program Files, Desktop, and more).
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_StackTraceLayoutRenderer.htm">StackTraceLayoutRenderer</a></td><td><div class="summary">
+            Stack trace renderer.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_TempDirLayoutRenderer.htm">TempDirLayoutRenderer</a></td><td><div class="summary">
+            A temporary directory.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_ThreadIdLayoutRenderer.htm">ThreadIdLayoutRenderer</a></td><td><div class="summary">
+            The identifier of the current thread.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_ThreadNameLayoutRenderer.htm">ThreadNameLayoutRenderer</a></td><td><div class="summary">
+            The name of the current thread.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_TicksLayoutRenderer.htm">TicksLayoutRenderer</a></td><td><div class="summary">
+            The Ticks value of current date and time.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_TimeLayoutRenderer.htm">TimeLayoutRenderer</a></td><td><div class="summary">
+            The time in a 24-hour, sortable format HH:mm:ss.mmm.
+            </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" title="Public class" /></td><td><a href="T_NLog_LayoutRenderers_WindowsIdentityLayoutRenderer.htm">WindowsIdentityLayoutRenderer</a></td><td><div class="summary">
+            Thread Windows identity information (username).
+            </div></td></tr></table></div><h1 class="heading"><span onclick="ExpandCollapse(enumerationToggle)" style="cursor:default;" onkeypress="ExpandCollapse_CheckKey(enumerationToggle, event)" tabindex="0"><img id="enumerationToggle" class="toggle" name="toggleSwitch" src="../icons/collapse_all.gif" />Enumerations</span></h1><div id="enumerationSection" class="section" name="collapseableSection" style=""><table id="typeList" class="members" frame="lhs" cellpadding="2"><col width="10%" /><tr><th class="iconColumn">
+           
+       </th><th class="nameColumn">Enumeration</th><th class="descriptionColumn">Description</th></tr><tr data="enumeration; public"><td><img src="../icons/pubenumeration.gif" title="Public enumeration" /></td><td><a href="T_NLog_LayoutRenderers_GarbageCollectorProperty.htm">GarbageCollectorProperty</a></td><td><div class="summary">
+            Gets or sets the property of System.GC to retrieve.
+            </div></td></tr><tr data="enumeration; public"><td><img src="../icons/pubenumeration.gif" title="Public enumeration" /></td><td><a href="T_NLog_LayoutRenderers_ProcessInfoProperty.htm">ProcessInfoProperty</a></td><td><div class="summary">
+            Property of System.Diagnostics.Process to retrieve.
+            </div></td></tr><tr data="enumeration; public"><td><img src="../icons/pubenumeration.gif" title="Public enumeration" /></td><td><a href="T_NLog_LayoutRenderers_SilverlightApplicationInfoOption.htm">SilverlightApplicationInfoOption</a></td><td><div class="summary">
+            Specifies application information to display in ${sl-appinfo} renderer.
+            </div></td></tr><tr data="enumeration; public"><td><img src="../icons/pubenumeration.gif" title="Public enumeration" /></td><td><a href="T_NLog_LayoutRenderers_StackTraceFormat.htm">StackTraceFormat</a></td><td><div class="summary">
+            Format of the ${stacktrace} layout renderer output.
+            </div></td></tr></table></div></div><div id="footer"><div class="footerLine"><img width="100%" height="3px" src="../icons/footer.gif" title="Footer image" /></div><A NAME="feedback"></A><span id="fb" class="feedbackcss"> </span>
+ <p /><a href="http://nlog-project.org/" target="_blank">Copyright (c) 2004-2015 by Kim Christensen</a></div></div></body></html>
