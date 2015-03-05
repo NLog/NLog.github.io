@@ -16,3 +16,7 @@ How to add a new news post.
    ---
    ```
 3. Write some [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/) and save the file. 
+
+Update version
+===
+Update `version` variable in [_config.yml](_config.yml)
