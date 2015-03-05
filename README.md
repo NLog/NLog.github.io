@@ -4,7 +4,7 @@ Add a news post
 ===
 How to add a new news post.
 
-1. Create and new MarkDown file (.md) in the `_posts` folder, starting with the date (yyyy-MM-dd)
+1. Create and new MarkDown file (.md) in the `_posts` folder, starting with the date (yyyy-MM-dd). Don't use spaces or extra dots in the filename!
 2. Start the post with the [Jekyll front matter](http://jekyllrb.com/docs/frontmatter/), 
   * `layout: post` is required. 
   * Choose a good title after `title:`
