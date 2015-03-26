@@ -12,7 +12,7 @@ All issues for 4.0 are now prioritized with the  [MoSCoW method](https://en.wiki
  - The release *should* contains the *should haves*. But we will release even if not all should haves are implemented.
  - Could haves would be nice, but only if we have enough time, according to the planned release date. 
  
-We have now:
+The roadmap of 4.0:
 
 * [5 must haves](https://github.com/NLog/NLog/issues?q=is%3Aopen+is%3Aissue+milestone%3A4.0+label%3A%22Must+have%22)
 * [7 should haves](https://github.com/NLog/NLog/issues?q=is%3Aopen+is%3Aissue+milestone%3A4.0+label%3A%22Should+have%22+)
