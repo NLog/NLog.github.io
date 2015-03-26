@@ -19,5 +19,9 @@ We have now:
 * [10 could haves](https://github.com/NLog/NLog/issues?q=is%3Aopen+is%3Aissue+milestone%3A4.0+label%3A%22Could+have%22+)
 
 
+Please note that "pull requests" (PR's) that are accepted a week before release, are also released with 4.0! 
+
+
+
 Also I would like to emphasize that NLog is a fully open source project. So also the roadmap and internal discussions are open. 
 If you're a interested in the NLog process and discussions, just look at the [Github issues](https://github.com/NLog/NLog/issues?q=is%3Aopen+is%3Aissue+label%3Adiscussion)
