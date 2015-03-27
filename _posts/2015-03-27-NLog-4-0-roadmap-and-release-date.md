@@ -18,7 +18,7 @@ The roadmap of 4.0:
 * [5 must haves](https://github.com/NLog/NLog/issues?q=is%3Aopen+is%3Aissue+milestone%3A4.0+label%3A%22Must+have%22)
 * [7 should haves](https://github.com/NLog/NLog/issues?q=is%3Aopen+is%3Aissue+milestone%3A4.0+label%3A%22Should+have%22+)
 * [10 could haves](https://github.com/NLog/NLog/issues?q=is%3Aopen+is%3Aissue+milestone%3A4.0+label%3A%22Could+have%22+)
-* [Total list](https://github.com/NLog/NLog/issues?utf8=%E2%9C%93&q=milestone%3A4.0)
+* [Full issue list](https://github.com/NLog/NLog/issues?utf8=%E2%9C%93&q=milestone%3A4.0)
 
 
 Please note that "pull requests" (PR's) that are accepted a week before release, are also released with 4.0! 
