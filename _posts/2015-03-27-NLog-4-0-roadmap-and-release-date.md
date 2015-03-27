@@ -21,7 +21,7 @@ The roadmap of 4.0:
 * [Full issue list for v4.0](https://github.com/NLog/NLog/issues?utf8=%E2%9C%93&q=milestone%3A4.0)
 
 
-Please note that "pull requests" (PR's) if accepted a week before release, are also released with 4.0! 
+Please note that "pull requests" (PR's), if accepted a week before release, are also released with 4.0! 
 
 
 
