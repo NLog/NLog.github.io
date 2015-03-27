@@ -4,7 +4,7 @@ title: NLog 4.0 - Roadmap and release date
 ---
 
 With the upcoming release of 4.0, we're doing some things differently: 
-we are time-boxing the release and so the release date is now already known : Jun 2nd, 2015, a year after the release of 3.0!
+we are time-boxing the release and so the release date is now already known: June 2nd, 2015, a year after the release of 3.0!
 
 Issues for 4.0 are now prioritized with the  [MoSCoW method](https://en.wikipedia.org/wiki/MoSCoW_method). In short this means:
 
