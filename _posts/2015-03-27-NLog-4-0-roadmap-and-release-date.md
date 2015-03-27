@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NLog 4.0: Roadmap and release date
+title: NLog 4.0 - Roadmap and release date
 ---
 
 With the upcoming release of 4.0, we're doing some things differently: 
