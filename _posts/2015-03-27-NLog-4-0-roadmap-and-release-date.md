@@ -26,4 +26,4 @@ Please note that "pull requests" (PR's), if accepted a week before release, are 
 
 
 I would also like to emphasize that NLog is a fully open source project. So also the roadmap and internal discussions are open. 
-If you're interested in the NLog process and discussions, just look at the [discussion at the Github issues list](https://github.com/NLog/NLog/issues?q=is%3Aopen+is%3Aissue+label%3Adiscussion)
+If you're interested in the NLog process and discussions, just look at the [discussions at the Github issues list](https://github.com/NLog/NLog/issues?q=is%3Aopen+is%3Aissue+label%3Adiscussion)
