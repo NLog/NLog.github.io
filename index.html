@@ -23,28 +23,31 @@ layout: default
                 <h4>Easy to configure</h4>
                 <p>
                     NLog is very easy to configure,  both through <a href="https://github.com/nlog/NLog/wiki/Configuration-file">configuration file</a>
-                    and <a href="https://github.com/nlog/NLog/wiki/Configuration-API">programmatically</a>. The easy-to-use logger pattern known from log4net.
+                    and <a href="https://github.com/nlog/NLog/wiki/Configuration-API">programmatically</a>. 
+                    Even without restarting the application, the configuration can be changed.
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <h4>Templatable</h4>
+                <p>
+                 Every log message can be templated with various <a href="https://github.com/nlog/nlog/wiki/Layout-Renderers">/a> layout renders</a>
                 </p>
             </div>
             <div class="col-sm-4">
                 <h4>Extensible</h4>
                 <p>
-                    Even though NLog has targets and pre-defined layouts, you can write <a href="https://github.com/nlog/nlog/wiki/How-to-write-a-Target"> custom targets</a> or pass <a href="https://github.com/nlog/nlog/wiki/Event-Context-Layout-Renderer"> custom values</a>
+                    Even though NLog has targets and pre-defined layouts, 
+                    you can write <a href="https://github.com/nlog/nlog/wiki/How-to-write-a-Target"> custom targets</a> or pass <a href="https://github.com/nlog/nlog/wiki/Event-Context-Layout-Renderer"> custom values</a>
                 </p>
             </div>
-            <div class="col-sm-4">
-                <h4>Cross platform</h4>
-                <p>
-                  NLog has cross-platform support: .NET Framework (3.5, 4 and 4.5), Silverlight (4 and 5) and Mono.
-         
-                </p>
-            </div>
+        
         </div>
     </section>
     <section>
         <h1 class="page-header" id="targets">Targets</h1>
         <p class="lead">
-            Targets are used to display, store or pass log messages to another destination.
+            Targets are used to display, store or pass log messages to another destination. 
+            NLog can dynamically write to one of multiple targets for each log message.
         </p>
         <p>There are more than 30 targets provided out-of the box, including:</p>
         <div id="targets-list">
@@ -54,7 +57,9 @@ layout: default
                         <i class="fa fa-file fa-fw"></i>
                         Files
                     </h4>
-                    Write logs to any number of files, with <a href="https://github.com/nlog/NLog/wiki/File-target">automatic file naming and archival</a>
+                    Write logs to any number of files, 
+                    with <a href="https://github.com/nlog/NLog/wiki/File-target">automatic file naming and archival</a>. 
+                    NLog won't lock your files by default.
                 </div>
                 <div class="col-sm-4">
                     <h4>
@@ -104,6 +109,14 @@ layout: default
 
         </p>
     </section>
+      <section>
+        <h1 class="page-header" id="support">Support</h1>
+        <p>
+            NLog has cross-platform support: .NET Framework (3.5, 4 and 4.5), Silverlight (4 and 5) and Mono.
+        </p>
+    </section>
+     
+    
     <section>
         <h1 class="page-header" id="license">License</h1>
         <p>
