@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shfbBuild product="Sandcastle Help File Builder" version="2015.1.12.0" projectFile="X:\_GitHub\NLog\src\Docs\NLog.shfbproj" started="18-5-2015 22:34:23">
+<buildStep step="Initializing">
+Finding tools...
+The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
+Locating components in the following folder(s):
+   X:\_GitHub\NLog\src\Docs
+Using presentation style &#39;VS2013&#39; located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013&#39;
+Loading and initializing plug-ins...
+Lightweight Website Style Version 2015.1.12.0
+Copyright &#169; 2006-2015, Eric Woodruff, All Rights Reserved
+Portions Copyright &#169; 2014, Sam Harwell, All Rights Reserved
+</buildStep>
+<buildStep step="ValidatingDocumentationSources">
+Validating and copying documentation source information
+Source: X:\_GitHub\NLog\build\bin\Release\.NET Framework 4.5\NLog.dll
+    Found assembly &#39;X:\_GitHub\NLog\build\bin\Release\.NET Framework 4.5\NLog.dll&#39;
+Source: X:\_GitHub\NLog\build\bin\Release\.NET Framework 4.5\NLog.xml
+Source: X:\_GitHub\NLog\build\bin\Release\.NET Framework 4.5\NLog.Extended.dll
+    Found assembly &#39;X:\_GitHub\NLog\build\bin\Release\.NET Framework 4.5\NLog.Extended.dll&#39;
+Source: X:\_GitHub\NLog\build\bin\Release\.NET Framework 4.5\NLog.Extended.xml
+
+Copying XML comments files
+    X:\_GitHub\NLog\build\bin\Release\.NET Framework 4.5\NLog.xml -&gt; X:\_GitHub\NLog\src\Docs\Working\NLog.xml
+    X:\_GitHub\NLog\build\bin\Release\.NET Framework 4.5\NLog.Extended.xml -&gt; X:\_GitHub\NLog\src\Docs\Working\NLog.Extended.xml
+</buildStep>
+<buildStep step="GenerateSharedContent">
+Generating shared content files (en-US, English (United States))...
+<plugIn name="Lightweight Website Style" behavior="After" priority="1000">
+</plugIn>    Last step completed in 00:00:00,0090
+</buildStep>
+<buildStep step="GenerateApiFilter">
+Generating API filter for MRefBuilder...
+    Last step completed in 00:00:00,0340
+</buildStep>
+<buildStep step="GenerateReflectionInfo">
+Generating reflection information...
+[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+Build started 18-5-2015 22:34:24.
+Project &quot;X:\_GitHub\NLog\src\Docs\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
+PrepareForBuild:
+  Creating directory &quot;obj\Debug\&quot;.
+GenerateRefInfo:
+  MRefBuilder (v2015.1.12.0)
+  Copyright c 2006-2015, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
+  Loaded 2 assemblies for reflection and 1 dependency assemblies.
+  Wrote information on 16 namespaces, 235 types, and 1621 members
+  Copying file from &quot;reflection.org&quot; to &quot;reflection.all&quot;.
+  XslTransform (v2015.1.12.0)
+  Copyright c 2006-2015, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\MergeDuplicates.xsl&#39;.
+Done Building Project &quot;X:\_GitHub\NLog\src\Docs\Working\GenerateRefInfo.proj&quot; (default targets).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.86
+    Last step completed in 00:00:04,5013
+</buildStep>
+<buildStep step="TransformReflectionInfo">
+Transforming reflection output...
+[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+Build started 18-5-2015 22:34:29.
+Project &quot;X:\_GitHub\NLog\src\Docs\Working\TransformManifest.proj&quot; on node 1 (default targets).
+TransformManifest:
+  XslTransform (v2015.1.12.0)
+  Copyright c 2006-2015, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\\ProductionTransforms\ApplyVSDocModel.xsl&#39;.
+  Copying file from &quot;reflection.xml&quot; to &quot;reflection.nofilenames&quot;.
+  XslTransform (v2015.1.12.0)
+  Copyright c 2006-2015, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\AddFilenames.xsl&#39;.
+    Unique name M_NLog_LogEventInfo__ctor_1 generated for M:NLog.LogEventInfo.#ctor(NLog.LogLevel,System.String,System.IFormatProvider,System.String,System.Object[])
+    Unique name M_NLog_LogEventInfo__ctor_2 generated for M:NLog.LogEventInfo.#ctor(NLog.LogLevel,System.String,System.IFormatProvider,System.String,System.Object[],System.Exception)
+    Unique name M_NLog_LogEventInfo__ctor_3 generated for M:NLog.LogEventInfo.#ctor(NLog.LogLevel,System.String,System.String)
+    Unique name M_NLog_LogEventInfo_Create_1 generated for M:NLog.LogEventInfo.Create(NLog.LogLevel,System.String,System.IFormatProvider,System.String,System.Object[])
+    Unique name M_NLog_LogEventInfo_Create_2 generated for M:NLog.LogEventInfo.Create(NLog.LogLevel,System.String,System.String)
+    Unique name M_NLog_LogEventInfo_Create_3 generated for M:NLog.LogEventInfo.Create(NLog.LogLevel,System.String,System.String,System.Exception)
+    Unique name M_NLog_LogFactory__ctor_1 generated for M:NLog.LogFactory.#ctor(NLog.Config.LoggingConfiguration)
+    Unique name M_NLog_LogFactory_Dispose_1 generated for M:NLog.LogFactory.Dispose(System.Boolean)
+    Unique name M_NLog_LogFactory_Flush_1 generated for M:NLog.LogFactory.Flush(NLog.Common.AsyncContinuation)
+    Unique name M_NLog_LogFactory_Flush_2 generated for M:NLog.LogFactory.Flush(NLog.Common.AsyncContinuation,System.Int32)
+    Unique name M_NLog_LogFactory_Flush_3 generated for M:NLog.LogFactory.Flush(NLog.Common.AsyncContinuation,System.TimeSpan)
+    Unique name M_NLog_LogFactory_Flush_4 generated for M:NLog.LogFactory.Flush(System.Int32)
+    Unique name M_NLog_LogFactory_Flush_5 generated for M:NLog.LogFactory.Flush(System.TimeSpan)
+    Unique name M_NLog_LogFactory_GetCurrentClassLogger_1 generated for M:NLog.LogFactory.GetCurrentClassLogger(System.Type)
+    Unique name M_NLog_LogFactory_GetLogger_1 generated for M:NLog.LogFactory.GetLogger(System.String,System.Type)
+    Unique name M_NLog_Logger_Debug_1 generated for M:NLog.Logger.Debug(System.IFormatProvider,System.Object)
+    Unique name M_NLog_Logger_Debug_2 generated for M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Boolean)
+    Unique name M_NLog_Logger_Debug_3 generated for M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Byte)
+    Unique name M_NLog_Logger_Debug_4 generated for M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Char)
+    Unique name M_NLog_Logger_Debug_5 generated for M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Decimal)
+    Unique name M_NLog_Logger_Debug_6 generated for M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Double)
+    Unique name M_NLog_Logger_Debug_7 generated for M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Int32)
+    Unique name M_NLog_Logger_Debug_8 generated for M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Int64)
+    Unique name M_NLog_Logger_Debug_9 generated for M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Object)
+    Unique name M_NLog_Logger_Debug_10 generated for M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Object[])
+    Unique name M_NLog_Logger_Debug_11 generated for M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.SByte)
+    Unique name M_NLog_Logger_Debug_12 generated for M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Single)
+    Unique name M_NLog_Logger_Debug_13 generated for M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.String)
+    Unique name M_NLog_Logger_Debug_14 generated for M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.UInt32)
+    Unique name M_NLog_Logger_Debug_15 generated for M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.UInt64)
+    Unique name M_NLog_Logger_Debug__1_1 generated for M:NLog.Logger.Debug``1(System.IFormatProvider,``0)
+    Unique name M_NLog_Logger_Debug_16 generated for M:NLog.Logger.Debug(System.Object)
+    Unique name M_NLog_Logger_Debug_17 generated for M:NLog.Logger.Debug(System.String)
+    Unique name M_NLog_Logger_Debug_18 generated for M:NLog.Logger.Debug(System.String,System.Boolean)
+    Unique name M_NLog_Logger_Debug_19 generated for M:NLog.Logger.Debug(System.String,System.Byte)
+    Unique name M_NLog_Logger_Debug_20 generated for M:NLog.Logger.Debug(System.String,System.Char)
+    Unique name M_NLog_Logger_Debug_21 generated for M:NLog.Logger.Debug(System.String,System.Decimal)
+    Unique name M_NLog_Logger_Debug_22 generated for M:NLog.Logger.Debug(System.String,System.Double)
+    Unique name M_NLog_Logger_Debug_23 generated for M:NLog.Logger.Debug(System.String,System.Exception)
+    Unique name M_NLog_Logger_Debug_24 generated for M:NLog.Logger.Debug(System.String,System.Int32)
+    Unique name M_NLog_Logger_Debug_25 generated for M:NLog.Logger.Debug(System.String,System.Int64)
+    Unique name M_NLog_Logger_Debug_26 generated for M:NLog.Logger.Debug(System.String,System.Object)
+    Unique name M_NLog_Logger_Debug_27 generated for M:NLog.Logger.Debug(System.String,System.Object,System.Object)
+    Unique name M_NLog_Logger_Debug_28 generated for M:NLog.Logger.Debug(System.String,System.Object,System.Object,System.Object)
+    Unique name M_NLog_Logger_Debug_29 generated for M:NLog.Logger.Debug(System.String,System.Object[])
+    Unique name M_NLog_Logger_Debug_30 generated for M:NLog.Logger.Debug(System.String,System.SByte)
+    Unique name M_NLog_Logger_Debug_31 generated for M:NLog.Logger.Debug(System.String,System.Single)
+    Unique name M_NLog_Logger_Debug_32 generated for M:NLog.Logger.Debug(System.String,System.String)
+    Unique name M_NLog_Logger_Debug_33 generated for M:NLog.Logger.Debug(System.String,System.UInt32)
+    Unique name M_NLog_Logger_Debug_34 generated for M:NLog.Logger.Debug(System.String,System.UInt64)
+    Unique name M_NLog_Logger_Debug__1_2 generated for M:NLog.Logger.Debug``1(System.String,``0)
+    Unique name M_NLog_Logger_Debug__2_1 generated for M:NLog.Logger.Debug``2(System.String,``0,``1)
+    Unique name M_NLog_Logger_Debug__3_1 generated for M:NLog.Logger.Debug``3(System.String,``0,``1,``2)
+    Unique name M_NLog_Logger_Debug__1_3 generated for M:NLog.Logger.Debug``1(``0)
+    Unique name M_NLog_Logger_Error_1 generated for M:NLog.Logger.Error(System.IFormatProvider,System.Object)
+    Unique name M_NLog_Logger_Error_2 generated for M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Boolean)
+    Unique name M_NLog_Logger_Error_3 generated for M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Byte)
+    Unique name M_NLog_Logger_Error_4 generated for M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Char)
+    Unique name M_NLog_Logger_Error_5 generated for M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Decimal)
+    Unique name M_NLog_Logger_Error_6 generated for M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Double)
+    Unique name M_NLog_Logger_Error_7 generated for M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Int32)
+    Unique name M_NLog_Logger_Error_8 generated for M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Int64)
+    Unique name M_NLog_Logger_Error_9 generated for M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Object)
+    Unique name M_NLog_Logger_Error_10 generated for M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Object[])
+    Unique name M_NLog_Logger_Error_11 generated for M:NLog.Logger.Error(System.IFormatProvider,System.String,System.SByte)
+    Unique name M_NLog_Logger_Error_12 generated for M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Single)
+    Unique name M_NLog_Logger_Error_13 generated for M:NLog.Logger.Error(System.IFormatProvider,System.String,System.String)
+    Unique name M_NLog_Logger_Error_14 generated for M:NLog.Logger.Error(System.IFormatProvider,System.String,System.UInt32)
+    Unique name M_NLog_Logger_Error_15 generated for M:NLog.Logger.Error(System.IFormatProvider,System.String,System.UInt64)
+    Unique name M_NLog_Logger_Error__1_1 generated for M:NLog.Logger.Error``1(System.IFormatProvider,``0)
+    Unique name M_NLog_Logger_Error_16 generated for M:NLog.Logger.Error(System.Object)
+    Unique name M_NLog_Logger_Error_17 generated for M:NLog.Logger.Error(System.String)
+    Unique name M_NLog_Logger_Error_18 generated for M:NLog.Logger.Error(System.String,System.Boolean)
+    Unique name M_NLog_Logger_Error_19 generated for M:NLog.Logger.Error(System.String,System.Byte)
+    Unique name M_NLog_Logger_Error_20 generated for M:NLog.Logger.Error(System.String,System.Char)
+    Unique name M_NLog_Logger_Error_21 generated for M:NLog.Logger.Error(System.String,System.Decimal)
+    Unique name M_NLog_Logger_Error_22 generated for M:NLog.Logger.Error(System.String,System.Double)
+    Unique name M_NLog_Logger_Error_23 generated for M:NLog.Logger.Error(System.String,System.Exception)
+    Unique name M_NLog_Logger_Error_24 generated for M:NLog.Logger.Error(System.String,System.Int32)
+    Unique name M_NLog_Logger_Error_25 generated for M:NLog.Logger.Error(System.String,System.Int64)
+    Unique name M_NLog_Logger_Error_26 generated for M:NLog.Logger.Error(System.String,System.Object)
+    Unique name M_NLog_Logger_Error_27 generated for M:NLog.Logger.Error(System.String,System.Object,System.Object)
+    Unique name M_NLog_Logger_Error_28 generated for M:NLog.Logger.Error(System.String,System.Object,System.Object,System.Object)
+    Unique name M_NLog_Logger_Error_29 generated for M:NLog.Logger.Error(System.String,System.Object[])
+    Unique name M_NLog_Logger_Error_30 generated for M:NLog.Logger.Error(System.String,System.SByte)
+    Unique name M_NLog_Logger_Error_31 generated for M:NLog.Logger.Error(System.String,System.Single)
+    Unique name M_NLog_Logger_Error_32 generated for M:NLog.Logger.Error(System.String,System.String)
+    Unique name M_NLog_Logger_Error_33 generated for M:NLog.Logger.Error(System.String,System.UInt32)
+    Unique name M_NLog_Logger_Error_34 generated for M:NLog.Logger.Error(System.String,System.UInt64)
+    Unique name M_NLog_Logger_Error__1_2 generated for M:NLog.Logger.Error``1(System.String,``0)
+    Unique name M_NLog_Logger_Error__2_1 generated for M:NLog.Logger.Error``2(System.String,``0,``1)
+    Unique name M_NLog_Logger_Error__3_1 generated for M:NLog.Logger.Error``3(System.String,``0,``1,``2)
+    Unique name M_NLog_Logger_Error__1_3 generated for M:NLog.Logger.Error``1(``0)
+    Unique name M_NLog_Logger_Fatal_1 generated for M:NLog.Logger.Fatal(System.IFormatProvider,System.Object)
+    Unique name M_NLog_Logger_Fatal_2 generated for M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Boolean)
+    Unique name M_NLog_Logger_Fatal_3 generated for M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Byte)
+    Unique name M_NLog_Logger_Fatal_4 generated for M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Char)
+    Unique name M_NLog_Logger_Fatal_5 generated for M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Decimal)
+    Unique name M_NLog_Logger_Fatal_6 generated for M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Double)
+    Unique name M_NLog_Logger_Fatal_7 generated for M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Int32)
+    Unique name M_NLog_Logger_Fatal_8 generated for M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Int64)
+    Unique name M_NLog_Logger_Fatal_9 generated for M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Object)
+    Unique name M_NLog_Logger_Fatal_10 generated for M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Object[])
+    Unique name M_NLog_Logger_Fatal_11 generated for M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.SByte)
+    Unique name M_NLog_Logger_Fatal_12 generated for M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Single)
+    Unique name M_NLog_Logger_Fatal_13 generated for M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.String)
+    Unique name M_NLog_Logger_Fatal_14 generated for M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.UInt32)
+    Unique name M_NLog_Logger_Fatal_15 generated for M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.UInt64)
+    Unique name M_NLog_Logger_Fatal__1_1 generated for M:NLog.Logger.Fatal``1(System.IFormatProvider,``0)
+    Unique name M_NLog_Logger_Fatal_16 generated for M:NLog.Logger.Fatal(System.Object)
+    Unique name M_NLog_Logger_Fatal_17 generated for M:NLog.Logger.Fatal(System.String)
+    Unique name M_NLog_Logger_Fatal_18 generated for M:NLog.Logger.Fatal(System.String,System.Boolean)
+    Unique name M_NLog_Logger_Fatal_19 generated for M:NLog.Logger.Fatal(System.String,System.Byte)
+    Unique name M_NLog_Logger_Fatal_20 generated for M:NLog.Logger.Fatal(System.String,System.Char)
+    Unique name M_NLog_Logger_Fatal_21 generated for M:NLog.Logger.Fatal(System.String,System.Decimal)
+    Unique name M_NLog_Logger_Fatal_22 generated for M:NLog.Logger.Fatal(System.String,System.Double)
+    Unique name M_NLog_Logger_Fatal_23 generated for M:NLog.Logger.Fatal(System.String,System.Exception)
+    Unique name M_NLog_Logger_Fatal_24 generated for M:NLog.Logger.Fatal(System.String,System.Int32)
+    Unique name M_NLog_Logger_Fatal_25 generated for M:NLog.Logger.Fatal(System.String,System.Int64)
+    Unique name M_NLog_Logger_Fatal_26 generated for M:NLog.Logger.Fatal(System.String,System.Object)
+    Unique name M_NLog_Logger_Fatal_27 generated for M:NLog.Logger.Fatal(System.String,System.Object,System.Object)
+    Unique name M_NLog_Logger_Fatal_28 generated for M:NLog.Logger.Fatal(System.String,System.Object,System.Object,System.Object)
+    Unique name M_NLog_Logger_Fatal_29 generated for M:NLog.Logger.Fatal(System.String,System.Object[])
+    Unique name M_NLog_Logger_Fatal_30 generated for M:NLog.Logger.Fatal(System.String,System.SByte)
+    Unique name M_NLog_Logger_Fatal_31 generated for M:NLog.Logger.Fatal(System.String,System.Single)
+    Unique name M_NLog_Logger_Fatal_32 generated for M:NLog.Logger.Fatal(System.String,System.String)
+    Unique name M_NLog_Logger_Fatal_33 generated for M:NLog.Logger.Fatal(System.String,System.UInt32)
+    Unique name M_NLog_Logger_Fatal_34 generated for M:NLog.Logger.Fatal(System.String,System.UInt64)
+    Unique name M_NLog_Logger_Fatal__1_2 generated for M:NLog.Logger.Fatal``1(System.String,``0)
+    Unique name M_NLog_Logger_Fatal__2_1 generated for M:NLog.Logger.Fatal``2(System.String,``0,``1)
+    Unique name M_NLog_Logger_Fatal__3_1 generated for M:NLog.Logger.Fatal``3(System.String,``0,``1,``2)
+    Unique name M_NLog_Logger_Fatal__1_3 generated for M:NLog.Logger.Fatal``1(``0)
+    Unique name M_NLog_Logger_Info_1 generated for M:NLog.Logger.Info(System.IFormatProvider,System.Object)
+    Unique name M_NLog_Logger_Info_2 generated for M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Boolean)
+    Unique name M_NLog_Logger_Info_3 generated for M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Byte)
+    Unique name M_NLog_Logger_Info_4 generated for M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Char)
+    Unique name M_NLog_Logger_Info_5 generated for M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Decimal)
+    Unique name M_NLog_Logger_Info_6 generated for M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Double)
+    Unique name M_NLog_Logger_Info_7 generated for M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Int32)
+    Unique name M_NLog_Logger_Info_8 generated for M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Int64)
+    Unique name M_NLog_Logger_Info_9 generated for M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Object)
+    Unique name M_NLog_Logger_Info_10 generated for M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Object[])
+    Unique name M_NLog_Logger_Info_11 generated for M:NLog.Logger.Info(System.IFormatProvider,System.String,System.SByte)
+    Unique name M_NLog_Logger_Info_12 generated for M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Single)
+    Unique name M_NLog_Logger_Info_13 generated for M:NLog.Logger.Info(System.IFormatProvider,System.String,System.String)
+    Unique name M_NLog_Logger_Info_14 generated for M:NLog.Logger.Info(System.IFormatProvider,System.String,System.UInt32)
+    Unique name M_NLog_Logger_Info_15 generated for M:NLog.Logger.Info(System.IFormatProvider,System.String,System.UInt64)
+    Unique name M_NLog_Logger_Info__1_1 generated for M:NLog.Logger.Info``1(System.IFormatProvider,``0)
+    Unique name M_NLog_Logger_Info_16 generated for M:NLog.Logger.Info(System.Object)
+    Unique name M_NLog_Logger_Info_17 generated for M:NLog.Logger.Info(System.String)
+    Unique name M_NLog_Logger_Info_18 generated for M:NLog.Logger.Info(System.String,System.Boolean)
+    Unique name M_NLog_Logger_Info_19 generated for M:NLog.Logger.Info(System.String,System.Byte)
+    Unique name M_NLog_Logger_Info_20 generated for M:NLog.Logger.Info(System.String,System.Char)
+    Unique name M_NLog_Logger_Info_21 generated for M:NLog.Logger.Info(System.String,System.Decimal)
+    Unique name M_NLog_Logger_Info_22 generated for M:NLog.Logger.Info(System.String,System.Double)
+    Unique name M_NLog_Logger_Info_23 generated for M:NLog.Logger.Info(System.String,System.Exception)
+    Unique name M_NLog_Logger_Info_24 generated for M:NLog.Logger.Info(System.String,System.Int32)
+    Unique name M_NLog_Logger_Info_25 generated for M:NLog.Logger.Info(System.String,System.Int64)
+    Unique name M_NLog_Logger_Info_26 generated for M:NLog.Logger.Info(System.String,System.Object)
+    Unique name M_NLog_Logger_Info_27 generated for M:NLog.Logger.Info(System.String,System.Object,System.Object)
+    Unique name M_NLog_Logger_Info_28 generated for M:NLog.Logger.Info(System.String,System.Object,System.Object,System.Object)
+    Unique name M_NLog_Logger_Info_29 generated for M:NLog.Logger.Info(System.String,System.Object[])
+    Unique name M_NLog_Logger_Info_30 generated for M:NLog.Logger.Info(System.String,System.SByte)
+    Unique name M_NLog_Logger_Info_31 generated for M:NLog.Logger.Info(System.String,System.Single)
+    Unique name M_NLog_Logger_Info_32 generated for M:NLog.Logger.Info(System.String,System.String)
+    Unique name M_NLog_Logger_Info_33 generated for M:NLog.Logger.Info(System.String,System.UInt32)
+    Unique name M_NLog_Logger_Info_34 generated for M:NLog.Logger.Info(System.String,System.UInt64)
+    Unique name M_NLog_Logger_Info__1_2 generated for M:NLog.Logger.Info``1(System.String,``0)
+    Unique name M_NLog_Logger_Info__2_1 generated for M:NLog.Logger.Info``2(System.String,``0,``1)
+    Unique name M_NLog_Logger_Info__3_1 generated for M:NLog.Logger.Info``3(System.String,``0,``1,``2)
+    Unique name M_NLog_Logger_Info__1_3 generated for M:NLog.Logger.Info``1(``0)
+    Unique name M_NLog_Logger_Log_1 generated for M:NLog.Logger.Log(NLog.LogLevel,NLog.LogMessageGenerator)
+    Unique name M_NLog_Logger_Log_2 generated for M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.Object)
+    Unique name M_NLog_Logger_Log_3 generated for M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Boolean)
+    Unique name M_NLog_Logger_Log_4 generated for M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Byte)
+    Unique name M_NLog_Logger_Log_5 generated for M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Char)
+    Unique name M_NLog_Logger_Log_6 generated for M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Decimal)
+    Unique name M_NLog_Logger_Log_7 generated for M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Double)
+    Unique name M_NLog_Logger_Log_8 generated for M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Int32)
+    Unique name M_NLog_Logger_Log_9 generated for M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Int64)
+    Unique name M_NLog_Logger_Log_10 generated for M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Object)
+    Unique name M_NLog_Logger_Log_11 generated for M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Object[])
+    Unique name M_NLog_Logger_Log_12 generated for M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.SByte)
+    Unique name M_NLog_Logger_Log_13 generated for M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Single)
+    Unique name M_NLog_Logger_Log_14 generated for M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.String)
+    Unique name M_NLog_Logger_Log_15 generated for M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.UInt32)
+    Unique name M_NLog_Logger_Log_16 generated for M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.UInt64)
+    Unique name M_NLog_Logger_Log__1_1 generated for M:NLog.Logger.Log``1(NLog.LogLevel,System.IFormatProvider,``0)
+    Unique name M_NLog_Logger_Log_17 generated for M:NLog.Logger.Log(NLog.LogLevel,System.Object)
+    Unique name M_NLog_Logger_Log_18 generated for M:NLog.Logger.Log(NLog.LogLevel,System.String)
+    Unique name M_NLog_Logger_Log_19 generated for M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Boolean)
+    Unique name M_NLog_Logger_Log_20 generated for M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Byte)
+    Unique name M_NLog_Logger_Log_21 generated for M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Char)
+    Unique name M_NLog_Logger_Log_22 generated for M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Decimal)
+    Unique name M_NLog_Logger_Log_23 generated for M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Double)
+    Unique name M_NLog_Logger_Log_24 generated for M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Exception)
+    Unique name M_NLog_Logger_Log_25 generated for M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Int32)
+    Unique name M_NLog_Logger_Log_26 generated for M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Int64)
+    Unique name M_NLog_Logger_Log_27 generated for M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Object)
+    Unique name M_NLog_Logger_Log_28 generated for M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Object,System.Object)
+    Unique name M_NLog_Logger_Log_29 generated for M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Object,System.Object,System.Object)
+    Unique name M_NLog_Logger_Log_30 generated for M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Object[])
+    Unique name M_NLog_Logger_Log_31 generated for M:NLog.Logger.Log(NLog.LogLevel,System.String,System.SByte)
+    Unique name M_NLog_Logger_Log_32 generated for M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Single)
+    Unique name M_NLog_Logger_Log_33 generated for M:NLog.Logger.Log(NLog.LogLevel,System.String,System.String)
+    Unique name M_NLog_Logger_Log_34 generated for M:NLog.Logger.Log(NLog.LogLevel,System.String,System.UInt32)
+    Unique name M_NLog_Logger_Log_35 generated for M:NLog.Logger.Log(NLog.LogLevel,System.String,System.UInt64)
+    Unique name M_NLog_Logger_Log__1_2 generated for M:NLog.Logger.Log``1(NLog.LogLevel,System.String,``0)
+    Unique name M_NLog_Logger_Log__2_1 generated for M:NLog.Logger.Log``2(NLog.LogLevel,System.String,``0,``1)
+    Unique name M_NLog_Logger_Log__3_1 generated for M:NLog.Logger.Log``3(NLog.LogLevel,System.String,``0,``1,``2)
+    Unique name M_NLog_Logger_Log__1_3 generated for M:NLog.Logger.Log``1(NLog.LogLevel,``0)
+    Unique name M_NLog_Logger_Log_36 generated for M:NLog.Logger.Log(System.Type,NLog.LogEventInfo)
+    Unique name M_NLog_Logger_Swallow__1_1 generated for M:NLog.Logger.Swallow``1(System.Func{``0},``0)
+    Unique name M_NLog_Logger_SwallowAsync__1_1 generated for M:NLog.Logger.SwallowAsync``1(System.Func{System.Threading.Tasks.Task{``0}},``0)
+    Unique name M_NLog_Logger_Trace_1 generated for M:NLog.Logger.Trace(System.IFormatProvider,System.Object)
+    Unique name M_NLog_Logger_Trace_2 generated for M:NLog.Logger.Trace(System.IFormatProvider,System.String,System.Boolean)
+    Unique name M_NLog_Logger_Trace_3 generated for M:NLog.Logger.Trace(System.IFormatProvider,System.String,System.Byte)
+    Unique name M_NLog_Logger_Trace_4 generated for M:NLog.Logger.Trace(System.IFormatProvider,System.String,System.Char)
+    Unique name M_NLog_Logger_Trace_5 generated for M:NLog.Logger.Trace(System.IFormatProvider,System.String,System.Decimal)
+    Unique name M_NLog_Logger_Trace_6 generated for M:NLog.Logger.Trace(System.IFormatProvider,System.String,System.Double)
+    Unique name M_NLog_Logger_Trace_7 generated for M:NLog.Logger.Trace(System.IFormatProvider,System.String,System.Int32)
+    Unique name M_NLog_Logger_Trace_8 generated for M:NLog.Logger.Trace(System.IFormatProvider,System.String,System.Int64)
+    Unique name M_NLog_Logger_Trace_9 generated for M:NLog.Logger.Trace(System.IFormatProvider,System.String,System.Object)
+    Unique name M_NLog_Logger_Trace_10 generated for M:NLog.Logger.Trace(System.IFormatProvider,System.String,System.Object[])
+    Unique name M_NLog_Logger_Trace_11 generated for M:NLog.Logger.Trace(System.IFormatProvider,System.String,System.SByte)
+    Unique name M_NLog_Logger_Trace_12 generated for M:NLog.Logger.Trace(System.IFormatProvider,System.String,System.Single)
+    Unique name M_NLog_Logger_Trace_13 generated for M:NLog.Logger.Trace(System.IFormatProvider,System.String,System.String)
+    Unique name M_NLog_Logger_Trace_14 generated for M:NLog.Logger.Trace(System.IFormatProvider,System.String,System.UInt32)
+    Unique name M_NLog_Logger_Trace_15 generated for M:NLog.Logger.Trace(System.IFormatProvider,System.String,System.UInt64)
+    Unique name M_NLog_Logger_Trace__1_1 generated for M:NLog.Logger.Trace``1(System.IFormatProvider,``0)
+    Unique name M_NLog_Logger_Trace_16 generated for M:NLog.Logger.Trace(System.Object)
+    Unique name M_NLog_Logger_Trace_17 generated for M:NLog.Logger.Trace(System.String)
+    Unique name M_NLog_Logger_Trace_18 generated for M:NLog.Logger.Trace(System.String,System.Boolean)
+    Unique name M_NLog_Logger_Trace_19 generated for M:NLog.Logger.Trace(System.String,System.Byte)
+    Unique name M_NLog_Logger_Trace_20 generated for M:NLog.Logger.Trace(System.String,System.Char)
+    Unique name M_NLog_Logger_Trace_21 generated for M:NLog.Logger.Trace(System.String,System.Decimal)
+    Unique name M_NLog_Logger_Trace_22 generated for M:NLog.Logger.Trace(System.String,System.Double)
+    Unique name M_NLog_Logger_Trace_23 generated for M:NLog.Logger.Trace(System.String,System.Exception)
+    Unique name M_NLog_Logger_Trace_24 generated for M:NLog.Logger.Trace(System.String,System.Int32)
+    Unique name M_NLog_Logger_Trace_25 generated for M:NLog.Logger.Trace(System.String,System.Int64)
+    Unique name M_NLog_Logger_Trace_26 generated for M:NLog.Logger.Trace(System.String,System.Object)
+    Unique name M_NLog_Logger_Trace_27 generated for M:NLog.Logger.Trace(System.String,System.Object,System.Object)
+    Unique name M_NLog_Logger_Trace_28 generated for M:NLog.Logger.Trace(System.String,System.Object,System.Object,System.Object)
+    Unique name M_NLog_Logger_Trace_29 generated for M:NLog.Logger.Trace(System.String,System.Object[])
+    Unique name M_NLog_Logger_Trace_30 generated for M:NLog.Logger.Trace(System.String,System.SByte)
+    Unique name M_NLog_Logger_Trace_31 generated for M:NLog.Logger.Trace(System.String,System.Single)
+    Unique name M_NLog_Logger_Trace_32 generated for M:NLog.Logger.Trace(System.String,System.String)
+    Unique name M_NLog_Logger_Trace_33 generated for M:NLog.Logger.Trace(System.String,System.UInt32)
+    Unique name M_NLog_Logger_Trace_34 generated for M:NLog.Logger.Trace(System.String,System.UInt64)
+    Unique name M_NLog_Logger_Trace__1_2 generated for M:NLog.Logger.Trace``1(System.String,``0)
+    Unique name M_NLog_Logger_Trace__2_1 generated for M:NLog.Logger.Trace``2(System.String,``0,``1)
+    Unique name M_NLog_Logger_Trace__3_1 generated for M:NLog.Logger.Trace``3(System.String,``0,``1,``2)
+    Unique name M_NLog_Logger_Trace__1_3 generated for M:NLog.Logger.Trace``1(``0)
+    Unique name M_NLog_Logger_Warn_1 generated for M:NLog.Logger.Warn(System.IFormatProvider,System.Object)
+    Unique name M_NLog_Logger_Warn_2 generated for M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Boolean)
+    Unique name M_NLog_Logger_Warn_3 generated for M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Byte)
+    Unique name M_NLog_Logger_Warn_4 generated for M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Char)
+    Unique name M_NLog_Logger_Warn_5 generated for M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Decimal)
+    Unique name M_NLog_Logger_Warn_6 generated for M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Double)
+    Unique name M_NLog_Logger_Warn_7 generated for M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Int32)
+    Unique name M_NLog_Logger_Warn_8 generated for M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Int64)
+    Unique name M_NLog_Logger_Warn_9 generated for M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Object)
+    Unique name M_NLog_Logger_Warn_10 generated for M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Object[])
+    Unique name M_NLog_Logger_Warn_11 generated for M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.SByte)
+    Unique name M_NLog_Logger_Warn_12 generated for M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Single)
+    Unique name M_NLog_Logger_Warn_13 generated for M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.String)
+    Unique name M_NLog_Logger_Warn_14 generated for M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.UInt32)
+    Unique name M_NLog_Logger_Warn_15 generated for M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.UInt64)
+    Unique name M_NLog_Logger_Warn__1_1 generated for M:NLog.Logger.Warn``1(System.IFormatProvider,``0)
+    Unique name M_NLog_Logger_Warn_16 generated for M:NLog.Logger.Warn(System.Object)
+    Unique name M_NLog_Logger_Warn_17 generated for M:NLog.Logger.Warn(System.String)
+    Unique name M_NLog_Logger_Warn_18 generated for M:NLog.Logger.Warn(System.String,System.Boolean)
+    Unique name M_NLog_Logger_Warn_19 generated for M:NLog.Logger.Warn(System.String,System.Byte)
+    Unique name M_NLog_Logger_Warn_20 generated for M:NLog.Logger.Warn(System.String,System.Char)
+    Unique name M_NLog_Logger_Warn_21 generated for M:NLog.Logger.Warn(System.String,System.Decimal)
+    Unique name M_NLog_Logger_Warn_22 generated for M:NLog.Logger.Warn(System.String,System.Double)
+    Unique name M_NLog_Logger_Warn_23 generated for M:NLog.Logger.Warn(System.String,System.Exception)
+    Unique name M_NLog_Logger_Warn_24 generated for M:NLog.Logger.Warn(System.String,System.Int32)
+    Unique name M_NLog_Logger_Warn_25 generated for M:NLog.Logger.Warn(System.String,System.Int64)
+    Unique name M_NLog_Logger_Warn_26 generated for M:NLog.Logger.Warn(System.String,System.Object)
+    Unique name M_NLog_Logger_Warn_27 generated for M:NLog.Logger.Warn(System.String,System.Object,System.Object)
+    Unique name M_NLog_Logger_Warn_28 generated for M:NLog.Logger.Warn(System.String,System.Object,System.Object,System.Object)
+    Unique name M_NLog_Logger_Warn_29 generated for M:NLog.Logger.Warn(System.String,System.Object[])
+    Unique name M_NLog_Logger_Warn_30 generated for M:NLog.Logger.Warn(System.String,System.SByte)
+    Unique name M_NLog_Logger_Warn_31 generated for M:NLog.Logger.Warn(System.String,System.Single)
+    Unique name M_NLog_Logger_Warn_32 generated for M:NLog.Logger.Warn(System.String,System.String)
+    Unique name M_NLog_Logger_Warn_33 generated for M:NLog.Logger.Warn(System.String,System.UInt32)
+    Unique name M_NLog_Logger_Warn_34 generated for M:NLog.Logger.Warn(System.String,System.UInt64)
+    Unique name M_NLog_Logger_Warn__1_2 generated for M:NLog.Logger.Warn``1(System.String,``0)
+    Unique name M_NLog_Logger_Warn__2_1 generated for M:NLog.Logger.Warn``2(System.String,``0,``1)
+    Unique name M_NLog_Logger_Warn__3_1 generated for M:NLog.Logger.Warn``3(System.String,``0,``1,``2)
+    Unique name M_NLog_Logger_Warn__1_3 generated for M:NLog.Logger.Warn``1(``0)
+    Unique name M_NLog_LogManager_Flush_1 generated for M:NLog.LogManager.Flush(NLog.Common.AsyncContinuation)
+    Unique name M_NLog_LogManager_Flush_2 generated for M:NLog.LogManager.Flush(NLog.Common.AsyncContinuation,System.Int32)
+    Unique name M_NLog_LogManager_Flush_3 generated for M:NLog.LogManager.Flush(NLog.Common.AsyncContinuation,System.TimeSpan)
+    Unique name M_NLog_LogManager_Flush_4 generated for M:NLog.LogManager.Flush(System.Int32)
+    Unique name M_NLog_LogManager_Flush_5 generated for M:NLog.LogManager.Flush(System.TimeSpan)
+    Unique name M_NLog_LogManager_GetCurrentClassLogger_1 generated for M:NLog.LogManager.GetCurrentClassLogger(System.Type)
+    Unique name M_NLog_LogManager_GetLogger_1 generated for M:NLog.LogManager.GetLogger(System.String,System.Type)
+    Unique name M_NLog_NLogConfigurationException__ctor_1 generated for M:NLog.NLogConfigurationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    Unique name M_NLog_NLogConfigurationException__ctor_2 generated for M:NLog.NLogConfigurationException.#ctor(System.String)
+    Unique name M_NLog_NLogConfigurationException__ctor_3 generated for M:NLog.NLogConfigurationException.#ctor(System.String,System.Exception)
+    Unique name M_NLog_NLogRuntimeException__ctor_1 generated for M:NLog.NLogRuntimeException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    Unique name M_NLog_NLogRuntimeException__ctor_2 generated for M:NLog.NLogRuntimeException.#ctor(System.String)
+    Unique name M_NLog_NLogRuntimeException__ctor_3 generated for M:NLog.NLogRuntimeException.#ctor(System.String,System.Exception)
+    Unique name M_NLog_NLogTraceListener_Fail_1 generated for M:NLog.NLogTraceListener.Fail(System.String,System.String)
+    Unique name M_NLog_NLogTraceListener_TraceData_1 generated for M:NLog.NLogTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object[])
+    Unique name M_NLog_NLogTraceListener_TraceEvent_1 generated for M:NLog.NLogTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String)
+    Unique name M_NLog_NLogTraceListener_TraceEvent_2 generated for M:NLog.NLogTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[])
+    Unique name M_NLog_Common_InternalLogger_Debug_1 generated for M:NLog.Common.InternalLogger.Debug(System.String,System.Object[])
+    Unique name M_NLog_Common_InternalLogger_Error_1 generated for M:NLog.Common.InternalLogger.Error(System.String,System.Object[])
+    Unique name M_NLog_Common_InternalLogger_Fatal_1 generated for M:NLog.Common.InternalLogger.Fatal(System.String,System.Object[])
+    Unique name M_NLog_Common_InternalLogger_Info_1 generated for M:NLog.Common.InternalLogger.Info(System.String,System.Object[])
+    Unique name M_NLog_Common_InternalLogger_Log_1 generated for M:NLog.Common.InternalLogger.Log(NLog.LogLevel,System.String,System.Object[])
+    Unique name M_NLog_Common_InternalLogger_Trace_1 generated for M:NLog.Common.InternalLogger.Trace(System.String,System.Object[])
+    Unique name M_NLog_Common_InternalLogger_Warn_1 generated for M:NLog.Common.InternalLogger.Warn(System.String,System.Object[])
+    Unique name M_NLog_Conditions_ConditionEvaluationException__ctor_1 generated for M:NLog.Conditions.ConditionEvaluationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    Unique name M_NLog_Conditions_ConditionEvaluationException__ctor_2 generated for M:NLog.Conditions.ConditionEvaluationException.#ctor(System.String)
+    Unique name M_NLog_Conditions_ConditionEvaluationException__ctor_3 generated for M:NLog.Conditions.ConditionEvaluationException.#ctor(System.String,System.Exception)
+    Unique name M_NLog_Conditions_ConditionMethods_Equals2_1 generated for M:NLog.Conditions.ConditionMethods.Equals2(System.String,System.String,System.Boolean)
+    Unique name M_NLog_Conditions_ConditionParseException__ctor_1 generated for M:NLog.Conditions.ConditionParseException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    Unique name M_NLog_Conditions_ConditionParseException__ctor_2 generated for M:NLog.Conditions.ConditionParseException.#ctor(System.String)
+    Unique name M_NLog_Conditions_ConditionParseException__ctor_3 generated for M:NLog.Conditions.ConditionParseException.#ctor(System.String,System.Exception)
+    Unique name M_NLog_Conditions_ConditionParser_ParseExpression_1 generated for M:NLog.Conditions.ConditionParser.ParseExpression(System.String,NLog.Config.ConfigurationItemFactory)
+    Unique name M_NLog_Config_ConfigurationItemFactory_RegisterItemsFromAssembly_1 generated for M:NLog.Config.ConfigurationItemFactory.RegisterItemsFromAssembly(System.Reflection.Assembly,System.String)
+    Unique name M_NLog_Config_InstallationContext__ctor_1 generated for M:NLog.Config.InstallationContext.#ctor(System.IO.TextWriter)
+    Unique name M_NLog_Config_LoggingRule__ctor_1 generated for M:NLog.Config.LoggingRule.#ctor(System.String,NLog.LogLevel,NLog.Targets.Target)
+    Unique name M_NLog_Config_LoggingRule__ctor_2 generated for M:NLog.Config.LoggingRule.#ctor(System.String,NLog.Targets.Target)
+    Unique name M_NLog_Config_SimpleConfigurator_ConfigureForConsoleLogging_1 generated for M:NLog.Config.SimpleConfigurator.ConfigureForConsoleLogging(NLog.LogLevel)
+    Unique name M_NLog_Config_SimpleConfigurator_ConfigureForFileLogging_1 generated for M:NLog.Config.SimpleConfigurator.ConfigureForFileLogging(System.String,NLog.LogLevel)
+    Unique name M_NLog_Config_SimpleConfigurator_ConfigureForTargetLogging_1 generated for M:NLog.Config.SimpleConfigurator.ConfigureForTargetLogging(NLog.Targets.Target,NLog.LogLevel)
+    Unique name M_NLog_Config_XmlLoggingConfiguration__ctor_1 generated for M:NLog.Config.XmlLoggingConfiguration.#ctor(System.String,System.Boolean)
+    Unique name M_NLog_Config_XmlLoggingConfiguration__ctor_2 generated for M:NLog.Config.XmlLoggingConfiguration.#ctor(System.Xml.XmlReader,System.String)
+    Unique name M_NLog_Config_XmlLoggingConfiguration__ctor_3 generated for M:NLog.Config.XmlLoggingConfiguration.#ctor(System.Xml.XmlReader,System.String,System.Boolean)
+    Unique name M_NLog_Fluent_LogBuilder__ctor_1 generated for M:NLog.Fluent.LogBuilder.#ctor(NLog.Logger,NLog.LogLevel)
+    Unique name M_NLog_Fluent_LogBuilder_Message_1 generated for M:NLog.Fluent.LogBuilder.Message(System.String)
+    Unique name M_NLog_Fluent_LogBuilder_Message_2 generated for M:NLog.Fluent.LogBuilder.Message(System.String,System.Object)
+    Unique name M_NLog_Fluent_LogBuilder_Message_3 generated for M:NLog.Fluent.LogBuilder.Message(System.String,System.Object,System.Object)
+    Unique name M_NLog_Fluent_LogBuilder_Message_4 generated for M:NLog.Fluent.LogBuilder.Message(System.String,System.Object,System.Object,System.Object)
+    Unique name M_NLog_Fluent_LogBuilder_Message_5 generated for M:NLog.Fluent.LogBuilder.Message(System.String,System.Object,System.Object,System.Object,System.Object)
+    Unique name M_NLog_Fluent_LogBuilder_Message_6 generated for M:NLog.Fluent.LogBuilder.Message(System.String,System.Object[])
+    Unique name M_NLog_Fluent_LogBuilder_WriteIf_1 generated for M:NLog.Fluent.LogBuilder.WriteIf(System.Func{System.Boolean},System.String,System.String,System.Int32)
+    Unique name M_NLog_Internal_XmlHelper_WriteAttributeSafeString_1 generated for M:NLog.Internal.XmlHelper.WriteAttributeSafeString(System.Xml.XmlWriter,System.String,System.String,System.String,System.String)
+    Unique name M_NLog_LayoutRenderers_BaseDirLayoutRenderer__ctor_1 generated for M:NLog.LayoutRenderers.BaseDirLayoutRenderer.#ctor(NLog.Internal.Fakeables.IAppDomain)
+    Unique name M_NLog_LayoutRenderers_LayoutRenderer_Dispose_1 generated for M:NLog.LayoutRenderers.LayoutRenderer.Dispose(System.Boolean)
+    Unique name M_NLog_LayoutRenderers_LiteralLayoutRenderer__ctor_1 generated for M:NLog.LayoutRenderers.LiteralLayoutRenderer.#ctor(System.String)
+    Unique name M_NLog_LayoutRenderers_Log4JXmlEventLayoutRenderer__ctor_1 generated for M:NLog.LayoutRenderers.Log4JXmlEventLayoutRenderer.#ctor(NLog.Internal.Fakeables.IAppDomain)
+    Unique name M_NLog_Layouts_CsvColumn__ctor_1 generated for M:NLog.Layouts.CsvColumn.#ctor(System.String,NLog.Layouts.Layout)
+    Unique name M_NLog_Layouts_Layout_FromString_1 generated for M:NLog.Layouts.Layout.FromString(System.String,NLog.Config.ConfigurationItemFactory)
+    Unique name M_NLog_Layouts_SimpleLayout__ctor_1 generated for M:NLog.Layouts.SimpleLayout.#ctor(System.String)
+    Unique name M_NLog_Layouts_SimpleLayout__ctor_2 generated for M:NLog.Layouts.SimpleLayout.#ctor(System.String,NLog.Config.ConfigurationItemFactory)
+    Unique name M_NLog_Layouts_SimpleLayout_Evaluate_1 generated for M:NLog.Layouts.SimpleLayout.Evaluate(System.String,NLog.LogEventInfo)
+    Unique name M_NLog_LogReceiverService_LogReceiverForwardingService__ctor_1 generated for M:NLog.LogReceiverService.LogReceiverForwardingService.#ctor(NLog.LogFactory)
+    Unique name M_NLog_LogReceiverService_LogReceiverForwardingService_ProcessLogMessages_1 generated for M:NLog.LogReceiverService.LogReceiverForwardingService.ProcessLogMessages(NLog.LogReceiverService.NLogEvents)
+    Unique name M_NLog_LogReceiverService_NLogEvents_ToEventInfo_1 generated for M:NLog.LogReceiverService.NLogEvents.ToEventInfo(System.String)
+    Unique name M_NLog_LogReceiverService_WcfLogReceiverClient__ctor_1 generated for M:NLog.LogReceiverService.WcfLogReceiverClient.#ctor(System.ServiceModel.Channels.Binding,System.ServiceModel.EndpointAddress)
+    Unique name M_NLog_LogReceiverService_WcfLogReceiverClient__ctor_2 generated for M:NLog.LogReceiverService.WcfLogReceiverClient.#ctor(System.String)
+    Unique name M_NLog_LogReceiverService_WcfLogReceiverClient__ctor_3 generated for M:NLog.LogReceiverService.WcfLogReceiverClient.#ctor(System.String,System.ServiceModel.EndpointAddress)
+    Unique name M_NLog_LogReceiverService_WcfLogReceiverClient__ctor_4 generated for M:NLog.LogReceiverService.WcfLogReceiverClient.#ctor(System.String,System.String)
+    Unique name M_NLog_LogReceiverService_WcfLogReceiverClient_CloseAsync_1 generated for M:NLog.LogReceiverService.WcfLogReceiverClient.CloseAsync(System.Object)
+    Unique name M_NLog_LogReceiverService_WcfLogReceiverClient_OpenAsync_1 generated for M:NLog.LogReceiverService.WcfLogReceiverClient.OpenAsync(System.Object)
+    Unique name M_NLog_LogReceiverService_WcfLogReceiverClient_ProcessLogMessagesAsync_1 generated for M:NLog.LogReceiverService.WcfLogReceiverClient.ProcessLogMessagesAsync(NLog.LogReceiverService.NLogEvents,System.Object)
+    Unique name M_NLog_Targets_ConsoleRowHighlightingRule__ctor_1 generated for M:NLog.Targets.ConsoleRowHighlightingRule.#ctor(NLog.Conditions.ConditionExpression,NLog.Targets.ConsoleOutputColor,NLog.Targets.ConsoleOutputColor)
+    Unique name M_NLog_Targets_ConsoleWordHighlightingRule__ctor_1 generated for M:NLog.Targets.ConsoleWordHighlightingRule.#ctor(System.String,NLog.Targets.ConsoleOutputColor,NLog.Targets.ConsoleOutputColor)
+    Unique name M_NLog_Targets_DatabaseParameterInfo__ctor_1 generated for M:NLog.Targets.DatabaseParameterInfo.#ctor(System.String,NLog.Layouts.Layout)
+    Unique name M_NLog_Targets_EventLogTarget__ctor_1 generated for M:NLog.Targets.EventLogTarget.#ctor(NLog.Internal.Fakeables.IAppDomain)
+    Unique name M_NLog_Targets_FileTarget_CleanupInitializedFiles_1 generated for M:NLog.Targets.FileTarget.CleanupInitializedFiles(System.DateTime)
+    Unique name M_NLog_Targets_FileTarget_Write_1 generated for M:NLog.Targets.FileTarget.Write(NLog.LogEventInfo)
+    Unique name M_NLog_Targets_LogReceiverWebServiceTarget_Write_1 generated for M:NLog.Targets.LogReceiverWebServiceTarget.Write(NLog.Common.AsyncLogEventInfo[])
+    Unique name M_NLog_Targets_MailTarget_Write_1 generated for M:NLog.Targets.MailTarget.Write(NLog.Common.AsyncLogEventInfo[])
+    Unique name M_NLog_Targets_MethodCallParameter__ctor_1 generated for M:NLog.Targets.MethodCallParameter.#ctor(NLog.Layouts.Layout)
+    Unique name M_NLog_Targets_MethodCallParameter__ctor_2 generated for M:NLog.Targets.MethodCallParameter.#ctor(System.String,NLog.Layouts.Layout)
+    Unique name M_NLog_Targets_MethodCallParameter__ctor_3 generated for M:NLog.Targets.MethodCallParameter.#ctor(System.String,NLog.Layouts.Layout,System.Type)
+    Unique name M_NLog_Targets_MethodCallTargetBase_DoInvoke_1 generated for M:NLog.Targets.MethodCallTargetBase.DoInvoke(System.Object[],NLog.Common.AsyncContinuation)
+    Unique name M_NLog_Targets_RichTextBoxRowColoringRule__ctor_1 generated for M:NLog.Targets.RichTextBoxRowColoringRule.#ctor(System.String,System.String,System.String)
+    Unique name M_NLog_Targets_RichTextBoxRowColoringRule__ctor_2 generated for M:NLog.Targets.RichTextBoxRowColoringRule.#ctor(System.String,System.String,System.String,System.Drawing.FontStyle)
+    Unique name M_NLog_Targets_RichTextBoxWordColoringRule__ctor_1 generated for M:NLog.Targets.RichTextBoxWordColoringRule.#ctor(System.String,System.String,System.String)
+    Unique name M_NLog_Targets_RichTextBoxWordColoringRule__ctor_2 generated for M:NLog.Targets.RichTextBoxWordColoringRule.#ctor(System.String,System.String,System.String,System.Drawing.FontStyle)
+    Unique name M_NLog_Targets_Target_Dispose_1 generated for M:NLog.Targets.Target.Dispose(System.Boolean)
+    Unique name M_NLog_Targets_Target_Write_1 generated for M:NLog.Targets.Target.Write(NLog.Common.AsyncLogEventInfo[])
+    Unique name M_NLog_Targets_Target_Write_2 generated for M:NLog.Targets.Target.Write(NLog.LogEventInfo)
+    Unique name M_NLog_Targets_Wrappers_AspNetBufferingTargetWrapper__ctor_1 generated for M:NLog.Targets.Wrappers.AspNetBufferingTargetWrapper.#ctor(NLog.Targets.Target)
+    Unique name M_NLog_Targets_Wrappers_AspNetBufferingTargetWrapper__ctor_2 generated for M:NLog.Targets.Wrappers.AspNetBufferingTargetWrapper.#ctor(NLog.Targets.Target,System.Int32)
+    Unique name M_NLog_Targets_Wrappers_AsyncTargetWrapper__ctor_1 generated for M:NLog.Targets.Wrappers.AsyncTargetWrapper.#ctor(NLog.Targets.Target)
+    Unique name M_NLog_Targets_Wrappers_AsyncTargetWrapper__ctor_2 generated for M:NLog.Targets.Wrappers.AsyncTargetWrapper.#ctor(NLog.Targets.Target,System.Int32,NLog.Targets.Wrappers.AsyncTargetWrapperOverflowAction)
+    Unique name M_NLog_Targets_Wrappers_AutoFlushTargetWrapper__ctor_1 generated for M:NLog.Targets.Wrappers.AutoFlushTargetWrapper.#ctor(NLog.Targets.Target)
+    Unique name M_NLog_Targets_Wrappers_BufferingTargetWrapper__ctor_1 generated for M:NLog.Targets.Wrappers.BufferingTargetWrapper.#ctor(NLog.Targets.Target)
+    Unique name M_NLog_Targets_Wrappers_BufferingTargetWrapper__ctor_2 generated for M:NLog.Targets.Wrappers.BufferingTargetWrapper.#ctor(NLog.Targets.Target,System.Int32)
+    Unique name M_NLog_Targets_Wrappers_BufferingTargetWrapper__ctor_3 generated for M:NLog.Targets.Wrappers.BufferingTargetWrapper.#ctor(NLog.Targets.Target,System.Int32,System.Int32)
+    Unique name M_NLog_Targets_Wrappers_FallbackGroupTarget__ctor_1 generated for M:NLog.Targets.Wrappers.FallbackGroupTarget.#ctor(NLog.Targets.Target[])
+    Unique name M_NLog_Targets_Wrappers_FilteringRule__ctor_1 generated for M:NLog.Targets.Wrappers.FilteringRule.#ctor(NLog.Conditions.ConditionExpression,NLog.Conditions.ConditionExpression)
+    Unique name M_NLog_Targets_Wrappers_FilteringTargetWrapper__ctor_1 generated for M:NLog.Targets.Wrappers.FilteringTargetWrapper.#ctor(NLog.Targets.Target,NLog.Conditions.ConditionExpression)
+    Unique name M_NLog_Targets_Wrappers_ImpersonatingTargetWrapper__ctor_1 generated for M:NLog.Targets.Wrappers.ImpersonatingTargetWrapper.#ctor(NLog.Targets.Target)
+    Unique name M_NLog_Targets_Wrappers_ImpersonatingTargetWrapper_Write_1 generated for M:NLog.Targets.Wrappers.ImpersonatingTargetWrapper.Write(NLog.Common.AsyncLogEventInfo[])
+    Unique name M_NLog_Targets_Wrappers_RandomizeGroupTarget__ctor_1 generated for M:NLog.Targets.Wrappers.RandomizeGroupTarget.#ctor(NLog.Targets.Target[])
+    Unique name M_NLog_Targets_Wrappers_RepeatingTargetWrapper__ctor_1 generated for M:NLog.Targets.Wrappers.RepeatingTargetWrapper.#ctor(NLog.Targets.Target,System.Int32)
+    Unique name M_NLog_Targets_Wrappers_RetryingTargetWrapper__ctor_1 generated for M:NLog.Targets.Wrappers.RetryingTargetWrapper.#ctor(NLog.Targets.Target,System.Int32,System.Int32)
+    Unique name M_NLog_Targets_Wrappers_RoundRobinGroupTarget__ctor_1 generated for M:NLog.Targets.Wrappers.RoundRobinGroupTarget.#ctor(NLog.Targets.Target[])
+    Unique name M_NLog_Targets_Wrappers_SplitGroupTarget__ctor_1 generated for M:NLog.Targets.Wrappers.SplitGroupTarget.#ctor(NLog.Targets.Target[])
+    Unique name M_NLog_Targets_Wrappers_SplitGroupTarget_Write_1 generated for M:NLog.Targets.Wrappers.SplitGroupTarget.Write(NLog.Common.AsyncLogEventInfo[])
+  XslTransform (v2015.1.12.0)
+  Copyright c 2006-2015, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\ReflectionToManifest.xsl&#39;.
+Done Building Project &quot;X:\_GitHub\NLog\src\Docs\Working\TransformManifest.proj&quot; (default targets).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.99
+    Last step completed in 00:00:07,7114
+</buildStep>
+<buildStep step="GenerateNamespaceSummaries">
+Generating namespace summary information...
+    Last step completed in 00:00:00,1140
+</buildStep>
+<buildStep step="CopyAdditionalContent">
+Copying additional content files...
+No additional content to copy
+    Last step completed in 00:00:00,0090
+</buildStep>
+<buildStep step="MergeTablesOfContents">
+Merging conceptual and additional tables of contents...
+    Last step completed in 00:00:00,0040
+</buildStep>
+<buildStep step="GenerateIntermediateTableOfContents">
+Generating intermediate table of contents file...
+[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+Build started 18-5-2015 22:34:37.
+Project &quot;X:\_GitHub\NLog\src\Docs\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
+GenerateIntermediateTOC:
+  XslTransform (v2015.1.12.0)
+  Copyright c 2006-2015, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\\ProductionTransforms\CreateVSToc.xsl&#39;.
+Done Building Project &quot;X:\_GitHub\NLog\src\Docs\Working\GenerateIntermediateTOC.proj&quot; (default targets).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.55
+Generating conceptual content intermediate TOC file...
+    Last step completed in 00:00:02,1691
+</buildStep>
+<buildStep step="CreateBuildAssemblerConfigs">
+Creating Sandcastle configuration files...
+    sandcastle.config
+    Last step completed in 00:00:00,6060
+</buildStep>
+<buildStep step="MergeCustomConfigs">
+Merging custom build component configurations
+X:\_GitHub\NLog\src\Docs\Working\sandcastle.config
+    Last step completed in 00:00:00,0590
+</buildStep>
+<buildStep step="BuildReferenceTopics">
+Building reference help topics...
+[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+Build started 18-5-2015 22:34:39.
+Project &quot;X:\_GitHub\NLog\src\Docs\Working\BuildReferenceTopics.proj&quot; on node 1 (default targets).
+BuildReferenceTopics:
+  BuildAssembler (v2015.1.12.0)
+  Copyright c 2006-2015, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
+  Loading configuration...
+  Processing topics...
+  Processed 2263 topic(s)
+  CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 15 of 15.
+  CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 6 of 30.
+Done Building Project &quot;X:\_GitHub\NLog\src\Docs\Working\BuildReferenceTopics.proj&quot; (default targets).
+
+Build succeeded.
+
+Time Elapsed 00:00:47.06
+    Last step completed in 00:00:47,7407
+</buildStep>
+<buildStep step="CombiningIntermediateTocFiles">
+Combining conceptual and API intermediate TOC files...
+
+Clearing any prior web output
+    Last step completed in 00:00:00,4710
+</buildStep>
+<buildStep step="ExtractingHtmlInfo">
+Extracting HTML info for HTML Help 1 and/or website...
+[C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
+Sandcastle Help File Builder, version 2015.1.12.0
+Copyright c 2006-2015, Eric Woodruff, All Rights Reserved
+E-Mail: Eric@EWoodruff.us
+
+Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
+
+Processing website files in X:\_GitHub\NLog\src\Docs\Working\Output\Website
+Processed 2263 HTML files
+Sorting keywords and generating See Also indices
+Saving website keyword index to X:\_GitHub\NLog\src\Docs\Working\WebKI.xml
+Saving website table of contents to X:\_GitHub\NLog\src\Docs\Working\WebTOC.xml
+    Last step completed in 00:00:06,5514
+</buildStep>
+<buildStep step="CopyStandardHelpContent">
+Copying standard help content...
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertCaution.png -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\AlertCaution.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertNote.png -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\AlertNote.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertSecurity.png -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\AlertSecurity.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CFW.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\CFW.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CodeExample.png -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\CodeExample.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\favicon.ico -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\favicon.ico
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privclass.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\privclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privdelegate.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\privdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privenumeration.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\privenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privevent.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\privevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privextension.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\privextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privfield.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\privfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privinterface.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\privinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privmethod.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\privmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privproperty.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\privproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privstructure.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\privstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protclass.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\protclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protdelegate.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\protdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protenumeration.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\protenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protevent.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\protevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protextension.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\protextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protfield.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\protfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protinterface.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\protinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protmethod.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\protmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protoperator.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\protoperator.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protproperty.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\protproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protstructure.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\protstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubclass.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\pubclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubdelegate.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\pubdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubenumeration.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\pubenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubevent.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\pubevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubextension.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\pubextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubfield.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\pubfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubinterface.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\pubinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubmethod.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\pubmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\puboperator.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\puboperator.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubproperty.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\pubproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubstructure.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\pubstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionCollapsed.png -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\SectionCollapsed.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionExpanded.png -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\SectionExpanded.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\slMobile.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\slMobile.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\static.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\static.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\xna.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\xna.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\scripts\branding.js -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\scripts\branding.js
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-cs-CZ.css -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\styles\branding-cs-CZ.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-de-DE.css -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\styles\branding-de-DE.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-en-US.css -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\styles\branding-en-US.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-es-ES.css -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\styles\branding-es-ES.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-fr-FR.css -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\styles\branding-fr-FR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Help1.css -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\styles\branding-Help1.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Help2.css -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\styles\branding-Help2.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-HelpViewer.css -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\styles\branding-HelpViewer.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-it-IT.css -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\styles\branding-it-IT.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ja-JP.css -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\styles\branding-ja-JP.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ko-KR.css -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\styles\branding-ko-KR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pl-PL.css -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\styles\branding-pl-PL.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pt-BR.css -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\styles\branding-pt-BR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ru-RU.css -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\styles\branding-ru-RU.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-tr-TR.css -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\styles\branding-tr-TR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Website.css -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\styles\branding-Website.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-CN.css -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\styles\branding-zh-CN.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-TW.css -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\styles\branding-zh-TW.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding.css -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\styles\branding.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\index.html -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\index.html
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\search.html -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\search.html
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.aspx -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\SearchHelp.aspx
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.inc.php -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\SearchHelp.inc.php
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.php -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\SearchHelp.php
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\Web.Config -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\Web.Config
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\Search.png -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\Search.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocClose.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\TocClose.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocCollapsed.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\TocCollapsed.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocExpanded.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\TocExpanded.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocOpen.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\TocOpen.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\branding-Website.js -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\scripts\branding-Website.js
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\jquery-1.11.0.min.js -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\scripts\jquery-1.11.0.min.js
+    Last step completed in 00:00:00,3540
+</buildStep>
+<buildStep step="GenerateHelpFormatTableOfContents">
+Generating website table of contents file...
+    Last step completed in 00:00:00,0050
+</buildStep>
+<buildStep step="GenerateFullTextIndex">
+Generating full-text index for the website...
+
+<plugIn name="Lightweight Website Style" behavior="After" priority="1000">
+Adding lightweight search and TOC elements to each topic...
+</plugIn>    Last step completed in 00:00:28,4826
+</buildStep>
+<buildStep step="CopyingWebsiteFiles">
+Copying website files to output folder...
+
+Copied 100 files
+Copied 200 files
+Copied 300 files
+Copied 400 files
+Copied 500 files
+Copied 600 files
+Copied 700 files
+Copied 800 files
+Copied 900 files
+Copied 1000 files
+Copied 1100 files
+Copied 1200 files
+Copied 1300 files
+Copied 1400 files
+Copied 1500 files
+Copied 1600 files
+Copied 1700 files
+Copied 1800 files
+Copied 1900 files
+Copied 2000 files
+Copied 2100 files
+Copied 2200 files
+Copied 2300 files
+Copied 2400 files
+Copied 2500 files
+Copied 2600 files
+Copied 2700 files
+Copied 2800 files
+Copied 2900 files
+Copied 3000 files
+Copied 3004 files for the website content
+    Last step completed in 00:00:02,2561
+</buildStep>
+<buildStep step="CleanIntermediates">
+Removing intermediate files...
+    Last step completed in 00:00:00,3580
+</buildStep>
+<buildStep step="Completed">
+
+Build completed successfully at 18-5-2015 22:36:05.  Total time: 00:01:42,0368
+
+</buildStep>
+</shfbBuild>
