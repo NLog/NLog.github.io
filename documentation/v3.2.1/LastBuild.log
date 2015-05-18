@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder" version="2015.1.12.0" projectFile="X:\_GitHub\NLog\src\Docs\NLog.shfbproj" started="18-5-2015 22:34:23">
+<shfbBuild product="Sandcastle Help File Builder" version="2015.5.2.0" projectFile="X:\_GitHub\NLog\src\Docs\NLog 3.2.1.shfbproj" started="18-5-2015 23:00:44">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
@@ -7,7 +7,7 @@ Locating components in the following folder(s):
    X:\_GitHub\NLog\src\Docs
 Using presentation style &#39;VS2013&#39; located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013&#39;
 Loading and initializing plug-ins...
-Lightweight Website Style Version 2015.1.12.0
+Lightweight Website Style Version 2015.5.2.0
 Copyright &#169; 2006-2015, Eric Woodruff, All Rights Reserved
 Portions Copyright &#169; 2014, Sam Harwell, All Rights Reserved
 </buildStep>
@@ -27,27 +27,27 @@ Copying XML comments files
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, English (United States))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00,0090
+</plugIn>    Last step completed in 00:00:00,0970
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00,0340
+    Last step completed in 00:00:00,0470
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
-Build started 18-5-2015 22:34:24.
+Build started 18-5-2015 23:00:45.
 Project &quot;X:\_GitHub\NLog\src\Docs\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
 PrepareForBuild:
   Creating directory &quot;obj\Debug\&quot;.
 GenerateRefInfo:
-  MRefBuilder (v2015.1.12.0)
+  MRefBuilder (v2015.5.2.0)
   Copyright c 2006-2015, Microsoft Corporation, All Rights Reserved.
   Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
   Loaded 2 assemblies for reflection and 1 dependency assemblies.
   Wrote information on 16 namespaces, 235 types, and 1621 members
   Copying file from &quot;reflection.org&quot; to &quot;reflection.all&quot;.
-  XslTransform (v2015.1.12.0)
+  XslTransform (v2015.5.2.0)
   Copyright c 2006-2015, Microsoft Corporation, All Rights Reserved.
   Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\MergeDuplicates.xsl&#39;.
@@ -55,21 +55,21 @@ Done Building Project &quot;X:\_GitHub\NLog\src\Docs\Working\GenerateRefInfo.pro
 
 Build succeeded.
 
-Time Elapsed 00:00:03.86
-    Last step completed in 00:00:04,5013
+Time Elapsed 00:00:03.70
+    Last step completed in 00:00:04,6783
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
-Build started 18-5-2015 22:34:29.
+Build started 18-5-2015 23:00:50.
 Project &quot;X:\_GitHub\NLog\src\Docs\Working\TransformManifest.proj&quot; on node 1 (default targets).
 TransformManifest:
-  XslTransform (v2015.1.12.0)
+  XslTransform (v2015.5.2.0)
   Copyright c 2006-2015, Microsoft Corporation, All Rights Reserved.
   Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\\ProductionTransforms\ApplyVSDocModel.xsl&#39;.
   Copying file from &quot;reflection.xml&quot; to &quot;reflection.nofilenames&quot;.
-  XslTransform (v2015.1.12.0)
+  XslTransform (v2015.5.2.0)
   Copyright c 2006-2015, Microsoft Corporation, All Rights Reserved.
   Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\AddFilenames.xsl&#39;.
@@ -473,7 +473,7 @@ TransformManifest:
     Unique name M_NLog_Targets_Wrappers_RoundRobinGroupTarget__ctor_1 generated for M:NLog.Targets.Wrappers.RoundRobinGroupTarget.#ctor(NLog.Targets.Target[])
     Unique name M_NLog_Targets_Wrappers_SplitGroupTarget__ctor_1 generated for M:NLog.Targets.Wrappers.SplitGroupTarget.#ctor(NLog.Targets.Target[])
     Unique name M_NLog_Targets_Wrappers_SplitGroupTarget_Write_1 generated for M:NLog.Targets.Wrappers.SplitGroupTarget.Write(NLog.Common.AsyncLogEventInfo[])
-  XslTransform (v2015.1.12.0)
+  XslTransform (v2015.5.2.0)
   Copyright c 2006-2015, Microsoft Corporation, All Rights Reserved.
   Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\ReflectionToManifest.xsl&#39;.
@@ -481,29 +481,29 @@ Done Building Project &quot;X:\_GitHub\NLog\src\Docs\Working\TransformManifest.p
 
 Build succeeded.
 
-Time Elapsed 00:00:06.99
-    Last step completed in 00:00:07,7114
+Time Elapsed 00:00:06.91
+    Last step completed in 00:00:07,6184
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00,1140
+    Last step completed in 00:00:00,1620
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 No additional content to copy
-    Last step completed in 00:00:00,0090
+    Last step completed in 00:00:00,0170
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00,0040
+    Last step completed in 00:00:00,0030
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
-Build started 18-5-2015 22:34:37.
+Build started 18-5-2015 23:00:58.
 Project &quot;X:\_GitHub\NLog\src\Docs\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
 GenerateIntermediateTOC:
-  XslTransform (v2015.1.12.0)
+  XslTransform (v2015.5.2.0)
   Copyright c 2006-2015, Microsoft Corporation, All Rights Reserved.
   Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\\ProductionTransforms\CreateVSToc.xsl&#39;.
@@ -511,14 +511,14 @@ Done Building Project &quot;X:\_GitHub\NLog\src\Docs\Working\GenerateIntermediat
 
 Build succeeded.
 
-Time Elapsed 00:00:01.55
+Time Elapsed 00:00:01.54
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:02,1691
+    Last step completed in 00:00:02,1831
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00,6060
+    Last step completed in 00:00:00,7240
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
@@ -528,10 +528,10 @@ X:\_GitHub\NLog\src\Docs\Working\sandcastle.config
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
-Build started 18-5-2015 22:34:39.
+Build started 18-5-2015 23:01:01.
 Project &quot;X:\_GitHub\NLog\src\Docs\Working\BuildReferenceTopics.proj&quot; on node 1 (default targets).
 BuildReferenceTopics:
-  BuildAssembler (v2015.1.12.0)
+  BuildAssembler (v2015.5.2.0)
   Copyright c 2006-2015, Microsoft Corporation, All Rights Reserved.
   Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
   Loading configuration...
@@ -543,19 +543,19 @@ Done Building Project &quot;X:\_GitHub\NLog\src\Docs\Working\BuildReferenceTopic
 
 Build succeeded.
 
-Time Elapsed 00:00:47.06
-    Last step completed in 00:00:47,7407
+Time Elapsed 00:00:49.75
+    Last step completed in 00:00:50,4319
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
 
-Clearing any prior web output
-    Last step completed in 00:00:00,4710
+Clearing any prior web/markdown output
+    Last step completed in 00:00:01,2561
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
-Sandcastle Help File Builder, version 2015.1.12.0
+Sandcastle Help File Builder, version 2015.5.2.0
 Copyright c 2006-2015, Eric Woodruff, All Rights Reserved
 E-Mail: Eric@EWoodruff.us
 
@@ -566,7 +566,7 @@ Processed 2263 HTML files
 Sorting keywords and generating See Also indices
 Saving website keyword index to X:\_GitHub\NLog\src\Docs\Working\WebKI.xml
 Saving website table of contents to X:\_GitHub\NLog\src\Docs\Working\WebTOC.xml
-    Last step completed in 00:00:06,5514
+    Last step completed in 00:00:07,5144
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -646,62 +646,38 @@ C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyle
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocOpen.gif -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\icons\TocOpen.gif
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\branding-Website.js -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\scripts\branding-Website.js
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\jquery-1.11.0.min.js -&gt; X:\_GitHub\NLog\src\Docs\Working\Output\Website\scripts\jquery-1.11.0.min.js
-    Last step completed in 00:00:00,3540
+    Last step completed in 00:00:00,3780
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating website table of contents file...
-    Last step completed in 00:00:00,0050
+    Last step completed in 00:00:00,0070
 </buildStep>
 <buildStep step="GenerateFullTextIndex">
 Generating full-text index for the website...
 
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
 Adding lightweight search and TOC elements to each topic...
-</plugIn>    Last step completed in 00:00:28,4826
+</plugIn>    Last step completed in 00:00:27,1546
 </buildStep>
 <buildStep step="CopyingWebsiteFiles">
 Copying website files to output folder...
 
-Copied 100 files
-Copied 200 files
-Copied 300 files
-Copied 400 files
 Copied 500 files
-Copied 600 files
-Copied 700 files
-Copied 800 files
-Copied 900 files
 Copied 1000 files
-Copied 1100 files
-Copied 1200 files
-Copied 1300 files
-Copied 1400 files
 Copied 1500 files
-Copied 1600 files
-Copied 1700 files
-Copied 1800 files
-Copied 1900 files
 Copied 2000 files
-Copied 2100 files
-Copied 2200 files
-Copied 2300 files
-Copied 2400 files
 Copied 2500 files
-Copied 2600 files
-Copied 2700 files
-Copied 2800 files
-Copied 2900 files
 Copied 3000 files
 Copied 3004 files for the website content
-    Last step completed in 00:00:02,2561
+    Last step completed in 00:00:02,3471
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00,3580
+    Last step completed in 00:00:00,4060
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 18-5-2015 22:36:05.  Total time: 00:01:42,0368
+Build completed successfully at 18-5-2015 23:02:30.  Total time: 00:01:45,7771
 
 </buildStep>
 </shfbBuild>
