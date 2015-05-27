@@ -7,21 +7,24 @@ The release candidate of NLog 4.0 has been released. More than 100 issues are cl
 
 This release contains the following features:
 
-==Zipped file archives
+Zipped file archives
+==
 The FileTarget can now compress the archived files to zip format. 
 Example: set EnableArchiveFileCompression
+
+```xml
   <target name="file" xsi:type="File"
--	            layout="${longdate} ${logger} ${message}" 
--	            fileName="${basedir}/logs/logfile.txt" 
--	            archiveFileName="${basedir}/archives/log.{#}.txt"
--	            archiveEvery="Day"
--	            archiveNumbering="Rolling"
--	            maxArchiveFiles="7"
--	            
--	            enableArchiveFileCompression ="true" />
+      layout="${longdate} ${logger} ${message}" 
+      fileName="${basedir}/logs/logfile.txt" 
+      archiveFileName="${basedir}/archives/log.{#}.txt"
+      archiveEvery="Day"
+      archiveNumbering="Rolling"
+      maxArchiveFiles="7"
+    enableArchiveFileCompression ="true" />
+```
 
-
-==ConditionalDebug.
+ConditionalDebug
+==
 In Extreme cases logging could affect the performance of your application. There is a small overhead when writing a lot of log messages, like Tracing.
 For this case it’s now possible to only include the Trace and Debug call with a Debug release. 
 Instead of writing:
@@ -33,29 +36,33 @@ This call will be removed by the .Net compiler if the DEBUG conditional compilat
 Assemblies with the name NLog*.dll, like NLog.CustomTarget.dll are now loaded automatically. This assembly should be in the same folder as NLog.dll.
 Of course you can load NLog extentions manually with the [`<Extensions>` config]( https://github.com/nlog/nlog/wiki/How-to-write-a-Target#how-to-use-the-newly-created-target)
 
-==Added Eventlog.EntryType
+Added Eventlog.EntryType
+==
 When writing to the Eventlogger, NLog would write to Information, Warning or Error entrytype, depending on the level. This is now layoutable and gives the opportunity to write also a FailureAudit or SuccessAudit 
 
-== AllEventProperties layout renderer
+AllEventProperties layout renderer
+==
 A new layout renderer that outputs all of the event's properties. Format and separator can be manually configured.
 Usage examples:
 •	${all-event-properties}
 •	${all-event-properties:Separator=|}
 •	${all-event-properties:Separator= | :Format=[key] is [value]}
 
-==Logging exceptions handling
+Logging exceptions handling
+==
 Logging exceptions information is now more consistent and complete. This is a breaking change.
 All the logger methods, like `.Debug`, `Error` etc has now a first optional parameter of the type `Exception`. Only that parameter would be written as Exception to the log and can be used in the layout renderer like ` ${exception:format=tostring}`. 
 
 Changes:
-•	All "exception" methods are starting with exception. E.g Error(Exception exception, [Localizable(false)] string message, params object[] args);
-•	All "exception" methods has 'args' as parameters
-•	All "exception" methods has an overload with an IFormatProvider as parameter.
+*	All "exception" methods are starting with exception. E.g Error(Exception exception, [Localizable(false)] string message, params object[] args);
+*	All "exception" methods has 'args' as parameters
+*	All "exception" methods has an overload with an IFormatProvider as parameter.
 Backwardscomp changes:
-•	removed "exceptionCandidate" hack: Log(string message, Exception ex) would write to exception property instead of message. This is non-backwards compatible in behaviour!
-•	all other "exception methods": Eg. ErrorException and 'Error(string message, Exception exception) are marked as Obsolete, also in the interfaces (ILogger, ILoggerBase). No removals, only additions or adding Obsolete attributes.
+*	removed "exceptionCandidate" hack: Log(string message, Exception ex) would write to exception property instead of message. This is non-backwards compatible in behaviour!
+*	all other "exception methods": Eg. ErrorException and 'Error(string message, Exception exception) are marked as Obsolete, also in the interfaces (ILogger, ILoggerBase). No removals, only additions or adding Obsolete attributes.
 
-==Writing to JSON
+Writing to JSON
+==
 A new layout that renders log events as structured JSON documents.
 Example:
 <target name="jsonFile" xsi:type="File" fileName="${logFileNamePrefix}.json">
