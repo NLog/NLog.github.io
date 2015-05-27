@@ -83,12 +83,13 @@ All the logger methods, like `.Debug`, `Error` etc has now a first optional para
 
 Changes:
 
-*	All "exception" methods are starting with exception. E.g Error(Exception exception, [Localizable(false)] string message, params object[] args);
-*	All "exception" methods has 'args' as parameters
-*	All "exception" methods has an overload with an IFormatProvider as parameter.
-Backwardscomp changes:
-*	removed "exceptionCandidate" hack: Log(string message, Exception ex) would write to exception property instead of message. This is non-backwards compatible in behaviour!
-*	all other "exception methods": Eg. ErrorException and 'Error(string message, Exception exception) are marked as Obsolete, also in the interfaces (ILogger, ILoggerBase). No removals, only additions or adding Obsolete attributes.
+*	All "exception" methods are starting with `Exception`. E.g `Error(Exception exception, string message, params object[] args)`.
+*	All "exception" methods has 'args' as parameter for formatting the message.
+*	All "exception" methods has an overload with an `IFormatProvider` as parameter.
+
+Changes that are not backwards-compatible.
+*	removed "exceptionCandidate" hack: `Log(string message, Exception ex)` would write to exception property instead of message. This is non-backwards compatible in behaviour!
+*	all other "exception methods": Eg. `ErrorException` and `Error(string message, Exception exception)` are marked as `Obsolete`, also in the interfaces. 
 
 {% highlight csharp %}
 
@@ -176,4 +177,9 @@ NLog 4.0 has some breaking changes. To sum up:
 *	`LoggingRule.Final` behaviour has been changed.
 *	The methods of logging exception data has been changed.
 *	The webservice target won't write a BOM with UTF-8 (default, can be set)
+
+
+##Wiki
+Please note that the wiki isn't updated yet.
+
 
