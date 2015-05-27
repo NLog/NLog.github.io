@@ -3,7 +3,7 @@ layout: post
 title: NLog 4.0 release candidate is online
 ---
 
-The release candidate of NLog 4.0 has is online. More than 100 issues are closed in GitHub. The release candidate can be downloaded from NuGet. 
+The release candidate of NLog 4.0 has is online. More than 100 issues are [closed in GitHub](https://github.com/NLog/NLog/issues?q=milestone%3A4.0+is%3Aclosed). The release candidate can be downloaded from [NuGet](https://www.nuget.org/packages/NLog/4.0.0-rc). 
 
 ##Features
 
@@ -13,7 +13,7 @@ This release contains the following features:
 
 ###Zipped file archives
 
-The FileTarget can now compress the archived files to zip format. 
+The `FileTarget` can now compress the archived files to zip format. 
 Example: set `EnableArchiveFileCompression` in config file:
 
 {% highlight xml %}
