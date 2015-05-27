@@ -54,9 +54,10 @@ When writing to the Eventlogger, NLog would write to `Information`, `Warning` or
 
 A new layout renderer that outputs all of the event's properties. Format and separator can be manually configured.
 Usage examples:
-•	`${all-event-properties}`
-•	`${all-event-properties:Separator=|}`
-•	`${all-event-properties:Separator= | :Format=[key] is [value]}`
+
+*	`${all-event-properties}`
+*	`${all-event-properties:Separator=|}`
+*	`${all-event-properties:Separator= | :Format=[key] is [value]}`
 
 This combines nicely with the [fluent interface introduced in 3.2.0](http://nlog-project.org/2015/01/20/have-you-seen-our-new-fluent-interface.html).
 
