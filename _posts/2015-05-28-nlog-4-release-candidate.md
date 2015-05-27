@@ -27,6 +27,38 @@ Example: set EnableArchiveFileCompression
     enableArchiveFileCompression ="true" />
 {% endhighlight %}
 
+
+### Logging exceptions (**breaking change**)
+
+Logging exceptions is now more consistent and complete then before. This is a breaking change.
+All the logger methods, like `.Debug`, `Error` etc has now a first optional parameter of the type `Exception`. Only that parameter would be written as `Exception` to the log and can be used in the layout renderer like ` ${exception:format=tostring}`. 
+
+#### Changes:
+
+*	All "exception" methods are starting with `Exception`. E.g `Error(Exception exception, string message, params object[] args)`.
+*	All "exception" methods has 'args' as parameter for formatting the message.
+*	All "exception" methods has an overload with an `IFormatProvider` as parameter.
+
+Changes that are not backwards-compatible.
+*	removed "exceptionCandidate" hack: `Log(string message, Exception ex)` would write to exception property instead of message. This is non-backwards compatible in behaviour!
+*	all other "exception methods": Eg. `ErrorException` and `Error(string message, Exception exception)` are marked as `Obsolete`, also in the interfaces. 
+
+{% highlight csharp %}
+
+//NLog 4.0
+Logger.Error(ex, "ow noos");
+Logger.Error(ex, "ow noo {0}", "s");
+
+//Obsolete
+Logger.ErrorException(ex, "ow noos");
+
+//BREAKING CHANGE: no compile error, but exception is used in message formatting.
+Logger.Error("ow noos", ex); //don't do this.
+//consistent with:
+Logger.Error("ow noos {0}", var1");
+
+{% endhighlight %}
+
 ###Conditional logging
 
 In extreme cases logging could affect the performance of your application. There is a small overhead when writing a lot of log messages, like Tracing.
@@ -76,38 +108,6 @@ logger.Info()
 * In case of `${all-event-properties:Format=[key] is [value]}` this would write: `Test is InfoWrite, coolness is 200%, a is not b`
 
 
-### Logging exceptions (**breaking change**)
-
-Logging exceptions is now more consistent and complete then before. This is a breaking change.
-All the logger methods, like `.Debug`, `Error` etc has now a first optional parameter of the type `Exception`. Only that parameter would be written as `Exception` to the log and can be used in the layout renderer like ` ${exception:format=tostring}`. 
-
-#### Changes:
-
-*	All "exception" methods are starting with `Exception`. E.g `Error(Exception exception, string message, params object[] args)`.
-*	All "exception" methods has 'args' as parameter for formatting the message.
-*	All "exception" methods has an overload with an `IFormatProvider` as parameter.
-
-Changes that are not backwards-compatible.
-*	removed "exceptionCandidate" hack: `Log(string message, Exception ex)` would write to exception property instead of message. This is non-backwards compatible in behaviour!
-*	all other "exception methods": Eg. `ErrorException` and `Error(string message, Exception exception)` are marked as `Obsolete`, also in the interfaces. 
-
-{% highlight csharp %}
-
-//NLog 4.0
-Logger.Error(ex, "ow noos");
-Logger.Error(ex, "ow noo {0}", "s");
-
-//Obsolete
-Logger.ErrorException(ex, "ow noos");
-
-//BREAKING CHANGE: no compile error, but exception is used in message formatting.
-Logger.Error("ow noos", ex); //don't do this.
-//consistent with:
-Logger.Error("ow noos {0}", var1");
-
-{% endhighlight %}
-
-
 ### Writing to JSON
 
 A new layout that renders log events as structured JSON documents.
@@ -143,7 +143,7 @@ When writing to the Eventlogger, NLog would write to `Information`, `Warning` or
 
 ### Other
 
-* The `EventLogTarget.Source` now accepts Layout-renderers. But beware that the layout renderers can be used when in- or uninstalling the target. 
+* The `EventLogTarget.Source` now accepts layout-renderers. But beware that the layout renderers can be used when in- or uninstalling the target. 
 *	The `Console`- and `ColorConsole` target has an `encoding` property.
 *	The application domain layout renderer has been added. Examples: `${appdomain}`, `${appdomain:format=short}` or `${appdomain:format=long}`.
 *	Added `CallSiteLineNumber` layout renderer. usage: `${callsite-linenumber}`
