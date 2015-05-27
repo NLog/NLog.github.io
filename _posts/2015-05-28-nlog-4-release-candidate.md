@@ -12,7 +12,7 @@ Zipped file archives
 The FileTarget can now compress the archived files to zip format. 
 Example: set EnableArchiveFileCompression
 
-```xml
+{% highlight xml %}
   <target name="file" xsi:type="File"
       layout="${longdate} ${logger} ${message}" 
       fileName="${basedir}/logs/logfile.txt" 
@@ -21,16 +21,24 @@ Example: set EnableArchiveFileCompression
       archiveNumbering="Rolling"
       maxArchiveFiles="7"
     enableArchiveFileCompression ="true" />
-```
+{% endhighlight %}
 
 ConditionalDebug
 ==
 In Extreme cases logging could affect the performance of your application. There is a small overhead when writing a lot of log messages, like Tracing.
 For this case it’s now possible to only include the Trace and Debug call with a Debug release. 
 Instead of writing:
-Logger.Trace(“entering method {0}, methodname”)
+
+{% highlight csharp %}
+Logger.Trace(“entering method {0}, methodname”);
+{% endhighlight %}
+
 Write
-Logger. ConditionalTrace(“entering method {0}, methodname”)
+
+{% highlight csharp %}
+Logger. ConditionalTrace(“entering method {0}, methodname”);
+{% endhighlight %}
+
 This call will be removed by the .Net compiler if the DEBUG conditional compilation symbol is not set – default on a Release build.
 
 Auto load extensions
@@ -46,9 +54,9 @@ AllEventProperties layout renderer
 ==
 A new layout renderer that outputs all of the event's properties. Format and separator can be manually configured.
 Usage examples:
-•	${all-event-properties}
-•	${all-event-properties:Separator=|}
-•	${all-event-properties:Separator= | :Format=[key] is [value]}
+•	`${all-event-properties}`
+•	`${all-event-properties:Separator=|}`
+•	`${all-event-properties:Separator= | :Format=[key] is [value]}`
 
 Logging exceptions handling
 ==
@@ -56,6 +64,7 @@ Logging exceptions information is now more consistent and complete. This is a br
 All the logger methods, like `.Debug`, `Error` etc has now a first optional parameter of the type `Exception`. Only that parameter would be written as `Exception` to the log and can be used in the layout renderer like ` ${exception:format=tostring}`. 
 
 Changes:
+
 *	All "exception" methods are starting with exception. E.g Error(Exception exception, [Localizable(false)] string message, params object[] args);
 *	All "exception" methods has 'args' as parameters
 *	All "exception" methods has an overload with an IFormatProvider as parameter.
@@ -67,6 +76,8 @@ Writing to JSON
 ==
 A new layout that renders log events as structured JSON documents.
 Example:
+
+{% highlight csharp %}
 <target name="jsonFile" xsi:type="File" fileName="${logFileNamePrefix}.json">
       <layout xsi:type="JsonLayout">
               <attribute name="time" layout="${longdate}" />
@@ -77,6 +88,7 @@ Example:
               <attribute name="exception" layout="${exception:format=ToString}"/>
        </layout>
 </target>
+{% endhighlight %}
 
 EventLogTarget.Source Layoutable
 ==
@@ -86,7 +98,10 @@ The `EventLogTarget.Source` now accepts Layout-renderers. But beware that the la
 LoggingRule final behavior
 ==
 The behavior of the final attribute has been changed. Example:
-` <logger name="logger1" level="Debug"  final=”true”  />`
+
+{% highlight csharp %}
+<logger name="logger1" level="Debug"  final=”true”  />
+{% endhighlight %}
 
 Before 4.0 it would mark _all_ messages from the logger “logger1” as final. In 4.0 it would only mark the _debug_ messages as final. 
 
@@ -94,19 +109,18 @@ Before 4.0 it would mark _all_ messages from the logger “logger1” as final. 
 New options
 ==
 *	The Console- and ColorConsole target has an encoding property.
-*	The app domain layout renderer has been added. Examples: ${appdomain}, "${appdomain:format=short} or ${appdomain:format=long}.
-*	Added CallSiteLineNumber layout renderer. usage: ${callsite-linenumber}
-*	Added SkipFrames option to the Stacktrace layout renderer
+*	The app domain layout renderer has been added. Examples: `${appdomain}`, `${appdomain:format=short}` or `${appdomain:format=long}`.
+*	Added `CallSiteLineNumber` layout renderer. usage: `${callsite-linenumber}`
+*	Added `SkipFrames` option to the `Stacktrace` layout renderer
 *	The WebserviceTarget has the option `IncludeBOM`. Possible options: 
-  *	`null` (dont change BOM),
-  *	`true` (always include UTF-8 bom on UTF-8 encodings),
-  *	`false` (default, always skip bom on UTF-8 encodings)
-	
-*	FileTarget uses time from the current TimeSource for date-based archiving. # 512
+   *	`null` (don't change BOM),
+   *	`true` (always include UTF-8 BOM UTF-8 encodings),
+   *	`false` (default, always skip BOM on UTF-8 encodings)
+*	`FileTarget` uses time from the current `TimeSource` for date-based archiving. # 512
 
 Other
-*	The Mailtarget has now less required parameters. (at least To, CC or BCC should be set) and the Mailtarget logs their errors correctly to the internal logger now. 
-* The Counter.Sequence now accepts Layout renderers.
+*	The `Mailtarget` has now less required parameters. (at least To, CC or BCC should be set) and the `Mailtarget` logs their errors correctly to the internal logger now. 
+* The `Counter.Sequence` now accepts layout renderers.
 
 Bug fixes
 ==
@@ -125,7 +139,7 @@ Breaking changes
 ==
 NLog 4.0 has some breaking changes. To sum up:
 
-*	LoggingRule.Final behaviour has been changed.
+*	`LoggingRule.Final` behaviour has been changed.
 *	The methods of logging exception data has been changed.
 *	The webservice target won't write a BOM with UTF-8 (default, can be set)
 
