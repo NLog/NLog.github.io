@@ -32,7 +32,9 @@ Logger.Trace(“entering method {0}, methodname”)
 Write
 Logger. ConditionalTrace(“entering method {0}, methodname”)
 This call will be removed by the .Net compiler if the DEBUG conditional compilation symbol is not set – default on a Release build.
-==Auto load extensions
+
+Auto load extensions
+==
 Assemblies with the name NLog*.dll, like NLog.CustomTarget.dll are now loaded automatically. This assembly should be in the same folder as NLog.dll.
 Of course you can load NLog extentions manually with the [`<Extensions>` config]( https://github.com/nlog/nlog/wiki/How-to-write-a-Target#how-to-use-the-newly-created-target)
 
@@ -51,7 +53,7 @@ Usage examples:
 Logging exceptions handling
 ==
 Logging exceptions information is now more consistent and complete. This is a breaking change.
-All the logger methods, like `.Debug`, `Error` etc has now a first optional parameter of the type `Exception`. Only that parameter would be written as Exception to the log and can be used in the layout renderer like ` ${exception:format=tostring}`. 
+All the logger methods, like `.Debug`, `Error` etc has now a first optional parameter of the type `Exception`. Only that parameter would be written as `Exception` to the log and can be used in the layout renderer like ` ${exception:format=tostring}`. 
 
 Changes:
 *	All "exception" methods are starting with exception. E.g Error(Exception exception, [Localizable(false)] string message, params object[] args);
@@ -76,46 +78,54 @@ Example:
        </layout>
 </target>
 
-== EventLogTarget.Source Layoutable
-The EventLogTarget.Source now accepts Layout-renderers. But beware that the layout renderers can be used when in- or uninstalling the target. 
-== LoggingRule final=true behavior
+EventLogTarget.Source Layoutable
+==
+The `EventLogTarget.Source` now accepts Layout-renderers. But beware that the layout renderers can be used when in- or uninstalling the target. 
+
+
+LoggingRule final behavior
+==
 The behavior of the final attribute has been changed. Example:
 ` <logger name="logger1" level="Debug"  final=”true”  />`
 
 Before 4.0 it would mark _all_ messages from the logger “logger1” as final. In 4.0 it would only mark the _debug_ messages as final. 
 
 
-==Accepting Layout renderers
--	The Counter.Sequence now accepts Layout renderers.
--	
-==New options
--	The Console- and ColorConsole target has an encoding property.
--	The app domain layout renderer has been added. Examples: ${appdomain}, "${appdomain:format=short} or ${appdomain:format=long}.
--	Added CallSiteLineNumber layout renderer. usage: ${callsite-linenumber}
--	Added SkipFrames option to the Stacktrace layout renderer
-•	The WebserviceTarget has the option IncludeBOM. 
-o	null (dont change BOM),
-o	true (always include UTF-8 bom on UTF-8 encodings),
-o	false (default, always skip bom on UTF-8 encodings)
--	
--	FileTarget uses time from the current TimeSource for date-based archiving. # 512
+New options
+==
+*	The Console- and ColorConsole target has an encoding property.
+*	The app domain layout renderer has been added. Examples: ${appdomain}, "${appdomain:format=short} or ${appdomain:format=long}.
+*	Added CallSiteLineNumber layout renderer. usage: ${callsite-linenumber}
+*	Added SkipFrames option to the Stacktrace layout renderer
+*	The WebserviceTarget has the option `IncludeBOM`. Possible options: 
+  *	`null` (dont change BOM),
+  *	`true` (always include UTF-8 bom on UTF-8 encodings),
+  *	`false` (default, always skip bom on UTF-8 encodings)
+	
+*	FileTarget uses time from the current TimeSource for date-based archiving. # 512
 
 Other
--	The Mailtarget has now less required parameters. (at least To, CC or BCC should be set) and the Mailtarget logs their errors correctly to the internal logger now. 
+*	The Mailtarget has now less required parameters. (at least To, CC or BCC should be set) and the Mailtarget logs their errors correctly to the internal logger now. 
+* The Counter.Sequence now accepts Layout renderers.
 
-==Bug fixes
+Bug fixes
+==
 More than 30 bugs are solved. The full list can be seen on [Github] (https://github.com/NLog/NLog/issues?utf8=%E2%9C%93&q=milestone%3A4.0+is%3Aclosed+label%3Abug).
 
 The most noticeable bugs:
--	The default value of DatabaseTarget.CommandType could lead to exceptions
--	If the XML was broken (invalid), autoreload would be disabled. This has been fixed.
--	The Logmanager.GetCurrentClassLogger was not threadsafe and with many concurrent class it would throw an Exception.
--	Various fixes to the archiving of files.
--	Bugfix: WebserviceTarget wrote encoded UTF-8 preamble.
+
+*	The default value of `DatabaseTarget.CommandType` could lead to exceptions
+*	If the XML was broken (invalid), autoreload would be disabled. This has been fixed.
+*	The `Logmanager.GetCurrentClassLogger` was not thread-safe and with many concurrent calls it would throw an exception.
+*	Various fixes to the archiving of files.
+*	Bugfix: `WebserviceTarget` wrote encoded UTF-8 preamble.
 
 
-Breaking changes:
--	Bugfix: LoggingRule.Final change
--	Logging of exeptions
--	The webservice target and writing BOM
+Breaking changes
+==
+NLog 4.0 has some breaking changes. To sum up:
+
+*	LoggingRule.Final behaviour has been changed.
+*	The methods of logging exception data has been changed.
+*	The webservice target won't write a BOM with UTF-8 (default, can be set)
 
