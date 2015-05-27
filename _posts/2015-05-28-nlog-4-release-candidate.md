@@ -14,7 +14,7 @@ This release contains the following features:
 ###Zipped file archives
 
 The FileTarget can now compress the archived files to zip format. 
-Example: set EnableArchiveFileCompression
+Example: set `EnableArchiveFileCompression` in config file:
 
 {% highlight xml %}
   <target name="file" xsi:type="File"
