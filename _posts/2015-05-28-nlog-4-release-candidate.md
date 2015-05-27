@@ -123,19 +123,18 @@ The behavior of the final attribute has been changed. Example:
 Before 4.0 it would mark _all_ messages from the logger “logger1” as final. In 4.0 it would only mark the _debug_ messages as final. 
 
 
-New options
+Other
 ==
-*	The Console- and ColorConsole target has an encoding property.
-*	The app domain layout renderer has been added. Examples: `${appdomain}`, `${appdomain:format=short}` or `${appdomain:format=long}`.
+*	The `Console`- and `ColorConsole` target has an `encoding` property.
+*	The application domain layout renderer has been added. Examples: `${appdomain}`, `${appdomain:format=short}` or `${appdomain:format=long}`.
 *	Added `CallSiteLineNumber` layout renderer. usage: `${callsite-linenumber}`
 *	Added `SkipFrames` option to the `Stacktrace` layout renderer
-*	The WebserviceTarget has the option `IncludeBOM`. Possible options: 
+*	The `WebserviceTarget` has the option `IncludeBOM`. Possible options: 
    *	`null` (don't change BOM),
    *	`true` (always include UTF-8 BOM UTF-8 encodings),
    *	`false` (default, always skip BOM on UTF-8 encodings)
 *	`FileTarget` uses time from the current `TimeSource` for date-based archiving. # 512
-
-Other
+*	Multicast with the `LogReceiverTarget` is now possible
 *	The `Mailtarget` has now less required parameters. (at least To, CC or BCC should be set) and the `Mailtarget` logs their errors correctly to the internal logger now. 
 * The `Counter.Sequence` now accepts layout renderers.
 
