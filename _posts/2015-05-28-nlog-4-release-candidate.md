@@ -72,7 +72,7 @@ logger.Info()
 * In case of `${all-event-properties:Format=[key] is [value]}` this would write: `Test is InfoWrite, coolness is 200%, a is not b`
 
 
-##Logging exceptions **breaking change**
+##Logging exceptions (**breaking change**)
 
 Logging exceptions is now more consistent and complete then before. This is a breaking change.
 All the logger methods, like `.Debug`, `Error` etc has now a first optional parameter of the type `Exception`. Only that parameter would be written as `Exception` to the log and can be used in the layout renderer like ` ${exception:format=tostring}`. 
@@ -123,7 +123,7 @@ Example:
 {% endhighlight %}
 
 
-##LoggingRule final behavior **breaking change**
+##LoggingRule final behavior (**breaking change**)
 
 The behavior of the final attribute has been changed. Example:
 
@@ -160,7 +160,7 @@ More than 30 bugs are solved. The full list can be seen on [Github](https://gith
 The most noticeable bugs:
 
 *	The default value of `DatabaseTarget.CommandType` could lead to exceptions
-*	If the XML was broken (invalid), autoreload would be disabled. This has been fixed.
+*	If the XML was broken (invalid), autoreload would be disabled - the application needed a restart before reading the changed config.  This has been fixed.
 *	The `Logmanager.GetCurrentClassLogger` was not thread-safe and with many concurrent calls it would throw an exception.
 *	Various fixes to the archiving of files.
 *	Bugfix: `WebserviceTarget` wrote encoded UTF-8 preamble.
