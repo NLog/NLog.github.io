@@ -58,6 +58,23 @@ Usage examples:
 •	`${all-event-properties:Separator=|}`
 •	`${all-event-properties:Separator= | :Format=[key] is [value]}`
 
+This combines nicely with the [fluent interface introduced in 3.2.0](http://nlog-project.org/2015/01/20/have-you-seen-our-new-fluent-interface.html).
+
+Examples:
+{% highlight csharp %}
+var logger = LogManager.GetCurrentClassLogger();
+logger.Info()
+    .Message("This is a test fluent message '{0}'.", DateTime.Now.Ticks)
+    .Property("Test", "InfoWrite")
+    .Property("coolness", "200%")
+    .Property("a", "not b")
+    .Write();
+{% endhighlight %}
+
+* In case of `${all-event-properties}` this would write: `Test=InfoWrite, coolness=200%, a=not b`
+* In case of `${all-event-properties:Format=[key] is [value]}` this would write: `Test is InfoWrite, coolness is 200%, a is not b`
+
+
 ##Logging exceptions handling
 
 Logging exceptions information is now more consistent and complete. This is a breaking change.
