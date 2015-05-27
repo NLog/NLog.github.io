@@ -43,12 +43,12 @@ This call will be removed by the .Net compiler if the DEBUG conditional compilat
 
 Auto load extensions
 ==
-Assemblies with the name NLog*.dll, like NLog.CustomTarget.dll are now loaded automatically. This assembly should be in the same folder as NLog.dll.
+Assemblies with the name "NLog*.dll", like "NLog.CustomTarget.dll" are now loaded automatically. This assembly should be in the same folder as NLog.dll.
 Of course you can load NLog extentions manually with the [`<Extensions>` config]( https://github.com/nlog/nlog/wiki/How-to-write-a-Target#how-to-use-the-newly-created-target)
 
 Added Eventlog.EntryType
 ==
-When writing to the Eventlogger, NLog would write to Information, Warning or Error entrytype, depending on the level. This is now layoutable and gives the opportunity to write also a FailureAudit or SuccessAudit 
+When writing to the Eventlogger, NLog would write to `Information`, `Warning` or `Error` entrytype, depending on the level. This is now layoutable and gives the opportunity to write also a `FailureAudit` or `SuccessAudit` and/or use it with conditions.
 
 AllEventProperties layout renderer
 ==
@@ -71,6 +71,23 @@ Changes:
 Backwardscomp changes:
 *	removed "exceptionCandidate" hack: Log(string message, Exception ex) would write to exception property instead of message. This is non-backwards compatible in behaviour!
 *	all other "exception methods": Eg. ErrorException and 'Error(string message, Exception exception) are marked as Obsolete, also in the interfaces (ILogger, ILoggerBase). No removals, only additions or adding Obsolete attributes.
+
+{% highlight csharp %}
+
+//NLog 4.0
+Logger.Error(ex, "ow noos");
+Logger.Error(ex, "ow noo {0}", "s");
+
+//Obsolete
+Logger.ErrorException(ex, "ow noos");
+
+//BREAKING CHANGE: no compile error, but exception is used in message formatting.
+Logger.Error("ow noos", ex); //don't do this.
+//consistent with:
+Logger.Error("ow noos {0}", var1");
+
+{% endhighlight %}
+
 
 Writing to JSON
 ==
