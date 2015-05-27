@@ -123,7 +123,7 @@ Example:
 </target>
 {% endhighlight %}
 
-would write: `{ "time": "2010-01-01 12:34:56.0000", "level": "ERROR", "message": "hello, world" }"
+would write: `{ "time": "2010-01-01 12:34:56.0000", "level": "ERROR", "message": "hello, world" }`
 
 ### LoggingRule final behavior (**breaking change**)
 
