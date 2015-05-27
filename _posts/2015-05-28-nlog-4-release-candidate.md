@@ -24,7 +24,7 @@ Example: set EnableArchiveFileCompression
       archiveEvery="Day"
       archiveNumbering="Rolling"
       maxArchiveFiles="7"
-    enableArchiveFileCompression ="true" />
+    enableArchiveFileCompression="true" />
 {% endhighlight %}
 
 
