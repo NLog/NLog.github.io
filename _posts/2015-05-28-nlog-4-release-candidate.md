@@ -5,9 +5,13 @@ title: NLog 4.0 release candidate is online
 
 The release candidate of NLog 4.0 has is online. More than 100 issues are closed in GitHub. The release candidate can be downloaded from NuGet. 
 
-This release contains the following features and changes:
+##Features
 
-##Zipped file archives
+This release contains the following features:
+
+
+
+###Zipped file archives
 
 The FileTarget can now compress the archived files to zip format. 
 Example: set EnableArchiveFileCompression
@@ -23,9 +27,9 @@ Example: set EnableArchiveFileCompression
     enableArchiveFileCompression ="true" />
 {% endhighlight %}
 
-##ConditionalDebug
+###Conditional logging
 
-In Extreme cases logging could affect the performance of your application. There is a small overhead when writing a lot of log messages, like Tracing.
+In extreme cases logging could affect the performance of your application. There is a small overhead when writing a lot of log messages, like Tracing.
 For this case it’s now possible to only include the Trace and Debug call with a Debug release. 
 Instead of writing:
 
@@ -41,12 +45,12 @@ Logger. ConditionalTrace(“entering method {0}, methodname”);
 
 This call will be removed by the .Net compiler if the DEBUG conditional compilation symbol is not set – default on a Release build.
 
-##Auto load extensions
+### Auto load extensions
 
 Assemblies with the name "NLog*.dll", like "NLog.CustomTarget.dll" are now loaded automatically. This assembly should be in the same folder as NLog.dll.
 Of course you can load NLog extentions manually with the [`<Extensions>` config]( https://github.com/nlog/nlog/wiki/How-to-write-a-Target#how-to-use-the-newly-created-target)
 
-##AllEventProperties layout renderer
+### AllEventProperties layout renderer
 
 A new layout renderer that outputs all of the event's properties. Format and separator can be manually configured.
 Usage examples:
@@ -72,12 +76,12 @@ logger.Info()
 * In case of `${all-event-properties:Format=[key] is [value]}` this would write: `Test is InfoWrite, coolness is 200%, a is not b`
 
 
-##Logging exceptions (**breaking change**)
+### Logging exceptions (**breaking change**)
 
 Logging exceptions is now more consistent and complete then before. This is a breaking change.
 All the logger methods, like `.Debug`, `Error` etc has now a first optional parameter of the type `Exception`. Only that parameter would be written as `Exception` to the log and can be used in the layout renderer like ` ${exception:format=tostring}`. 
 
-Changes:
+#### Changes:
 
 *	All "exception" methods are starting with `Exception`. E.g `Error(Exception exception, string message, params object[] args)`.
 *	All "exception" methods has 'args' as parameter for formatting the message.
@@ -104,7 +108,7 @@ Logger.Error("ow noos {0}", var1");
 {% endhighlight %}
 
 
-##Writing to JSON
+### Writing to JSON
 
 A new layout that renders log events as structured JSON documents.
 Example:
@@ -123,7 +127,7 @@ Example:
 {% endhighlight %}
 
 
-##LoggingRule final behavior (**breaking change**)
+### LoggingRule final behavior (**breaking change**)
 
 The behavior of the final attribute has been changed. Example:
 
@@ -133,11 +137,11 @@ The behavior of the final attribute has been changed. Example:
 
 Before 4.0 it would mark _all_ messages from the logger “logger1” as final. In 4.0 it would only mark the _debug_ messages as final. 
 
-##Added Eventlog.EntryType
+### Added Eventlog.EntryType
 
 When writing to the Eventlogger, NLog would write to `Information`, `Warning` or `Error` entrytype, depending on the level. This is now layoutable and gives the opportunity to write also a `FailureAudit` or `SuccessAudit` and/or use it with conditions.
 
-##Other
+### Other
 
 * The `EventLogTarget.Source` now accepts Layout-renderers. But beware that the layout renderers can be used when in- or uninstalling the target. 
 *	The `Console`- and `ColorConsole` target has an `encoding` property.
