@@ -31,11 +31,11 @@ Example: set `EnableArchiveFileCompression` in config file:
 ### Logging exceptions (**breaking change**)
 
 Logging exceptions is now more consistent and complete then before. This is a breaking change.
-All the logger methods, like `.Debug`, `Error` etc has now a first optional parameter of the type `Exception`. Only that parameter would be written as `Exception` to the log and can be used in the layout renderer like ` ${exception:format=tostring}`. 
+All the logger methods, like `.Debug`, `Error` etc. has now a first optional parameter of the type `Exception`. Only that parameter would be written as `Exception` to the log and can be used in the layout renderer like ` ${exception:format=tostring}`. 
 
 #### Changes:
 
-*	All "exception" methods are starting with `Exception`. E.g `Error(Exception exception, string message, params object[] args)`.
+*	All "exception" methods are starting with `Exception`. E.g. `Error(Exception exception, string message, params object[] args)`.
 *	All "exception" methods has 'args' as parameter for formatting the message.
 *	All "exception" methods has an overload with an `IFormatProvider` as parameter.
 
@@ -80,7 +80,7 @@ This call will be removed by the .Net compiler if the DEBUG conditional compilat
 ### Auto load extensions
 
 Assemblies with the name "NLog*.dll", like "NLog.CustomTarget.dll" are now loaded automatically. This assembly should be in the same folder as NLog.dll.
-Of course you can load NLog extentions manually with the [`<Extensions>` config]( https://github.com/nlog/nlog/wiki/How-to-write-a-Target#how-to-use-the-newly-created-target)
+Of course you can load NLog extensions manually with the [`<Extensions>` config]( https://github.com/nlog/nlog/wiki/How-to-write-a-Target#how-to-use-the-newly-created-target)
 
 ### AllEventProperties layout renderer
 
@@ -162,7 +162,7 @@ More than 30 bugs are solved. The full list can be seen on [Github](https://gith
 The most noticeable bugs:
 
 *	The default value of `DatabaseTarget.CommandType` could lead to exceptions
-*	If the XML was broken (invalid), autoreload would be disabled - the application needed a restart before reading the changed config.  This has been fixed.
+*	If the XML was broken (invalid), auto reload would be disabled - the application needed a restart before reading the changed configuration.  This has been fixed.
 *	The `Logmanager.GetCurrentClassLogger` was not thread-safe and with many concurrent calls it would throw an exception.
 *	Various fixes to the archiving of files.
 *	Bugfix: `WebserviceTarget` wrote encoded UTF-8 preamble.
