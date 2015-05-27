@@ -62,20 +62,20 @@ Logger.Error("ow noos {0}", var1");
 ###Conditional logging
 
 In extreme cases logging could affect the performance of your application. There is a small overhead when writing a lot of log messages, like Tracing.
-For this case it’s now possible to only include the Trace and Debug call with a Debug release. 
+For this case it’s now possible to only include the `Trace` and `Debug` call with a debug release. 
 Instead of writing:
 
 {% highlight csharp %}
-Logger.Trace(“entering method {0}, methodname”);
+Logger.Trace("entering method {0}", methodname);
 {% endhighlight %}
 
 Write
 
 {% highlight csharp %}
-Logger. ConditionalTrace(“entering method {0}, methodname”);
+Logger.ConditionalTrace("entering method {0}", methodname);
 {% endhighlight %}
 
-This call will be removed by the .Net compiler if the DEBUG conditional compilation symbol is not set – default on a Release build.
+This call will be removed by the .Net compiler if the DEBUG conditional compilation symbol is not set – default on a release build.
 
 ### Auto load extensions
 
