@@ -119,20 +119,18 @@ Example:
               <attribute name="time" layout="${longdate}" />
               <attribute name="level" layout="${level:upperCase=true}"/>
               <attribute name="message" layout="${message}" />
-              <attribute name="callsite" layout="${callsite:includeSourcePath=true}" />
-              <attribute name="stacktrace" layout="${stacktrace:topFrames=10}" />
-              <attribute name="exception" layout="${exception:format=ToString}"/>
        </layout>
 </target>
 {% endhighlight %}
 
+would write: `{ "time": "2010-01-01 12:34:56.0000", "level": "ERROR", "message": "hello, world" }"
 
 ### LoggingRule final behavior (**breaking change**)
 
 The behavior of the final attribute has been changed. Example:
 
 {% highlight csharp %}
-<logger name="logger1" level="Debug"  final=”true”  />
+<logger name="logger1" level="Debug"  final=true  />
 {% endhighlight %}
 
 Before 4.0 it would mark _all_ messages from the logger “logger1” as final. In 4.0 it would only mark the _debug_ messages as final. 
