@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NLog 4.0 release candidate has been released.
+title: NLog 4.0 release candidate is online.
 ---
 
 The release candidate of NLog 4.0 has been released. More than 100 issues are closed in GitHub. The release candidate can be downloaded from NuGet. 
@@ -124,7 +124,7 @@ Other
 
 Bug fixes
 ==
-More than 30 bugs are solved. The full list can be seen on [Github] (https://github.com/NLog/NLog/issues?utf8=%E2%9C%93&q=milestone%3A4.0+is%3Aclosed+label%3Abug).
+More than 30 bugs are solved. The full list can be seen on [Github](https://github.com/NLog/NLog/issues?utf8=%E2%9C%93&q=milestone%3A4.0+is%3Aclosed+label%3Abug).
 
 The most noticeable bugs:
 
