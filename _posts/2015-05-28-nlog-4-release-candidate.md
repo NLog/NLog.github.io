@@ -183,6 +183,6 @@ NLog 4.0 has some breaking changes. To sum up:
 Please note that the wiki isn't updated yet.
 
 ##Feedback
-Any feedback or issues to report? Please post them in [this GitHub](https://github.com/NLog/NLog/issues/722) issue or [create a new issue](https://github.com/NLog/NLog/issues/new).  
+Any feedback or issues to report? Please post them in [this GitHub issue](https://github.com/NLog/NLog/issues/722) or [create a new issue](https://github.com/NLog/NLog/issues/new).  
 
 
