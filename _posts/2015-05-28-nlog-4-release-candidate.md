@@ -1,11 +1,11 @@
 ---
 layout: post
-title: NLog 4.0 release candidate is online.
+title: NLog 4.0 release candidate is online
 ---
 
-The release candidate of NLog 4.0 has been released. More than 100 issues are closed in GitHub. The release candidate can be downloaded from NuGet. 
+The release candidate of NLog 4.0 has is online. More than 100 issues are closed in GitHub. The release candidate can be downloaded from NuGet. 
 
-This release contains the following features:
+This release contains the following features and changes:
 
 ##Zipped file archives
 
@@ -46,10 +46,6 @@ This call will be removed by the .Net compiler if the DEBUG conditional compilat
 Assemblies with the name "NLog*.dll", like "NLog.CustomTarget.dll" are now loaded automatically. This assembly should be in the same folder as NLog.dll.
 Of course you can load NLog extentions manually with the [`<Extensions>` config]( https://github.com/nlog/nlog/wiki/How-to-write-a-Target#how-to-use-the-newly-created-target)
 
-##Added Eventlog.EntryType
-
-When writing to the Eventlogger, NLog would write to `Information`, `Warning` or `Error` entrytype, depending on the level. This is now layoutable and gives the opportunity to write also a `FailureAudit` or `SuccessAudit` and/or use it with conditions.
-
 ##AllEventProperties layout renderer
 
 A new layout renderer that outputs all of the event's properties. Format and separator can be manually configured.
@@ -76,9 +72,9 @@ logger.Info()
 * In case of `${all-event-properties:Format=[key] is [value]}` this would write: `Test is InfoWrite, coolness is 200%, a is not b`
 
 
-##Logging exceptions handling
+##Logging exceptions **breaking change**
 
-Logging exceptions information is now more consistent and complete. This is a breaking change.
+Logging exceptions is now more consistent and complete then before. This is a breaking change.
 All the logger methods, like `.Debug`, `Error` etc has now a first optional parameter of the type `Exception`. Only that parameter would be written as `Exception` to the log and can be used in the layout renderer like ` ${exception:format=tostring}`. 
 
 Changes:
@@ -126,12 +122,8 @@ Example:
 </target>
 {% endhighlight %}
 
-##EventLogTarget.Source Layoutable
 
-The `EventLogTarget.Source` now accepts Layout-renderers. But beware that the layout renderers can be used when in- or uninstalling the target. 
-
-
-##LoggingRule final behavior
+##LoggingRule final behavior **breaking change**
 
 The behavior of the final attribute has been changed. Example:
 
@@ -141,9 +133,13 @@ The behavior of the final attribute has been changed. Example:
 
 Before 4.0 it would mark _all_ messages from the logger “logger1” as final. In 4.0 it would only mark the _debug_ messages as final. 
 
+##Added Eventlog.EntryType
+
+When writing to the Eventlogger, NLog would write to `Information`, `Warning` or `Error` entrytype, depending on the level. This is now layoutable and gives the opportunity to write also a `FailureAudit` or `SuccessAudit` and/or use it with conditions.
 
 ##Other
 
+* The `EventLogTarget.Source` now accepts Layout-renderers. But beware that the layout renderers can be used when in- or uninstalling the target. 
 *	The `Console`- and `ColorConsole` target has an `encoding` property.
 *	The application domain layout renderer has been added. Examples: `${appdomain}`, `${appdomain:format=short}` or `${appdomain:format=long}`.
 *	Added `CallSiteLineNumber` layout renderer. usage: `${callsite-linenumber}`
@@ -177,7 +173,7 @@ NLog 4.0 has some breaking changes. To sum up:
 *	`LoggingRule.Final` behaviour has been changed.
 *	The methods of logging exception data has been changed.
 *	The webservice target won't write a BOM with UTF-8 (default, can be set)
-
+* All properties that has been changed to accept layout renderers. 
 
 ##Wiki
 Please note that the wiki isn't updated yet.
