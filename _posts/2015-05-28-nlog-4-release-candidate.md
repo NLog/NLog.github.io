@@ -3,7 +3,7 @@ layout: post
 title: NLog 4.0 release candidate is online
 ---
 
-The release candidate of NLog 4.0 has is online. More than 100 issues are [closed in GitHub](https://github.com/NLog/NLog/issues?q=milestone%3A4.0+is%3Aclosed). The release candidate can be downloaded from [NuGet](https://www.nuget.org/packages/NLog/4.0.0-rc). 
+The release candidate of NLog 4.0 is online. More than 100 issues are [closed in GitHub](https://github.com/NLog/NLog/issues?q=milestone%3A4.0+is%3Aclosed). The release candidate can be downloaded from [NuGet](https://www.nuget.org/packages/NLog/4.0.0-rc). 
 
 First of all, thanks for the reported issues and requested features!
 
@@ -32,14 +32,15 @@ Example: set `EnableArchiveFileCompression` in config file:
 
 ### Logging exceptions (**breaking change**)
 
-Logging exceptions is now more consistent and complete then before. This is a breaking change.
-All the logger methods, like `.Debug`, `Error` etc. has now a first optional parameter of the type `Exception`. Only that parameter would be written as `Exception` to the log and can be used in the layout renderer like ` ${exception:format=tostring}`. 
+Logging of exceptions is now more consistent and complete than before. This is a breaking change.
+All the logger methods, such as `.Debug`, `Error` etc. now contains a first optional parameter of the type `Exception`. 
+Only this parameter would be written as `Exception` to the log and can be used in the layout renderer, for example ` ${exception:format=tostring}`. 
 
 #### Changes:
 
-*	All "exception" methods are starting with `Exception`. E.g. `Error(Exception exception, string message, params object[] args)`.
-*	All "exception" methods has 'args' as parameter for formatting the message.
-*	All "exception" methods has an overload with an `IFormatProvider` as parameter.
+*	All "exception" methods starts with `Exception` parameter. E.g. `Error(Exception exception, string message, params object[] args)`.
+*	All "exception" methods have a 'args' as parameter for formatting the message.
+*	All "exception" methods have an overload with an `IFormatProvider` as parameter.
 
 Changes that are not backwards-compatible.
 *	removed "exceptionCandidate" hack: `Log(string message, Exception ex)` would write to exception property instead of message. This is non-backwards compatible in behaviour!
@@ -64,14 +65,14 @@ Logger.Error("ow noos {0}", var1");
 ###Conditional logging
 
 In extreme cases logging could affect the performance of your application. There is a small overhead when writing a lot of log messages, like Tracing.
-For this case it’s now possible to only include the `Trace` and `Debug` call with a debug release. 
-Instead of writing:
+In this case it’s now possible to only include the `Trace` and `Debug` call with a debug release. 
+Instead of:
 
 {% highlight csharp %}
 Logger.Trace("entering method {0}", methodname);
 {% endhighlight %}
 
-Write
+Use:
 
 {% highlight csharp %}
 Logger.ConditionalTrace("entering method {0}", methodname);
@@ -86,7 +87,7 @@ Of course you can load NLog extensions manually with the [`<Extensions>` config]
 
 ### AllEventProperties layout renderer
 
-A new layout renderer that outputs all of the event's properties. Format and separator can be manually configured.
+A new layout renderer which outputs all of the event's properties. Format and separator can be manually configured.
 Usage examples:
 
 *	`${all-event-properties}`
@@ -106,8 +107,8 @@ logger.Info()
     .Write();
 {% endhighlight %}
 
-* In case of `${all-event-properties}` this would write: `Test=InfoWrite, coolness=200%, a=not b`
-* In case of `${all-event-properties:Format=[key] is [value]}` this would write: `Test is InfoWrite, coolness is 200%, a is not b`
+* In case of `${all-event-properties}` this would produce: `Test=InfoWrite, coolness=200%, a=not b`
+* In case of `${all-event-properties:Format=[key] is [value]}` this would produce: `Test is InfoWrite, coolness is 200%, a is not b`
 
 
 ### Writing to JSON
@@ -135,36 +136,36 @@ The behavior of the final attribute has been changed. Example:
 <logger name="logger1" level="Debug"  final=true  />
 {% endhighlight %}
 
-Before 4.0 it would mark _all_ messages from the logger “logger1” as final. In 4.0 it would only mark the _debug_ messages as final. 
+Before 4.0 it would mark _all_ messages from the logger “logger1” as final. In 4.0 it will only mark the _debug_ messages as final. 
 
 ### Added Eventlog.EntryType
 
-When writing to the Eventlogger, NLog would write to `Information`, `Warning` or `Error` entrytype, depending on the level. This is now layoutable and gives the opportunity to write also a `FailureAudit` or `SuccessAudit` and/or use it with conditions.
+When writing to the Eventlogger, NLog would writes to `Information`, `Warning` or `Error` entrytype, depending on the level. This is now configurable (with layout renderes) and offers the opportunity to write also a `FailureAudit` or `SuccessAudit` and/or use it with conditions.
 
 ### Other
 
-* The `EventLogTarget.Source` now accepts layout-renderers. But beware that the layout renderers can be used when in- or uninstalling the target. 
+* The `EventLogTarget.Source` now accepts layout-renderers. Note: layout renderers can not be used when in- or uninstalling the target. 
 *	The `Console`- and `ColorConsole` target has an `encoding` property.
 *	The application domain layout renderer has been added. Examples: `${appdomain}`, `${appdomain:format=short}` or `${appdomain:format=long}`.
 *	Added `CallSiteLineNumber` layout renderer. usage: `${callsite-linenumber}`
 *	Added `SkipFrames` option to the `Stacktrace` layout renderer
 *	The `WebserviceTarget` has the option `IncludeBOM`. Possible options: 
-    *	`null`: don't change BOM.
+    *	`null`: doesn't change BOM.
     *	`true`: always include UTF-8 BOM UTF-8 encodings.
     *	`false`: **default**, always skip BOM on UTF-8 encodings.
-*	`FileTarget` uses time from the current `TimeSource` for date-based archiving. #512
+*	`FileTarget` uses time from the current `TimeSource` for date-based archiving. 
 *	Multicast with the `LogReceiverTarget` is now possible
-*	The `Mailtarget` has now less required parameters. (at least To, CC or BCC should be set) and the `Mailtarget` logs their errors correctly to the internal logger now. 
+*	The `Mailtarget` has less required parameters (at least To, CC or BCC should be set) and the `Mailtarget` logs their errors correctly to the internal logger now. 
 * The `Counter.Sequence` now accepts layout renderers.
 
 ##Bug fixes
 
-More than 30 bugs are solved. The full list can be seen on [Github](https://github.com/NLog/NLog/issues?utf8=%E2%9C%93&q=milestone%3A4.0+is%3Aclosed+label%3Abug).
+Over 30 bugs has been solved. The full list can be viewed on  [Github](https://github.com/NLog/NLog/issues?utf8=%E2%9C%93&q=milestone%3A4.0+is%3Aclosed+label%3Abug).
 
 The most noticeable bugs:
 
 *	The default value of `DatabaseTarget.CommandType` could lead to exceptions
-*	If the XML was broken (invalid), auto reload would be disabled - the application needed a restart before reading the changed configuration.  This has been fixed.
+*	If the XML was broken (invalid), auto reload would be disabled - the application needed a restart before reading the changed configuration.  
 *	The `Logmanager.GetCurrentClassLogger` was not thread-safe and with many concurrent calls it would throw an exception.
 *	Various fixes to the archiving of files.
 *	Bugfix: `WebserviceTarget` wrote encoded UTF-8 preamble.
@@ -177,10 +178,10 @@ NLog 4.0 has some breaking changes. To sum up:
 *	`LoggingRule.Final` behaviour has been changed.
 *	The methods of logging exception data has been changed.
 *	The webservice target won't write a BOM with UTF-8 (default, can be set)
-* All properties that has been changed to accept layout renderers. 
+* All properties that have been changed to accept layout renderers. 
 
 ##Wiki
-Please note that the wiki isn't updated yet.
+Please note that the wiki hasn't been updated yet.
 
 ##Feedback
 Any feedback or issues to report? Please post them in [this GitHub issue](https://github.com/NLog/NLog/issues/722) or [create a new issue](https://github.com/NLog/NLog/issues/new).  
