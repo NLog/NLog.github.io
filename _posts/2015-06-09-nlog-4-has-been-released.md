@@ -12,7 +12,12 @@ We underestimated the need for a release candidate and the time needed for docum
 
 Thanks again for the reported issues and requested features!
 
-This post is almost identical to the [release candidatie news post](http://nlog-project.org/2015/05/28/nlog-4-release-candidate.html)
+##Changes since the Release Candidate
+There is one change after the release of NLog 4.0 RC:
+
+- The autoflush fix was not fixed well. (see [GitHub](https://github.com/NLog/NLog/pull/734)
+
+Also this post and is almost identical to the [release candidatie news post](http://nlog-project.org/2015/05/28/nlog-4-release-candidate.html). 
 
 ##Features
 
