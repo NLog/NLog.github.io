@@ -141,7 +141,7 @@ would write: `{ "time": "2010-01-01 12:34:56.0000", "level": "ERROR", "message":
 * Also there is no way to prevent escaping of the values (e.g. writing custom JSON as value)
 * The JSON will be written on one line, so no newlines. 
 
-### LoggingRule final behavior (**breaking change**)
+### Improved loggingRule final behavior (**breaking change**)
 
 The behavior of the final attribute has been changed. Example:
 
