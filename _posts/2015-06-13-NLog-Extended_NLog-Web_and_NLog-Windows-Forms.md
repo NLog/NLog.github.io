@@ -22,6 +22,7 @@ The new extension packages, NLog.Web and NLog.Windows.Forms have their own GitHu
 
 * [NLog.Web on GitHub](https://github.com/NLog/NLog.Web)
 * [NLog.Windows.Forms on GitHub](https://github.com/NLog/NLog.Windows.Forms)
+* NLog.Extended is in the folder [NLog.Extended in the NLog GitHub repository](https://github.com/NLog/NLog/tree/master/src/NLog.Extended)
 
 
 ##Auto load
