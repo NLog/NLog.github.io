@@ -9,9 +9,10 @@ There are also some targets and layout renderers still in NLog.Extended, we will
 
 For now this this will results in:
 
-- [NLog.Web](https://www.nuget.org/packages/NLog.Web/) contains the targets and layout-renderes specific to ASP.Net and IIS. Version 2.0 is compatible with NLog 4.0
-- [NLog.Windows.Forms](https://www.nuget.org/packages/NLog.Windows.Forms/) contains targets specific for Windows.Forms. Version 2.0 is compatible with NLog 4.0
-- All other are in [NLog.Extended](https://www.nuget.org/packages/NLog.Extended/) - This is for currently only the MSMQ target and `${appsetting}` layout renderer. Version 4.0 is compatible with NLog 4.0
+- [NLog.Web package](https://www.nuget.org/packages/NLog.Web/) contains the targets and layout-renderes specific to ASP.Net and IIS. Version 2.0 is compatible with NLog 4.0
+- [NLog.Windows.Forms package](https://www.nuget.org/packages/NLog.Windows.Forms/) contains targets specific for Windows.Forms. Version 2.0 is compatible with NLog 4.0
+- All other are in [NLog.Extended package](https://www.nuget.org/packages/NLog.Extended/) - This is for currently only the MSMQ target and `${appsetting}` layout renderer. Version 4.0 is compatible with NLog 4.0
+- Please note: the classic ASP (so non-ASP.Net) are still in the [NLog package](https://www.nuget.org/packages/NLog/)
 
 
 This wasn't communicated in the [NLog 4.0 release post](http://nlog-project.org/2015/06/09/nlog-4-has-been-released.html) - which could lead to upgrade issues - we are sorry for that. The NLog 4.0 release post will be fixed.
