@@ -25,4 +25,4 @@ The new extension packages, NLog.Web and NLog.Windows.Forms have their own GitHu
 
 
 ##Auto load
-Because we introduced auto load of extentions in NLog 4.0 (see [news post](http://nlog-project.org/2015/06/09/nlog-4-has-been-released.html#auto-load-extensions), there is no need for additional configuration. Just install NLog.Web, NLog.Windows.Forms and/or NLog.Extended with Nuget. 
+Because we introduced auto load of extentions in NLog 4.0 (see [news post](http://nlog-project.org/2015/06/09/nlog-4-has-been-released.html#auto-load-extensions)), there is no need for additional configuration. Just install NLog.Web, NLog.Windows.Forms and/or NLog.Extended with Nuget. 
