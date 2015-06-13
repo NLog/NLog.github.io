@@ -20,7 +20,7 @@ This release contains the following features:
 
 
 
-###Zipped file archives
+###Zipped file archives (.Net 4.5 and higher)
 
 The `FileTarget` can now compress the archived files to zip format. 
 Example: set `EnableArchiveFileCompression` in config file:
@@ -36,8 +36,9 @@ Example: set `EnableArchiveFileCompression` in config file:
     enableArchiveFileCompression="true" />
 {% endhighlight %}
 
+Because we use the standard stuff of .Net for this, it's only available in .Net 4.5 and higher.
 
-### Logging exceptions (**breaking change**)
+### Consistent logging of exceptions (**breaking change**)
 
 Logging of exceptions is now more consistent and complete than before. This is a breaking change.
 All the logger methods, such as `.Debug`, `Error` etc. now contains a first optional parameter of the type `Exception`. 
@@ -140,7 +141,7 @@ would write: `{ "time": "2010-01-01 12:34:56.0000", "level": "ERROR", "message":
 * Also there is no way to prevent escaping of the values (e.g. writing custom JSON as value)
 * The JSON will be written on one line, so no newlines. 
 
-### LoggingRule final behavior (**breaking change**)
+### Improved loggingRule final behavior (**breaking change**)
 
 The behavior of the final attribute has been changed. Example:
 
