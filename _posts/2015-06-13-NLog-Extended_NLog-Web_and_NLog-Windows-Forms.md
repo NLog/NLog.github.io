@@ -5,7 +5,7 @@ title: NLog.Extended, NLog.Web and NLog.Windows.Forms
 
 With the release of NLog 4.0 we have split the package [NLog.Extended](https://www.nuget.org/packages/NLog.Extended/) to [NLog.Web](https://www.nuget.org/packages/NLog.Web/) and [NLog.Windows.Forms](https://www.nuget.org/packages/NLog.Windows/Forms/). 
 This will give us the opportunity to clean up the references in NLog.Extended. 
-There are also some targets still in NLog.Extended, we will also create new packages for those in the future.
+There are also some targets and layout renderers still in NLog.Extended, we will also create new packages for those in the future.
 
 For now this this will results in:
 
