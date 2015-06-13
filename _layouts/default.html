@@ -79,13 +79,17 @@
             </p>
             <p class="version">Latest version: {{site.version}} </p>
                 
-                <p class="github-buttons" style="position: relative;top: 20px;">
+                <p class="social-buttons" style="position: relative;top: 20px;">
                         <iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user=NLog&repo=NLog&type=star&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
                     
                         <iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user=NLog&repo=NLog&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
                 
+          
+                    <a class="twitter-hashtag-button"  href="https://twitter.com/intent/tweet?button_hashtag=nlog">
+                        Tweet #nlog
+                    </a>
+                       <a href="https://twitter.com/NLogOfficial" class="twitter-follow-button"  data-show-count="true">Follow @NLogOfficial</a>
                 </p>
-
                 
            
             {% endif %}
@@ -99,29 +103,35 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-md-10">
+                <div class="col-md-9">
                     <div id="content">
                         {{ content }}
                     </div>
                 </div>
-                <div class="col-md-2">
-                    <div class="ads row" id="banners-right">
-                        <div class="banner-item col-md-12 col-xs-12 col-sm-3">
-                            <a href="https://www.gibraltarsoftware.com/loupe/extensions/nlog">
-                                <img src="{{ site.baseurl }}/images/LoupeForNLog.png" alt="Gibraltar Loupe – The free log viewer and log analysis tool for NLog" style="width: 162px" />
-                            </a>
+                <div class="col-md-3">
+                    <div class="row" >
+                        <div id="twitter-box" style="margin-bottom: 20px;margin-top: 20px;">
+                        <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/nlog" 
+                        data-widget-id="609863870476324864">#nlog Tweets</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                      </div>
+                            <div class="banner-item col-md-12 col-xs-12 col-sm-3">
+                                <a href="https://www.gibraltarsoftware.com/loupe/extensions/nlog">
+                                    <img src="{{ site.baseurl }}/images/LoupeForNLog.png" alt="Gibraltar Loupe – The free log viewer and log analysis tool for NLog" style="width: 162px" />
+                                </a>
+                            </div>
+                            <div class="banner-item col-md-12 col-xs-12 col-sm-3">
+                                <a href="https://www.ndepend.com/">
+                                    <img src="{{ site.baseurl }}/images/PoweredByNDepend.png" alt="Powered by NDepend" style="width: 162px" />
+                                </a>
+                            </div>
+                            <div class="banner-item col-md-12 col-xs-12 col-sm-3">
+                                <a href="https://papertrailapp.com/">
+                                    <img src="{{ site.baseurl }}/images/papertrail.png" alt="Papertrail - Frustration-free log management" style="width: 162px" />
+                                </a>
+                            </div>
                         </div>
-                        <div class="banner-item col-md-12 col-xs-12 col-sm-3">
-                            <a href="https://www.ndepend.com/">
-                                <img src="{{ site.baseurl }}/images/PoweredByNDepend.png" alt="Powered by NDepend" style="width: 162px" />
-                            </a>
-                        </div>
-                        <div class="banner-item col-md-12 col-xs-12 col-sm-3">
-                            <a href="https://papertrailapp.com/">
-                                <img src="{{ site.baseurl }}/images/papertrail.png" alt="Papertrail - Frustration-free log management" style="width: 162px" />
-                            </a>
-                        </div>
-                    </div>
+                   
 
                 </div>
             </div>
@@ -163,5 +173,22 @@
         ga('send', 'pageview');
 
     </script>
+    <script>
+    window.twttr = (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+          if (d.getElementById(id)) return t;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "https://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js, fjs);
+         
+          t._e = [];
+          t.ready = function(f) {
+            t._e.push(f);
+          };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
 </body>
 </html>
