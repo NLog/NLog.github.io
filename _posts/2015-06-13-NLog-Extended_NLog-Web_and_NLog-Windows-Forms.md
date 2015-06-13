@@ -17,5 +17,12 @@ For now this this will results in:
 This wasn't communicated in the [NLog 4.0 release post](http://nlog-project.org/2015/06/09/nlog-4-has-been-released.html) - which could lead to upgrade issues - we are sorry for that. The NLog 4.0 release post will be fixed.
 
 
+##Source code and issues
+The new extension packages, NLog.Web and NLog.Windows.Forms have their own GitHub reposities. Please post questions, feature requests or bug reports to the related repository. 
+
+* [NLog.Web on GitHub](https://github.com/NLog/NLog.Web)
+* [NLog.Windows.Forms on GitHub](https://github.com/NLog/NLog.Windows.Forms)
+
+
 ##Auto load
 Because we introduced auto load of extentions in NLog 4.0 (see [news post](http://nlog-project.org/2015/06/09/nlog-4-has-been-released.html#auto-load-extensions), there is no need for additional configuration. Just install NLog.Web, NLog.Windows.Forms and/or NLog.Extended with Nuget. 
