@@ -13,3 +13,5 @@ We just released a patch release for 4.0. This release fixes the following probl
 * Some descriptions for the obsolete methods are corrected.
 
 Thanks for reporting those issues and creating Pull Requests! Without your help we could not release of 4.0.1 on short time.
+
+PS: details of the fixed issues can be found on the [GitHub 4.0.1 milestone](https://github.com/NLog/NLog/issues?q=milestone%3A4.0.1).
