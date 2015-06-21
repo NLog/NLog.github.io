@@ -24,7 +24,7 @@ header: Getting started
                 Source code is available as zip on GitHub
             </p>
             <p>
-                <a href="https://github.com/NLog/NLog/releases/" class="btn btn-outline">Download zipped binaries</a>
+                <a href="https://github.com/NLog/NLog/releases/" class="btn btn-outline">Download sourcecode as Zip</a>
             </p>
         </div>
         <div class="col-sm-4">
