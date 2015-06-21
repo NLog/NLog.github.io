@@ -3,7 +3,19 @@ layout: default
 header: Getting started
 ---
 <section>
-    <h1 class="page-header" id="download">Download</h1>
+    <h1 class="page-header" id="download">Getting started</h1>
+    
+    <h2>The easiest way</h2>
+    The easiest way to get started in just two steps:
+    1. 
+    {% highlight xml %}
+PM> Install-Package NLog.Config
+{% endhighlight %}
+    
+    2. and go to the quick start [tutorial](https://github.com/NLog/NLog/wiki/Tutorial)
+    
+    
+    <h2>Manual download</h2>
     <p class="lead">  NLog is available as source code and NuGet packages.</p>
 
     <div class="row text-center">
@@ -42,16 +54,20 @@ header: Getting started
         </div>
     </div>
 
-    <h2 id="other-downloads">Other downloads    </h2>
+    <h2 id="other-downloads">Need more?  </h2>
+NLog has also extensions for more targets and layout renderers. Which package do you need? Check the [target list](https://github.com/NLog/NLog/wiki/Targets) and the [layout renderers list](https://github.com/NLog/NLog/wiki/Layout-Renderers) on the [NLog wiki](https://github.com/NLog/NLog/wiki)
+
+The following packages are available 
 
     <ul>
-
-        <li><a href="http://nuget.org/List/Packages/NLog.Extended">NLog for Extended Profile</a> </li>
-        <li><a href="http://nuget.org/List/Packages/NLog.Config/">NLog Configuration</a> </li>
+    <li><a href="http://nuget.org/List/Packages/NLog.Web">NLog.Web package contains targets and layout-renderes specific to ASP.Net and IIS.</a> </li>
+    <li><a href="http://nuget.org/List/Packages/NLog.Windows.Forms">NLog.Windows.Forms package contains targets specific for Windows.Forms</a> </li>
+        <li><a href="http://nuget.org/List/Packages/NLog.Extended">MSMQ target, AppSetting layout renderer</a> </li>
+        <li><a href="http://nuget.org/List/Packages/NLog.Config/">NLog Configuration example</a> </li>
         <li><a href="http://nuget.org/List/Packages/NLog.Schema">NLog Schema for Intellisense&#0153; </a></li>
     </ul>
 
-
+    <h2 id="other-downloads">Older downloads    </h2>
     <p>Older releases can be downloaded from CodePlex. Installer and zip packages are available.</p>
     <ul>
         <li><a href="https://nlog.codeplex.com/releases/view/32639">NLog 2.0</a></li>
