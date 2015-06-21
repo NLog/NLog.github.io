@@ -9,8 +9,7 @@ header: Getting started
     The easiest way to get started in just two steps:
     1. 
     {% highlight xml %}
-PM> Install-Package NLog.Config
-{% endhighlight %}
+PM> Install-Package NLog.Config{% endhighlight %}
     
     2. and go to the quick start [tutorial](https://github.com/NLog/NLog/wiki/Tutorial)
     
