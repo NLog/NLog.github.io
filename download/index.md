@@ -4,7 +4,7 @@ header: Getting started
 ---
 <section>
     <h1 class="page-header" id="download">Download</h1>
-    <p class="lead">  NLog is available as source code and binary packages.</p>
+    <p class="lead">  NLog is available as source code and NuGet packages.</p>
 
     <div class="row text-center">
   
