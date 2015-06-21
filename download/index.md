@@ -19,9 +19,9 @@ header: Getting started
 
         </div>
         <div class="col-sm-4">
-            <h4>GitHub binaries</h4>
+            <h4>GitHub releases</h4>
             <p class="download-text">
-                Binary packages are also available as zip via GitHub
+                Source code is available as zip on GitHub
             </p>
             <p>
                 <a href="https://github.com/NLog/NLog/releases/" class="btn btn-outline">Download zipped binaries</a>
