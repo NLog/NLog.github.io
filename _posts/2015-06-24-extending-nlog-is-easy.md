@@ -141,11 +141,11 @@ static void Main(string[] args)
 { 
     //target
     ConfigurationItemFactory.Default.Targets
-                            .RegisterDefinition("MyFirst", typeof(MyNamespace.MyFirstTarget));
+          .RegisterDefinition("MyFirst", typeof(MyNamespace.MyFirstTarget));
 
     //layout renderer
     ConfigurationItemFactory.Default.LayoutRenderers
-                            .RegisterDefinition("hello-world", typeof(MyNamespace.HelloWorldLayoutRenderer ));
+          .RegisterDefinition("hello-world", typeof(MyNamespace.HelloWorldLayoutRenderer ));
  
     // start logging here 
 }
