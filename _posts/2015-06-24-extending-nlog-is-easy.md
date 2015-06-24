@@ -144,8 +144,8 @@ static void Main(string[] args)
                             .RegisterDefinition("MyFirst", typeof(MyNamespace.MyFirstTarget));
 
     //layout renderer
-    ConfigurationItemFactory.Default
-                            .LayoutRenderers.RegisterDefinition("hello-world", typeof(MyNamespace.HelloWorldLayoutRenderer ));
+    ConfigurationItemFactory.Default.LayoutRenderers
+                            .RegisterDefinition("hello-world", typeof(MyNamespace.HelloWorldLayoutRenderer ));
  
     // start logging here 
 }
