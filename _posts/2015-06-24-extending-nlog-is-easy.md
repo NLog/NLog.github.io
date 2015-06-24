@@ -124,7 +124,7 @@ Configuration file example:
   <targets> 
     <target name="a1" type="MyFirst" host="localhost"/> 
     <target name="f1" type="file"  layout="${longdate} ${hello-world}" 
-            fileName="${basedir}/logs/logfile.log" 
+            fileName="${basedir}/logs/logfile.log" />
   </targets> 
   <rules> 
     <logger name="*" minLevel="Info" appendTo="a1"/> 
