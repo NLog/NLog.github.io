@@ -5,7 +5,7 @@ title: Extending NLog ... is easy!
 
 
 
-Not everyone is aware the NLog is easy to extend to your own wishes. 
+Not everyone is aware that NLog is easy to extend to your own wishes. 
 There could be various reasons why you would like to extend NLog. 
 For example: If you want to write your log messages to a custom output or you would like to use your own ${} macro's. 
 
@@ -21,36 +21,33 @@ It’s really easy. Create a class that inherits from `NLog.Targets.TargetWithLa
 ###Example
 
 Example 
-```csharp
-using NLog;
-using NLog.Config;
-using NLog.Targets;
- 
-    [Target("MyFirst")] 
-    public sealed class MyFirstTarget: TargetWithLayout 
-    { 
-        public MyFirstTarget()
-        {
-            this.Host = "localhost";
-        }
- 
-        [RequiredParameter] 
-        public string Host { get; set; }
- 
-        protected override void Write(LogEventInfo logEvent) 
-        { 
-            string logMessage = this.Layout.Render(logEvent); 
- 
-            SendTheMessageToRemoteHost(this.Host, logMessage); 
-        } 
- 
-        private void SendTheMessageToRemoteHost(string host, string message) 
-        { 
-            // TODO - write me 
-        } 
-    } 
+{% highlight csharp %}
 
-```
+[Target("MyFirst")] 
+public sealed class MyFirstTarget: TargetWithLayout 
+{ 
+    public MyFirstTarget()
+    {
+        this.Host = "localhost";
+    }
+ 
+    [RequiredParameter] 
+    public string Host { get; set; }
+ 
+    protected override void Write(LogEventInfo logEvent) 
+    { 
+       string logMessage = this.Layout.Render(logEvent); 
+
+       SendTheMessageToRemoteHost(this.Host, logMessage); 
+    } 
+ 
+    private void SendTheMessageToRemoteHost(string host, string message) 
+    { 
+         // TODO - write me 
+    } 
+} 
+
+{% endhighlight %}
 
 ###How to pass configuration options to the target?
 Consider the above example. There’s a property called “Host” that does just that. Having a public property that sets the required configuration parameters is enough for NLog to use it. Each attribute that you put in the `<target />` definition gets passed to the appropriate public property. NLog takes care of the appropriate conversions necessary so that you can use integer, string, datetime, boolean parameters.
@@ -62,7 +59,7 @@ Invoke in this method `builder.Append(..)` to render your custom layout renderer
 ###Example
 We create a `${hello-world}` layout renderer, which renders..."hello world!".
 
-```c#
+{% highlight csharp %}
 [LayoutRenderer("hello-world")]
 public class HelloWorldLayoutRenderer : LayoutRenderer
 {
@@ -73,7 +70,7 @@ public class HelloWorldLayoutRenderer : LayoutRenderer
 }
 
 
-```
+{% endhighlight %}
 
 ###How to pass configuration options to the layout render?
 Just create public properties on the Layout Renderer. The properties could be decorated with the `[RequiredParameter]` and `[DefaultParameter]` attributes. The `[DefaultParameter]` is can be passed to the layout renderer without using the name.
@@ -82,7 +79,7 @@ Just create public properties on the Layout Renderer. The properties could be de
 
 for example:
 
-```c#
+{% highlight csharp %}
 [LayoutRenderer("hello-world")]
 public class HelloWorldLayoutRenderer : LayoutRenderer
 {
@@ -103,7 +100,7 @@ public class HelloWorldLayoutRenderer : LayoutRenderer
         [DefaultParameter]
         public bool Caps {get;set;}
 
-```
+{% endhighlight %}
 
 Example usages
 
@@ -118,7 +115,8 @@ It’s easy. Just put the target or layout renderer in a DLL and reference it fr
 Starting from NLog 4.0 assemblies with the name "NLog*.dll", like “NLog.CustomTarget.dll” are now loaded automatically. This assembly should be in the same folder as `NLog.dll`. 
 
 Configuration file example:
-```xml
+
+{% highlight xml %}
 <nlog> 
   <extensions> 
     <add assembly="MyAssembly"/> 
@@ -133,12 +131,12 @@ Configuration file example:
     <logger name="*" minLevel="Info" appendTo="f1"/> 
   </rules> 
 </nlog>
-```
+{% endhighlight %}
 
 
 ###Do I really need to create a separate DLL?
 Not really. You can register your target programmatically. Just be sure to do it at the very beginning of your program before any log messages are written. It should be possible to reference your EXE using the `<extensions />` clause.
-```csharp
+{% highlight csharp %}
 static void Main(string[] args) 
 { 
     //target
@@ -151,6 +149,6 @@ static void Main(string[] args)
  
     // start logging here 
 }
-```
+{% endhighlight %}
 
 
