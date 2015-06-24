@@ -20,7 +20,7 @@ It’s really easy. Create a class that inherits from `NLog.Targets.TargetWithLa
 
 ###Example
 
-Example 
+ 
 {% highlight csharp %}
 
 [Target("MyFirst")] 
