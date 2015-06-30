@@ -16,7 +16,7 @@ I will describe creating your own layout renderer and custom target in this post
 
 
 ##How to write a custom layout renderer?
-Create a class that inherits from `NLog.LayoutRenderers.LayoutRenderer`, set the `[LayoutRenderer("your-name"]` on the class and override the `Append(StringBuilder builder, LogEventInfo logEvent)` method. 
+Create a class which inherits from `NLog.LayoutRenderers.LayoutRenderer`, set the `[LayoutRenderer("your-name"]` on the class and override the `Append(StringBuilder builder, LogEventInfo logEvent)` method. 
 Invoke in this method `builder.Append(..)` to render your custom layout renderer.
 
 ###Example
@@ -36,11 +36,12 @@ public class HellouniverseLayoutRenderer : LayoutRenderer
 {% endhighlight %}
 
 ###How to pass configuration options to the layout render?
-Just create **public** properties on the layout renderer. The properties could be decorated with the `[RequiredParameter]` and `[DefaultParameter]` attributes. 
-With the `[RequiredParameter]` attribute, NLog will check if this property has a value and throw an exception when not. When the  `[DefaultParameter]` attribute is used, then the name of the property is not required in your config if it's the first value - see the examples below. 
+Just create **public** properties on the layout renderer. The properties can be decorated with the `[RequiredParameter]` and `[DefaultParameter]` attributes. 
+With the `[RequiredParameter]` attribute, NLog checks if this property has a value and throws an exception when it hasn't.
+The property names are required in your config by default. The property name of the first value can be skipped, if the property is decorated with the `[DefaultParameter]` attribute - see the examples below. 
 
-It's not required that the property is a `string`.
-NLog takes care of the appropriate conversions necessary. You can use, inter alia, the following types for the properties: `integer`, `string`, `datetime` and `boolean`. 
+It's not required for the property to be a `string`.
+NLog takes care of the appropriate conversions when necessary. You can use, inter alia, the following types for the properties: `integer`, `string`, `datetime` and `boolean`. 
 
 
 For example:
@@ -55,29 +56,29 @@ public class HellouniverseLayoutRenderer : LayoutRenderer
         public string Config1 { get; set; }
 
         /// <summary>
-        /// I'm required
+        /// I'm required! 
         /// </summary>
         [RequiredParameter]
         public string Config2 { get; set; }
 
         /// <summary>
-        /// I'm the default parameter. You can also set me as required.
+        /// Hi! I'm the default parameter. You can also set me as required.
         /// </summary>
         [DefaultParameter]
         public bool Caps {get;set;}
 
 {% endhighlight %}
 
-Example usages
+Example usages:
 
-- `${hello-universe}` - raises exception: required parameter "Config2" isn't set
-- `${hello-universe:Config2=abc}` - OK, "Config2" property set
-- `${hello-universe:true:config2=abc}` - default parameter "Caps" set to `true`
-- `${hello-universe:true:config2=abc:config1=yes}` - all the three properties set.
+- `${hello-universe}` - Raises exception: required parameter "Config2" isn't set.
+- `${hello-universe:Config2=abc}` - OK, "Config2" property set.
+- `${hello-universe:true:config2=abc}` - Default parameter "Caps" set to `true`.
+- `${hello-universe:true:config2=abc:config1=yes}` - All the three properties set.
 
 
 ##How to write a custom target?
-Creating a custom target is almost indentical to creating a custom layout renderer. 
+Creating a custom target is almost identical to creating a custom layout renderer. 
 
 The created class should now inherit from `NLog.Targets.TargetWithLayout` and override the `Write()` method. In the body of the method invoke `this.Layout.Render()` to render the message text.
 
@@ -117,8 +118,8 @@ public sealed class MyFirstTarget: TargetWithLayout
 The property "host" is a configurable option to this target. You can pass the value as attribute in the config: `<layout type="myFirst" host="test.com" />`
 
 
-##How to use the custom target / layout renderer
-First put your custom target or layout renderer in a separate assembly (.dll). Then you should register your assembly. Starting from NLog 4.0, assemblies with the name "NLog*.dll", such as "NLog.CustomTarget.dll" are now registered automatically - the should be in the same folder as "NLog.dll".  
+##How to use the custom target or layout renderer
+First put your custom target or layout renderer in a separate assembly (.dll). Then you should register your assembly. Starting from NLog 4.0, assemblies with the name "NLog*.dll", such as "NLog.CustomTarget.dll" are now registered automatically - they should be in the same folder as "NLog.dll".  
 
 If that's not the case you should register your assembly manually: reference your assembly from the the config file using the `<extensions />` clause. Only the assembly name is needed (without ".dll"). 
 
@@ -143,7 +144,7 @@ Configuration file example:
 
 
 ###Do I really need to create a separate assembly?
-Not really. You should then register your target programmatically. Just be sure to do it at the very beginning of your program before any log messages are written. 
+Not really. You should then register your target programmatically. Just make sure to register your stuff at the very beginning of your program, before any log messages are written. 
 {% highlight csharp %}
 static void Main(string[] args) 
 { 
