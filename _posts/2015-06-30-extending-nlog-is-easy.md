@@ -70,9 +70,9 @@ public class HellouniverseLayoutRenderer : LayoutRenderer
 
 Example usages
 
-- `${hello-universe}` - raises exception: required parameter Config2 isn't set
-- `${hello-universe:Config2=abc}` - OK, Config2 property set
-- `${hello-universe:true:config2=abc}` - default parameter (Caps) set to `true`
+- `${hello-universe}` - raises exception: required parameter "Config2" isn't set
+- `${hello-universe:Config2=abc}` - OK, "Config2" property set
+- `${hello-universe:true:config2=abc}` - default parameter "Caps" set to `true`
 - `${hello-universe:true:config2=abc:config1=yes}` - all the three properties set.
 
 
