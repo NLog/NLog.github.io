@@ -118,9 +118,9 @@ The property "host" is a configurable option to this target. You can pass the va
 
 
 ##How to use the custom target / layout renderer
-It’s very simple. Just put the target or layout renderer in a DLL and reference it from the the config file using the `<extensions />` clause as described above.
+First put your custom target or layout renderer in a separate assembly (.dll). Then you should register your assembly. Starting from NLog 4.0, assemblies with the name "NLog*.dll", such as "NLog.CustomTarget.dll" are now registered automatically - the should be in the same folder as "NLog.dll".  
 
-Starting from NLog 4.0, assemblies with the name "NLog*.dll", such as “NLog.CustomTarget.dll” are now loaded automatically. This assembly should be in the same folder as `NLog.dll`. 
+If that's not the case you should register your assembly manually: reference your assembly from the the config file using the `<extensions />` clause. Only the assembly name is needed (without ".dll"). 
 
 Configuration file example:
 
@@ -142,8 +142,8 @@ Configuration file example:
 {% endhighlight %}
 
 
-###Do I really need to create a separate DLL?
-Not really. You can register your target programmatically. Just be sure to do it at the very beginning of your program before any log messages are written. 
+###Do I really need to create a separate assembly?
+Not really. You should then register your target programmatically. Just be sure to do it at the very beginning of your program before any log messages are written. 
 {% highlight csharp %}
 static void Main(string[] args) 
 { 
