@@ -50,7 +50,7 @@ For example:
 public class HellouniverseLayoutRenderer : LayoutRenderer
 {
         /// <summary>
-        /// I'm not required or default
+        /// I'm not required
         /// </summary>
         public string Config1 { get; set; }
 
