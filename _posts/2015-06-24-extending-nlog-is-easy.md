@@ -7,19 +7,79 @@ title: Extending NLog is... easy!
 
 Not everyone knows NLog is easy to extend to your own wishes. 
 There can be various reasons for wanting to extend NLog. 
-For example when you want to write your log messages to a custom output or you would like to use your own ${} macros. 
+For example when you want wto write your log messages to a custom output or you would like to use your own ${} macros. 
 
 With some attributes you can create your own custom target, layout or layout renderer with ease. 
 Also creating your own conditions for filter messages is possible!
 
 I will describe creating your own custom target and layout renderer in this post.
 
-##How to write a custom target?
-It’s really easy. Create a class that inherits from `NLog.Targets.TargetWithLayout` and override the `Write()` method. In the body of the method invoke `this.Layout.Render()` to get the message text, then send the text to the destination media.
 
+##How to write a custom layout renderer?
+Create a class that inherits from `NLog.LayoutRenderers.LayoutRenderer`, set the `[LayoutRenderer("your-name"]` on the class and override the `Append(StringBuilder builder, LogEventInfo logEvent)` method. 
+Invoke in this method `builder.Append(..)` to render your custom layout renderer.
 
 ###Example
+We create a `${hello-universe}` layout renderer, which renders... "hello universe!".
 
+{% highlight csharp %}
+[LayoutRenderer("hello-universe")]
+public class HellouniverseLayoutRenderer : LayoutRenderer
+{
+    protected override void Append(StringBuilder builder, LogEventInfo logEvent)
+    {
+        builder.Append("hello universe!");
+    }
+}
+
+
+{% endhighlight %}
+
+###How to pass configuration options to the layout render?
+Just create **public** properties on the layout renderer. The properties could be decorated with the `[RequiredParameter]` and `[DefaultParameter]` attributes. The `[DefaultParameter]` can be passed on to the layout renderer without using the name. 
+NLog takes care of the appropriate conversions necessary so that you can use, inter alia integer, string, datetime, boolean parameters.
+
+
+For example:
+
+{% highlight csharp %}
+[LayoutRenderer("hello-universe")]
+public class HellouniverseLayoutRenderer : LayoutRenderer
+{
+        /// <summary>
+        /// I'm not required or default
+        /// </summary>
+        public string Config1 { get; set; }
+
+        /// <summary>
+        /// I'm required
+        /// </summary>
+        [RequiredParameter]
+        public string Config2 { get; set; }
+
+        /// <summary>
+        /// I'm the default parameter. You can also set me as required.
+        /// </summary>
+        [DefaultParameter]
+        public bool Caps {get;set;}
+
+{% endhighlight %}
+
+Example usages
+
+- `${hello-universe}` - raises exception: required parameter Config2 isn't set
+- `${hello-universe:Config2=abc}` - OK, Config2 property set
+- `${hello-universe:true:config2=abc}` - default parameter (Caps) set to `true`
+- `${hello-universe:true:config2=abc:config1=yes}` - all the three properties set.
+
+
+##How to write a custom target?
+Creating a custom target is almost indentical to creating a custom layout renderer. 
+
+The created class should now inherit from `NLog.Targets.TargetWithLayout` and override the `Write()` method. In the body of the method invoke `this.Layout.Render()` to render the message text.
+
+###Example
+An example of a custom target:
  
 {% highlight csharp %}
 
@@ -50,64 +110,9 @@ public sealed class MyFirstTarget: TargetWithLayout
 {% endhighlight %}
 
 ###How to pass configuration options to the target?
-Consider the above example. There’s a property called “Host” that does just that. Having a public property that sets the required configuration parameters is enough for NLog to use it. Each attribute you put in the `<target />` definition gets passed to the appropriate public property. NLog takes care of the appropriate conversions necessary so that you can use integer, string, datetime, boolean parameters.
 
-##How to write a custom layout renderer?
-Create a class that inherits from `NLog.LayoutRenderers.LayoutRenderer`, set the `[LayoutRenderer("your-name"]` on the class and override the `Append(StringBuilder builder, LogEventInfo logEvent)` method. 
-Invoke in this method `builder.Append(..)` to render your custom layout renderer.
+The property "host" is a configurable option to this target. You can pass the value as attribute in the config: `<layout type="myFirst" host="test.com" />`
 
-###Example
-We create a `${hello-world}` layout renderer, which renders... "hello world!".
-
-{% highlight csharp %}
-[LayoutRenderer("hello-world")]
-public class HelloWorldLayoutRenderer : LayoutRenderer
-{
-    protected override void Append(StringBuilder builder, LogEventInfo logEvent)
-    {
-        builder.Append("hello world!");
-    }
-}
-
-
-{% endhighlight %}
-
-###How to pass configuration options to the layout render?
-Just create public properties on the layout renderer. The properties could be decorated with the `[RequiredParameter]` and `[DefaultParameter]` attributes. The `[DefaultParameter]` can be passed on to the layout renderer without using the name.
-
-
-
-For example:
-
-{% highlight csharp %}
-[LayoutRenderer("hello-world")]
-public class HelloWorldLayoutRenderer : LayoutRenderer
-{
-        /// <summary>
-        /// I'm not required or default
-        /// </summary>
-        public string Config1 { get; set; }
-
-        /// <summary>
-        /// I'm required
-        /// </summary>
-        [RequiredParameter]
-        public string Config2 { get; set; }
-
-        /// <summary>
-        /// I'm the default parameter. You can also set me as required.
-        /// </summary>
-        [DefaultParameter]
-        public bool Caps {get;set;}
-
-{% endhighlight %}
-
-Example usages
-
-- `${hello-world}` - raises exception: required parameter Config2 isn't set
-- `${hello-world:Config2=abc}` - OK, Config2 property set
-- `${hello-world:true:config2=abc}` - default parameter (Caps) set to `true`
-- `${hello-world:true:config2=abc:config1=yes}` - all the three properties set.
 
 ##How to use the custom target / layout renderer
 It’s very simple. Just put the target or layout renderer in a DLL and reference it from the the config file using the `<extensions />` clause as described above.
@@ -123,7 +128,7 @@ Configuration file example:
   </extensions> 
   <targets> 
     <target name="a1" type="MyFirst" host="localhost"/> 
-    <target name="f1" type="file"  layout="${longdate} ${hello-world}" 
+    <target name="f1" type="file"  layout="${longdate} ${hello-universe}" 
             fileName="${basedir}/logs/logfile.log" />
   </targets> 
   <rules> 
@@ -145,7 +150,7 @@ static void Main(string[] args)
 
     //layout renderer
     ConfigurationItemFactory.Default.LayoutRenderers
-          .RegisterDefinition("hello-world", typeof(MyNamespace.HelloWorldLayoutRenderer ));
+          .RegisterDefinition("hello-universe", typeof(MyNamespace.HellouniverseLayoutRenderer ));
  
     // start logging here 
 }
