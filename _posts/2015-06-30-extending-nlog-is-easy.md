@@ -143,17 +143,17 @@ Configuration file example:
 
 
 ###Do I really need to create a separate DLL?
-Not really. You can register your target programmatically. Just be sure to do it at the very beginning of your program before any log messages are written. It should be possible to reference your EXE using the `<extensions />` clause.
+Not really. You can register your target programmatically. Just be sure to do it at the very beginning of your program before any log messages are written. 
 {% highlight csharp %}
 static void Main(string[] args) 
 { 
-    //target
-    ConfigurationItemFactory.Default.Targets
-          .RegisterDefinition("MyFirst", typeof(MyNamespace.MyFirstTarget));
-
     //layout renderer
     ConfigurationItemFactory.Default.LayoutRenderers
           .RegisterDefinition("hello-universe", typeof(MyNamespace.HellouniverseLayoutRenderer ));
+
+    //target
+    ConfigurationItemFactory.Default.Targets
+          .RegisterDefinition("MyFirst", typeof(MyNamespace.MyFirstTarget));
  
     // start logging here 
 }
