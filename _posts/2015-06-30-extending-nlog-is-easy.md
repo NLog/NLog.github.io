@@ -36,8 +36,11 @@ public class HellouniverseLayoutRenderer : LayoutRenderer
 {% endhighlight %}
 
 ###How to pass configuration options to the layout render?
-Just create **public** properties on the layout renderer. The properties could be decorated with the `[RequiredParameter]` and `[DefaultParameter]` attributes. The `[DefaultParameter]` can be passed on to the layout renderer without using the name. 
-NLog takes care of the appropriate conversions necessary so that you can use, inter alia integer, string, datetime, boolean parameters.
+Just create **public** properties on the layout renderer. The properties could be decorated with the `[RequiredParameter]` and `[DefaultParameter]` attributes. 
+With the `[RequiredParameter]` attribute, NLog will force a value for this property. When the  `[DefaultParameter]` attribute is used, than the name of the property is not required in your config - see the examples below. 
+
+It's not required that the property is a `string`.
+NLog takes care of the appropriate conversions necessary. You can use, inter alia, the following types for the properties: integer, string, datetime and boolean. 
 
 
 For example:
