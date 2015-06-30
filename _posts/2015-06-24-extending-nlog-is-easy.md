@@ -7,12 +7,12 @@ title: Extending NLog is... easy!
 
 Not everyone knows NLog is easy to extend to your own wishes. 
 There can be various reasons for wanting to extend NLog. 
-For example when you want wto write your log messages to a custom output or you would like to use your own ${} macros. 
+For example when you want to write your log messages to a custom output or you would like to use your own ${} macros. 
 
 With some attributes you can create your own custom target, layout or layout renderer with ease. 
 Also creating your own conditions for filter messages is possible!
 
-I will describe creating your own custom target and layout renderer in this post.
+I will describe creating your own layout renderer and custom target in this post.
 
 
 ##How to write a custom layout renderer?
