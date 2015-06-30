@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Extending NLog ... is easy!
+title: Extending NLog is... easy!
 ---
 
 
 
-Not everyone is aware that NLog is easy to extend to your own wishes. 
-There could be various reasons why you would like to extend NLog. 
-For example: If you want to write your log messages to a custom output or you would like to use your own ${} macro's. 
+Not everyone knows NLog is easy to extend to your own wishes. 
+There can be various reasons for wanting to extend NLog. 
+For example when you want to write your log messages to a custom output or you would like to use your own ${} macros. 
 
-With some attributes you can create your own custom Target, Layout or Layout renderer with easy. 
+With some attributes you can create your own custom target, layout or layout renderer with ease. 
 Also creating your own conditions for filter messages is possible!
 
-I will describe the Target and Layout renderer in this post.
+I will describe creating your own custom target and layout renderer in this post.
 
 ##How to write a custom target?
 It’s really easy. Create a class that inherits from `NLog.Targets.TargetWithLayout` and override the `Write()` method. In the body of the method invoke `this.Layout.Render()` to get the message text, then send the text to the destination media.
@@ -50,14 +50,14 @@ public sealed class MyFirstTarget: TargetWithLayout
 {% endhighlight %}
 
 ###How to pass configuration options to the target?
-Consider the above example. There’s a property called “Host” that does just that. Having a public property that sets the required configuration parameters is enough for NLog to use it. Each attribute that you put in the `<target />` definition gets passed to the appropriate public property. NLog takes care of the appropriate conversions necessary so that you can use integer, string, datetime, boolean parameters.
+Consider the above example. There’s a property called “Host” that does just that. Having a public property that sets the required configuration parameters is enough for NLog to use it. Each attribute you put in the `<target />` definition gets passed to the appropriate public property. NLog takes care of the appropriate conversions necessary so that you can use integer, string, datetime, boolean parameters.
 
 ##How to write a custom layout renderer?
 Create a class that inherits from `NLog.LayoutRenderers.LayoutRenderer`, set the `[LayoutRenderer("your-name"]` on the class and override the `Append(StringBuilder builder, LogEventInfo logEvent)` method. 
 Invoke in this method `builder.Append(..)` to render your custom layout renderer.
 
 ###Example
-We create a `${hello-world}` layout renderer, which renders..."hello world!".
+We create a `${hello-world}` layout renderer, which renders... "hello world!".
 
 {% highlight csharp %}
 [LayoutRenderer("hello-world")]
@@ -73,11 +73,11 @@ public class HelloWorldLayoutRenderer : LayoutRenderer
 {% endhighlight %}
 
 ###How to pass configuration options to the layout render?
-Just create public properties on the Layout Renderer. The properties could be decorated with the `[RequiredParameter]` and `[DefaultParameter]` attributes. The `[DefaultParameter]` is can be passed to the layout renderer without using the name.
+Just create public properties on the layout renderer. The properties could be decorated with the `[RequiredParameter]` and `[DefaultParameter]` attributes. The `[DefaultParameter]` can be passed on to the layout renderer without using the name.
 
 
 
-for example:
+For example:
 
 {% highlight csharp %}
 [LayoutRenderer("hello-world")]
@@ -95,7 +95,7 @@ public class HelloWorldLayoutRenderer : LayoutRenderer
         public string Config2 { get; set; }
 
         /// <summary>
-        /// I'm the default parameter. You can set me as required also.
+        /// I'm the default parameter. You can also set me as required.
         /// </summary>
         [DefaultParameter]
         public bool Caps {get;set;}
@@ -110,9 +110,9 @@ Example usages
 - `${hello-world:true:config2=abc:config1=yes}` - all the three properties set.
 
 ##How to use the custom target / layout renderer
-It’s easy. Just put the target or layout renderer in a DLL and reference it from the the config file using the `<extensions />` clause as described here.
+It’s very simple. Just put the target or layout renderer in a DLL and reference it from the the config file using the `<extensions />` clause as described above.
 
-Starting from NLog 4.0 assemblies with the name "NLog*.dll", like “NLog.CustomTarget.dll” are now loaded automatically. This assembly should be in the same folder as `NLog.dll`. 
+Starting from NLog 4.0, assemblies with the name "NLog*.dll", such as “NLog.CustomTarget.dll” are now loaded automatically. This assembly should be in the same folder as `NLog.dll`. 
 
 Configuration file example:
 
