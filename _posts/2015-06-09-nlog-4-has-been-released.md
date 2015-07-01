@@ -51,6 +51,7 @@ Only this parameter would be written as `Exception` to the log and can be used i
 *	All "exception" methods have an overload with an `IFormatProvider` as parameter.
 
 Changes that are not backwards-compatible.
+
 *	removed "exceptionCandidate" hack: `Log(string message, Exception ex)` would write to exception property instead of message. This is non-backwards compatible in behaviour!
 *	all other "exception methods": Eg. `ErrorException` and `Error(string message, Exception exception)` are marked as `Obsolete`, also in the interfaces. 
 
@@ -137,6 +138,7 @@ Example:
 would write: `{ "time": "2010-01-01 12:34:56.0000", "level": "ERROR", "message": "hello, world" }`
 
 ####Notes:
+
 * Currently the layout will always create an non-nested object with properties.
 * Also there is no way to prevent escaping of the values (e.g. writing custom JSON as value)
 * The JSON will be written on one line, so no newlines. 
