@@ -53,7 +53,7 @@ Because we use the standard stuff of .Net for this, it's only available in .Net 
 
 Logging of exceptions is now more consistent and complete than before. This is a breaking change.
 All the logger methods, such as `.Debug`, `Error` etc. now contains a first optional parameter of the type `Exception`. 
-Only this parameter would be written as `Exception` to the log and can be used in the layout renderer, for example ` ${exception:format=tostring}`. 
+Only this parameter would be written as `Exception` to the log and can be used in the layout renderer, for example `${exception:format=tostring}`. 
 
 #### Changes:
 
