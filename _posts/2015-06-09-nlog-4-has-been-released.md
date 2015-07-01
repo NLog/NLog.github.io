@@ -50,7 +50,7 @@ Only this parameter would be written as `Exception` to the log and can be used i
 *	All "exception" methods have a 'args' as parameter for formatting the message.
 *	All "exception" methods have an overload with an `IFormatProvider` as parameter.
 
-Changes that are not backwards-compatible.
+Changes that are not backwards-compatible:
 
 *	removed "exceptionCandidate" hack: `Log(string message, Exception ex)` would write to exception property instead of message. This is non-backwards compatible in behaviour!
 *	all other "exception methods": Eg. `ErrorException` and `Error(string message, Exception exception)` are marked as `Obsolete`, also in the interfaces. 
