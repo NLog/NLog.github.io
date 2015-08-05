@@ -22,7 +22,7 @@ However, we want to grow even more. We’d like to:
 *  Measure, and improve, the code coverage of the unit tests. 
  
 Currently the NLog team consists of two people. If we want to develop NLog further, we need more horsepower!
-And so we are looking for developers! If you are interested in contributing to one of the most popular .Net libraries --we are ranked in the top 100 of NuGet, and when excluding the non-.Net and Microsoft packages, we rank in the top 10.-- then get in touch with us on Gitter or Github :)
+And so we are looking for developers! If you are interested in contributing to one of the most popular .Net libraries --we are ranked in the [top 100 of NuGet](https://www.nuget.org/stats/packages), and when excluding the non-.Net and Microsoft packages, we rank in the top 10.-- then get in touch with us on Gitter or Github :)
 
-Get in touch with us on Gitter or Github :)
+Get in touch with us on [Gitter](https://gitter.im/NLog/NLog) or [Github](https://github.com/NLog/NLog/issues/828) :)
 
