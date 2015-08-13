@@ -2,7 +2,7 @@
 layout: default
 title: News
 header: News
-redirect_from: "/news"
+redirect_from: "/news/"
 ---
 
 <section id="archive">
