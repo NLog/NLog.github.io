@@ -69,5 +69,13 @@ Mabye you ask yourself: why is the old method not replaced? Well the new method 
 
 
 
+###  Object values for GDC, MDC and NDC contexts
+The context classes, GCD, MCD and NDC, now supports using `object` values instead of `string`s. This is mostly benificat from the API perspective. 
+
+The `get` method still returns a `string` - for backwards compaiblity reasons. We created a new method `getObject`. 
+
+
+###Easier move from NLog 3 to NLog 4
+With the release of NLog 4.0 we made some breaking changes. Those breaking changes made upgrading an issue: all the code have to be upgraded to NLog 4 at once.
 
 
