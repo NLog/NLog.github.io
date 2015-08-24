@@ -42,7 +42,7 @@ In NLog 4.0 you would define:
 </nlog>
 {% endhighlight %}
 
-In 4.1 you can use the `var` layout renderer:
+In 4.1 you can use the `$var{}` layout renderer:
 
 {% highlight xml %}
 <nlog>
