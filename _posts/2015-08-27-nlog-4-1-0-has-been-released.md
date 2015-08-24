@@ -30,15 +30,15 @@ In NLog 4.0 you would define:
 
 {% highlight xml %}
 <nlog>
-    <variable name='user' value='admin' />
-    <variable name='password' value='realgoodpassword' />
+  <variable name='user' value='admin' />
+  <variable name='password' value='realgoodpassword' />
             
-    <targets>
-      <target name='debug' type='Debug' layout= '${message} and ${user}=${password}' />
-    </targets>
-    <rules>
-      <logger name='*' minlevel='Debug' writeTo='debug' />
-    </rules>
+  <targets>
+    <target name='debug' type='Debug' layout='${message} and ${user}=${password}' />
+  </targets>
+  <rules>
+    <logger name='*' minlevel='Debug' writeTo='debug' />
+  </rules>
 </nlog>
 {% endhighlight %}
 
@@ -46,15 +46,15 @@ In 4.1 you can use the `var` layout renderer:
 
 {% highlight xml %}
 <nlog>
-    <variable name='user' value='admin' />
-    <variable name='password' value='realgoodpassword' />
+  <variable name='user' value='admin' />
+  <variable name='password' value='realgoodpassword' />
             
-    <targets>
-      <target name='debug' type='Debug' layout= '${message} and ${var:user}=${var:password}' />
-    </targets>
-    <rules>
-      <logger name='*' minlevel='Debug' writeTo='debug' />
-    </rules>
+  <targets>
+    <target name='debug' type='Debug' layout='${message} and ${var:user}=${var:password}' />
+  </targets>
+  <rules>
+    <logger name='*' minlevel='Debug' writeTo='debug' />
+  </rules>
 </nlog>
 {% endhighlight %}
 
