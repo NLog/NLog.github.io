@@ -78,18 +78,49 @@ The `get` method still returns a `string` - for backwards-compatibility reasons.
 ###Easier upgrade from NLog 3 to NLog 4
 With the release of NLog 4.0 we made some breaking changes. Those breaking changes made upgrading an issue: all the code has to be upgraded to NLog 4 at once.
 
-###JSON options
-TODO: 
-
- - control spaces
- - disable encoding 
+###new JSON options
+New options have been added for writing JSON output. 
  
+ - More control over spaces: SuppressSpaces. Example:
+ 
+  {% highlight xml %}
+  <layout xsi:type="JsonLayout" SuppressSpaces="false">
+    <attribute name="process_name" layout="${processname}" />
+    <attribute name="short_message" layout="${message}" />
+  </layout>
+  {% endhighlight %}
+ - The JSON encoding can be disabled for properties. 
+ 
+```xml
+    <layout xsi:type="JsonLayout">
+        <attribute name="Message" layout="${message}" encode="false"/>
+    </layout>
+```
+Example call:
 
-###Merged contrib
-- Move MDLC and Traceactivity
+```c#
+logger.Info("{ \"hello\" : \"world\" }");
+```
+
+
+###Integrated NLog.Contrib to core
+The NLog.Contrib code has been integrated with the core of NLog. 
+The following features are now available on the NLog package:
+
+-  Mapped Diagnostics Context (MDLC): Async version of Mapped Diagnostics Context  Allows for maintaining state across
+  asynchronous tasks and call contexts.
+- The Mapped Diagnostics Contextt Layout renderer: `${mdlc}`
+- Trace Activity Id Layout Renderer: `${activityid}` write the `System.Diagnostics` his trace correlation id.
 
 
 ###All events layout renderer: added `IncludeCallerInformation` option
+The all events layout renderer introduced in NLog 4.0 
+
+TODO
+
+```
+   <target type='file'  name='f'layout='${message} ${all-event-properties:IncludeCallerInformation=true}
+```
 
 
 ###Call site line number layout renderer
