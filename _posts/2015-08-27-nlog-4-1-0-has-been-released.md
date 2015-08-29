@@ -78,4 +78,44 @@ The `get` method still returns a `string` - for backwards compatibility reasons.
 ###Easier move from NLog 3 to NLog 4
 With the release of NLog 4.0 we made some breaking changes. Those breaking changes made upgrading an issue: all the code have to be upgraded to NLog 4 at once.
 
+###Json options
+TODO: 
 
+ - control spaces
+ - disable encoding 
+ 
+
+###Merged contrib
+- Move MDLC and Traceactivity
+
+
+###All events layout renderer: added `IncludeCallerInformation` option
+
+
+###Call site line number layout renderer
+
+
+###replace-newlines layout renderer
+`replace-newlines`
+
+
+###log reciever compatiblty
+
+##Bugs
+
+
+###UNC path issues
+
+###Fixes in file archiving
+- Archive files delete right order 
+- DeleteOldDateArchive could delete files not being actual archives. [#850]
+
+###Fixed Mono build
+
+###Position of `<extensions>`
+
+###Logger.log(Exception)
+
+###Internal logger improvements
+###${event-properties} - Added culture and format properties 
+ 
