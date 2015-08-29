@@ -78,7 +78,7 @@ The `get` method still returns a `string` - for backwards-compatibility reasons.
 ###Easier upgrade from NLog 3 to NLog 4
 With the release of NLog 4.0 we made some breaking changes. Those breaking changes made upgrading an issue: all the code has to be upgraded to NLog 4 at once.
 
-###new JSON options
+###New JSON options
 New options have been added for writing JSON output. 
  
  - More control over spaces: SuppressSpaces. Example:
