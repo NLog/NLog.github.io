@@ -91,16 +91,16 @@ New options have been added for writing JSON output.
   {% endhighlight %}
  - The JSON encoding can be disabled for properties. 
  
-```xml
+{% highlight xml %}
     <layout xsi:type="JsonLayout">
         <attribute name="Message" layout="${message}" encode="false"/>
     </layout>
-```
+{% endhighlight %}
 Example call:
 
-```c#
+{% highlight c# %}
 logger.Info("{ \"hello\" : \"world\" }");
-```
+{% endhighlight %}
 
 
 ###Integrated NLog.Contrib to core
