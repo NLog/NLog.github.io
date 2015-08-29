@@ -160,8 +160,8 @@ The `${replace-newlines}` layout renderer fixes this.
 ###Re-implemented log receiver one way feature
 TODO
 
-###${event-properties} - Added culture and format properties 
-The event properties (or context), are `object` values. When writing them to the logs, those are converted to `strings`. It's now possible to control the culture and format. 
+##Event properties - culture and format options 
+The event properties are `object` values. When writing them with  `${event-properties}`  to the logs, the values are converted to `strings`. It's now possible to control the culture and format. 
 
 Examples: `${event-properties:prop1:format=yyyy-M-dd}` and `${event-properties:aaa:culture=nl-NL}`
 
