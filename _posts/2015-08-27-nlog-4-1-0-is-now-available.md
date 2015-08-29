@@ -74,9 +74,36 @@ The context classes, GCD, MCD and NDC, now support using `object` values instead
 
 The `get` method still returns a `string` - for backwards-compatibility reasons. We created a new method: `getObject`. 
 
+When writing to the logs, the `object` is converted to a `string`
+
+  {% highlight C# %}
+GlobalDiagnosticsContext.Set("myDataBase","someValue"); //already possible
+GlobalDiagnosticsContext.Set("myDataBaseNumber",2); //4.1+
+ {% endhighlight %}
+
 
 ###Easier upgrade from NLog 3 to NLog 4
-With the release of NLog 4.0 we made some breaking changes. Those breaking changes made upgrading an issue: all the code has to be upgraded to NLog 4 at once.
+With [the release of NLog 4.0](http://nlog-project.org/2015/06/09/nlog-4-has-been-released.html) we made some breaking changes. Those breaking changes made upgrading an issue: all the code has to be upgraded to NLog 4 at once.
+
+The main cause was the change of behavior of `Log(string message, Exception ex)`. This callshould be replaced by `Log(Exception ex, string message)` in NLog 4.0
+
+Changing al those calls can be difficult at once. So we have introducted the following option:
+
+  {% highlight xml %}
+<nlog exceptionLoggingOldStyle='true'>
+  {% endhighlight %}
+
+With this option enabled, you can still use `Log(string message, Exception ex)` in NLog 4. 
+
+So the upgrade path to NLog 4
+
+1. Enable "exceptionLoggingOldStyle" in the config
+2. Upgrade to NLog 4.1 +
+3. (this can take some time): replace the calls to `Log(string message, Exception ex)` etc.
+4. Disable "exceptionLoggingOldStyle"
+
+Note: we will remove this feature in NLog 5.0
+
 
 ###New JSON options
 New options have been added for writing JSON output. 
