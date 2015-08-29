@@ -175,7 +175,7 @@ Various bugs are fixed in the version. The most notable ones:
 Multiple bugs are fixed with file archiving:
 
 - Archive files where sometimes deleted in the wrong order.
-- `DeleteOldDateArchive` could delete files not being actual archives. [#850](nlog#850)
+- `DeleteOldDateArchive` could delete files not being actual archives. [#847](https://github.com/NLog/NLog/issues/847)
 
 ###Fixed Mono build
 This release finally builds again on Mono! We are busy adding Travis CI integration to keep the Mono build working. 
