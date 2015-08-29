@@ -102,6 +102,7 @@ Example call:
 logger.Info("{ \"hello\" : \"world\" }");
 {% endhighlight %}
 
+See [the wiki](https://github.com/NLog/NLog/wiki/JsonLayout)
 
 ###Integrated NLog.Contrib to core
 The NLog.Contrib code has been integrated with the core of NLog. 
@@ -113,30 +114,34 @@ The following features are now available on the NLog package:
 - Trace Activity Id Layout Renderer: `${activityid}` write the `System.Diagnostics` his trace correlation id.
 
 
-###All events layout renderer: added `IncludeCallerInformation` option
-The all events layout renderer introduced in NLog 4.0 
+###All events layout renderer: optional writing of caller information. 
+The all events layout renderer introduced in NLog 4.0 was unexpecitly writing [caller information](https://msdn.microsoft.com/en-us/library/hh534540.aspx), like current method etc, to the targets. This is now an option and disabled by default. 
 
-TODO
-
-```
-   <target type='file'  name='f'layout='${message} ${all-event-properties:IncludeCallerInformation=true}
-```
-
+For example:
+` ${all-event-properties}` writes "Test=InfoWrite, coolness=200%, a=not b"
+` ${all-event-properties:includeCallerInformation=true}` writes "Test=InfoWrite, coolness=200%, a=not b, CallerMemberName=foo, CallerFilePath=c:/test/log.cs, CallerLineNumber=1001"
 
 ###Call site line number layout renderer
-
+Officially introduced in NLog 4.0, but was not available due to a merge fault. The `${callsite-linenumber}`  writes the linenumber of the caller. 
 
 ###replace-newlines layout renderer
-`replace-newlines`
+With the `${replace}` layout renderer it was already possible to replace the newlines, but it was a bit tricky to use - different systems, different newlines.
 
+The `${replace-newlines}` layout renderer fixes this.
 
 ###Redo log reciever compatiblty
+TODO
+
+###${event-properties} - Added culture and format properties 
+The event properties (or context), are `object` values. When writing them to the logs, those are converted to `strings`. It's now possible to control the culture and format. 
+
+Examples: `${event-properties:prop1:format=yyyy-M-dd}` and `${event-properties:aaa:culture=nl-NL}`
 
 ##Bugs
 Various bugs are fixed in the version. The most notable ones:
 
 ###UNC path issues
-4.0.1 did gave issues with configuration files or binaries located on UNC paths. TODO aangeroepen 
+4.0.1 did gave issues with configuration files or binaries hosted on UNC locations.
 
 ###Fixes in file archiving
 Multiple bugs are fixed with file archiving:
@@ -145,12 +150,16 @@ Multiple bugs are fixed with file archiving:
 - `DeleteOldDateArchive` could delete files not being actual archives. [#850]
 
 ###Fixed Mono build
-This release finnaly builds again on Mono! We are busy adding TODO integration to keep the Mono build working. 
+This release finnaly builds again on Mono! We are busy adding Travis CI integration to keep the Mono build working. 
+
+
 
 ###Position of `<extensions>`
 
-###Logger.log(Exception)
+
+###Exception is not correctly logged when calling without message
+Writing an excepion as only argument to a logger, like `logger.Info(new Exception())` was not correctly registering the exception to the log messages.  
 
 ###Internal logger improvements
-###${event-properties} - Added culture and format properties 
+
  
