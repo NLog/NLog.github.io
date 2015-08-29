@@ -166,7 +166,7 @@ The event properties (or context), are `object` values. When writing them to the
 Examples: `${event-properties:prop1:format=yyyy-M-dd}` and `${event-properties:aaa:culture=nl-NL}`
 
 ##Bugs
-Various bugs are fixed in the version. The most notable ones:
+Various bugs are fixed in this version. The most notable ones:
 
 ###UNC path issues
 4.0.1 did gave issues with configuration files or binaries hosted on UNC locations.
