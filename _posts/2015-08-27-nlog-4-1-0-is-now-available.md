@@ -152,7 +152,7 @@ For example:
 ###Call site line number layout renderer
 Officially introduced in NLog 4.0, but was not available due to a merge fault. The `${callsite-linenumber}`  writes the linenumber of the caller. 
 
-###replace-newlines layout renderer
+###Easy replacement of newlines
 With the `${replace}` layout renderer it was already possible to replace the newlines, but it was a bit tricky to use - different systems, different newlines.
 
 The `${replace-newlines}` layout renderer fixes this.
@@ -180,9 +180,6 @@ Multiple bugs are fixed with file archiving:
 ###Fixed Mono build
 This release finnaly builds again on Mono! We are busy adding Travis CI integration to keep the Mono build working. 
 
-
-
-###Position of `<extensions>`
 
 
 ###Exception is not correctly logged when calling without message
