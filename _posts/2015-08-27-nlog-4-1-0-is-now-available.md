@@ -85,9 +85,9 @@ GlobalDiagnosticsContext.Set("myDataBaseNumber",2); //4.1+
 ###Easier upgrade from NLog 3 to NLog 4
 With [the release of NLog 4.0](http://nlog-project.org/2015/06/09/nlog-4-has-been-released.html) we made some breaking changes. Those breaking changes made upgrading an issue: all the code has to be upgraded to NLog 4 at once.
 
-The main cause was the change of behavior of `Log(string message, Exception ex)`. This callshould be replaced by `Log(Exception ex, string message)` in NLog 4.0
+The main cause was the change of behavior of `Log(string message, Exception ex)`. This call should be replaced by `Log(Exception ex, string message)` in NLog 4.0.
 
-Changing al those calls can be difficult at once. So we have introducted the following option:
+Changing al those calls can be difficult at once. So we have introduced the following option:
 
   {% highlight xml %}
 <nlog exceptionLoggingOldStyle='true'>
@@ -137,12 +137,12 @@ The following features are now available on the NLog package:
 
 -  Mapped Diagnostics Context (MDLC): Async version of Mapped Diagnostics Context  Allows for maintaining state across
   asynchronous tasks and call contexts.
-- The Mapped Diagnostics Contextt Layout renderer: `${mdlc}`
+- The Mapped Diagnostics Context Layout renderer: `${mdlc}`
 - Trace Activity Id Layout Renderer: `${activityid}` write the `System.Diagnostics` his trace correlation id.
 
 
 ###All events layout renderer: optional writing of caller information. 
-The all events layout renderer introduced in NLog 4.0 was unexpecitly writing [caller information](https://msdn.microsoft.com/en-us/library/hh534540.aspx), like current method etc, to the targets. This is now an option and disabled by default. 
+The all events layout renderer introduced in NLog 4.0 was unexpectedly writing [caller information](https://msdn.microsoft.com/en-us/library/hh534540.aspx), like current method etc, to the targets. This is now an option and disabled by default. 
 
 For example:
 
@@ -157,7 +157,7 @@ With the `${replace}` layout renderer it was already possible to replace the new
 
 The `${replace-newlines}` layout renderer fixes this.
 
-###Redo log reciever compatiblty
+###Re-implemented log receiver one way feature
 TODO
 
 ###${event-properties} - Added culture and format properties 
@@ -178,13 +178,13 @@ Multiple bugs are fixed with file archiving:
 - `DeleteOldDateArchive` could delete files not being actual archives. [#850]
 
 ###Fixed Mono build
-This release finnaly builds again on Mono! We are busy adding Travis CI integration to keep the Mono build working. 
+This release finally builds again on Mono! We are busy adding Travis CI integration to keep the Mono build working. 
 
 
 
 ###Exception is not correctly logged when calling without message
-Writing an excepion as only argument to a logger, like `logger.Info(new Exception())` was not correctly registering the exception to the log messages.  
+Writing an exception as only argument to a logger, like `logger.Info(new Exception())` was not correctly registering the exception to the log messages.  
 
 ###Internal logger improvements
 Some small improved has been made to the internal logger. 
- 
+
