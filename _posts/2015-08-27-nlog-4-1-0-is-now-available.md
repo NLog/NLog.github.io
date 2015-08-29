@@ -145,8 +145,9 @@ The following features are now available on the NLog package:
 The all events layout renderer introduced in NLog 4.0 was unexpecitly writing [caller information](https://msdn.microsoft.com/en-us/library/hh534540.aspx), like current method etc, to the targets. This is now an option and disabled by default. 
 
 For example:
-` ${all-event-properties}` writes "Test=InfoWrite, coolness=200%, a=not b"
-` ${all-event-properties:includeCallerInformation=true}` writes "Test=InfoWrite, coolness=200%, a=not b, CallerMemberName=foo, CallerFilePath=c:/test/log.cs, CallerLineNumber=1001"
+
+- ` ${all-event-properties}` writes "Test=InfoWrite, coolness=200%, a=not b"
+- ` ${all-event-properties:includeCallerInformation=true}` writes "Test=InfoWrite, coolness=200%, a=not b, CallerMemberName=foo, CallerFilePath=c:/test/log.cs, CallerLineNumber=1001"
 
 ###Call site line number layout renderer
 Officially introduced in NLog 4.0, but was not available due to a merge fault. The `${callsite-linenumber}`  writes the linenumber of the caller. 
