@@ -130,18 +130,22 @@ TODO
 `replace-newlines`
 
 
-###log reciever compatiblty
+###Redo log reciever compatiblty
 
 ##Bugs
-
+Various bugs are fixed in the version. The most notable ones:
 
 ###UNC path issues
+4.0.1 did gave issues with configuration files or binaries located on UNC paths. TODO aangeroepen 
 
 ###Fixes in file archiving
-- Archive files delete right order 
-- DeleteOldDateArchive could delete files not being actual archives. [#850]
+Multiple bugs are fixed with file archiving:
+
+- Archive files where sometimes deleted in the wrong order.
+- `DeleteOldDateArchive` could delete files not being actual archives. [#850]
 
 ###Fixed Mono build
+This release finnaly builds again on Mono! We are busy adding TODO integration to keep the Mono build working. 
 
 ###Position of `<extensions>`
 
