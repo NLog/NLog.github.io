@@ -161,5 +161,5 @@ This release finnaly builds again on Mono! We are busy adding Travis CI integrat
 Writing an excepion as only argument to a logger, like `logger.Info(new Exception())` was not correctly registering the exception to the log messages.  
 
 ###Internal logger improvements
-
+Some small improved has been made to the internal logger. 
  
