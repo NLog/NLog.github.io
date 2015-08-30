@@ -166,9 +166,12 @@ Unfortunately, there was not an easy fix, so the following was done to try to ma
 Compared to 3.2.1, these the changes:
 
 -  use `ILogReceiverTwoWayClient` instead of `ILogReceiverClient`. `ILogReceiverClient` is still in the code, but marked a obsolete.
+- If your code is depended of `ClientBase` then change it to `WcfLogReceiverClientBase`
 
 
 ####Changes from 4.0.0
+
+- The return type is `WcfLogReceiverClient` agian.
 
 ##Event properties - culture and format options 
 The event properties are `object` values. When writing them with  `${event-properties}`  to the logs, the values are converted to `strings`. It's now possible to control the culture and format. 
