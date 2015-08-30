@@ -157,8 +157,18 @@ With the `${replace}` layout renderer it was already possible to replace the new
 
 The `${replace-newlines}` layout renderer fixes this.
 
-###Re-implemented log receiver one way feature
-TODO
+###WCF Log Receiver Changes
+4.0.0 introduced an unattended breaking changing that replaced the `WcfLogReceiverClient` with the `WcfLogReceiverClientFacade` (NLog/NLog#783). It was not only a naming issue, but also some functionality was lost and there was a lot of code duplication.
+
+Unfortunately, there was not an easy fix, so the following was done to try to make it _less_ of a breaking change. The changes are still breaking, but minus a recompilation, the changes should be mostly transparent. See NLog/NLog#874 for all of the changes related to WCF Log Receiver.
+
+####Changes from 3.2.1
+Compared to 3.2.1, these the changes:
+
+- Deprecated ILogReceiverClient (superseded by ILogReceiverOneWayClient).
+
+
+####Changes from 4.0.0
 
 ##Event properties - culture and format options 
 The event properties are `object` values. When writing them with  `${event-properties}`  to the logs, the values are converted to `strings`. It's now possible to control the culture and format. 
