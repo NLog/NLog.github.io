@@ -163,13 +163,14 @@ The `${replace-newlines}` layout renderer fixes this.
 Unfortunately, there was not an easy fix, so the following was done to try to make it _less_ of a breaking change. The changes are still breaking, but minus a recompilation, the changes should be mostly transparent. See NLog/NLog#874 for all of the changes related to WCF Log Receiver.
 
 ####Changes from 3.2.1
-Compared to 3.2.1, these the changes:
+Compared to 3.2.x, these the changes:
 
 -  Use `ILogReceiverTwoWayClient` instead of `ILogReceiverClient`. `ILogReceiverClient` is still in the code, but is marked obsolete.
 - If your code is dependent on `ClientBase`, then change it to `WcfLogReceiverClientBase`
 
 
 ####Changes from 4.0.0
+Compared to 4.0.x, these the changes:
 
 - The return type for the method `CreateWcfLogReceiverClient()` in `LogReceiverWebServiceTarget` is `WcfLogReceiverClient` again, but is marked obsolete.
 - Use `CreateLogReceiver()`, which returns `IWcfLogReceiverClient` to reduce breaking changes in the future.
