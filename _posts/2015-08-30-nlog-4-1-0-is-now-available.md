@@ -97,10 +97,10 @@ With this option enabled, you can still use `Log(string message, Exception ex)` 
 
 So the upgrade path to NLog 4
 
-1. Enable "exceptionLoggingOldStyle" in the config
+1. Enable "exceptionLoggingOldStyle" in the configuration
 2. Upgrade to NLog 4.1+
 3. (this can take some time): replace the calls to `Log(string message, Exception ex)` etc.
-4. Disable "exceptionLoggingOldStyle"
+4. Disable "exceptionLoggingOldStyle"  in the configuration
 
 Note: we will remove this feature in NLog 5.0
 
@@ -150,7 +150,7 @@ For example:
 - ` ${all-event-properties:includeCallerInformation=true}` writes "Test=InfoWrite, coolness=200%, a=not b, CallerMemberName=foo, CallerFilePath=c:/test/log.cs, CallerLineNumber=1001"
 
 ###Call site line number layout renderer
-Officially introduced in NLog 4.0, but was not available due to a merge fault. The `${callsite-linenumber}`  writes the linenumber of the caller. 
+Officially introduced in NLog 4.0, but was not available due to a merge fault. The `${callsite-linenumber}`  writes the line number of the caller. 
 
 ###Easy replacement of newlines
 With the `${replace}` layout renderer it was already possible to replace the newlines, but it was a bit tricky to use - different systems, different newlines.
