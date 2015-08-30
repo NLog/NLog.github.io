@@ -141,7 +141,7 @@ The following features are now available on the NLog package:
 - Trace Activity Id Layout Renderer: `${activityid}` write the `System.Diagnostics` his trace correlation id.
 
 
-###All events layout renderer: optional writing of caller information. 
+###All events layout renderer: optional writing of caller information 
 The all events layout renderer introduced in NLog 4.0 was unexpectedly writing [caller information](https://msdn.microsoft.com/en-us/library/hh534540.aspx), like current method etc, to the targets. This is now an option and disabled by default. 
 
 For example:
