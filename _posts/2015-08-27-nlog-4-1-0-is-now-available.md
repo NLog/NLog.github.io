@@ -21,7 +21,7 @@ This release contains the following features:
 Since 4.0 you can read the variables defined in the configuration file. We also claimed you could change the values, but we were wrong...
 The variables where implemented like a kind of macros and changing them would not give the expected results. 
 
-In NLog 4.1 we created a new method to render the variables, which fits a lot better in the NLog library: 
+In NLog 4.1, we created a new method to render the variables, which fits a lot better in the NLog library: 
 we created a layout renderer for the variables! With the same syntax you can define the variables, but rendering is a bit different. 
 
 
@@ -87,7 +87,7 @@ With [the release of NLog 4.0](http://nlog-project.org/2015/06/09/nlog-4-has-bee
 
 The main cause was the change of behavior of `Log(string message, Exception ex)`. This call should be replaced by `Log(Exception ex, string message)` in NLog 4.0.
 
-Changing al those calls can be difficult at once. So we have introduced the following option:
+Changing all those calls can be difficult at once. So we have introduced the following option:
 
   {% highlight xml %}
 <nlog exceptionLoggingOldStyle='true'>
@@ -98,7 +98,7 @@ With this option enabled, you can still use `Log(string message, Exception ex)` 
 So the upgrade path to NLog 4
 
 1. Enable "exceptionLoggingOldStyle" in the config
-2. Upgrade to NLog 4.1 +
+2. Upgrade to NLog 4.1+
 3. (this can take some time): replace the calls to `Log(string message, Exception ex)` etc.
 4. Disable "exceptionLoggingOldStyle"
 
@@ -165,13 +165,14 @@ Unfortunately, there was not an easy fix, so the following was done to try to ma
 ####Changes from 3.2.1
 Compared to 3.2.1, these the changes:
 
--  use `ILogReceiverTwoWayClient` instead of `ILogReceiverClient`. `ILogReceiverClient` is still in the code, but marked a obsolete.
-- If your code is depended of `ClientBase` then change it to `WcfLogReceiverClientBase`
+-  Use `ILogReceiverTwoWayClient` instead of `ILogReceiverClient`. `ILogReceiverClient` is still in the code, but is marked obsolete.
+- If your code is dependent on `ClientBase`, then change it to `WcfLogReceiverClientBase`
 
 
 ####Changes from 4.0.0
 
-- The return type is `WcfLogReceiverClient` agian.
+- The return type for the method `CreateWcfLogReceiverClient()` in `LogReceiverWebServiceTarget` is `WcfLogReceiverClient` again, but is marked obsolete.
+- Use `CreateLogReceiver()`, which returns `IWcfLogReceiverClient` to reduce breaking changes in the future.
 
 ##Event properties - culture and format options 
 The event properties are `object` values. When writing them with  `${event-properties}`  to the logs, the values are converted to `strings`. It's now possible to control the culture and format. 
