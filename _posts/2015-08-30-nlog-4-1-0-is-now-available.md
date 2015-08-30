@@ -110,18 +110,18 @@ New options have been added for writing JSON output.
  
  - More control over spaces: SuppressSpaces. Example:
  
-  {% highlight xml %}
-  <layout xsi:type="JsonLayout" SuppressSpaces="false">
-    <attribute name="process_name" layout="${processname}" />
-    <attribute name="short_message" layout="${message}" />
-  </layout>
-  {% endhighlight %}
+{% highlight xml %}
+<layout xsi:type="JsonLayout" SuppressSpaces="false">
+  <attribute name="process_name" layout="${processname}" />
+  <attribute name="short_message" layout="${message}" />
+</layout>
+{% endhighlight %}
  - The JSON encoding can be disabled for properties. 
  
 {% highlight xml %}
-    <layout xsi:type="JsonLayout">
-        <attribute name="Message" layout="${message}" encode="false"/>
-    </layout>
+<layout xsi:type="JsonLayout">
+    <attribute name="Message" layout="${message}" encode="false"/>
+</layout>
 {% endhighlight %}
 Example call:
 
