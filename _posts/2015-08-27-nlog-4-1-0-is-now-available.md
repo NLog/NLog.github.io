@@ -165,7 +165,7 @@ Unfortunately, there was not an easy fix, so the following was done to try to ma
 ####Changes from 3.2.1
 Compared to 3.2.1, these the changes:
 
-- Deprecated ILogReceiverClient (superseded by ILogReceiverOneWayClient).
+-  use `ILogReceiverTwoWayClient` instead of `ILogReceiverClient`. `ILogReceiverClient` is still in the code, but marked a obsolete.
 
 
 ####Changes from 4.0.0
