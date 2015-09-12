@@ -40,7 +40,8 @@ You should remove it, or change it to:
 - If you don't use other libraries build on NLog, or those are build on NLog 4.x (expected 4.1.0), remove it
 
 We are sorry if the upgrade to 4.1.0 gave issues. 
-We are aware that the strong naming is sometimes more an issue than solving stuff and there versioning issues with strong naming are common. 
+We are aware that the strong naming is sometimes gives more issues than solving things and 
+that versioning issues with strong naming are common. 
 But some users need the strong name, and so we keep it for at least version 4.
 
 
