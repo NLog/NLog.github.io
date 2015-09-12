@@ -3,7 +3,7 @@ layout: post
 title: NLog 4.1.1 has been released!
 ---
 
-We just released a new version of NLog which fixed a few issues in NLog 4.1.0
+We just released a new version of NLog which fixes a few issues in NLog 4.1.0
 
 ##Features
 
