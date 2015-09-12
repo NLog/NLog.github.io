@@ -3,7 +3,7 @@ layout: post
 title: NLog 4.1.1 has been released!
 ---
 
-We just released a new version of NLog which fixes a few issues in NLog 4.1.0
+We just released a new version of NLog which fixes a few issues in NLog 4.1.0.
 
 ##Features
 
@@ -48,3 +48,6 @@ But some users need the strong name, and so we keep it for at least version 4.
 ##Other:
 - Obsolete text fixed
 - Removed some unused classes (moved to NLog.Windows.Forms before)
+
+
+Download it from [nuget](https://www.nuget.org/packages/NLog/)!
