@@ -10,11 +10,11 @@ We just released a new version of NLog which fixed a few issues in NLog 4.1.0
 - MDLC now also support objects, like MDC,GDC and NDC (those we're added in 4.1.0)
 
 ##Bug fixes:
-- NLog won't crash if there are binaries starting with "Nlog" that we can't load (auto load)
+- NLog won't crash if there are binaries starting with "nlog" that we can't load (those were loaded by the auto load feature)
 - Directory was required with the internal logger
-- Fixed assembly name issue with strong name. With the release of NLog 4.1.0 we make a mistake with the full name. 
-We changed it to 4.1.0.0, but because of the strong naming, we should keep ik 4.0.0.0. 
-This the curse of strong naming, and at least in NLog 4 we shoud live with it. 
+- Fixed assembly name issue with strong name. With the release of NLog 4.1.0 we made a mistake with the full name. 
+We changed the version in it to 4.1.0.0, but because of the strong naming, we should keep it 4.0.0.0. 
+This the curse of strong naming, and at least in NLog 4 we should live with it. 
 
 In the NLog 4.1.1, the full name is the same as NLog 4.0.0 and 4.0.1.
 
