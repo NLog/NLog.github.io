@@ -7,7 +7,7 @@ We just released a new version of NLog which fixes a few issues in NLog 4.1.0.
 
 ##Features
 
-- MDLC now also support objects, like MDC,GDC and NDC (those we're added in 4.1.0)
+- MDLC now also support objects, like MDC,GDC and NDC (those were added in 4.1.0)
 
 ##Bug fixes:
 - NLog won't crash if there are binaries starting with "nlog" that we can't load (those were loaded by the auto load feature)
