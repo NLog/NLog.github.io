@@ -202,4 +202,3 @@ Writing an exception as only argument to a logger, like `logger.Info(new Excepti
 
 ###Internal logger improvements
 Some small improved has been made to the internal logger. 
-

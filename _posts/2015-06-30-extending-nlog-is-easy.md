@@ -24,7 +24,7 @@ We create a `${hello-universe}` layout renderer, which renders... "hello univers
 
 {% highlight csharp %}
 [LayoutRenderer("hello-universe")]
-public class HellouniverseLayoutRenderer : LayoutRenderer
+public class HelloUniverseLayoutRenderer : LayoutRenderer
 {
     protected override void Append(StringBuilder builder, LogEventInfo logEvent)
     {
@@ -48,7 +48,7 @@ For example:
 
 {% highlight csharp %}
 [LayoutRenderer("hello-universe")]
-public class HellouniverseLayoutRenderer : LayoutRenderer
+public class HelloUniverseLayoutRenderer : LayoutRenderer
 {
         /// <summary>
         /// I'm not required
@@ -150,7 +150,7 @@ static void Main(string[] args)
 { 
     //layout renderer
     ConfigurationItemFactory.Default.LayoutRenderers
-          .RegisterDefinition("hello-universe", typeof(MyNamespace.HellouniverseLayoutRenderer ));
+          .RegisterDefinition("hello-universe", typeof(MyNamespace.HelloUniverseLayoutRenderer ));
 
     //target
     ConfigurationItemFactory.Default.Targets

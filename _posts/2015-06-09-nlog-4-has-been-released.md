@@ -14,6 +14,17 @@ Thanks again for the reported issues and requested features!
 
 This post is almost identical to the [release candidatie news post](http://nlog-project.org/2015/05/28/nlog-4-release-candidate.html)
 
+
+
+## Split of the package NLog.Extended to NLog.Web and NLog.Windows.Forms
+With the release of NLog 4.0 we have split the package [NLog.Extended](https://www.nuget.org/packages/NLog.Extended/) to [NLog.Web](https://www.nuget.org/packages/NLog.Web/) and [NLog.Windows.Forms](https://www.nuget.org/packages/NLog.Windows.Forms/). 
+This will give us the opportunity to clean up the references in NLog.Extended. 
+There are also some targets and layout renderers still in NLog.Extended, we will also create new packages for those in the future.
+
+The [wiki](https://github.com/nlog/nlog/wiki/Targets) has been updated to make more clear which [Targets](https://github.com/nlog/nlog/wiki/Targets) and which [Layout Renderers](https://github.com/nlog/nlog/wiki/Layout-Renderers) are in each package.
+
+For more information, see the [NLog.Extended news post](http://nlog-project.org/2015/06/13/NLog-Extended_NLog-Web_and_NLog-Windows-Forms.html)
+
 ##Features
 
 This release contains the following features:
@@ -42,7 +53,7 @@ Because we use the standard stuff of .Net for this, it's only available in .Net 
 
 Logging of exceptions is now more consistent and complete than before. This is a breaking change.
 All the logger methods, such as `.Debug`, `Error` etc. now contains a first optional parameter of the type `Exception`. 
-Only this parameter would be written as `Exception` to the log and can be used in the layout renderer, for example ` ${exception:format=tostring}`. 
+Only this parameter would be written as `Exception` to the log and can be used in the layout renderer, for example `${exception:format=tostring}`. 
 
 #### Changes:
 
