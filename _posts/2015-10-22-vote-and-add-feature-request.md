@@ -10,4 +10,4 @@ We are now also on [UserEcho](http://nlog.userecho.com/), so vote or add ideas!
 Happy coding,
 Julian
 
-PS: if you like to have more status updates, just follow [our Twitter](https://twitter.com/nlogofficial).
+PS: if you like to have more status updates, just follow us [on Twitter](https://twitter.com/nlogofficial).
