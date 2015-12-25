@@ -23,16 +23,19 @@ When logging exceptions to RichTextBoxTarget you have to find a compromise betwe
 <img src="/images/posts/2015/12/link_exception_details_click.png">
 
 Just setup a proper layout (don't forget to enable `supportLinks`)
-```xml
+
+{% highlight xml %}
 <target xsi:type="RichTextBox"
             layout="${message}${onexception:inner= ${exception:format=Message} ${rtb-link:details}}"
          ....
             supportLinks="true"
          ....
             />
-```
+{% endhighlight %}
+
 And add a link click handler:
-```c#
+
+{% highlight c# %}
 public Form1()
 {
     InitializeComponent();
@@ -44,7 +47,7 @@ private void Form1_LinkClicked(RichTextBoxTarget sender, string linkText, LogEve
 {
     MessageBox.Show(logEvent.Exception.ToString(), "Exception details", MessageBoxButtons.OK);
 }
-```
+{% endhighlight %}
 
 ####Focusing at specific item example
 Sometimes you may need to not only notify user of some problem (like validation failing), but also help him navigate to the problematic item (for example when the list is huge). In this case you may store item's id of some sort in the [`LogEventInfo.Property`](https://github.com/NLog/NLog/wiki/EventProperties-Layout-Renderer), turn it into a link and navigate to the item in link click handler:
@@ -52,17 +55,19 @@ Sometimes you may need to not only notify user of some problem (like validation 
 <img src="/images/posts/2015/12/event_properties_link_click.png">
 
 The layout:
-```xml
+
+{% highlight xml %}
 <target xsi:type="RichTextBox"
             layout="${message} ${rtb-link:${event-properties:item=Index}}"
             ....
             supportLinks="true"
             ....
             />
-```
+{% endhighlight %}
 
 Validation code:
-```c#
+
+{% highlight c# %}
 private void validateButton_Click(object sender, EventArgs e)
 {
     logger.Info("Validation started");
@@ -79,10 +84,11 @@ private void validateButton_Click(object sender, EventArgs e)
     }
     logger.Info("Validation succeeded");
 }
-```
+{% endhighlight %}
 
 Event handling code:
-```c#
+
+{% highlight c# %}
 public Form2()
 {
     InitializeComponent();
@@ -97,7 +103,7 @@ private void Form2_LinkClicked(RichTextBoxTarget sender, string linkText, LogEve
     listView1.SelectedIndices.Add(lineIndex);
     listView1.Select();
 }
-```
+{% endhighlight %}
 
 Hope you could find more useful applications of this new feature!
 
