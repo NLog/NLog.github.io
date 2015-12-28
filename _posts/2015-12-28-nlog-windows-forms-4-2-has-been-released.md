@@ -26,11 +26,11 @@ Just setup a proper layout (don't forget to enable `supportLinks`)
 
 {% highlight xml %}
 <target xsi:type="RichTextBox"
-            layout="${message}${onexception:inner= ${exception:format=Message} ${rtb-link:details}}"
-         ....
-            supportLinks="true"
-         ....
-            />
+   layout="${message}${onexception:inner= ${exception:format=Message} ${rtb-link:details}}"
+   ....
+   supportLinks="true"
+   ....
+   />
 {% endhighlight %}
 
 And add a link click handler:
@@ -43,9 +43,9 @@ public Form1()
     RichTextBoxTarget.GetTargetByControl(richTextBox1).LinkClicked += Form1_LinkClicked;
 }
 
-private void Form1_LinkClicked(RichTextBoxTarget sender, string linkText, LogEventInfo logEvent)
+private void Form1_LinkClicked(RichTextBoxTarget sender, string linkText, LogEventInfo event)
 {
-    MessageBox.Show(logEvent.Exception.ToString(), "Exception details", MessageBoxButtons.OK);
+    MessageBox.Show(event.Exception.ToString(), "Exception details", MessageBoxButtons.OK);
 }
 {% endhighlight %}
 
