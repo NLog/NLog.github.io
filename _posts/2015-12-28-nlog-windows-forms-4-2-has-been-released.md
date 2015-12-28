@@ -108,4 +108,5 @@ private void Form2_LinkClicked(RichTextBoxTarget sender, string linkText, LogEve
 Hope you could find more useful applications of this new feature!
 
 ###A note on 4.1 release
-_In case you are not sure what_ `RichTextBoxTarget.ReInitializeAllTextboxes(this)` _call does, then you might have missed a feature added in 4.1 release. It improves the RichTextBoxTarget functional by allowing it to be configured and initialized before the actual control is created. Check_ `allowAccessoryFormCreation` _and_ `messageRetention` _options description in the [target's documentaion](https://github.com/NLog/NLog.Windows.Forms/wiki/RichTextBoxTarget)_
+_In case you are not sure what_ `RichTextBoxTarget.ReInitializeAllTextboxes(this)` _call does, then you might have missed a feature added in 4.1 release. It improves the RichTextBoxTarget functional by allowing it to be configured and initialized before the actual control is created. Check_ `allowAccessoryFormCreation` _and_ `messageRetention` _options description in the [target's documentation](https://github.com/NLog/NLog.Windows.Forms/wiki/RichTextBoxTarget)_
+
