@@ -96,9 +96,9 @@ public Form2()
     RichTextBoxTarget.GetTargetByControl(richTextBox1).LinkClicked += Form2_LinkClicked;
 }
 
-private void Form2_LinkClicked(RichTextBoxTarget sender, string linkText, LogEventInfo logEvent)
+private void Form2_LinkClicked(RichTextBoxTarget sender, string linkText, LogEventInfo event)
 {
-    int lineIndex = (int)logEvent.Properties["Index"];
+    int lineIndex = (int)event.Properties["Index"];
     listView1.EnsureVisible(lineIndex);
     listView1.SelectedIndices.Add(lineIndex);
     listView1.Select();
