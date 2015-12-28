@@ -11,7 +11,7 @@ This release contains the following features:
 
 ###RichTextBox links 
 
-It is now possible to add clickable links to messages showin in the RichTextBox control and receive whole event info in the link click handler. 
+It is now possible to add clickable links to messages show in in the RichTextBox control and receive whole event info in the link click handler. 
 To do this, set target's newly introduced `supportLink` parameter to `true` and use new [`${rtb-link}`](https://github.com/NLog/NLog.Windows.Forms/wiki/RTB-Link-Layout-Renderer) layout renderer to specify link part of the layout. 
 To receive link click events, add a handler to `RichTextBoxTarget.LinkClicked` event. Use `RichTextBoxTarget.GetTargetByControl(RichTextBox control)` static method to access the target attached to a specific RichTextBox control.
 
