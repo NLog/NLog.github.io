@@ -14,8 +14,8 @@ Mainly because then contributions are located in a single place, where people co
 Recently the first two contributions were made to the repository, NLog.ManualFlush and NLog.Elmah.  
 The NLog-Contrib wiki will soon be updated with examples and description of the contributed targets.
 
-## NLog.ManualFlush ##
+## NLog.ManualFlush ## 
 Is a wrapper which is used when you want to control the flushing yourself. Is useful when you only want to log to file under certain circumstances.
 
-## NLog.Elmah ##
+## NLog.Elmah ## 
 Contributed by [Todd Meinershagen](https://github.com/toddmeinershagen), is used to log to [Elmah](https://code.google.com/p/elmah/).  

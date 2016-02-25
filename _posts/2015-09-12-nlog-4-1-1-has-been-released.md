@@ -5,11 +5,11 @@ title: NLog 4.1.1 has been released!
 
 We just released a new version of NLog which fixes a few issues in NLog 4.1.0.
 
-##Features
+## Features
 
 - MDLC now also supports objects, such as MDC, GDC and NDC (those were added in 4.1.0)
 
-##Bug fixes:
+## Bug fixes:
 - NLog won't crash if there are binaries starting with "nlog" that we can't load (those were loaded by the auto load feature)
 - Directory was required with the internal logger
 - Fixed assembly name issue with strong name. With the release of NLog 4.1.0 we made a mistake with the full name. 
@@ -45,7 +45,7 @@ that versioning issues with strong naming are common.
 But some users need the strong name, and therefore we will keep it for at least version 4.
 
 
-##Other:
+## Other:
 - Obsolete text fixed
 - Removed some unused classes (moved to NLog.Windows.Forms before)
 

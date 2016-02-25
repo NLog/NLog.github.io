@@ -19,13 +19,13 @@ For more information, see the [NLog.Extended news post](http://nlog-project.org/
 
 
 
-##Features
+## Features
 
 This release contains the following features:
 
 
 
-###Zipped file archives (.Net 4.5 and higher)
+### Zipped file archives (.Net 4.5 and higher)
 
 The `FileTarget` can now compress the archived files to zip format. 
 Example: set `EnableArchiveFileCompression` in config file:
@@ -76,7 +76,7 @@ Logger.Error("ow noos {0}", var1");
 
 {% endhighlight %}
 
-###Conditional logging
+### Conditional logging
 
 In extreme cases logging could affect the performance of your application. There is a small overhead when writing a lot of log messages, like Tracing.
 In this case it’s now possible to only include the `Trace` and `Debug` call with a debug release. 
@@ -172,7 +172,7 @@ When writing to the Eventlogger, NLog would writes to `Information`, `Warning` o
 *	The `Mailtarget` has less required parameters (at least To, CC or BCC should be set) and the `Mailtarget` logs their errors correctly to the internal logger now. 
 * The `Counter.Sequence` now accepts layout renderers.
 
-##Bug fixes
+## Bug fixes
 
 Over 30 bugs has been solved. The full list can be viewed on  [Github](https://github.com/NLog/NLog/issues?utf8=%E2%9C%93&q=milestone%3A4.0+is%3Aclosed+label%3Abug).
 
@@ -185,7 +185,7 @@ The most noticeable bugs:
 *	Bugfix: `WebserviceTarget` wrote encoded UTF-8 preamble.
 
 
-##Breaking changes
+## Breaking changes
 
 NLog 4.0 has some breaking changes. To sum up:
 
@@ -194,10 +194,10 @@ NLog 4.0 has some breaking changes. To sum up:
 *	The webservice target won't write a BOM with UTF-8 (default, can be set)
 * All properties that have been changed to accept layout renderers. 
 
-##Wiki
+## Wiki
 Please note that the wiki hasn't been updated yet.
 
-##Feedback
+## Feedback
 Any feedback or issues to report? Please post them in [this GitHub issue](https://github.com/NLog/NLog/issues/722) or [create a new issue](https://github.com/NLog/NLog/issues/new).  
 
 
