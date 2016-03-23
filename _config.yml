@@ -1,4 +1,10 @@
-version: 4.2.3
-highlighter: pygments
+version: 4.2.3 / 4.3 RC / 4.4 Beta
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
 gems:
   - jekyll-redirect-from
+  
