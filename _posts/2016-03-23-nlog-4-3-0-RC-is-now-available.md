@@ -3,7 +3,9 @@ layout: post
 title: NLog 4.3 RC is Now Available!
 ---
 
-edit 27 march: RC 2 is now online which resolves a bug in finding the correct stackframe in for `${callsite}` etc. This was broken since 4.3-beta 1.  
+**update** 27 march: RC 2 is now online which resolves a bug in finding the correct stackframe in for `${callsite}` etc. This was broken since 4.3-beta 1. 
+
+---
 
 NLog 4.3 is almost ready. There are some changes in the core, so therefore a Release Candidate (RC) has been released. 
 Right now there are 132 closed issues in NLog 4.3, which makes NLog 4.3 the largest release since years. 
