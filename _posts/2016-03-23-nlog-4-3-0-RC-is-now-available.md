@@ -2,8 +2,9 @@
 layout: post
 title: NLog 4.3 RC is Now Available!
 ---
+**update** 9 april: RC 3 is released with some small fixes. See [NuGet](https://www.nuget.org/packages/NLog/4.3.0-rc3/).
 
-**update** 27 march: RC 2 is now online which resolves a bug in finding the correct stackframe in for `${callsite}` etc. This was broken since 4.3-beta 1. 
+**update** 27 march: RC 2 is now online which resolves a bug in finding the correct stackframe for `${callsite}` etc. This was broken since 4.3-beta 1. 
 
 ---
 
