@@ -1,4 +1,4 @@
-version: 4.2.3 / 4.3 RC3 / 4.4 beta
+version: 4.3 / 4.4 beta (.NET core)
 highlighter: rouge
 markdown: kramdown
 kramdown:
