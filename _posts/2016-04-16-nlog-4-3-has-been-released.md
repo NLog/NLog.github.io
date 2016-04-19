@@ -45,7 +45,7 @@ This has been fixed in NLog 4.3!
 Advise: disable throwExceptions in production environments! (this the default)
 
 ```xml
-<nlog throwConfigExceptions="false">
+<nlog throwExceptions="false">
 ```
 
 ### Control of exception throwing for configuration errors
