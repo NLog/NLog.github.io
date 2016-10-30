@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NLog roadmap: .NET Core, stuctural loggin & performance
+title: NLog roadmap -  .NET Core, stuctural logging & performance
 ---
 
 We have the following releases planned for NLog:
