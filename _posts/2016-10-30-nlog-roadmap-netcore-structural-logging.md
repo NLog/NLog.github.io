@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NLog roadmap -  .NET Core, stuctural logging & performance
+title: NLog roadmap -  .NET Core, structural logging & performance
 ---
 
 We have the following releases planned for NLog:
@@ -11,7 +11,7 @@ We have the following releases planned for NLog:
 #### no .NET Core, yet
 
 Originally NLog 4.4 would have .NET Core support. We have released multiple alpha and beta releases with support .NET Core (or to be precise .NET Standard).
-Unfortunately there is a show-stopper: the behaviour of `GetCurrentClassLogger` is wrong and we can't fix it as the StackTrace API is limited in .NET Core 
+Unfortunately, there is a show-stopper: the behavior  of `GetCurrentClassLogger` is wrong and we can't fix it as the StackTrace API is limited in .NET Core 
 (see [here](https://github.com/dotnet/corefx/issues/1797)). You can read more about it [here](https://github.com/NLog/NLog/issues/1379#issuecomment-235696767). 
 We will postpone .NET Core support to NLog 5.
 
