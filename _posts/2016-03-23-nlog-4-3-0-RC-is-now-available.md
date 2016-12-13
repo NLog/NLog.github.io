@@ -2,6 +2,11 @@
 layout: post
 title: NLog 4.3 RC is Now Available!
 ---
+**update** 9 april: RC 3 is released with some small fixes. See [NuGet](https://www.nuget.org/packages/NLog/4.3.0-rc3/).
+
+**update** 27 march: RC 2 is now online which resolves a bug in finding the correct stackframe for `${callsite}` etc. This was broken since 4.3-beta 1. 
+
+---
 
 NLog 4.3 is almost ready. There are some changes in the core, so therefore a Release Candidate (RC) has been released. 
 Right now there are 132 closed issues in NLog 4.3, which makes NLog 4.3 the largest release since years. 
@@ -47,7 +52,7 @@ This has been fixed in NLog 4.3!
 Advise: disable throwExceptions in production environments! (this the default)
 
 ```xml
-<nlog throwConfigExceptions="false">
+<nlog throwExceptions="false">
 ```
 
 ### Control of exception throwing for configuration errors
@@ -233,6 +238,7 @@ See [GitHub issues](https://github.com/NLog/NLog/issues?q=milestone%3A4.3+is%3Ac
 - [rellis-of-rhindleton](https://github.com/rellis-of-rhindleton)
 - [sorvis](https://github.com/sorvis)
 - [UgurAldanmaz](https://github.com/UgurAldanmaz)
+- [vincechan](https://github.com/vincechan)
 
 
 
