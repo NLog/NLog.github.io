@@ -1,4 +1,4 @@
-version: 4.4.1 / 5.0 beta (.NET core & netstandard)
+version: 4.4.2 / 5.0 beta (.NET core & netstandard)
 highlighter: rouge
 markdown: kramdown
 kramdown:
