@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="NLog.Targets.ElmahIo"
+<xs:schema id="NLog.Targets.Elmah.Io"
            elementFormDefault="qualified"
-           targetNamespace="http://www.nlog-project.org/schemas/NLog.Targets.ElmahIo.xsd"
+           targetNamespace="http://www.nlog-project.org/schemas/NLog.Targets.Elmah.Io.xsd"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xmlns:elmahio="http://www.nlog-project.org/schemas/NLog.Targets.ElmahIo.xsd"
+           xmlns:elmahio="http://www.nlog-project.org/schemas/NLog.Targets.Elmah.Io.xsd"
            xmlns:nlog="http://www.nlog-project.org/schemas/NLog.xsd">
     <xs:import namespace="http://www.nlog-project.org/schemas/NLog.xsd" />
   <xs:complexType name="elmah.io">
