@@ -39,6 +39,7 @@ Step 4: XSD schema generation
 Similar to conceptual documentation, NLog.xsd is also generated from NLog.api - the result is a document with documented XSD types and elements which can be used in Visual Studio to provide Intellisense(tm) for authoring and validating NLog.config. (Note that MakeNLogXsd.exe in the public repository is not up-to-date yet and does not use NLog.api, instead it's an older version from NLog 1.0 which uses reflection. It will be updated soon.)
 
 Step 5: Website generation
+--------------------------
 NLog.api will also be used to generate documentation for the website, which includes:
 
  * targets.html
