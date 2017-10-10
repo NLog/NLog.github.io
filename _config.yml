@@ -1,4 +1,4 @@
-version: 4.4.12 / 4.5 alpha (structured logging) / 5.0 beta (.NET core & netstandard)
+version: 4.4.12 / 4.5 beta (structured logging + .NET Standard 2)
 highlighter: rouge
 markdown: kramdown
 kramdown:
