@@ -1,0 +1,71 @@
+---
+layout: post
+title: NLog 4.5 is near! (and no NLog 5)
+---
+
+With the releases of NLog 4.5 RC, a RTM release is near!
+
+NLog 4.5 adds support for various platforms (.NET Standard 1.5+, .NET Standard 2 and UWP - This also means .NET Core!) and adds 
+structured logging!
+
+
+List of important changes in NLog 4.5
+
+**Features:**
+
+- Support for .Net Standard 1.5 #2341
+- Support for .Net Standard 2.0 #2263 + #2402
+- Support for UWP #2441 (Remember to manually flush on app suspend).
+- Introduced Structured logging #2208 + #2262 + #2244
+- Default file archive logic is now easier to use #1993
+- Introduced InstallationContext.ThrowExceptions #2214
+- WebServiceTarget can now batch multiple logevents into single request #2223
+- WebServiceTarget - Allow configuration of proxy address #2375
+- Json conversion also supports object properties #2179
+- event-properties layout-renderer can now render objects as json #2241
+- exception layout-renderer can now render exceptions as json #2357
+- ${guid}, added GeneratedFromLogEvent #2226
+- TraceTarget RawWrite to always perform Trace.WriteLine independent of LogLevel #1968
+- Adding OverflowAction options to BufferingTargetWrapper #2276
+- WhenRepeatedFilter  #2123 + #2297
+- ${callsite} added CleanNamesOfAsyncContinuations option #2292
+- ${ndlctiming} allows timing of ndlc-scopes #2377
+- NLogViewerTarget - Enable override of the Logger-name #2390
+- ${sequenceid} added #2411  
+- Added "regex-matches" for filtering #2437 
+
+
+**BugFixes:**
+- Improve archive stability during concurrent file access #1889
+- FallbackGroup could lose log events #2265
+- Exception separator should only be inserted for available items #2250
+- ${exception} - only include separator when items are available #2257
+- LogFactory - Fixes broken EventArgs for ConfigurationChanged #1897
+- Do not report wrapped targets as unused targets #2290
+- Added IIncludeContext, implemented missing properties #2117
+- Improve logging of callsite linenumber for async-methods #2386
+- NLogTraceListener - DisableFlush is enabled by default when AutoFlush=true #2407
+- NLogViewer - Better defaults for connection limits #2404
+- LoggingConfiguration.LoggingRules is not thread safe #2393, #2418
+
+**Performance:**
+- More targets has OptimizeBufferReuse enabled by default #1913 + #1923 + #1912 + #1911 + #1910 + #1909 + #1908 + #1907
+- StringBuilderPool - Improved Layout Render Performance by reusing StringBuilders #2208
+- JsonLayout - Improved Layout Performance, by optimizing use of StringBuilder #2208
+- FileTarget - Faster byte-encoding of log messsages, by using crude Encoding.GetMaxByteCount() instead of exact Encoding.GetByteCount() #2208
+- Target - Precalculate Layout should ignore sub-layouts for complex layout (Ex Json) #2378
+
+
+What happend to NLog 5?
+
+We started with NLog 5 almost two years ago, in the time of DNX and dotnet5.4. 
+Fast forward, the branch we were building on is heavily diverged and we were maintaining two versions of NLog! (NLog 4 and NLog 5).
+Almost every file had been changed in NLog 5 and with multiple migrations (DNX, project.json, csproj), 
+it was clear that merging the NLog 5 branch into master was too tricky! 
+
+With the completion of .NET Standard 2, it was easier to move in smaller steps to the new platforms (including .NET standard 1) and we have ported 
+the most important stuff to NLog 4.5
+
+This means that NLog 4.5 will have the support for the platforms added in NLog 5, thus making NLog 5 obsolete!
+
+The best part, there are no breaking changes between NLog 4.x and NLog 4.5! (we take semver very serious!)
