@@ -4,22 +4,26 @@ layout: default
 <section class="content">
     <section>
         <h1 class="page-header" id="welcome">
-            Welcome to NLog
+            Welcome to NLog!
         </h1>
         <p class="lead">
-            NLog is a free logging platform for .NET, .NET Standard, UWP , Xamarin, Silverlight and Windows Phone with rich log routing and management capabilities.
-            NLog makes it easy to produce and manage high-quality logs for your application regardless of its size or complexity.
+            NLog is a flexible and free logging platform for various .NET plaforms, including .NET standard. 
+           
+            NLog makes it easy to write to serveral  <a href="#targets">targets</a>. (database, file, console) and change the logging configuration on-the-fly.
         </p>
+      
         <p>
-            NLog can process diagnostic messages emitted from any .NET language (C#, VB.NET etc.), augment them
-            with contextual information (date and time, severity, thread, process, environment),
-            format according to your preferences and send to one or more <a href="#targets">targets</a>.
+            NLog has support for <a href="https://github.com/NLog/NLog/wiki/How-to-use-structured-logging">structured</a> 
+            and traditional logging. 
+        </p>
+          <p>
+            The focus for NLog: high performance, easy-to-use, easy to extend and flexible to configure. 
         </p>
     </section>
     <section>
         <h1 class="page-header" id="features">Features</h1>
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <h4>Easy to configure</h4>
                 <p>
                     NLog is very easy to configure,  both through <a href="https://github.com/nlog/NLog/wiki/Configuration-file">configuration file</a>
@@ -27,18 +31,23 @@ layout: default
                     Even without restarting the application, the configuration can be changed.
                 </p>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <h4>Templatable</h4>
                 <p>
                  Every log message can be templated with various <a href="https://github.com/nlog/nlog/wiki/Layout-Renderers">layout renders</a>
                 </p>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <h4>Extensible</h4>
                 <p>
                     Even though NLog has targets and pre-defined layouts, 
                     you can write <a href="https://github.com/nlog/nlog/wiki/How-to-write-a-Target"> custom targets</a> or pass <a href="https://github.com/nlog/nlog/wiki/Event-Context-Layout-Renderer"> custom values</a>
                 </p>
+            </div>
+               <div class="col-sm-3">
+                <h4>Structured logging</h4>
+                <p>
+                    Fully support for <a href="https://github.com/NLog/NLog/wiki/How-to-use-structured-logging"> structured logging</a></p>
             </div>
         
         </div>
@@ -89,9 +98,9 @@ layout: default
                     You can send <a href="https://github.com/nlog/NLog/wiki/Mail-target">emails</a> whenever application errors occur
                 </div>
                 <div class="col-sm-4">
-                    <h4> <i class="fa fa-file-o fa-fw"></i> ASP.NET trace</h4>
-                    Write log messages to the
-                    <a href="http://msdn.microsoft.com/en-us/library/y13fw6we%28v=vs.85%29.aspx">built in trace in ASP.NET</a>
+                    <h4> <i class="fa fa-file-o fa-fw"></i> ASP.NET core Logging</h4>
+                    Write log messages to the ASP.NET Core Logging
+                 
                 </div>
             </div>
         </div>
