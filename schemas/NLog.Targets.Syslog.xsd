@@ -8,7 +8,7 @@
            xmlns:nlog="http://www.nlog-project.org/schemas/NLog.xsd">
     <xs:import namespace="http://www.nlog-project.org/schemas/NLog.xsd" />
     <xs:annotation>
-        <xs:documentation>NLog Syslog target schema for Intellisense™ 4.0.1</xs:documentation>
+        <xs:documentation>NLog Syslog target schema for Intellisense™ 5.0.0</xs:documentation>
     </xs:annotation>
     <xs:complexType name="Syslog">
         <xs:complexContent>
@@ -113,9 +113,13 @@
                                         <xs:choice minOccurs="0" maxOccurs="unbounded">
                                             <xs:element name="server" type="xs:string" minOccurs="1" maxOccurs="1" />
                                             <xs:element name="port" type="xs:integer" minOccurs="0" maxOccurs="1" />
+                                            <xs:element name="reconnectInterval" type="xs:integer" minOccurs="0" maxOccurs="1" />
+                                            <xs:element name="connectionCheckTimeout" type="xs:integer" minOccurs="0" maxOccurs="1" />
                                         </xs:choice>
                                         <xs:attribute name="server" type="xs:string" />
                                         <xs:attribute name="port" type="xs:integer" />
+                                        <xs:attribute name="reconnectInterval" type="xs:integer" />
+                                        <xs:attribute name="connectionCheckTimeout" type="xs:integer" />
                                     </xs:complexType>
                                 </xs:element>
                                 <xs:element name="tcp" minOccurs="0" maxOccurs="1">
@@ -128,11 +132,13 @@
                                                 <xs:complexType>
                                                     <xs:choice minOccurs="0" maxOccurs="unbounded">
                                                         <xs:element name="enabled" type="xs:boolean" minOccurs="0" maxOccurs="1" />
-                                                        <xs:element name="timeout" type="xs:integer" minOccurs="0" maxOccurs="1" />
+                                                        <xs:element name="retryCount" type="xs:integer" minOccurs="0" maxOccurs="1" />
+                                                        <xs:element name="time" type="xs:integer" minOccurs="0" maxOccurs="1" />
                                                         <xs:element name="interval" type="xs:integer" minOccurs="0" maxOccurs="1" />
                                                     </xs:choice>
                                                     <xs:attribute name="enabled" type="xs:boolean" />
-                                                    <xs:attribute name="timeout" type="xs:integer" />
+                                                    <xs:attribute name="retryCount" type="xs:integer" />
+                                                    <xs:attribute name="time" type="xs:integer" />
                                                     <xs:attribute name="interval" type="xs:integer" />
                                                 </xs:complexType>
                                             </xs:element>
@@ -161,6 +167,7 @@
                                         <xs:attribute name="server" type="xs:string" />
                                         <xs:attribute name="port" type="xs:integer" />
                                         <xs:attribute name="reconnectInterval" type="xs:integer" />
+                                        <xs:attribute name="connectionCheckTimeout" type="xs:integer" />
                                         <xs:attribute name="framing" type="xs:string" />
                                         <xs:attribute name="dataChunkSize" type="xs:integer" />
                                     </xs:complexType>
