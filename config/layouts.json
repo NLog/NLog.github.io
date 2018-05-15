@@ -1,0 +1,74 @@
+[
+    {
+        "name": "CSV",
+        "page": "CsvLayout",
+        "description": "A specialized layout that renders CSV-formatted events.",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono",
+            "wp8",
+            "sl"
+        ]
+    },
+    {
+        "name": "JSON",
+        "page": "JsonLayout",
+        "description": "A specialized layout that renders to JSON.",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono",
+            "wp8",
+            "sl"
+        ]
+    },
+    {
+        "name": "Log4JXml",
+        "page": "Log4JXmlEventLayout",
+        "description": "A specialized layout that renders Log4j-compatible XML events.",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono",
+            "wp8",
+            "sl"
+        ]
+    },
+    {
+        "name": "Compound",
+        "page": "CompoundLayout",
+        "description": "A layout containing one or more nested layouts.",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono",
+            "wp8",
+            "sl"
+        ]
+    }
+]
