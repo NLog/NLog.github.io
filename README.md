@@ -1,5 +1,15 @@
 This is the official NLog GitHub page, [nlog-project.org](http://nlog-project.org/).
 
+Config targets, layouts and layout renderers:
+===
+
+The config of the targets, layouts and layout renderers:
+
+- [config/targets.json](config/targets.json)
+- [config/layouts.json](config/layouts.json)
+- [config/layout-renderers.json](config/layout-renderers.json)
+
+
 Add a news post 
 ===
 How to add a new news post.
