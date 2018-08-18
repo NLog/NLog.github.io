@@ -61,7 +61,8 @@
       "oracle",
       "PostgreSQL",
       "SQLite",
-      "Entity Framework"
+      "Entity Framework", 
+      "db"
     ],
     "platforms": [
       "net35",
@@ -100,6 +101,20 @@
       "net40",
       "net45",
       "mono"
+    ],
+    "category": "Integrations"
+  },
+  {
+    "name": "EventLog",
+    "page": "EventLog-target",
+    "description": "Writes log message to the Event Log.",
+    "package": "NLog.WindowsEventLog",
+    "keywords": [
+      "event viewer",
+      "eventviewer"
+    ],
+    "platforms": [
+      "netstandard2.0"
     ],
     "category": "Integrations"
   },
@@ -719,7 +734,7 @@
   {
     "name": "Google Logging",
     "page": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
-    "package": "Google.Cloud.Logging",
+    "package": "Google.Cloud.Logging.NLog",
     "description": "Write NLog message to Google Cloud Logging StackDriver",
     "external": true,
     "category": "Integrations"
