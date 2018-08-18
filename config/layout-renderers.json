@@ -410,6 +410,9 @@
       "wp8",
       "sl"
     ],
+    "keywords": [
+      "context"
+    ],
     "category": "Context information"
   },
   {
@@ -428,6 +431,12 @@
       "mono",
       "wp8",
       "sl"
+    ],
+    "keywords": [
+      "trace",
+      "info",
+      "warn",
+      "fatal"
     ],
     "category": ""
   },
@@ -467,6 +476,10 @@
       "wp8",
       "sl"
     ],
+    "keywords": [
+      "xml",
+      "log4j"
+    ],
     "category": "Intergrations"
   },
   {
@@ -485,6 +498,10 @@
       "mono",
       "wp8",
       "sl"
+    ],
+    "keywords": [
+      "name",
+      "rule"
     ],
     "category": ""
   },
@@ -701,7 +718,7 @@
       "mono",
       "wp8"
     ],
-    "category":  "Processes, threads and assemblies"
+    "category": "Processes, threads and assemblies"
   },
   {
     "name": "processname",
@@ -717,7 +734,7 @@
       "mono",
       "wp8"
     ],
-    "category":  "Processes, threads and assemblies"
+    "category": "Processes, threads and assemblies"
   },
   {
     "name": "processtime",
@@ -736,7 +753,7 @@
       "wp8",
       "sl"
     ],
-    "category":  "Processes, threads and assemblies"
+    "category": "Processes, threads and assemblies"
   },
   {
     "name": "qpc",
@@ -969,7 +986,7 @@
     "keywords": [
       "now"
     ],
-    "category":  "Date and time"
+    "category": "Date and time"
   },
   {
     "name": "var",
@@ -990,7 +1007,9 @@
     ],
     "keywords": [
       "variables",
-      "constants"
+      "constants",
+      "context",
+      "parameters"
     ],
     "category": ""
   },
@@ -1008,8 +1027,13 @@
       "android",
       "mono"
     ],
+    "keywords": [
+      "username",
+      "domain"
+    ],
     "platform-notes": "NLog.WindowsIdentity nuget package for .NET standard",
     "category": "Identity"
+
   },
   {
     "name": "cached",
@@ -1100,7 +1124,7 @@
       "text"
     ],
     "wrapper": true,
-    "category":  "Encoding and string transformations"
+    "category": "Encoding and string transformations"
   },
   {
     "name": "onexception",
@@ -1144,7 +1168,7 @@
       "text"
     ],
     "wrapper": true,
-    "category":  "Encoding and string transformations"
+    "category": "Encoding and string transformations"
   },
   {
     "name": "replace",
@@ -1170,7 +1194,7 @@
       "expression"
     ],
     "wrapper": true,
-    "category":  "Encoding and string transformations"
+    "category": "Encoding and string transformations"
   },
   {
     "name": "replace-newlines",
@@ -1194,7 +1218,7 @@
       "nl"
     ],
     "wrapper": true,
-    "category":  "Encoding and string transformations"
+    "category": "Encoding and string transformations"
   },
   {
     "name": "rot13",
@@ -1241,7 +1265,7 @@
       "text"
     ],
     "wrapper": true,
-    "category":  "Encoding and string transformations"
+    "category": "Encoding and string transformations"
   },
   {
     "name": "uppercase",
@@ -1265,7 +1289,7 @@
       "text"
     ],
     "wrapper": true,
-    "category":  "Encoding and string transformations"
+    "category": "Encoding and string transformations"
   },
   {
     "name": "url-encode",
@@ -1291,7 +1315,7 @@
       "hyperlink"
     ],
     "wrapper": true,
-    "category":  "Encoding and string transformations"
+    "category": "Encoding and string transformations"
   },
   {
     "name": "when",
