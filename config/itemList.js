@@ -100,11 +100,7 @@ Vue.component('item-list', {
             }
             return count;
         },
-        /**
-         * 
-         * @param {[]} items 
-         */
-        filterList(items) {
+        filterList: function(items) {
             var filteredItems;
             var self = this;
             if (!items) {
@@ -164,7 +160,7 @@ Vue.component('item-list', {
             return filteredItems;
         },
 
-        groupByCategory(list) {
+        groupByCategory: function(list) {
             var grouped = _.groupBy(list, function (item) {
                 if (item.category == undefined) {
                     return "";
