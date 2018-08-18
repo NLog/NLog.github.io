@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#da6821">
     <title> {% if page.title %} {{ page.title }} | {% endif %} NLog</title>
+
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/bootstrap.min.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/font-awesome.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.min.css" media="screen">
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/syntax.css" media="screen">
-    <link href="{{ site.baseurl }}/feed/index.xml" 
+    <link href="{{ site.baseurl }}/feed/index.xml"
           rel="alternate" type="application/rss+xml" title="Latest NLog news" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" ></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
 </head>
 <body>
 
@@ -49,7 +53,8 @@
                 <ul class="nav navbar-nav navbar-right">
 
                     <li><a href="https://github.com/nlog/nlog/wiki">Documentation</a></li>
-  
+                    <li style="display:none"><a href="{{ site.baseurl }}/config">Config options</a></li>
+
                     <li><a href="https://github.com/NLog/NLog/issues">Support</a></li>
                     <li><a href="https://github.com/NLog/NLog/blob/master/CHANGELOG.md">Changelog</a></li>
 
@@ -79,20 +84,20 @@
                 <a href="{{ site.baseurl }}/download" class="btn btn-outline-inverse btn-lg">Download NLog</a>
             </p>
             <p class="version">Latest version: {{site.version}} </p>
-                
-                <p class="social-buttons" style="position: relative;top: 20px;">
-                        <iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user=NLog&repo=NLog&type=star&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
-                    
-                        <iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user=NLog&repo=NLog&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
-                
-          
-                    <a class="twitter-hashtag-button"  href="https://twitter.com/intent/tweet?button_hashtag=nlog">
-                        Tweet #nlog
-                    </a>
-                       <a href="https://twitter.com/NLogOfficial" class="twitter-follow-button"  data-show-count="false">Follow @NLogOfficial</a>
-                </p>
-                
-           
+
+            <p class="social-buttons" style="position: relative;top: 20px;">
+                <iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user=NLog&repo=NLog&type=star&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+
+                <iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user=NLog&repo=NLog&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
+
+
+                <a class="twitter-hashtag-button" href="https://twitter.com/intent/tweet?button_hashtag=nlog">
+                    Tweet #nlog
+                </a>
+                <a href="https://twitter.com/NLogOfficial" class="twitter-follow-button" data-show-count="false">Follow @NLogOfficial</a>
+            </p>
+
+
             {% endif %}
 
 
@@ -110,35 +115,37 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="row" >
+                    <div class="row">
                         <div id="twitter-box" style="margin-bottom: 20px;margin-top: 20px;">
-                        <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/nlog" 
-                        data-widget-id="609863870476324864">#nlog Tweets</a>
-                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                      </div>
-                    
-                   
+                            <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/nlog"
+                               data-widget-id="609863870476324864">#nlog Tweets</a>
+                            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+                        </div>
 
+
+
+                    </div>
                 </div>
+
+
             </div>
-
-
         </div>
     </main>
 
     <div class="container">
         <div class="row">
-           
 
         </div>
     </div>
 
-
-
- 
+    <footer class="footer">
+        <div class="container">
+            <a href="https://github.com/NLog/NLog" target="_blank">Github <span class="fa fa-github"></span></a>
+        </div>
+    </footer>
 
     <script>
-   
+
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
@@ -151,21 +158,21 @@
 
     </script>
     <script>
-    window.twttr = (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0],
-            t = window.twttr || {};
-          if (d.getElementById(id)) return t;
-          js = d.createElement(s);
-          js.id = id;
-          js.src = "https://platform.twitter.com/widgets.js";
-          fjs.parentNode.insertBefore(js, fjs);
-         
-          t._e = [];
-          t.ready = function(f) {
-            t._e.push(f);
-          };
- 
-  return t;
-}(document, "script", "twitter-wjs"));</script>
+        window.twttr = (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            t._e = [];
+            t.ready = function (f) {
+                t._e.push(f);
+            };
+
+            return t;
+        }(document, "script", "twitter-wjs"));</script>
 </body>
 </html>

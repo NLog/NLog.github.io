@@ -1,0 +1,13 @@
+.search-row {
+    display: flex;
+}
+.search {
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.platforms-selector {
+    width: 180px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -5px;
+}

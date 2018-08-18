@@ -1,0 +1,127 @@
+---
+layout: default
+header: Configuration options
+title: Config
+---
+<link type="text/css" rel="stylesheet" href="../css/config.css" />
+<div id="app">
+    <div>
+        <p>Config options for NLog's configuration <a class="read-more" @click.prevent="toggleShowInfo">read more...</a> </p>
+        <div v-show="showInfo" class="more-info" style="display:none">
+            The following types can be configured:
+            <ul>
+                <li><strong>Targets</strong> - the destinations of a logevent, e.g. file, database, console </li>
+                <li><strong>Layout</strong> - the layout e.g. json, csv, plain-text (default)</li>
+                <li><strong>Layout renderers</strong> - the template markers, e.g. ${message}, ${exception}, ${date}</li>
+
+
+            </ul>
+            More information can be found at the <a href="https://github.com/NLog/NLog/wiki/Tutorial" target="_blank">NLog tutorial</a>
+            and
+            <a href="https://github.com/NLog/NLog/wiki/Configuration-file" target="_blank">Advanced NLog Configuration file</a>.
+        </div>
+    </div>
+
+    <div class="search-row">
+        <input v-model="search" class="search form-control" ref="search" type="search" :placeholder="searchPlaceHolder" />
+        <select class="platforms-selector form-control" v-model="platformFilter">
+            <option value="">All platforms</option>
+            <option v-for="(item, key) in platforms" :value="key" v-text="item.name"></option>
+        </select>
+    </div>
+    <div>
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" @click.prevent="setTab('targets')" :class="{'active': tab == 'targets' }">
+                <a href="#targets" role="tab">Targets <span class="badge" v-text="targetsCount"></span></a>
+            </li>
+            <li role="presentation" @click.prevent="setTab('layouts')" :class="{'active': tab == 'layouts' }">
+                <a href="#layouts" role="tab">Layouts <span class="badge" v-text="layoutsCount"></span></a>
+            </li>
+            <li role="presentation" :class="{'active': tab == 'layout-renderers' }">
+                <a href="#layout-renderers" @click.prevent="setTab('layout-renderers')" role="tab">Layout renderers <span class="badge" v-text="layoutRendersCount"></span></a>
+            </li>
+
+
+        </ul>
+
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane" :class="{'active': tab == 'layout-renderers' }" id="layout-renderers">
+                <item-list title="Layout Renderers"
+                           item-name="Layout Renderer"
+                           :file="'layout-renderers.json'"
+                           v-on:init-count="onInitCount"
+                           v-on:count-update="onCountUpdateLayoutRenders"
+                           :search="search"
+                           :is-layout-renderer="true"
+                           :platform-filter="platformFilter">
+
+                </item-list>
+            </div>
+            <div role="tabpanel" class="tab-pane" :class="{'active': tab == 'layouts' }" id="layouts">
+                <item-list title="Layouts"
+                           item-name="Layout"
+                           :file="'layouts.json'"
+                           v-on:init-count="onInitCount"
+                           v-on:count-update="onCountUpdateLayouts"
+                           :search="search"
+                           :platform-filter="platformFilter">
+
+                </item-list>
+            </div>
+            <div role="tabpanel" class="tab-pane" :class="{'active': tab == 'targets' }" id="targets">
+                <item-list title="Targets"
+                           item-name="Target"
+                           :file="'targets.json'"
+                           v-on:init-count="onInitCount"
+                           v-on:count-update="onCountUpdateTargets"
+                           :search="search"
+                           :platform-filter="platformFilter">
+
+                </item-list>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/x-template" id="item-list-template">
+    <div>
+        <div v-if="isLoading">
+            <span class="fa fa-spinner fa-spin fa-fw fa-2x"></span>
+        </div>
+        <div v-else>
+            <div>
+                <div v-for="(items, group) in filteredItems">
+                    <h4 v-text="group" :name="group"></h4>
+
+                    <ul>
+                        <li v-for="item in items">
+                            <span v-if="item.page">
+                                <a target="_blank" v-text="item.title()" :href="item.href()"></a>
+                            </span>
+                            <span v-else v-text="item.title()"></span>
+                            <span>-</span>
+                            <span class="fa fa-object-ungroup" v-if="item.wrapper" :title="'Wraps another ' + itemName"></span>
+                            <span class="fa fa-thumbs-o-down" v-if="item.legacy" :title="'Legacy' + itemName"></span>
+                            <span v-text="item.description"></span>
+
+
+                            <a v-for="package in item.packageList()" target="_blank" :href="'https://www.nuget.org/packages/' + package" :title="'Needs package '+ package">
+                                <span v-text="package" class="label label-default package-label"></span>
+                            </a>
+                            <span v-if="item.external" class="label label-info">External</span>
+                            <span v-if="item.githubRepoUrl"><a :href="item.githubRepoUrl" target="_blank"><span class="fa fa-github"></span></a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</script>
+
+
+<script src="item-type.js"></script>
+<script src="itemList.js"></script>
+<script src="searchPage.js"></script>
