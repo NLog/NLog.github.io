@@ -1,6 +1,7 @@
 function loadJSON(file, callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
+    file = file +"?c="+ Date.now(); //cache buster
     xobj.open('GET', file, true);
     // Replace 'my_data' with the path to your file
     xobj.onreadystatechange = function () {
