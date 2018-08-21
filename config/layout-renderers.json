@@ -281,7 +281,7 @@
   {
     "name": "exception",
     "page": "Exception-Layout-Renderer",
-    "description": "Exception information provided through a call to one of the Logger.*Exception() methods",
+    "description": "Exception information provided through a call to one of the Logger methods",
     "platforms": [
       "net35",
       "net40",
