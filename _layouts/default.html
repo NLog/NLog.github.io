@@ -9,8 +9,8 @@
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.min.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/syntax.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css?{{ site.time }}" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/syntax.css?{{ site.time }}" media="screen">
     <link href="{{ site.baseurl }}/feed/index.xml"
           rel="alternate" type="application/rss+xml" title="Latest NLog news" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -19,10 +19,24 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
 </head>
-<body>
+<body last-updated="{{ site.time }}">
 
 
     <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+
+    {% if site.news %}
+    <div class="alert text-center alert-info alert-dismissible" id="site-news">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+       {{site.news}}
+       {% if site.newslink %}
+       <a href="{{site.newslink}}">Read more</a>
+       {% endif %}
+      </div>
+    {% endif %}
+  
+
+  
 
     <!-- Docs master nav -->
     <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
@@ -83,7 +97,14 @@
             <p class="lead">
                 <a href="{{ site.baseurl }}/download" class="btn btn-outline-inverse btn-lg">Download NLog</a>
             </p>
-            <p class="version">Latest version: {{site.version}} </p>
+            <p class="version">Latest version: 
+                               
+                <a href="https://www.nuget.org/packages/NLog/{{site.version}}" target="_blank"> {{site.version}}</a>
+             {% if site.preversion %}
+              | <a href="https://www.nuget.org/packages/NLog/{{site.preversion}}"  target="_blank"> {{site.preversion}}</a>
+              {% endif %}
+            
+            </p>
 
             <p class="social-buttons" style="position: relative;top: 20px;">
                 <iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user=NLog&repo=NLog&type=star&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
@@ -138,11 +159,11 @@
         </div>
     </div>
 
-    <footer class="footer">
+  <!-- <footer class="footer">
         <div class="container">
             <a href="https://github.com/NLog/NLog" target="_blank">Github <span class="fa fa-github"></span></a>
         </div>
-    </footer>
+    </footer>--> 
 
     <script>
 
