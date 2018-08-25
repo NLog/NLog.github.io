@@ -480,7 +480,7 @@
       "xml",
       "log4j"
     ],
-    "category": "Intergrations"
+    "category": "Integrations"
   },
   {
     "name": "logger",
@@ -1848,7 +1848,7 @@
     "description": "Converts log to GELF format",
     "package": "NLog.GelfLayout",
     "external": true,
-    "category": "Intergrations"
+    "category": "Integrations"
   },
   {
     "name": "xml",
