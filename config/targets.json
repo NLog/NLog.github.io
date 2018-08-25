@@ -61,7 +61,7 @@
       "oracle",
       "PostgreSQL",
       "SQLite",
-      "Entity Framework", 
+      "Entity Framework",
       "db"
     ],
     "platforms": [
@@ -404,6 +404,11 @@
     "page": "MSMQ-target",
     "description": "Writes log message to the specified message queue handled by MSMQ.",
     "package": "NLog.Extended",
+    "platforms": [
+      "net35",
+      "net40",
+      "net45"
+    ],
     "keywords": [
       "message queue"
     ],
@@ -414,6 +419,11 @@
     "page": "AspNetTrace-target",
     "description": "Writes log messages to the ASP.NET trace.",
     "package": "NLog.Web",
+    "platforms": [
+      "net35",
+      "net40",
+      "net45"
+    ],
     "category": "Integrations"
   },
   {
@@ -422,6 +432,11 @@
     "description": "Buffers log events for the duration of ASP.NET request and sends them down to the wrapped target at the end of a request.",
     "package": "NLog.Web",
     "wrapper": "true",
+    "platforms": [
+      "net35",
+      "net40",
+      "net45"
+    ],
     "category": "Async and buffering"
   },
   {
@@ -444,6 +459,11 @@
       "windows",
       "gui"
     ],
+    "platforms": [
+      "net35",
+      "net40",
+      "net45"
+    ],
     "category": "Windows Forms"
   },
   {
@@ -454,6 +474,11 @@
     "keywords": [
       "windows",
       "gui"
+    ],
+    "platforms": [
+      "net35",
+      "net40",
+      "net45"
     ],
     "category": "Windows Forms"
   },
@@ -748,4 +773,3 @@
     "category": "Integrations"
   }
 ]
-  
