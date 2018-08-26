@@ -1,4 +1,4 @@
-This is the official NLog GitHub page, [nlog-project.org](http://nlog-project.org/).
+This is the official NLog GitHub page, [nlog-project.org](https://nlog-project.org/).
 
 Config targets, layouts and layout renderers:
 ===
@@ -15,7 +15,7 @@ Add a news post
 How to add a new news post.
 
 1. Create and new MarkDown file (`.md`) in the `_posts` folder, starting with the date (`yyyy-MM-dd`). Don't use spaces or extra dots in the filename! Don't forget the `.md` extension! 
-2. Start the post with the [Jekyll front matter](http://jekyllrb.com/docs/frontmatter/), 
+2. Start the post with the [Jekyll front matter](https://jekyllrb.com/docs/frontmatter/), 
   * `layout: post` is required. 
   * Choose a good title after `title:`
   * Example
