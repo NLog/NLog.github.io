@@ -1,7 +1,7 @@
 
 
 
-var url = 'http://nlog-project.org/config/'
+var url = 'https://nlog-project.org/config/'
 
 
 function getQueryStringValue(key, defaultValue) {
