@@ -1835,10 +1835,10 @@
     "category": "Web, ASP.NET and ASP.NET Core"
   },
   {
-    "name": "appsetting",
-    "description": "${appsetting} for .NET Standard and appsettings.json config files",
-    "page": "https://github.com/linmasaki/NLog.Appsetting.Standard",
-    "package": "NLog.Appsetting.Standard",
+    "name": "appsettings",
+    "description": "${appsettings} for .NET Standard and appsettings.json config files",
+    "page": "https://github.com/linmasaki/NLog.Appsettings.Standard",
+    "package": "NLog.Appsettings.Standard",
     "external": true,
     "category": "Environment and config files"
   },
