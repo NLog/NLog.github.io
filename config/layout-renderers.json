@@ -1836,9 +1836,13 @@
   },
   {
     "name": "appsettings",
-    "description": "${appsettings} for .NET Standard and appsettings.json config files",
+    "description": "It be used to access appsettings.json for netcoreapp",
     "page": "https://github.com/linmasaki/NLog.Appsettings.Standard",
     "package": "NLog.Appsettings.Standard",
+    "platforms": [
+      "netstandard1.6",
+      "netstandard2.0"
+    ],
     "external": true,
     "category": "Environment and config files"
   },
