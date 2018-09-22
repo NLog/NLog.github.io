@@ -1458,8 +1458,10 @@
     ],
     "keywords": [
       "config",
-      "appsettings.json",
-      "ASP.NET Core"
+      "appsetting.json",
+      "ASP.NET Core",
+      "Application Settings",
+      "connectionstrings"
     ],
     "wrapper": false,
     "category": "Environment and config files"
