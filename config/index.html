@@ -6,7 +6,7 @@ title: Config
 <link type="text/css" rel="stylesheet" href="../css/config.css" />
 <div id="app">
     <div>
-        <p>Config options for NLog's configuration <a class="read-more" @click.prevent="toggleShowInfo">read more...</a> </p>
+        <p>Config options for NLog's configuration <a class="read-more" @click.prevent="toggleShowInfo"><span v-if="!showInfo">read more...</span><span v-else>(read less)</span></a> </p>
         <div v-show="showInfo" class="more-info" style="display:none">
             The following types can be configured:
             <ul>
@@ -101,7 +101,7 @@ title: Config
                             <span v-else v-text="item.title()"></span>
                             <span>-</span>
                             <span class="fa fa-object-ungroup" v-if="item.wrapper" :title="'Wraps another ' + itemName"></span>
-                            <span class="fa fa-thumbs-o-down" v-if="item.legacy" :title="'Legacy' + itemName"></span>
+                            <span class="fa fa-thumbs-o-down" v-if="item.legacy" title="Legacy"></span>
                             <span v-text="item.description"></span>
 
 
