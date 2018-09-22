@@ -9,6 +9,7 @@
       "net45",
       "netstandard1.3",
       "netstandard1.5",
+      "netstandard1.6",
       "netstandard2.0",
       "ios",
       "android",
@@ -32,6 +33,7 @@
       "net40",
       "net45",
       "netstandard1.5",
+      "netstandard1.6",
       "netstandard2.0",
       "mono",
       "wp8",
@@ -70,6 +72,7 @@
       "net45",
       "netstandard1.3",
       "netstandard1.5",
+      "netstandard1.6",
       "netstandard2.0",
       "mono",
       "wp8"
@@ -145,6 +148,7 @@
     "platforms": [
       "netstandard1.3",
       "netstandard1.5",
+      "netstandard1.6",
       "netstandard2.0"
     ],
     "package": "NLog.WCF",
@@ -185,6 +189,7 @@
       "net45",
       "netstandard1.3",
       "netstandard1.5",
+      "netstandard1.6",
       "netstandard2.0"
     ],
     "package": "NLog.MailKit",
@@ -242,6 +247,7 @@
       "net45",
       "netstandard1.3",
       "netstandard1.5",
+      "netstandard1.6",
       "netstandard2.0",
       "mono"
     ],
@@ -272,6 +278,7 @@
       "net40",
       "net45",
       "netstandard1.5",
+      "netstandard1.6",
       "netstandard2.0",
       "ios",
       "android",
