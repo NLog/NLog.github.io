@@ -102,11 +102,11 @@ Vue.component('item-list', {
         },
         /** text includes all terms in "includes"
          * @param text {string}
-         * @param includes {string[]}
+         * @param includes {string[]} all must be in text
          * @returns {boolean}
           */
         includesAll: function (text, includes) {
-            for (i = 0; i < includes.length; i++) {
+            for (var i = 0; i < includes.length; i++) {
                 var include = includes[i];
                 if (!_.includes(text, include)) {
                     return false;
@@ -115,6 +115,51 @@ Vue.component('item-list', {
             }
             return true;
 
+        },
+        /** text includes any terms in "includes"
+         * @param text {string}
+         * @param includes {string[]} one must be in text
+         * @returns {boolean}
+          */
+        includesAny: function (text, includes) {
+            for (var i = 0; i < includes.length; i++) {
+                var include = includes[i];
+                if (_.includes(text, include)) {
+                    return true;
+                }
+
+            }
+            return false;
+
+        },
+        /** text includes any terms in "includes"
+         * @param text {string[]}
+         * @param includes {string[]} one must be in text
+         * @returns {boolean}
+          */
+        includesAnyArray: function (texts, includes) {
+            var self = this;
+            for (var i = 0; i < texts.length; i++) {
+                var text = texts[i];
+                if (self.includesAny(text, includes)) {
+                    return true;
+                }
+
+            }
+            return false;
+
+        },
+
+        /** @param items {string[]}
+         * @returns {string[]}
+         */
+        trimAll: function (items) {
+
+            items = _.map(items, function (it) {
+                if (it == null) it = "";
+                return it.trim()
+            });
+            return items;
         },
 
         filterList: function (items) {
@@ -132,10 +177,47 @@ Vue.component('item-list', {
                 var searchValue = self.search.trim().toLowerCase();
                 var searchValues = _.split(searchValue, " ");
 
+                searchValues = self.trimAll(searchValues);
+
                 //remove whitespace terms
                 _.remove(searchValues, function (value) {
-                    value == null || value.trim() == ""
+                    value == null || value == ""
                 });
+
+                //search for "package:""
+                var packageSearchValues = _.remove(searchValues, function (value) {
+                    return _.startsWith(value, "package:")
+                });
+                packageSearchValues = self.trimAll(packageSearchValues);
+
+                //remove package: of every item
+                packageSearchValues = _.map(packageSearchValues, function (it) {
+                    return _.trimStart(it, "package:");
+                });
+
+
+
+
+                if (packageSearchValues.length) {
+
+
+                    items = _.filter(items, function (item) {
+                        if (!item.package || item.package.length == 0) {
+                            return false;
+                        }
+                        if (_.isArray(item.package)) {
+                            var packages = _.map(item.package, function (it) {
+                                return it.toLowerCase();
+                            })
+
+                            return self.includesAnyArray(packages, packageSearchValues);
+                        } else {
+                            var package = item.package.toLowerCase();
+
+                            return self.includesAny(package, packageSearchValues);
+                        }
+                    });
+                }
 
                 var filteredItems = _.filter(items, function (item) {
 
