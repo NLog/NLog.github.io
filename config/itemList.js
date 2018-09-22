@@ -1,7 +1,7 @@
 function loadJSON(file, callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
-    file = file +"?c="+ Date.now(); //cache buster
+    file = file + "?c=" + Date.now(); //cache buster
     xobj.open('GET', file, true);
     // Replace 'my_data' with the path to your file
     xobj.onreadystatechange = function () {
@@ -100,7 +100,24 @@ Vue.component('item-list', {
             }
             return count;
         },
-        filterList: function(items) {
+        /** text includes all terms in "includes"
+         * @param text {string}
+         * @param includes {string[]}
+         * @returns {boolean}
+          */
+        includesAll: function (text, includes) {
+            for (i = 0; i < includes.length; i++) {
+                var include = includes[i];
+                if (!_.includes(text, include)) {
+                    return false;
+                }
+
+            }
+            return true;
+
+        },
+
+        filterList: function (items) {
             var filteredItems;
             var self = this;
             if (!items) {
@@ -112,9 +129,16 @@ Vue.component('item-list', {
             }
             else {
 
+                var searchValue = self.search.trim().toLowerCase();
+                var searchValues = _.split(searchValue, " ");
+
+                //remove whitespace terms
+                _.remove(searchValues, function (value) {
+                    value == null || value.trim() == ""
+                });
+
                 var filteredItems = _.filter(items, function (item) {
 
-                    var searchValue = self.search.trim().toLowerCase();
 
                     var itemName = item.name.toLowerCase();
                     if (this.isLayoutRenderer) {
@@ -125,15 +149,15 @@ Vue.component('item-list', {
                         item.description = "";
                     }
 
-                    var isMatch = item && itemName && _.includes(itemName, searchValue)
-                        || _.includes(item.description.toLowerCase(), searchValue);
+                    var isMatch = item && itemName && self.includesAll(itemName, searchValues)
+                        || self.includesAll(item.description.toLowerCase(), searchValues);
 
                     //  console.log("search keyword?", item.keywords)
                     if (!isMatch && item.keywords) {
                         for (var i = 0; i < item.keywords.length; i++) {
                             var keyword = item.keywords[i].toLowerCase();
                             // console.log("search keyword", keyword)
-                            isMatch = _.includes(keyword, searchValue)
+                            isMatch = self.includesAll(keyword, searchValues)
                             if (isMatch) {
                                 break;
                             }
@@ -160,7 +184,7 @@ Vue.component('item-list', {
             return filteredItems;
         },
 
-        groupByCategory: function(list) {
+        groupByCategory: function (list) {
             var grouped = _.groupBy(list, function (item) {
                 if (item.category == undefined) {
                     return "";
