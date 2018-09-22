@@ -1461,7 +1461,7 @@
       "appsettings.json",
       "ASP.NET Core"
     ],
-    "wrapper": true,
+    "wrapper": false,
     "category": "Environment and config files"
   },
   {
