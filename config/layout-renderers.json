@@ -1449,7 +1449,7 @@
     "name": "configsetting",
     "page": "ConfigSetting-Layout-Renderer",
     "package": "NLog.Extensions.Logging",
-    "description": "Value from the appsettings.json or other configuration in .NET Core",
+    "description": "Value from the appsettings.json or other configuration in ASP.NET Core & .NET Core",
     "platforms": [
       "netstandard1.3",
       "netstandard1.5",
