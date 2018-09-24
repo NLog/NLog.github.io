@@ -1726,6 +1726,24 @@
     "category": "Web, ASP.NET and ASP.NET Core"
   },
   {
+    "name": "aspnet-Request-Form",
+    "page": "AspNetRequest-Form-Layout-Renderer",
+    "package": [
+      "NLog.Web",
+      "NLog.Web.AspNetCore"
+    ],
+    "description": "ASP.NET Request form content.",
+    "platforms": [
+      "net35",
+      "net40",
+      "net45",
+      "netstandard1.5",
+      "netstandard2.0"
+    ],
+    "wrapper": false,
+    "category": "Web, ASP.NET and ASP.NET Core"
+  },
+  {
     "name": "aspnet-Session",
     "page": "AspNetSession-layout-renderer",
     "package": [
