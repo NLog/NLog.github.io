@@ -1016,6 +1016,9 @@
   {
     "name": "windows-identity",
     "page": "Windows-Identity-Layout-Renderer",
+    "package": [
+      "Nlog.WindowsIdentity"
+    ],
     "description": "Thread Windows identity information (username)",
     "platforms": [
       "net35",
