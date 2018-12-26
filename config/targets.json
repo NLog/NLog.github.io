@@ -771,5 +771,13 @@
     "description": "Writes NLog messages to Rapid7 InsightOps / Logentries",
     "external": true,
     "category": "Integrations"
+  },
+  {
+    "name": "Logify",
+    "page": "https://github.com/DevExpress/Logify.Alert.Clients/tree/develop/dotnet/Logify.Alert.NLog",
+    "package": "Logify.Alert.NLog",
+    "description": "Writes NLog messages to https://logify.devexpress.com",
+    "external": true,
+    "category": "Integrations (Cloud)"
   }
 ]
