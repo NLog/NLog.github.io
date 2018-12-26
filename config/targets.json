@@ -634,7 +634,7 @@
     "package": "Gibraltar.Agent.NLog4",
     "description": "Writes NLog messages to Gibraltar https://www.onloupe.com",
     "external": true,
-    "category": "Integrations"
+    "category": "Integrations (Cloud)"
   },
   {
     "name": "MongoDB",
@@ -746,7 +746,7 @@
     "package": "AWS.Logger.NLog",
     "description": "Writes NLog messages to Amazon CloudWatch Logs (AWS)",
     "external": true,
-    "category": "Integrations"
+    "category": "Integrations (Cloud)"
   },
   {
     "name": "AzureBlobStorage",
@@ -754,7 +754,7 @@
     "package": "NLog.Extensions.AzureStorage",
     "description": "Batch writing of NLog messages to Azure BlobStorage (or TableStorage)",
     "external": true,
-    "category": "Integrations"
+    "category": "Integrations (Cloud)"
   },
   {
     "name": "Google Logging",
@@ -762,7 +762,7 @@
     "package": "Google.Cloud.Logging.NLog",
     "description": "Write NLog message to Google Cloud Logging StackDriver",
     "external": true,
-    "category": "Integrations"
+    "category": "Integrations (Cloud)"
   },
   {
     "name": "R7 InsightOps",
