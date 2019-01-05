@@ -1029,7 +1029,7 @@
       "username",
       "domain"
     ],
-    "platform-notes": "NLog.WindowsIdentity nuget package for .NET standard",
+    "platform-notes": "For .NET Standard: NLog.WindowsIdentity nuget package required",
     "category": "Identity"
 
   },
@@ -1042,13 +1042,13 @@
     "description": "Thread Windows identity information (username)",
     "platforms": [
       "netstandard1.5",
-      "netstandard2.0",
+      "netstandard2.0"
     ],
     "keywords": [
       "username",
       "domain"
     ],
-    "platform-notes": "NLog.WindowsIdentity nuget package for .NET standard",
+    "platform-notes": "For .NET Standard: NLog.WindowsIdentity nuget package required",
     "category": "Identity"
 
   },
