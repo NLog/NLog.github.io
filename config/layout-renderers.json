@@ -1021,8 +1021,6 @@
       "net35",
       "net40",
       "net45",
-      "netstandard1.5",
-      "netstandard2.0",
       "ios",
       "android",
       "mono"
@@ -1031,7 +1029,26 @@
       "username",
       "domain"
     ],
-    "platform-notes": "NLog.WindowsIdentity nuget package for .NET standard",
+    "platform-notes": "For .NET Standard: NLog.WindowsIdentity nuget package required",
+    "category": "Identity"
+
+  },
+  {
+    "name": "windows-identity",
+    "page": "Windows-Identity-Layout-Renderer",
+    "package": [
+      "Nlog.WindowsIdentity"
+    ],
+    "description": "Thread Windows identity information (username)",
+    "platforms": [
+      "netstandard1.5",
+      "netstandard2.0"
+    ],
+    "keywords": [
+      "username",
+      "domain"
+    ],
+    "platform-notes": "For .NET Standard: NLog.WindowsIdentity nuget package required",
     "category": "Identity"
 
   },
