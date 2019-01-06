@@ -1558,7 +1558,10 @@
   {
     "name": "aspnet-TraceIdentifier",
     "page": "AspNetTraceIdentifier-Layout-Renderer",
-    "package": "NLog.Web",
+    "package": [
+      "NLog.Web",
+      "NLog.Web.AspNetCore"
+    ],
     "description": "ASP.NET trace identifier",
     "platforms": [
       "net35",
