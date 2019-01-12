@@ -1,783 +1,783 @@
 [
     {
-      "name": "Chainsaw",
-      "page": "Chainsaw-target",
-      "description": "Sends log messages to the remote instance of Chainsaw application from log4j.",
-      "platforms": [
-        "net35",
-        "net40",
-        "net45",
-        "netstandard1.3",
-        "netstandard1.5",
-        "netstandard2.0",
-        "ios",
-        "android",
-        "mono",
-        "wp8",
-        "sl"
-      ],
-      "keywords": [
-        "tool",
-        "gui",
-        "java"
-      ],
-      "category": "Integrations (GUI tools)"
-    },
-    {
-      "name": "ColoredConsole",
-      "page": "ColoredConsole-target",
-      "description": "Writes log messages to the console with customizable coloring.",
-      "platforms": [
-        "net35",
-        "net40",
-        "net45",
-        "netstandard1.5",
-        "netstandard2.0",
-        "mono",
-        "wp8",
-        "sl"
-      ],
-      "keywords": [
-        "cmd"
-      ],
-      "category": ""
-    },
-    {
-      "name": "Console",
-      "page": "Console-target",
-      "description": "Writes log messages to the console.",
-      "keywords": [
-        "cmd"
-      ],
-      "category": ""
-    },
-    {
-      "name": "Database",
-      "page": "Database-target",
-      "description": "Writes log messages to the database using an ADO.NET provider.",
-      "keywords": [
-        "sql",
-        "mysql",
-        "oracle",
-        "PostgreSQL",
-        "SQLite",
-        "Entity Framework",
-        "db"
-      ],
-      "platforms": [
-        "net35",
-        "net40",
-        "net45",
-        "netstandard1.3",
-        "netstandard1.5",
-        "netstandard2.0",
-        "mono",
-        "wp8"
-      ],
-      "category": "Databases"
-    },
-    {
-      "name": "Debug",
-      "page": "Debug-target",
-      "description": "Mock target - useful for testing.",
-      "category": ""
-    },
-    {
-      "name": "Debugger",
-      "page": "Debugger-target",
-      "description": "Writes log messages to the attached managed debugger.",
-      "category": "Trace and debugging"
-    },
-    {
-      "name": "EventLog",
-      "page": "EventLog-target",
-      "description": "Writes log message to the Event Log.",
-      "keywords": [
-        "event viewer",
-        "eventviewer"
-      ],
-      "platforms": [
-        "net35",
-        "net40",
-        "net45",
-        "mono"
-      ],
-      "category": "Integrations"
-    },
-    {
-      "name": "EventLog",
-      "page": "EventLog-target",
-      "description": "Writes log message to the Event Log (.NET Core)",
-      "package": "NLog.WindowsEventLog",
-      "keywords": [
-        "event viewer",
-        "eventviewer"
-      ],
-      "platforms": [
-        "netstandard2.0"
-      ],
-      "category": "Integrations"
-    },
-    {
-      "name": "File",
-      "page": "File-target",
-      "description": "Writes log messages to one or more files.",
-      "keywords": [
-        "document"
-      ],
-      "category": ""
-    },
-    {
-      "name": "LogReceiverService",
-      "page": "LogReceiverService-target",
-      "description": "Sends log messages to a NLog Receiver Service (using WCF or Web Services).",
-      "platforms": [
-        "net35",
-        "net40",
-        "net45"
-      ],
-      "category": "Webservices and networking"
-    },
-    {
-      "name": "LogReceiverService",
-      "page": "LogReceiverService-target",
-      "description": "(.NET standard) Sends log messages to a NLog Receiver Service (using WCF or Web Services).",
-      "platforms": [
-        "netstandard1.3",
-        "netstandard1.5",
-        "netstandard2.0"
-      ],
-      "package": "NLog.WCF",
-      "platform-notes": "NLog.WCF nuget package for .NET standard",
-      "category": "Webservices and networking"
-    },
-    {
-      "name": "Mail",
-      "page": "Mail-target",
-      "description": "Sends log messages by email using SMTP protocol or pickup folder.",
-      "keywords": [
-        "email",
-        "e-mail",
-        "pickup"
-      ],
-      "platforms": [
-        "net35",
-        "net40",
-        "net45",
-        "netstandard2.0",
-        "ios",
-        "android",
-        "mono",
-        "wp8"
-      ],
-      "category": ""
-    },
-    {
-      "name": "Mail",
-      "page": "Mail-target",
-      "description": "Mail Target using MailKit. Only SMTP supported.",
-      "keywords": [
-        "email",
-        "e-mail"
-      ],
-      "platforms": [
-        "net40",
-        "net45",
-        "netstandard1.3",
-        "netstandard1.5",
-        "netstandard2.0"
-      ],
-      "package": "NLog.MailKit",
-      "category": ""
-    },
-    {
-      "name": "Memory",
-      "page": "Memory-target",
-      "description": "Writes log messages to an ArrayList in memory for programmatic retrieval.",
-      "category": "Programmatically"
-    },
-    {
-      "name": "MethodCall",
-      "page": "MethodCall-target",
-      "description": "Calls the specified static method on each log message and passes contextual parameters to it.",
-      "category": "Programmatically"
-    },
-    {
-      "name": "Network",
-      "page": "Network-target",
-      "description": "Sends log messages over the network.",
-      "keywords": [
-        "tcp",
-        "udp",
-        "ip"
-      ],
-      "category": "Webservices and networking"
-    },
-    {
-      "name": "NLogViewer",
-      "page": "NLogViewer-target",
-      "description": "Sends log messages to the remote instance of NLog Viewer.",
-      "keywords": [
-        "tool",
-        "gui"
-      ],
-      "category": "Integrations (GUI tools)"
-    },
-    {
-      "name": "Null",
-      "page": "Null-target",
-      "description": "Discards log messages. Used mainly for debugging and benchmarking.",
-      "keywords": [
-        "blackhole"
-      ],
-      "category": ""
-    },
-    {
-      "name": "OutputDebugString",
-      "page": "OutputDebugString-target",
-      "description": "Outputs log messages through the OutputDebugString() Win32 API.",
-      "platforms": [
-        "net35",
-        "net40",
-        "net45",
-        "netstandard1.3",
-        "netstandard1.5",
-        "netstandard2.0",
-        "mono"
-      ],
-      "category": "Integrations"
-    },
-    {
-      "name": "PerfCounter",
-      "page": "PerfCounter-target",
-      "description": "Increments specified performance counter on each write.",
-      "keywords": [
-        "performance counter",
-        "Diagnostics"
-      ],
-      "platforms": [
-        "net35",
-        "net40",
-        "net45",
-        "mono"
-      ],
-      "category": "Trace and debugging"
-    },
-    {
-      "name": "Trace",
-      "page": "Trace-target",
-      "description": "Sends log messages through System.Diagnostics.Trace.",
-      "platforms": [
-        "net35",
-        "net40",
-        "net45",
-        "netstandard1.5",
-        "netstandard2.0",
-        "ios",
-        "android",
-        "mono",
-        "wp8"
-      ],
-      "category": "Trace and debugging"
-    },
-    {
-      "name": "WebService",
-      "page": "WebService-target",
-      "description": "Calls the specified web service on each log message.",
-      "keywords": [
-        "SOAP"
-      ],
-      "category": "Webservices and networking"
-    },
-    {
-      "name": "AsyncWrapper",
-      "page": "AsyncWrapper-target",
-      "description": "Provides asynchronous, buffered execution of target writes.",
-      "wrapper": true,
-      "keywords": [
-        "performance"
-      ],
-      "category": "Async and buffering"
-    },
-    {
-      "name": "AutoFlushWrapper",
-      "page": "AutoFlushWrapper-target",
-      "description": "Causes a flush after each write on a wrapped target.",
-      "wrapper": true,
-      "category": "Async and buffering"
-    },
-    {
-      "name": "BufferingWrapper",
-      "page": "BufferingWrapper-target",
-      "description": "A target that buffers log events and sends them in batches to the wrapped target. Useful in combination with Mail target.",
-      "wrapper": true,
-      "category": "Async and buffering"
-    },
-    {
-      "name": "FallbackGroup",
-      "page": "FallbackGroup-target",
-      "description": "Provides fallback-on-error.",
-      "wrapper": true,
-      "keywords": [
-        "alternative"
-      ],
-      "category": "Filtering, throttling and error handling"
-    },
-    {
-      "name": "FilteringWrapper",
-      "page": "FilteringWrapper-target",
-      "description": "Filters log entries based on a condition.",
-      "wrapper": true,
-      "category": "Filtering, throttling and error handling"
-    },
-    {
-      "name": "ImpersonatingWrapper",
-      "page": "ImpersonatingWrapper-target",
-      "description": "Impersonates another user for the duration of the write.",
-      "wrapper": true,
-      "keywords": [
-        "security"
-      ],
-      "platforms": [
-        "net35",
-        "net40",
-        "net45",
-        "mono"
-      ],
-      "category": "Security"
-    },
-    {
-      "name": "LimitingWrapper",
-      "page": "LimitingWrapper-target",
-      "description": "Limits number of log events sent to target.",
-      "wrapper": true,
-      "keywords": [
-        "throtte",
-        "throttling"
-      ],
-      "category": "Filtering, throttling and error handling"
-    },
-    {
-      "name": "PostFilteringWrapper",
-      "page": "PostFilteringWrapper-target",
-      "description": "Filters buffered log entries based on a set of conditions that are evaluated on a group of events.",
-      "wrapper": true,
-      "category": "Filtering, throttling and error handling"
-    },
-    {
-      "name": "RandomizeGroup",
-      "page": "RandomizeGroup-target",
-      "description": "Sends log messages to a randomly selected target.",
-      "wrapper": true,
-      "category": "Filtering, throttling and error handling"
-    },
-    {
-      "name": "RepeatingWrapper",
-      "page": "RepeatingWrapper-target",
-      "description": "Repeats each log event the specified number of times.",
-      "wrapper": true,
-      "category": "Filtering, throttling and error handling"
-    },
-    {
-      "name": "RetryingWrapper",
-      "page": "RetryingWrapper-target",
-      "description": "Retries in case of write error.",
-      "wrapper": true,
-      "category": "Filtering, throttling and error handling"
-    },
-    {
-      "name": "RoundRobinGroup",
-      "page": "RoundRobinGroup-target",
-      "description": "Distributes log events to targets in a round-robin fashion.",
-      "wrapper": true,
-      "category": "Filtering, throttling and error handling"
-    },
-    {
-      "name": "SplitGroup",
-      "page": "SplitGroup-target",
-      "description": "Writes log events to all targets.",
-      "wrapper": true,
-      "category": "Filtering, throttling and error handling"
-    },
-    {
-      "name": "MSMQ",
-      "page": "MSMQ-target",
-      "description": "Writes log message to the specified message queue handled by MSMQ.",
-      "package": "NLog.Extended",
-      "platforms": [
-        "net35",
-        "net40",
-        "net45"
-      ],
-      "keywords": [
-        "message queue"
-      ],
-      "category": "Queues"
-    },
-    {
-      "name": "AspNetTrace",
-      "page": "AspNetTrace-target",
-      "description": "Writes log messages to the ASP.NET trace.",
-      "package": "NLog.Web",
-      "platforms": [
-        "net35",
-        "net40",
-        "net45"
-      ],
-      "category": "Integrations"
-    },
-    {
-      "name": "AspNetBufferingWrapper",
-      "page": "AspNetBufferingWrapper-target",
-      "description": "Buffers log events for the duration of ASP.NET request and sends them down to the wrapped target at the end of a request.",
-      "package": "NLog.Web",
-      "wrapper": "true",
-      "platforms": [
-        "net35",
-        "net40",
-        "net45"
-      ],
-      "category": "Async and buffering"
-    },
-    {
-      "name": "FormControl",
-      "page": "FormControl-target",
-      "description": "Logs text to Windows.Forms.Control.Text property control of specified Name.",
-      "package": "NLog.Windows.Forms",
-      "keywords": [
-        "windows",
-        "gui"
-      ],
-      "category": "Windows Forms"
-    },
-    {
-      "name": "MessageBox",
-      "page": "MessageBox-target",
-      "description": "Pops up log messages as message boxes.",
-      "package": "NLog.Windows.Forms",
-      "keywords": [
-        "windows",
-        "gui"
-      ],
-      "platforms": [
-        "net35",
-        "net40",
-        "net45"
-      ],
-      "category": "Windows Forms"
-    },
-    {
-      "name": "RichTextBox",
-      "page": "https://github.com/NLog/NLog.Windows.Forms/wiki/RichTextBoxTarget",
-      "description": "Log text a Rich Text Box control in an existing or new form.",
-      "package": "NLog.Windows.Forms",
-      "keywords": [
-        "windows",
-        "gui"
-      ],
-      "platforms": [
-        "net35",
-        "net40",
-        "net45"
-      ],
-      "category": "Windows Forms"
-    },
-    {
-      "name": "Elmah",
-      "description": "Logs to Elmah",
-      "package": "NLog.Elmah",
-      "page": "https://github.com/NLog/NLog.elmah",
-      "keywords": [
-        "errors"
-      ],
-      "category": "Integrations"
-    },
-    {
-      "name": "Amazon SNS",
-      "page": "https://github.com/Takaloy/NLog.Targets.SNS",
-      "description": "Writes NLog messages to Amazon SNS",
-      "package": "NLog.Targets.SNS",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "Amazon SQS",
-      "page": "https://github.com/aireq/NLog.Targets.SQS",
-      "description": "Writes NLog messages to Amazon SQS",
-      "package": "NLog.Targets.SQS",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "AzureTableStorage",
-      "page": "https://github.com/abkonsta/NLog.Extensions.AzureTableStorage",
-      "description": "Writes NLog messages to Azure TableStorage",
-      "package": "NLog.Extensions.AzureTableStorage",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "Microsoft ApplicationInsights",
-      "page": "https://github.com/Microsoft/ApplicationInsights-dotnet-logging",
-      "description": "Writes NLog messages to Microsoft ApplicationInsights",
-      "package": "Microsoft.ApplicationInsights.NLogTarget",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "Elastic Search",
-      "page": "https://github.com/ReactiveMarkets/NLog.Targets.ElasticSearch",
-      "description": "Writes to Elastic Search servers",
-      "package": "NLog.Targets.ElasticSearch",
-      "external": true,
-      "category": "Integrations"
-    },
-    {
-      "name": "elmah.io",
-      "page": "https://github.com/elmahio/elmah.io.nlog",
-      "description": "Sends logs to https://elmah.io",
-      "package": "elmah.io.nlog",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "ExceptionLess",
-      "page": "https://github.com/exceptionless/Exceptionless.Net",
-      "description": "Writes NLog messages to https://www.exceptionless.com",
-      "package": "Exceptionless.NLog",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "Fluentd",
-      "page": "https://github.com/fluent/NLog.Targets.Fluentd",
-      "description": "Writes NLog messages to Fluentd",
-      "package": "NLog.Targets.Fluentd",
-      "external": true,
-      "category": "Integrations"
-    },
-    {
-      "name": "Gelf",
-      "page": "https://github.com/2020Legal/NLog.Targets.Gelf",
-      "description": "Writes NLog messages to GrayLog2 - Gelf",
-      "package": "NLog.Targets.Gelf",
-      "external": true,
-      "category": "Integrations"
-    },
-    {
-      "name": "Gelf4NLog",
-      "page": "https://github.com/Certegy/Gelf4NLog",
-      "package": "Gelf4NLog.Target",
-      "description": "Writes NLog messages to GrayLog2 - Gelf",
-      "external": true,
-      "category": "Integrations"
-    },
-    {
-      "name": "NLog.Gelf",
-      "page": "https://github.com/mantasaudickas/NLog.Gelf",
-      "package": "NLog.Gelf",
-      "description": "Writes NLog messages to GrayLog2 - Gelf",
-      "external": true,
-      "category": "Integrations"
-    },
-    {
-      "name": "EasyGelf",
-      "page": "https://github.com/Pliner/EasyGelf",
-      "package": "EasyGelf.NLog",
-      "description": "Writes NLog messages to GrayLog2 - Gelf",
-      "external": true,
-      "category": "Integrations"
-    },
-    {
-      "name": "Glimpse",
-      "page": "https://github.com/NLog/Glimpse.NLog",
-      "package": "Glimpse.NLog",
-      "description": "Show NLog information in https://getglimpse.com/",
-      "external": true,
-      "category": "Integrations"
-    },
-    {
-      "name": "GrowlNotify",
-      "page": "https://github.com/RyanFarley/NLogGrowlNotify",
-      "description": "Sends logs via Growl for Windows (http://www.growlforwindows.com/gfw/) a desktop notification system.",
-      "package": "NLog.Growl",
-      "external": true,
-      "category": "Integrations (GUI tools)"
-    },
-    {
-      "name": "LiveSwitch",
-      "page": "https://www.liveswitch.com",
-      "package": "LiveSwitch.NLog",
-      "description": "Sends logs via named pipes to a local service that you can monitor in real-time with a UI",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "Loggly",
-      "page": "https://github.com/neutmute/nlog-targets-loggly",
-      "package": "NLog.Targets.Loggly",
-      "description": "Writes NLog messages to https://www.loggly.com",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "Logentries",
-      "page": "https://github.com/logentries/le_dotnet",
-      "package": "Logentries.nlog",
-      "description": "Writes NLog messages to https://www.logentries.com",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "Loupe",
-      "page": "https://github.com/GibraltarSoftware/Gibraltar.Agent.NLog2",
-      "package": "Gibraltar.Agent.NLog4",
-      "description": "Writes NLog messages to Gibraltar https://www.onloupe.com",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "MongoDB",
-      "page": "https://github.com/loresoft/NLog.Mongo",
-      "package": "NLog.Mongo",
-      "description": "Writes NLog messages to MongoDB",
-      "external": true,
-      "category": "Databases"
-    },
-    {
-      "name": "LiteDB",
-      "page": "https://github.com/cccsdh/NLog.LiteDB",
-      "package": "NLog.LiteDB",
-      "description": "Writes NLog messages to LiteDB",
-      "external": true,
-      "category": "Databases"
-    },
-    {
-      "name": "Pushover",
-      "page": "https://github.com/RobThree/NLog.Targets.Pushover",
-      "package": "NLog.Targets.Pushover",
-      "description": "Sends logs via (https://pushover.net/), an Android/iOS/Desktop  push notification system",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "RabbitMQ",
-      "page": "https://github.com/adolya/NLog.RabbitMQ",
-      "package": "Nlog.RabbitMQ.Target",
-      "description": "Sends logs over a RabbitMQ message broker",
-      "external": true,
-      "category": "Queues"
-    },
-    {
-      "name": "Raygun",
-      "page": "https://github.com/MindscapeHQ/NLog.Raygun",
-      "package": "NLog.Raygun",
-      "description": "Writes NLog messages to www.raygun.com",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "Redis",
-      "page": "https://github.com/richclement/NLog.Redis",
-      "package": "NLog.Redis",
-      "description": "Writes NLog messages to Redis",
-      "external": true,
-      "category": "Integrations"
-    },
-    {
-      "name": "ReflectInsight",
-      "page": "https://github.com/reflectsoftware/reflectinsight-extensions-nlog",
-      "package": "ReflectSoftware.Insight.Extensions.NLog",
-      "description": "Writes NLog messages to https://www.reflectsoftware.com",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "RavenDB",
-      "page": "https://github.com/kentcooper/NLog.Raven",
-      "package": "Nlog.Raven",
-      "description": "Writes NLog messages to https://ravendb.net",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "Sentry",
-      "page": "https://github.com/CurtisInstruments/NLog.Targets.Sentry",
-      "package": "NLog.Targets.Sentry3",
-      "description": "Writes NLog messages to https://www.sentry.io",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "Seq",
-      "page": "https://github.com/datalust/nlog-targets-seq",
-      "package": "NLog.Targets.Seq",
-      "description": "Writes NLog messages to https://www.getseq.net",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "SignalR",
-      "page": "https://github.com/toddmeinershagen/NLog.SignalR",
-      "package": "NLog.SignalR",
-      "description": "Writes NLog messages to a SignalR hub",
-      "external": true,
-      "category": "Integrations"
-    },
-    {
-      "name": "Splunk",
-      "page": "https://github.com/AlanBarber/NLog.Targets.Splunk",
-      "package": "NLog.Targets.Splunk",
-      "description": "Writes NLog messages to Splunk",
-      "external": true,
-      "category": "Integrations"
-    },
-    {
-      "name": "Syslog",
-      "page": "https://github.com/graffen/NLog.Targets.Syslog",
-      "package": "NLog.Targets.Syslog",
-      "description": "Writes NLog messages to Syslog",
-      "external": true,
-      "category": "Integrations"
-    },
-    {
-      "name": "Amazon CloudWatch",
-      "page": "https://github.com/aws/aws-logging-dotnet",
-      "package": "AWS.Logger.NLog",
-      "description": "Writes NLog messages to Amazon CloudWatch Logs (AWS)",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "AzureBlobStorage",
-      "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage",
-      "package": "NLog.Extensions.AzureStorage",
-      "description": "Batch writing of NLog messages to Azure BlobStorage (or TableStorage)",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "Google Logging",
-      "page": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
-      "package": "Google.Cloud.Logging.NLog",
-      "description": "Write NLog message to Google Cloud Logging StackDriver",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "R7 InsightOps",
-      "page": "https://github.com/rapid7/r7insight_dotnet",
-      "package": "r7Insight.nlog",
-      "description": "Writes NLog messages to Rapid7 InsightOps / Logentries",
-      "external": true,
-      "category": "Integrations (Cloud)"
-    },
-    {
-      "name": "Logify",
-      "page": "https://github.com/DevExpress/Logify.Alert.Clients/tree/develop/dotnet/Logify.Alert.NLog",
-      "package": "Logify.Alert.NLog",
-      "description": "Writes NLog messages to https://logify.devexpress.com",
-      "external": true,
-      "category": "Integrations (Cloud)"
+        "name": "Chainsaw",
+        "page": "Chainsaw-target",
+        "description": "Sends log messages to the remote instance of Chainsaw application from log4j.",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono",
+            "wp8",
+            "sl"
+        ],
+        "keywords": [
+            "tool",
+            "gui",
+            "java"
+        ],
+        "category": "Integrations (GUI tools)"
+    },
+    {
+        "name": "ColoredConsole",
+        "page": "ColoredConsole-target",
+        "description": "Writes log messages to the console with customizable coloring.",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.5",
+            "netstandard2.0",
+            "mono",
+            "wp8",
+            "sl"
+        ],
+        "keywords": [
+            "cmd"
+        ],
+        "category": ""
+    },
+    {
+        "name": "Console",
+        "page": "Console-target",
+        "description": "Writes log messages to the console.",
+        "keywords": [
+            "cmd"
+        ],
+        "category": ""
+    },
+    {
+        "name": "Database",
+        "page": "Database-target",
+        "description": "Writes log messages to the database using an ADO.NET provider.",
+        "keywords": [
+            "sql",
+            "mysql",
+            "oracle",
+            "PostgreSQL",
+            "SQLite",
+            "Entity Framework",
+            "db"
+        ],
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0",
+            "mono",
+            "wp8"
+        ],
+        "category": "Databases"
+    },
+    {
+        "name": "Debug",
+        "page": "Debug-target",
+        "description": "Mock target - useful for testing.",
+        "category": ""
+    },
+    {
+        "name": "Debugger",
+        "page": "Debugger-target",
+        "description": "Writes log messages to the attached managed debugger.",
+        "category": "Trace and debugging"
+    },
+    {
+        "name": "EventLog",
+        "page": "EventLog-target",
+        "description": "Writes log message to the Event Log.",
+        "keywords": [
+            "event viewer",
+            "eventviewer"
+        ],
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "mono"
+        ],
+        "category": "Integrations"
+    },
+    {
+        "name": "EventLog",
+        "page": "EventLog-target",
+        "description": "Writes log message to the Event Log (.NET Core)",
+        "package": "NLog.WindowsEventLog",
+        "keywords": [
+            "event viewer",
+            "eventviewer"
+        ],
+        "platforms": [
+            "netstandard2.0"
+        ],
+        "category": "Integrations"
+    },
+    {
+        "name": "File",
+        "page": "File-target",
+        "description": "Writes log messages to one or more files.",
+        "keywords": [
+            "document"
+        ],
+        "category": ""
+    },
+    {
+        "name": "LogReceiverService",
+        "page": "LogReceiverService-target",
+        "description": "Sends log messages to a NLog Receiver Service (using WCF or Web Services).",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45"
+        ],
+        "category": "Webservices and networking"
+    },
+    {
+        "name": "LogReceiverService",
+        "page": "LogReceiverService-target",
+        "description": "(.NET standard) Sends log messages to a NLog Receiver Service (using WCF or Web Services).",
+        "platforms": [
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "package": "NLog.WCF",
+        "platform-notes": "NLog.WCF nuget package for .NET standard",
+        "category": "Webservices and networking"
+    },
+    {
+        "name": "Mail",
+        "page": "Mail-target",
+        "description": "Sends log messages by email using SMTP protocol or pickup folder.",
+        "keywords": [
+            "email",
+            "e-mail",
+            "pickup"
+        ],
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono",
+            "wp8"
+        ],
+        "category": ""
+    },
+    {
+        "name": "Mail",
+        "page": "Mail-target",
+        "description": "Mail Target using MailKit. Only SMTP supported.",
+        "keywords": [
+            "email",
+            "e-mail"
+        ],
+        "platforms": [
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "package": "NLog.MailKit",
+        "category": ""
+    },
+    {
+        "name": "Memory",
+        "page": "Memory-target",
+        "description": "Writes log messages to an ArrayList in memory for programmatic retrieval.",
+        "category": "Programmatically"
+    },
+    {
+        "name": "MethodCall",
+        "page": "MethodCall-target",
+        "description": "Calls the specified static method on each log message and passes contextual parameters to it.",
+        "category": "Programmatically"
+    },
+    {
+        "name": "Network",
+        "page": "Network-target",
+        "description": "Sends log messages over the network.",
+        "keywords": [
+            "tcp",
+            "udp",
+            "ip"
+        ],
+        "category": "Webservices and networking"
+    },
+    {
+        "name": "NLogViewer",
+        "page": "NLogViewer-target",
+        "description": "Sends log messages to the remote instance of NLog Viewer.",
+        "keywords": [
+            "tool",
+            "gui"
+        ],
+        "category": "Integrations (GUI tools)"
+    },
+    {
+        "name": "Null",
+        "page": "Null-target",
+        "description": "Discards log messages. Used mainly for debugging and benchmarking.",
+        "keywords": [
+            "blackhole"
+        ],
+        "category": ""
+    },
+    {
+        "name": "OutputDebugString",
+        "page": "OutputDebugString-target",
+        "description": "Outputs log messages through the OutputDebugString() Win32 API.",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0",
+            "mono"
+        ],
+        "category": "Integrations"
+    },
+    {
+        "name": "PerfCounter",
+        "page": "PerfCounter-target",
+        "description": "Increments specified performance counter on each write.",
+        "keywords": [
+            "performance counter",
+            "Diagnostics"
+        ],
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "mono"
+        ],
+        "category": "Trace and debugging"
+    },
+    {
+        "name": "Trace",
+        "page": "Trace-target",
+        "description": "Sends log messages through System.Diagnostics.Trace.",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.5",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono",
+            "wp8"
+        ],
+        "category": "Trace and debugging"
+    },
+    {
+        "name": "WebService",
+        "page": "WebService-target",
+        "description": "Calls the specified web service on each log message.",
+        "keywords": [
+            "SOAP"
+        ],
+        "category": "Webservices and networking"
+    },
+    {
+        "name": "AsyncWrapper",
+        "page": "AsyncWrapper-target",
+        "description": "Provides asynchronous, buffered execution of target writes.",
+        "wrapper": true,
+        "keywords": [
+            "performance"
+        ],
+        "category": "Async and buffering"
+    },
+    {
+        "name": "AutoFlushWrapper",
+        "page": "AutoFlushWrapper-target",
+        "description": "Causes a flush after each write on a wrapped target.",
+        "wrapper": true,
+        "category": "Async and buffering"
+    },
+    {
+        "name": "BufferingWrapper",
+        "page": "BufferingWrapper-target",
+        "description": "A target that buffers log events and sends them in batches to the wrapped target. Useful in combination with Mail target.",
+        "wrapper": true,
+        "category": "Async and buffering"
+    },
+    {
+        "name": "FallbackGroup",
+        "page": "FallbackGroup-target",
+        "description": "Provides fallback-on-error.",
+        "wrapper": true,
+        "keywords": [
+            "alternative"
+        ],
+        "category": "Filtering, throttling and error handling"
+    },
+    {
+        "name": "FilteringWrapper",
+        "page": "FilteringWrapper-target",
+        "description": "Filters log entries based on a condition.",
+        "wrapper": true,
+        "category": "Filtering, throttling and error handling"
+    },
+    {
+        "name": "ImpersonatingWrapper",
+        "page": "ImpersonatingWrapper-target",
+        "description": "Impersonates another user for the duration of the write.",
+        "wrapper": true,
+        "keywords": [
+            "security"
+        ],
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "mono"
+        ],
+        "category": "Security"
+    },
+    {
+        "name": "LimitingWrapper",
+        "page": "LimitingWrapper-target",
+        "description": "Limits number of log events sent to target.",
+        "wrapper": true,
+        "keywords": [
+            "throtte",
+            "throttling"
+        ],
+        "category": "Filtering, throttling and error handling"
+    },
+    {
+        "name": "PostFilteringWrapper",
+        "page": "PostFilteringWrapper-target",
+        "description": "Filters buffered log entries based on a set of conditions that are evaluated on a group of events.",
+        "wrapper": true,
+        "category": "Filtering, throttling and error handling"
+    },
+    {
+        "name": "RandomizeGroup",
+        "page": "RandomizeGroup-target",
+        "description": "Sends log messages to a randomly selected target.",
+        "wrapper": true,
+        "category": "Filtering, throttling and error handling"
+    },
+    {
+        "name": "RepeatingWrapper",
+        "page": "RepeatingWrapper-target",
+        "description": "Repeats each log event the specified number of times.",
+        "wrapper": true,
+        "category": "Filtering, throttling and error handling"
+    },
+    {
+        "name": "RetryingWrapper",
+        "page": "RetryingWrapper-target",
+        "description": "Retries in case of write error.",
+        "wrapper": true,
+        "category": "Filtering, throttling and error handling"
+    },
+    {
+        "name": "RoundRobinGroup",
+        "page": "RoundRobinGroup-target",
+        "description": "Distributes log events to targets in a round-robin fashion.",
+        "wrapper": true,
+        "category": "Filtering, throttling and error handling"
+    },
+    {
+        "name": "SplitGroup",
+        "page": "SplitGroup-target",
+        "description": "Writes log events to all targets.",
+        "wrapper": true,
+        "category": "Filtering, throttling and error handling"
+    },
+    {
+        "name": "MSMQ",
+        "page": "MSMQ-target",
+        "description": "Writes log message to the specified message queue handled by MSMQ.",
+        "package": "NLog.Extended",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45"
+        ],
+        "keywords": [
+            "message queue"
+        ],
+        "category": "Queues"
+    },
+    {
+        "name": "AspNetTrace",
+        "page": "AspNetTrace-target",
+        "description": "Writes log messages to the ASP.NET trace.",
+        "package": "NLog.Web",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45"
+        ],
+        "category": "Integrations"
+    },
+    {
+        "name": "AspNetBufferingWrapper",
+        "page": "AspNetBufferingWrapper-target",
+        "description": "Buffers log events for the duration of ASP.NET request and sends them down to the wrapped target at the end of a request.",
+        "package": "NLog.Web",
+        "wrapper": "true",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45"
+        ],
+        "category": "Async and buffering"
+    },
+    {
+        "name": "FormControl",
+        "page": "FormControl-target",
+        "description": "Logs text to Windows.Forms.Control.Text property control of specified Name.",
+        "package": "NLog.Windows.Forms",
+        "keywords": [
+            "windows",
+            "gui"
+        ],
+        "category": "Windows Forms"
+    },
+    {
+        "name": "MessageBox",
+        "page": "MessageBox-target",
+        "description": "Pops up log messages as message boxes.",
+        "package": "NLog.Windows.Forms",
+        "keywords": [
+            "windows",
+            "gui"
+        ],
+        "platforms": [
+            "net35",
+            "net40",
+            "net45"
+        ],
+        "category": "Windows Forms"
+    },
+    {
+        "name": "RichTextBox",
+        "page": "https://github.com/NLog/NLog.Windows.Forms/wiki/RichTextBoxTarget",
+        "description": "Log text a Rich Text Box control in an existing or new form.",
+        "package": "NLog.Windows.Forms",
+        "keywords": [
+            "windows",
+            "gui"
+        ],
+        "platforms": [
+            "net35",
+            "net40",
+            "net45"
+        ],
+        "category": "Windows Forms"
+    },
+    {
+        "name": "Elmah",
+        "description": "Logs to Elmah",
+        "package": "NLog.Elmah",
+        "page": "https://github.com/NLog/NLog.elmah",
+        "keywords": [
+            "errors"
+        ],
+        "category": "Integrations"
+    },
+    {
+        "name": "Amazon SNS",
+        "page": "https://github.com/Takaloy/NLog.Targets.SNS",
+        "description": "Writes NLog messages to Amazon SNS",
+        "package": "NLog.Targets.SNS",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Amazon SQS",
+        "page": "https://github.com/aireq/NLog.Targets.SQS",
+        "description": "Writes NLog messages to Amazon SQS",
+        "package": "NLog.Targets.SQS",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "AzureTableStorage",
+        "page": "https://github.com/abkonsta/NLog.Extensions.AzureTableStorage",
+        "description": "Writes NLog messages to Azure TableStorage",
+        "package": "NLog.Extensions.AzureTableStorage",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Microsoft ApplicationInsights",
+        "page": "https://github.com/Microsoft/ApplicationInsights-dotnet-logging",
+        "description": "Writes NLog messages to Microsoft ApplicationInsights",
+        "package": "Microsoft.ApplicationInsights.NLogTarget",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Elastic Search",
+        "page": "https://github.com/ReactiveMarkets/NLog.Targets.ElasticSearch",
+        "description": "Writes to Elastic Search servers",
+        "package": "NLog.Targets.ElasticSearch",
+        "external": true,
+        "category": "Integrations"
+    },
+    {
+        "name": "elmah.io",
+        "page": "https://github.com/elmahio/elmah.io.nlog",
+        "description": "Sends logs to https://elmah.io",
+        "package": "elmah.io.nlog",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "ExceptionLess",
+        "page": "https://github.com/exceptionless/Exceptionless.Net",
+        "description": "Writes NLog messages to https://www.exceptionless.com",
+        "package": "Exceptionless.NLog",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Fluentd",
+        "page": "https://github.com/fluent/NLog.Targets.Fluentd",
+        "description": "Writes NLog messages to Fluentd",
+        "package": "NLog.Targets.Fluentd",
+        "external": true,
+        "category": "Integrations"
+    },
+    {
+        "name": "Gelf",
+        "page": "https://github.com/2020Legal/NLog.Targets.Gelf",
+        "description": "Writes NLog messages to GrayLog2 - Gelf",
+        "package": "NLog.Targets.Gelf",
+        "external": true,
+        "category": "Integrations"
+    },
+    {
+        "name": "Gelf4NLog",
+        "page": "https://github.com/Certegy/Gelf4NLog",
+        "package": "Gelf4NLog.Target",
+        "description": "Writes NLog messages to GrayLog2 - Gelf",
+        "external": true,
+        "category": "Integrations"
+    },
+    {
+        "name": "NLog.Gelf",
+        "page": "https://github.com/mantasaudickas/NLog.Gelf",
+        "package": "NLog.Gelf",
+        "description": "Writes NLog messages to GrayLog2 - Gelf",
+        "external": true,
+        "category": "Integrations"
+    },
+    {
+        "name": "EasyGelf",
+        "page": "https://github.com/Pliner/EasyGelf",
+        "package": "EasyGelf.NLog",
+        "description": "Writes NLog messages to GrayLog2 - Gelf",
+        "external": true,
+        "category": "Integrations"
+    },
+    {
+        "name": "Glimpse",
+        "page": "https://github.com/NLog/Glimpse.NLog",
+        "package": "Glimpse.NLog",
+        "description": "Show NLog information in https://getglimpse.com/",
+        "external": true,
+        "category": "Integrations"
+    },
+    {
+        "name": "GrowlNotify",
+        "page": "https://github.com/RyanFarley/NLogGrowlNotify",
+        "description": "Sends logs via Growl for Windows (http://www.growlforwindows.com/gfw/) a desktop notification system.",
+        "package": "NLog.Growl",
+        "external": true,
+        "category": "Integrations (GUI tools)"
+    },
+    {
+        "name": "LiveSwitch",
+        "page": "https://www.liveswitch.com",
+        "package": "LiveSwitch.NLog",
+        "description": "Sends logs via named pipes to a local service that you can monitor in real-time with a UI",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Loggly",
+        "page": "https://github.com/neutmute/nlog-targets-loggly",
+        "package": "NLog.Targets.Loggly",
+        "description": "Writes NLog messages to https://www.loggly.com",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Logentries",
+        "page": "https://github.com/logentries/le_dotnet",
+        "package": "Logentries.nlog",
+        "description": "Writes NLog messages to https://www.logentries.com",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Loupe",
+        "page": "https://github.com/GibraltarSoftware/Gibraltar.Agent.NLog2",
+        "package": "Gibraltar.Agent.NLog4",
+        "description": "Writes NLog messages to Gibraltar https://www.onloupe.com",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "MongoDB",
+        "page": "https://github.com/loresoft/NLog.Mongo",
+        "package": "NLog.Mongo",
+        "description": "Writes NLog messages to MongoDB",
+        "external": true,
+        "category": "Databases"
+    },
+    {
+        "name": "LiteDB",
+        "page": "https://github.com/cccsdh/NLog.LiteDB",
+        "package": "NLog.LiteDB",
+        "description": "Writes NLog messages to LiteDB",
+        "external": true,
+        "category": "Databases"
+    },
+    {
+        "name": "Pushover",
+        "page": "https://github.com/RobThree/NLog.Targets.Pushover",
+        "package": "NLog.Targets.Pushover",
+        "description": "Sends logs via (https://pushover.net/), an Android/iOS/Desktop  push notification system",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "RabbitMQ",
+        "page": "https://github.com/adolya/NLog.RabbitMQ",
+        "package": "Nlog.RabbitMQ.Target",
+        "description": "Sends logs over a RabbitMQ message broker",
+        "external": true,
+        "category": "Queues"
+    },
+    {
+        "name": "Raygun",
+        "page": "https://github.com/MindscapeHQ/NLog.Raygun",
+        "package": "NLog.Raygun",
+        "description": "Writes NLog messages to www.raygun.com",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Redis",
+        "page": "https://github.com/richclement/NLog.Redis",
+        "package": "NLog.Redis",
+        "description": "Writes NLog messages to Redis",
+        "external": true,
+        "category": "Integrations"
+    },
+    {
+        "name": "ReflectInsight",
+        "page": "https://github.com/reflectsoftware/reflectinsight-extensions-nlog",
+        "package": "ReflectSoftware.Insight.Extensions.NLog",
+        "description": "Writes NLog messages to https://www.reflectsoftware.com",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "RavenDB",
+        "page": "https://github.com/kentcooper/NLog.Raven",
+        "package": "Nlog.Raven",
+        "description": "Writes NLog messages to https://ravendb.net",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Sentry",
+        "page": "https://github.com/CurtisInstruments/NLog.Targets.Sentry",
+        "package": "NLog.Targets.Sentry3",
+        "description": "Writes NLog messages to https://www.sentry.io",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Seq",
+        "page": "https://github.com/datalust/nlog-targets-seq",
+        "package": "NLog.Targets.Seq",
+        "description": "Writes NLog messages to https://www.getseq.net",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "SignalR",
+        "page": "https://github.com/toddmeinershagen/NLog.SignalR",
+        "package": "NLog.SignalR",
+        "description": "Writes NLog messages to a SignalR hub",
+        "external": true,
+        "category": "Integrations"
+    },
+    {
+        "name": "Splunk",
+        "page": "https://github.com/AlanBarber/NLog.Targets.Splunk",
+        "package": "NLog.Targets.Splunk",
+        "description": "Writes NLog messages to Splunk",
+        "external": true,
+        "category": "Integrations"
+    },
+    {
+        "name": "Syslog",
+        "page": "https://github.com/graffen/NLog.Targets.Syslog",
+        "package": "NLog.Targets.Syslog",
+        "description": "Writes NLog messages to Syslog",
+        "external": true,
+        "category": "Integrations"
+    },
+    {
+        "name": "Amazon CloudWatch",
+        "page": "https://github.com/aws/aws-logging-dotnet",
+        "package": "AWS.Logger.NLog",
+        "description": "Writes NLog messages to Amazon CloudWatch Logs (AWS)",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "AzureBlobStorage",
+        "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage",
+        "package": "NLog.Extensions.AzureStorage",
+        "description": "Batch writing of NLog messages to Azure BlobStorage (or TableStorage)",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Google Logging",
+        "page": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
+        "package": "Google.Cloud.Logging.NLog",
+        "description": "Write NLog message to Google Cloud Logging StackDriver",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "R7 InsightOps",
+        "page": "https://github.com/rapid7/r7insight_dotnet",
+        "package": "r7Insight.nlog",
+        "description": "Writes NLog messages to Rapid7 InsightOps / Logentries",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Logify",
+        "page": "https://github.com/DevExpress/Logify.Alert.Clients/tree/develop/dotnet/Logify.Alert.NLog",
+        "package": "Logify.Alert.NLog",
+        "description": "Writes NLog messages to https://logify.devexpress.com",
+        "external": true,
+        "category": "Integrations (Cloud)"
     }
-  ]
+]
