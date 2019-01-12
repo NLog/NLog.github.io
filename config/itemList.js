@@ -116,32 +116,25 @@ Vue.component('item-list', {
             return true;
 
         },
-        /** text includes any terms in "includes"
-         * @param text {string}
-         * @param includes {string[]} one must be in text
+        /** search term found in list?
+          * @param search {string} search terms
+         * @param list {string[]} one must be in text
          * @returns {boolean}
           */
-        includesAny: function (text, includes) {
-            for (var i = 0; i < includes.length; i++) {
-                var include = includes[i];
-                if (_.includes(text, include)) {
-                    return true;
-                }
+        equalsAny: function (search, list) {
 
-            }
-            return false;
-
+            return _.includes(list, search);
         },
-        /** text includes any terms in "includes"
-         * @param text {string[]}
-         * @param includes {string[]} one must be in text
+        /** one of the searched found in list?
+         * @param searches {string[]} search terms
+         * @param list {string[]} one must be in text
          * @returns {boolean}
           */
-        includesAnyArray: function (texts, includes) {
+        equalsAnyArray: function (searches, list) {
             var self = this;
-            for (var i = 0; i < texts.length; i++) {
-                var text = texts[i];
-                if (self.includesAny(text, includes)) {
+            for (var i = 0; i < searches.length; i++) {
+                var search = searches[i];
+                if (self.equalsAny(search, list)) {
                     return true;
                 }
 
@@ -210,11 +203,11 @@ Vue.component('item-list', {
                                 return it.toLowerCase();
                             })
 
-                            return self.includesAnyArray(packages, packageSearchValues);
+                            return self.equalsAnyArray(packages, packageSearchValues);
                         } else {
                             var package = item.package.toLowerCase();
 
-                            return self.includesAny(package, packageSearchValues);
+                            return self.equalsAny(package, packageSearchValues);
                         }
                     });
                 }
