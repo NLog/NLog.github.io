@@ -1610,13 +1610,23 @@
             "NLog.Web",
             "NLog.Web.AspNetCore"
         ],
-        "description": "ASP.NET AppBasePath (Content Root)r",
+        "description": "ASP.NET Application base path (Content Root)",
         "platforms": [
             "net35",
             "net40",
             "net45",
             "netstandard1.5",
             "netstandard2.0"
+        ],
+        "keywords": [
+            "files",
+            "directories",
+            "directory",
+            "root",
+            "application",
+            "MapPath",
+            "AppBasePath",
+            "IHostingEnvironment"
         ],
         "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1628,13 +1638,22 @@
             "NLog.Web",
             "NLog.Web.AspNetCore"
         ],
-        "description": "ASP.NET WebRootPath (wwwroot)",
+        "description": "ASP.NET Web root path (wwwroot)",
         "platforms": [
             "net35",
             "net40",
             "net45",
             "netstandard1.5",
             "netstandard2.0"
+        ],
+        "keywords": [
+            "files",
+            "directories",
+            "directory",
+            "root",
+            "application",
+            "MapPath",
+            "IHostingEnvironment"
         ],
         "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
