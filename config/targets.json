@@ -493,6 +493,19 @@
         "category": "Integrations"
     },
     {
+        "name": "ETW",
+        "description": "Log to Event Tracing for Windows (ETW)",
+        "package": "NLog.ETW",
+        "page": "https://github.com/NLog/NLog.ETW",
+        "keywords": [
+            "errors"
+        ],
+        "platforms": [
+            "net45"
+        ],
+        "category": "Integrations"
+    },
+    {
         "name": "Amazon SNS",
         "page": "https://github.com/Takaloy/NLog.Targets.SNS",
         "description": "Writes NLog messages to Amazon SNS",
