@@ -375,6 +375,24 @@
         "category": "Counters"
     },
     {
+        "name": "hostname",
+        "page": "HostName-Layout-Renderer",
+        "description": "The host name of the computer that the process is running on.",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono",
+            "wp8"
+        ],
+        "category": "Processes, threads and assemblies"
+    },
+    {
         "name": "identity",
         "page": "Identity-Layout-Renderer",
         "description": "Thread identity information (name and authentication information).",
