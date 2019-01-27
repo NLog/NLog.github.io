@@ -80,18 +80,18 @@
         "name": "Debug",
         "page": "Debug-target",
         "description": "Mock target - useful for testing.",
-        "category": ""
+        "category": "Programmatically"
     },
     {
         "name": "Debugger",
         "page": "Debugger-target",
         "description": "Writes log messages to the attached managed debugger.",
-        "category": "Trace and debugging"
+        "category": "Integrations"
     },
     {
         "name": "EventLog",
         "page": "EventLog-target",
-        "description": "Writes log message to the Event Log.",
+        "description": "Writes log message to the Windows Event Log.",
         "keywords": [
             "event viewer",
             "eventviewer"
@@ -107,7 +107,7 @@
     {
         "name": "EventLog",
         "page": "EventLog-target",
-        "description": "Writes log message to the Event Log (.NET Core)",
+        "description": "Writes log message to the Windows Event Log (.NET Core)",
         "package": "NLog.WindowsEventLog",
         "keywords": [
             "event viewer",
@@ -230,7 +230,7 @@
         "keywords": [
             "blackhole"
         ],
-        "category": ""
+        "category": "Programmatically"
     },
     {
         "name": "OutputDebugString",
@@ -250,7 +250,7 @@
     {
         "name": "PerfCounter",
         "page": "PerfCounter-target",
-        "description": "Increments specified performance counter on each write.",
+        "description": "Updates specified Windows Performance Counter on each write.",
         "keywords": [
             "performance counter",
             "Diagnostics"
@@ -261,7 +261,7 @@
             "net45",
             "mono"
         ],
-        "category": "Trace and debugging"
+        "category": "Integrations"
     },
     {
         "name": "Trace",
@@ -278,7 +278,7 @@
             "mono",
             "wp8"
         ],
-        "category": "Trace and debugging"
+        "category": "Integrations"
     },
     {
         "name": "WebService",
@@ -412,7 +412,7 @@
         "keywords": [
             "message queue"
         ],
-        "category": "Queues"
+        "category": "Integrations"
     },
     {
         "name": "AspNetTrace",
@@ -445,9 +445,10 @@
         "description": "Logs text to Windows.Forms.Control.Text property control of specified Name.",
         "package": "NLog.Windows.Forms",
         "keywords": [
-            "windows",
+            "winforms",
             "gui"
         ],
+        "external": true,
         "category": "Windows Forms"
     },
     {
@@ -456,7 +457,7 @@
         "description": "Pops up log messages as message boxes.",
         "package": "NLog.Windows.Forms",
         "keywords": [
-            "windows",
+            "winforms",
             "gui"
         ],
         "platforms": [
@@ -472,7 +473,7 @@
         "description": "Log text a Rich Text Box control in an existing or new form.",
         "package": "NLog.Windows.Forms",
         "keywords": [
-            "windows",
+            "winforms",
             "gui"
         ],
         "platforms": [
@@ -497,12 +498,6 @@
         "description": "Log to Event Tracing for Windows (ETW)",
         "package": "NLog.ETW",
         "page": "https://github.com/NLog/NLog.ETW",
-        "keywords": [
-            "errors"
-        ],
-        "platforms": [
-            "net45"
-        ],
         "category": "Integrations"
     },
     {
@@ -603,7 +598,7 @@
     },
     {
         "name": "Glimpse",
-        "page": "https://github.com/NLog/Glimpse.NLog",
+        "page": "https://github.com/rho24/Glimpse.NLog",
         "package": "Glimpse.NLog",
         "description": "Show NLog information in https://getglimpse.com/",
         "external": true,
@@ -679,7 +674,10 @@
         "package": "Nlog.RabbitMQ.Target",
         "description": "Sends logs over a RabbitMQ message broker",
         "external": true,
-        "category": "Queues"
+        "keywords": [
+            "message queue"
+        ],
+        "category": "Integrations"
     },
     {
         "name": "Raygun",
@@ -762,10 +760,10 @@
         "category": "Integrations (Cloud)"
     },
     {
-        "name": "AzureBlobStorage",
+        "name": "Microsoft AzureStorage",
         "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage",
         "package": "NLog.Extensions.AzureStorage",
-        "description": "Batch writing of NLog messages to Azure BlobStorage (or TableStorage)",
+        "description": "Batch writing of NLog messages to Azure BlobStorage, TableStorage or QueueStorage",
         "external": true,
         "category": "Integrations (Cloud)"
     },
@@ -790,6 +788,30 @@
         "page": "https://github.com/DevExpress/Logify.Alert.Clients/tree/develop/dotnet/Logify.Alert.NLog",
         "package": "Logify.Alert.NLog",
         "description": "Writes NLog messages to https://logify.devexpress.com",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Logzio",
+        "page": "https://github.com/logzio/logzio-dotnet",
+        "package": "Logzio.DotNet.NLog",
+        "description": "Writes NLog messages to https://logz.io/",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Rollbar.NET",
+        "page": "https://github.com/rollbar/Rollbar.NET",
+        "package": "Rollbar.PlugIns.NLog",
+        "description": "Writes NLog messages to https://rollbar.com/",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "SumoLogic",
+        "page": "https://github.com/SumoLogic/sumologic-net-appenders",
+        "package": "SumoLogic.Logging.NLog",
+        "description": "Writes NLog messages to https://www.sumologic.com/",
         "external": true,
         "category": "Integrations (Cloud)"
     }
