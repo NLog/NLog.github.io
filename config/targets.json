@@ -409,6 +409,9 @@
             "net40",
             "net45"
         ],
+        "keywords": [
+            "message queue"
+        ],
         "category": "Integrations"
     },
     {
@@ -442,7 +445,7 @@
         "description": "Logs text to Windows.Forms.Control.Text property control of specified Name.",
         "package": "NLog.Windows.Forms",
         "keywords": [
-            "windows",
+            "winforms",
             "gui"
         ],
         "external": true,
@@ -454,7 +457,7 @@
         "description": "Pops up log messages as message boxes.",
         "package": "NLog.Windows.Forms",
         "keywords": [
-            "windows",
+            "winforms",
             "gui"
         ],
         "platforms": [
@@ -470,7 +473,7 @@
         "description": "Log text a Rich Text Box control in an existing or new form.",
         "package": "NLog.Windows.Forms",
         "keywords": [
-            "windows",
+            "winforms",
             "gui"
         ],
         "platforms": [
@@ -671,6 +674,9 @@
         "package": "Nlog.RabbitMQ.Target",
         "description": "Sends logs over a RabbitMQ message broker",
         "external": true,
+        "keywords": [
+            "message queue"
+        ],
         "category": "Integrations"
     },
     {
