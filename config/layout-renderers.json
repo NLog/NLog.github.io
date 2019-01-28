@@ -1466,7 +1466,7 @@
         "package": [
             "NLog.Extensions.Logging",
             "NLog.Extensions.Hosting",
-            "NLog.Web.AspNetCore",
+            "NLog.Web.AspNetCore"
         ],
         "description": "Value from the appsettings.json or other configuration in ASP.NET Core & .NET Core",
         "platforms": [
