@@ -30,9 +30,9 @@ How to add a new news post.
 Notes
 ---
 - The markdown parser is different compared to Github itself. So that means: different syntax sometimes: 
- - Code fences (triple tick)isn't working. See [NLog 4.0 release post](https://github.com/NLog/NLog.github.io/blob/master/_posts/2015-06-09-nlog-4-has-been-released.md)
+  - Code fences (triple tick) isn't working. See [NLog 4.0 release post](https://github.com/NLog/NLog.github.io/blob/master/_posts/2015-06-09-nlog-4-has-been-released.md)
 I prefer markdown when it's possible (the hyperlink).
- - Lists should be prepended with a whiteline. 
+  - Lists should be prepended with a whiteline. 
 - You can preview you changes to rename your fork to `<your-name>.github.io` and browse to it!
 - Changes are visible in about a minute. 
 
