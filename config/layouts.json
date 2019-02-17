@@ -71,10 +71,10 @@
             "sl"
         ]
     },
-        {
+    {
         "name": "Simple (plain text)",
         "page": "TextLayout",
-        "description": "The default layout when no Layout type is specified",
+        "description": "The default layout",
         "platforms": [
             "net35",
             "net40",
@@ -88,5 +88,5 @@
             "wp8",
             "sl"
         ]
-    },
+    }
 ]
