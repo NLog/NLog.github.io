@@ -74,7 +74,7 @@
     {
         "name": "Simple (plain text)",
         "page": "TextLayout",
-        "description": "The default layout",
+        "description": "The default layout when no Layout type is specified.",
         "platforms": [
             "net35",
             "net40",
