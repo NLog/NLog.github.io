@@ -70,5 +70,23 @@
             "wp8",
             "sl"
         ]
-    }
+    },
+        {
+        "name": "Simple (plain text)",
+        "page": "TextLayout",
+        "description": "The default layout when no Layout type is specified",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono",
+            "wp8",
+            "sl"
+        ]
+    },
 ]
