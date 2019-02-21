@@ -1429,6 +1429,80 @@
         "category": "Encoding and string transformations"
     },
     {
+        "name": "Left",
+        "page": "Left-layout-renderer",
+        "description": "Left part of a text",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono",
+            "wp8",
+            "sl"
+        ],
+        "keywords": [
+            "substring",
+            "text"
+        ],
+        "wrapper": true,
+        "category": "Encoding and string transformations"
+    },
+    {
+        "name": "Right",
+        "page": "Right-layout-renderer",
+        "description": "Right part of a text",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono",
+            "wp8",
+            "sl"
+        ],
+        "keywords": [
+            "substring",
+            "text"
+        ],
+        "wrapper": true,
+        "category": "Encoding and string transformations"
+    },
+    {
+        "name": "Substring",
+        "page": "Substring-layout-renderer",
+        "description": "Substring of a text",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono",
+            "wp8",
+            "sl"
+        ],
+        "keywords": [
+            "left",
+            "text",
+            "right",
+            "middle"
+        ],
+        "wrapper": true,
+        "category": "Encoding and string transformations"
+    },
+    {
         "name": "xml-encode",
         "page": "Xml-Encode-Layout-Renderer",
         "description": "Converts the result of another layout output to be XML-compliant.",
