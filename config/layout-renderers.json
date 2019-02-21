@@ -15,6 +15,25 @@
         "category": "Trace and debugging"
     },
     {
+        "name": "db-null",
+        "page": "db-null-layout-renderer",
+        "description": "Render DbNull for the database",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0",
+            "mono",
+            "wp8"
+        ],
+        "keywords": [
+            "database", "db", "empty", "ignore", "sql", "sqlparameter"
+        ],
+        "category": ""
+    },
+    {
         "name": "all-event-properties",
         "page": "All-Event-Properties-Layout-Renderer",
         "description": "Log all event context data.",
