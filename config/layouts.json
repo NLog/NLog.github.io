@@ -2,7 +2,7 @@
     {
         "name": "CSV",
         "page": "CsvLayout",
-        "description": "A specialized layout that renders CSV-formatted events.",
+        "description": "Renders events to CSV-format.",
         "platforms": [
             "net35",
             "net40",
@@ -20,7 +20,25 @@
     {
         "name": "JSON",
         "page": "JsonLayout",
-        "description": "A specialized layout that renders to JSON.",
+        "description": "Render events to JSON",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono",
+            "wp8",
+            "sl"
+        ]
+    },
+    {
+        "name": "XML",
+        "page": "XmlLayout",
+        "description": "Render events to XML",
         "platforms": [
             "net35",
             "net40",
@@ -38,7 +56,7 @@
     {
         "name": "Log4JXml",
         "page": "Log4JXmlEventLayout",
-        "description": "A specialized layout that renders Log4j-compatible XML events.",
+        "description": "Render events to Log4j-compatible XML",
         "platforms": [
             "net35",
             "net40",
@@ -56,7 +74,7 @@
     {
         "name": "Compound",
         "page": "CompoundLayout",
-        "description": "A layout containing one or more nested layouts.",
+        "description": "Combine layouts",
         "platforms": [
             "net35",
             "net40",
@@ -74,7 +92,7 @@
     {
         "name": "Simple (plain text)",
         "page": "TextLayout",
-        "description": "The default layout when no Layout type is specified.",
+        "description": "Write events as plain text. The default layout when no Layout type is specified.",
         "platforms": [
             "net35",
             "net40",
