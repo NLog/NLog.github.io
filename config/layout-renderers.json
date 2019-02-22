@@ -2096,13 +2096,6 @@
         "package": "NLog.GelfLayout",
         "external": true,
         "category": "Integrations"
-    },
-    {
-        "name": "xml",
-        "page": "https://github.com/loresoft/NLog.Xml",
-        "description": "Converts to fixed XML format",
-        "package": "NLog.XML",
-        "external": true,
-        "category": "Encoding and string transformations"
     }
+
 ]
