@@ -1111,6 +1111,35 @@
         "category": ""
     },
     {
+        "name": "norawvalue",
+        "page": "NoRawValue-Layout-Renderer",
+        "description": "Prevents the output of another layout renderer to be treated as raw value",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono",
+            "wp8",
+            "sl"
+        ],
+        "keywords": [
+            "performance", 
+            "dbtype",
+            "parametertype", 
+            "string",
+            "text", 
+            "parse",
+            "render"
+        ],
+        "wrapper": true,
+        "category": "Encoding and string transformations"
+    },
+    {
         "name": "filesystem-normalize",
         "page": "Filesystem-Normalize-Layout-Renderer",
         "description": "Filters characters not allowed in the file names by replacing them with safe character.",
