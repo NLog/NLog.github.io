@@ -1817,6 +1817,24 @@
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
+        "name": "aspnet-request-posted-body",
+        "page": "AspNet-Request-posted-body-layout-renderer",
+        "package": [
+            "NLog.Web",
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET posted body / payload",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
         "name": "aspnet-Request-Cookie",
         "page": "AspNetRequest-Cookie-Layout-Renderer",
         "package": [
