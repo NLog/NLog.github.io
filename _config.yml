@@ -1,4 +1,7 @@
 version: 4.6
+#preversion: 4.6-rc3
+news: NLog 4.6 is live!
+newslink: https://nlog-project.org/2019/03/20/nlog-4-6-is-live.html
 highlighter: rouge
 markdown: kramdown
 kramdown:

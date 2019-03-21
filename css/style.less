@@ -1,5 +1,17 @@
 @color1: #DA6821;
 @color2: #fff;
+@colorHeader:#31708f;
+
+#site-news
+{
+    border-radius: 0;
+    margin-bottom: 0;
+
+    a{
+        color: @colorHeader;
+        font-weight: bold;
+    }
+}
 
 
 #docs-header {
@@ -7,7 +19,6 @@
     color: white;
     padding: 40px 0;
     text-align: center;
-
     &.large-header {
          padding: 35px 0;
         .content-title {
@@ -21,9 +32,25 @@
         text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
         font-size: 33px;
     }
+    .version a{
+        color:white;
+    }
 }
 
-
+.highlight {
+    margin-top: 5px;
+    pre{
+        padding: 0;
+        margin: 5px 0;
+        span{
+            font-size:14px;
+        }
+        code{
+            white-space: unset;
+            font-size:14px;
+        }
+    }
+}
 
 #top {
     margin-bottom: 0;
