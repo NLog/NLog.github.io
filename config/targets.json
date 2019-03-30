@@ -808,6 +808,14 @@
         "category": "Integrations (Cloud)"
     },
     {
+        "name": "Stackify Retrace",
+        "page": "https://github.com/stackify/stackify-api-dotnet",
+        "package": "NLog.Targets.Stackify",
+        "description": "Writes NLog messages to https://stackify.com/retrace/",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
         "name": "SumoLogic",
         "page": "https://github.com/SumoLogic/sumologic-net-appenders",
         "package": "SumoLogic.Logging.NLog",
