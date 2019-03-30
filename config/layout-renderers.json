@@ -12,7 +12,7 @@
             "android",
             "mono"
         ],
-        "category": "Trace and debugging"
+        "category": "Context information"
     },
     {
         "name": "db-null",
@@ -353,7 +353,7 @@
             "sl"
         ],
         "platform-notes": "Silverlight:  no file name or source path",
-        "category": "Environment and config files"
+        "category": "Processes, threads and assemblies"
     },
     {
         "name": "gdc",
@@ -722,7 +722,7 @@
             "net45",
             "mono"
         ],
-        "category": "Trace and debugging"
+        "category": "Processes, threads and assemblies"
     },
     {
         "name": "processid",
@@ -807,7 +807,7 @@
             "time",
             "sec"
         ],
-        "category": "Trace and debugging"
+        "category": "Date and time"
     },
     {
         "name": "registry",
