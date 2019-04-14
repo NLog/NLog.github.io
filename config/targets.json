@@ -538,7 +538,8 @@
         "description": "Writes to Elastic Search servers",
         "package": "NLog.Targets.ElasticSearch",
         "external": true,
-        "category": "Integrations"
+        "category": "Integrations",
+        "keywords": ["Elasticsearch"]
     },
     {
         "name": "elmah.io",
