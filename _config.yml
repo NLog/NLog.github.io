@@ -1,6 +1,6 @@
 version: 4.6.2
 #preversion: 4.6-rc3
-news: 
+news:
   enabled: true
   text: NLog 4.6.2 is live!
   readmore_text: Read more about 4.6
