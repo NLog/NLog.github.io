@@ -538,7 +538,8 @@
         "description": "Writes to Elastic Search servers",
         "package": "NLog.Targets.ElasticSearch",
         "external": true,
-        "category": "Integrations"
+        "category": "Integrations",
+        "keywords": ["Elasticsearch"]
     },
     {
         "name": "elmah.io",
@@ -689,10 +690,9 @@
     },
     {
         "name": "Redis",
-        "page": "https://github.com/richclement/NLog.Redis",
-        "package": "NLog.Redis",
+        "page": "https://github.com/NLog/NLog.Redis",
+        "package": "NLog.Targets.Redis",
         "description": "Writes NLog messages to Redis",
-        "external": true,
         "category": "Integrations"
     },
     {
@@ -804,6 +804,14 @@
         "page": "https://github.com/rollbar/Rollbar.NET",
         "package": "Rollbar.PlugIns.NLog",
         "description": "Writes NLog messages to https://rollbar.com/",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Stackify Retrace",
+        "page": "https://github.com/stackify/stackify-api-dotnet",
+        "package": "NLog.Targets.Stackify",
+        "description": "Writes NLog messages to https://stackify.com/retrace/",
         "external": true,
         "category": "Integrations (Cloud)"
     },
