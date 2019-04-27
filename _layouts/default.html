@@ -25,12 +25,12 @@
     <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
 
-    {% if site.news %}
+    {% if site.news.enabled %}
     <div class="alert text-center alert-info alert-dismissible" id="site-news">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-       {{site.news}}
-       {% if site.newslink %}
-       <a href="{{site.newslink}}">Read more</a>
+       {{site.news.text}}
+       {% if site.news.readmore_link %}
+       <a href="{{site.news.readmore_link}}">{{site.news.readmore_text}}</a>
        {% endif %}
       </div>
     {% endif %}
