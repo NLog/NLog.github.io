@@ -517,7 +517,7 @@
         "category": "Integrations (Cloud)"
     },
     {
-        "name": "AzureTableStorage",
+        "name": "Microsoft AzureTableStorage",
         "page": "https://github.com/abkonsta/NLog.Extensions.AzureTableStorage",
         "description": "Writes NLog messages to Azure TableStorage",
         "package": "NLog.Extensions.AzureTableStorage",
