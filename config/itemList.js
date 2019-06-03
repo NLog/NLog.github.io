@@ -35,7 +35,7 @@ function assignList(list, isLayoutRenderer) {
     }
 
     //and reoder
-    list = _.orderBy(list, function (item) { return item.name })
+    list = _.orderBy(list, function (item) { return item.name && item.name.toUpperCase(); })
     return list;
 
 }
