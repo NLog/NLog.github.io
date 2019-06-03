@@ -298,6 +298,27 @@
         "category": "Context information"
     },
     {
+        "name": "environment-user",
+        "page": "Environment-User-Layout-Renderer",
+        "description": "User identity information (username).",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono",
+            "wp8"
+        ],
+        "keywords": [
+            "USERPROFILE",
+            "usr"
+        ],
+        "category": "Environment and config files"
+    },
+ 
+    {
         "name": "exception",
         "page": "Exception-Layout-Renderer",
         "description": "Exception information provided through a call to one of the Logger methods",
