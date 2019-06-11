@@ -1556,11 +1556,7 @@
             <xs:documentation>Condition expression. Log events who meet this condition will be forwarded to the wrapped target.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="filter" type="Filter">
-          <xs:annotation>
-            <xs:documentation>Filter. Log events who evaluates to  will be discarded</xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
+
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
             <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
