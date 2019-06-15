@@ -712,7 +712,15 @@
         "category": "Integrations (Cloud)"
     },
     {
-        "name": "Sentry",
+        "name": "Sentry (Unified SDK)",
+        "page": "https://github.com/getsentry/sentry-dotnet",
+        "package": "Sentry.NLog",
+        "description": "Official NLog integration for Sentry - Open-source error tracking that helps developers monitor and fix crashes in real time.",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Sentry (Raven sdk)",
         "page": "https://github.com/CurtisInstruments/NLog.Targets.Sentry",
         "package": "NLog.Targets.Sentry3",
         "description": "Writes NLog messages to https://www.sentry.io",
