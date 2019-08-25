@@ -1180,6 +1180,29 @@
         "wrapper": true,
         "category": "Files and directories"
     },
+        {
+        "name": "object-path",
+        "page": "ObjectPath-Layout-Renderer",
+        "description": "Render a (nested) property of an object",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono",
+            "wp8",
+            "sl"
+        ],
+        "keywords": [
+            "reflection"
+        ],
+        "wrapper": true,
+        "category": ""
+    },
     {
         "name": "json-encode",
         "page": "Json-Encode-Layout-Renderer",
