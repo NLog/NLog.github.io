@@ -13,9 +13,9 @@ Those are visible and searchable on https://nlog-project.org/config
 
 ### Add a custom component
 
-Do you like to have a custom target, layout or layout renderer listed https://nlog-project.org/config?
+Do you like to have a custom target, layout or layout renderer listed at https://nlog-project.org/config?
 
-- Please make sure you docs are up-to-date. An example is really recommend.
+- Please make sure you docs are up-to-date. An example is really recommend!
 - Send a PR for one of the JSON files
 
 Add a news post 
