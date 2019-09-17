@@ -533,6 +533,14 @@
         "category": "Integrations (Cloud)"
     },
     {
+        "name": "Microsoft AppCenter",
+        "page": "https://github.com/NLog/NLog.AzureAppCenter",
+        "description": "Writes NLog messages to Microsoft Visual Studio AppCenter with Azure",
+        "package": "NLog.Targets.AppCenter",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
         "name": "Elastic Search",
         "page": "https://github.com/ReactiveMarkets/NLog.Targets.ElasticSearch",
         "description": "Writes to Elastic Search servers",
