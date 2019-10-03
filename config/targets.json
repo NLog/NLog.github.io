@@ -128,6 +128,22 @@
         "category": ""
     },
     {
+        "name": "HTTP",
+        "page": "HTTP-target",
+        "description": "Sends messages to a designated HTTP target using POST by default. Combined with JSON Formatter supports Splunk.",
+        "keywords":[
+            "http",
+            "Splunk"
+        ],
+        "platforms":[
+            "netstandard2.0",
+            "net45",
+            "net462",
+            "net472"
+        ],
+        "category":"Webservices and networking"
+    },
+    {
         "name": "LogReceiverService",
         "page": "LogReceiverService-target",
         "description": "Sends log messages to a NLog Receiver Service (using WCF or Web Services).",
