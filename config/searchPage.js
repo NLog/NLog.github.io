@@ -32,7 +32,7 @@ var app = new Vue({
             "net45": { name: ".NET 4.5" },
             "netstandard1.3": { name: ".NET Standard 1.3" },
             "netstandard1.5": { name: ".NET Standard 1.5" },
-            "netstandard2.0": { name: ".NET Standard 2.0" },
+            "netstandard2.0": { name: ".NET Standard 2.0 / .NET Core 3" },
             "ios": { name: "Xamarin iOs" },
             "android": { name: "Xamarin Android" },
             "mono": { name: "Mono" },
