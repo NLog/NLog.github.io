@@ -29,7 +29,12 @@
             "wp8"
         ],
         "keywords": [
-            "database", "db", "empty", "ignore", "sql", "sqlparameter"
+            "database",
+            "db",
+            "empty",
+            "ignore",
+            "sql",
+            "sqlparameter"
         ],
         "category": ""
     },
@@ -317,7 +322,6 @@
         ],
         "category": "Environment and config files"
     },
- 
     {
         "name": "exception",
         "page": "Exception-Layout-Renderer",
@@ -1149,11 +1153,11 @@
             "sl"
         ],
         "keywords": [
-            "performance", 
+            "performance",
             "dbtype",
-            "parametertype", 
+            "parametertype",
             "string",
-            "text", 
+            "text",
             "parse",
             "render"
         ],
@@ -1180,7 +1184,7 @@
         "wrapper": true,
         "category": "Files and directories"
     },
-        {
+    {
         "name": "object-path",
         "page": "ObjectPath-Layout-Renderer",
         "description": "Render a (nested) property of an object",
@@ -1897,6 +1901,30 @@
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
+        "name": "aspnet-Request-Headers",
+        "page": "AspNetRequest-Headers-Layout-Renderer",
+        "package": [
+            "NLog.Web",
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Header key/value pairs.",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "keywords": [
+            "Content-Type",
+            "accept-language",
+            "accept-encoding",
+            "user-agent"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
         "name": "aspnet-Request-Host",
         "page": "AspNetRequest-Host-Layout-Renderer",
         "package": [
@@ -1948,6 +1976,11 @@
             "netstandard2.0"
         ],
         "wrapper": false,
+        "keywords": [
+            "ipaddress",
+            "ipv4",
+            "ipv6"
+        ],
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -2206,5 +2239,4 @@
         "external": true,
         "category": "Integrations"
     }
-
 ]
