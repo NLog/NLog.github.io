@@ -522,6 +522,18 @@
         "category": ""
     },
     {
+        "name": "local-ip",
+        "page": "Local-IP-Address-Layout-Renderer",
+        "description": "Local IP Address from Network Interface.",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard2.0"
+        ],
+        "category": "Processes, threads and assemblies"
+    },
+    {
         "name": "log4jxmlevent",
         "page": "Log4JXMLEvent-Layout-Renderer",
         "description": "XML event description compatible with log4j, Chainsaw and NLogViewer.",
