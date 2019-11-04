@@ -776,10 +776,34 @@
         "category": "Integrations (Cloud)"
     },
     {
-        "name": "Microsoft AzureStorage",
+        "name": "Microsoft Azure Blob Storage",
         "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage",
-        "package": "NLog.Extensions.AzureStorage",
-        "description": "Batch writing of NLog messages to Azure BlobStorage, TableStorage or QueueStorage",
+        "package": "NLog.Extensions.AzureBlobStorage",
+        "description": "Batch writing of NLog messages to Azure BlobStorage",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Microsoft Azure CosmosDb Tables",
+        "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage",
+        "package": "NLog.Extensions.AzureCosmosTable",
+        "description": "Batch writing of NLog messages to Azure Table Storage or Azure CosmosDb Tables",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Microsoft Azure EventHubs",
+        "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage",
+        "package": "NLog.Extensions.AzureEventHub",
+        "description": "Batch writing of NLog messages to Azure Event Hubs",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Microsoft Azure Queue Storage",
+        "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage",
+        "package": "NLog.Extensions.AzureQueueStorage",
+        "description": "Batch writing of NLog messages to Azure Queue Storage",
         "external": true,
         "category": "Integrations (Cloud)"
     },
