@@ -1,10 +1,10 @@
-version: 4.6.7
+version: 4.6.8
 #preversion: 4.6-rc3
 news:
-  # enabled: true
-  text: NLog 4.6.3 is live!
-  readmore_text: Read more about 4.6
-  readmore_link: https://nlog-project.org/2019/03/20/nlog-4-6-is-live.html
+  enabled: true
+  text: NLog 4.6.8 is released!
+  readmore_text: See changelog
+  readmore_link: https://github.com/NLog/NLog/releases/tag/v4.6.8
 highlighter: rouge
 markdown: kramdown
 kramdown:
