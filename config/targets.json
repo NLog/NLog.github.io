@@ -134,7 +134,11 @@
         "description": "Sends messages to a designated HTTP target using POST by default. Combined with JSON Formatter supports Splunk.",
         "keywords": [
             "http",
-            "Splunk"
+            "Splunk",
+            "Proxy",
+            "Nagle algorithm",
+            "GET",
+            "PUT"
         ],
         "platforms": [
             "netstandard2.0",
