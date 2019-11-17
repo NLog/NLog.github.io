@@ -134,11 +134,13 @@
         "description": "Sends messages to a designated HTTP target using POST by default. Combined with JSON Formatter supports Splunk.",
         "keywords": [
             "http",
+            "https",
             "Splunk",
             "Proxy",
             "Nagle algorithm",
             "GET",
-            "PUT"
+            "PUT",
+            "web"
         ],
         "platforms": [
             "netstandard2.0",
@@ -156,6 +158,13 @@
             "net40",
             "net45"
         ],
+        "keywords": [
+            "http",
+            "https",
+            "SOAP",
+            "POST",
+            "web"
+        ],
         "category": "Webservices and networking"
     },
     {
@@ -166,6 +175,13 @@
             "netstandard1.3",
             "netstandard1.5",
             "netstandard2.0"
+        ],
+        "keywords": [
+            "http",
+            "https",
+            "SOAP",
+            "POST",
+            "web"
         ],
         "package": "NLog.WCF",
         "platform-notes": "NLog.WCF nuget package for .NET standard",
@@ -229,7 +245,12 @@
         "keywords": [
             "tcp",
             "udp",
-            "ip"
+            "ip",
+            "ipv6",
+            "http",
+            "https",
+            "POST",
+            "web"
         ],
         "category": "Webservices and networking"
     },
@@ -305,7 +326,17 @@
         "page": "WebService-target",
         "description": "Calls the specified web service on each log message.",
         "keywords": [
-            "SOAP"
+            "SOAP",
+            "SOAP 1.1",
+            "SOAP 1.2",
+            "POST",
+            "https",
+            "proxy",
+            "Rfc3986",
+            "web",
+            "json",
+            "xml",
+            "WebServices"
         ],
         "category": "Webservices and networking"
     },
