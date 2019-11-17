@@ -128,6 +128,22 @@
         "category": ""
     },
     {
+        "name": "HTTP",
+        "page": "https://github.com/DarekDan/NLog.Targets.HTTP/blob/master/README.md",
+        "package": "NLog.Targets.Http",
+        "description": "Sends messages to a designated HTTP target using POST by default. Combined with JSON Formatter supports Splunk.",
+        "keywords": [
+            "http",
+            "Splunk"
+        ],
+        "platforms": [
+            "netstandard2.0",
+            "net45"
+        ],
+        "category": "Webservices and networking",
+        "external": true
+    },
+    {
         "name": "LogReceiverService",
         "page": "LogReceiverService-target",
         "description": "Sends log messages to a NLog Receiver Service (using WCF or Web Services).",
@@ -547,7 +563,9 @@
         "package": "NLog.Targets.ElasticSearch",
         "external": true,
         "category": "Integrations",
-        "keywords": ["Elasticsearch"]
+        "keywords": [
+            "Elasticsearch"
+        ]
     },
     {
         "name": "elmah.io",
