@@ -336,7 +336,7 @@
             "web",
             "json",
             "xml",
-            "WebServices",
+            "WebServices"
         ],
         "category": "Webservices and networking"
     },
