@@ -1,7 +1,7 @@
-npm install jsonlint -g
+npm install @prantlf/jsonlint -g
 
 Write-Host "Validate targets.json ..."
-jsonlint config/targets.json -q  2>&1
+jsonlint config/targets.json --quiet --no-duplicate-keys --validate config/targets.schema.json --environment json-schema-draft-07 2>&1
 if (-Not $LastExitCode -eq 0)
 	{ exit $LastExitCode }
 

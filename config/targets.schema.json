@@ -1,0 +1,126 @@
+{
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://nlog-project.org/targets.json",
+    "type": "array",
+    "title": "Targets",
+    "items": {
+        "$id": "#/items",
+        "type": "object",
+        "title": "Target",
+        "required": [
+            "name",
+            "page",
+            "description",
+            "category"
+        ],
+        "properties": {
+            "name": {
+                "$id": "#/items/properties/name",
+                "type": "string",
+                "title": "Target Name",
+                "default": "",
+                "examples": [
+                    "Chainsaw"
+                ],
+                "pattern": "^(.*)$"
+            },
+            "page": {
+                "$id": "#/items/properties/page",
+                "type": "string",
+                "title": "Page",
+                "default": "",
+                "examples": [
+                    "Database-target",
+                    "https://mypage/example.html"
+                ],
+                "description": "Full URL or NLog wiki page",
+                "pattern": "^(.*)$"
+            },
+            "description": {
+                "$id": "#/items/properties/description",
+                "type": "string",
+                "title": "Description",
+                "default": "",
+                "pattern": "^(.*)$"
+            },
+            "platforms": {
+                "$id": "#/items/properties/platforms",
+                "type": "array",
+                "title": "Platforms",
+                "items": {
+                    "$id": "#/items/properties/platforms/items",
+                    "type": "string",
+                    "title": "Items",
+                    "enum": [
+                        "net35",
+                        "net40",
+                        "net45",
+                        "netstandard1.3",
+                        "netstandard1.5",
+                        "netstandard2.0",
+                        "ios",
+                        "android",
+                        "mono",
+                        "wp8",
+                        "sl"
+                    ]
+                },
+                "additionalItems": false
+            },
+            "keywords": {
+                "$id": "#/items/properties/keywords",
+                "type": "array",
+                "title": "Keywords",
+                "items": {
+                    "$id": "#/items/properties/keywords/items",
+                    "type": "string",
+                    "title": "Items",
+                    "default": "",
+                    "examples": [
+                        "web",
+                        "http"
+                    ],
+                    "pattern": "^(.*)$"
+                }
+            },
+            "category": {
+                "$id": "#/items/properties/category",
+                "type": "string",
+                "title": "Category",
+                "default": "",
+                "enum": [
+                    "Integrations (GUI tools)",
+                    "",
+                    "Databases",
+                    "Programmatically",
+                    "Integrations",
+                    "Webservices and networking",
+                    "Async and buffering",
+                    "Filtering, throttling and error handling",
+                    "Security",
+                    "Windows Forms",
+                    "Integrations (Cloud)"
+                ]
+            },
+            "wrapper": {
+                "type": [
+                    "boolean",
+                    "string"
+                ],
+                "description": "Wraps another target"
+            },
+            "external": {
+                "type": "boolean",
+                "description": "Not maintainted by the NLog team"
+            },
+            "package": {
+                "type": "string",
+                "Title": "Package id",
+                "examples": [
+                    "NLog.Web"
+                ]
+            }
+        }
+    }
+}
