@@ -638,7 +638,7 @@
     {
         "name": "mdlc",
         "page": "Mdlc-Layout-Renderer",
-        "description": "Async Mapped Diagnostics Context - a thread-local structure. Async version of the MDC ",
+        "description": "Async Mapped Diagnostics Context - a thread-local structure for scoped context. Async version of the MDC. ",
         "platforms": [
             "net35",
             "net40",
