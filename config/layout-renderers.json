@@ -1288,6 +1288,26 @@
         "category": ""
     },
     {
+        "name": "onhasproperties",
+        "page": "OnHasProperties-Layout-Renderer",
+        "description": "Only outputs the inner layout when event properties are included with the logevent.",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono",
+            "wp8",
+            "sl"
+        ],
+        "wrapper": true,
+        "category": ""
+    },
+    {
         "name": "pad",
         "page": "Pad-Layout-Renderer",
         "description": "Applies padding to another layout output.",
