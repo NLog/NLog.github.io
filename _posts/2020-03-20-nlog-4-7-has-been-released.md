@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NLog 4.7 is live!
+title: NLog 4.7 has been released!
 ---
 
 NLog 4.7 marks another year of new features and performance improvements.
