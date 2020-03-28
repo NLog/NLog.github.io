@@ -13,6 +13,7 @@ There has been introduced a new fluent api for setting up NLog before logging. I
 ### Custom Object Serialization
 It is now possible to customize the serialization of different object types. One can exclude unwanted properties, or add new artificial properties.
 
+### Examples
 Ensures that object-reflection is skipped for all objects that implements `IDangerousObject`:
 
 ```c#
@@ -38,7 +39,7 @@ NLog.LogManager.Setup().SetupSerialization(s =>
 This can be used together with `${exception:format=@}` or the Properties-Format-option `${exception:format=Properties}`.
 
 ### Lambda Condition Methods
-NLog already has 2 ways for adding own custom condition methods:
+NLog already has two ways for adding own custom condition methods:
 - Create static class with class-attribute `[ConditionMethods]` and add static methods with function-attribute `[ConditionMethod]`. Then add the assembly to be registered as an extension.
 - Explicit register a static method using `ConfigurationItemFactory.Default.ConditionMethods.RegisterDefinition()`.
 
@@ -50,7 +51,7 @@ LogManager.Setup().SetupExtensions(s =>
 );
 ```
 
-And ofcourse standard static methods: 
+And of course standard static methods: 
 
 ```c#
 LogManager.Setup().SetupExtensions(s =>
@@ -87,10 +88,10 @@ One should be careful with executing heavy operations in the custom event handle
 The new releases will now be tagged by [Microsoft.SourceLink.GitHub](https://github.com/dotnet/sourcelink), that will allow easier debugging with NLog source code available from Github. See also the [
 Scott Hanselman blog](https://www.hanselman.com/blog/ExploringNETCoresSourceLinkSteppingIntoTheSourceCodeOfNuGetPackagesYouDontOwn.aspx)
 
-### NetCore Single File Publish
-NetCore3 introduced a new feature called Single File Publish, that builds the entire application (with dotnet) as a single executable file. Microsoft failed to complete the illusion, so if checking the `AppDomain.BaseDirectory`, then one will get a secret temporary folder, where the single executable file has been unzipped to. 
+### .NET Core Single File Publish
+.NET Core 3 introduced a new feature called Single File Publish, that builds the entire application (with dotnet) as a single executable file. Microsoft failed to complete the illusion, so if checking the `AppDomain.BaseDirectory`, then one will get a secret temporary folder, where the single executable file has been unzipped to. 
 
-NLog uses `AppDomain.BaseDirectory` as base directory for all relative paths. This means logfiles will not appear as expected, but are instead written to the secret temp folder. The current work-around is to explicitly specify `${basedir}` with this special option:
+NLog uses `AppDomain.BaseDirectory` as base directory for all relative paths. This means log files will not appear as expected, but are instead written to the secret temp folder. The current work-around is to explicitly specify `${basedir}` with this special option:
 
 ```xml
 <target type="file" fileName="${basedir:fixtempdir=true}\App.txt" />
