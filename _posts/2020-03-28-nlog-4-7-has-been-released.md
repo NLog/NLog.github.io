@@ -13,7 +13,7 @@ There has been introduced a new fluent api for setting up NLog before logging. I
 ### Custom Object Serialization
 It is now possible to customize the serialization of different object types. One can exclude unwanted properties, or add new artificial properties.
 
-### Examples
+#### Examples
 Ensures that object-reflection is skipped for all objects that implements `IDangerousObject`:
 
 ```c#
