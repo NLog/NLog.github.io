@@ -75,6 +75,20 @@ Now it is possible to configure additional connection properties:
 
 All configured connection properties will be applied before opening the connection. In the above example then one must handle expiry of the AccessToken in `${gdc:AccessToken}`, by creating a custom background timer that will refresh the Azure AccessToken in timely manner.
 
+### DatabaseTarget Transaction IsolationLevel
+DatabaseTarget now has the option to write logevents in batches by using transactions. DatabaseTarget writes a logevent by executing a DbCommand. Now one can configure [Isolationlevel](https://docs.microsoft.com/en-us/dotnet/api/system.data.isolationlevel), so it creates a batch transaction for all DbCommand objects. This means for the SqlClient that it will execute all DbCommands as a single operation. This gives less traffic back and forth and better performance, especially in the cloud with high latency.
+
+Make sure to use the `AsyncWrapper` to write logevents in batches to the DatabaseTarget:
+
+```xml
+<target name="db_async" xsi:type="AsyncWrapper">
+    <target name="db" xsi:type="Database" connectionstring="..." isolationLevel="ReadCommitted" >
+    </target>
+</target>
+```
+
+By default DatabaseTarget will ensure that its own DbCommands are not enlisted in other ongoing database transactions. But to be completely sure then one can add `;ENLIST=FALSE` to the ConnectionString.
+
 ### InternalLogger LogMessageReceived
 NLog InternalLogger now has support for raising events, instead of having to create a custom `ITextWriter` and assign it as to `InternalLogger.LogWriter`.
 
