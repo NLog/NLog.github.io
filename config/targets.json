@@ -861,6 +861,14 @@
         "category": "Integrations (Cloud)"
     },
     {
+        "name": "Microsoft Azure File System",
+        "page": "https://github.com/lucianaparaschivei/NLog.Extensions.AzureFileSystem",
+        "package": "NLog.Extensions.AzureFileSystem",
+        "description": "Write NLog messages to Microsoft Azure file system (file shares)",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
         "name": "Google Logging",
         "page": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
         "package": "Google.Cloud.Logging.NLog",
