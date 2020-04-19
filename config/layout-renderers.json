@@ -218,7 +218,7 @@
             "netstandard2.0",
             "ios",
             "android",
-            "mono",
+            "mono"
         ],
         "keywords": [
             "folders, directories"
