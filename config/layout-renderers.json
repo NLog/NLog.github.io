@@ -207,6 +207,25 @@
         "category": "Files and directories"
     },
     {
+        "name": "processdir",
+        "page": "ProcessDir-Layout-Renderer",
+        "description": "The executable process directory of the application.",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.5",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono"
+        ],
+        "keywords": [
+            "folders, directories"
+        ],
+        "category": "Files and directories"
+    },    
+    {
         "name": "date",
         "page": "Date-Layout-Renderer",
         "description": "Current date and time.",
