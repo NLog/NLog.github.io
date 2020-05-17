@@ -568,7 +568,7 @@
         "category": "Integrations (Cloud)"
     },
     {
-        "name": "Microsoft AzureTableStorage",
+        "name": "Microsoft Azure Table Storage",
         "page": "https://github.com/abkonsta/NLog.Extensions.AzureTableStorage",
         "description": "Writes NLog messages to Azure TableStorage",
         "package": "NLog.Extensions.AzureTableStorage",
@@ -576,7 +576,7 @@
         "category": "Integrations (Cloud)"
     },
     {
-        "name": "Microsoft ApplicationInsights",
+        "name": "Microsoft Azure ApplicationInsights",
         "page": "https://github.com/Microsoft/ApplicationInsights-dotnet-logging",
         "description": "Writes NLog messages to Microsoft ApplicationInsights",
         "package": "Microsoft.ApplicationInsights.NLogTarget",
@@ -584,7 +584,7 @@
         "category": "Integrations (Cloud)"
     },
     {
-        "name": "Microsoft AppCenter",
+        "name": "Microsoft Azure AppCenter",
         "page": "https://github.com/NLog/NLog.AzureAppCenter",
         "description": "Writes NLog messages to Microsoft Visual Studio AppCenter with Azure",
         "package": "NLog.Targets.AppCenter",
@@ -845,7 +845,7 @@
         "category": "Integrations (Cloud)"
     },
     {
-        "name": "Microsoft Azure EventHubs",
+        "name": "Microsoft Azure Event Hubs",
         "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage",
         "package": "NLog.Extensions.AzureEventHub",
         "description": "Batch writing of NLog messages to Azure Event Hubs",
