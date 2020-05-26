@@ -147,7 +147,7 @@
           "items": {
             "$id": "#/NLog/properties/extensions/item",
             "type": "object",
-            "title": "first anyOf",
+            "title": "property",
             "description": "",
             "default": {},
             "examples": [
