@@ -11,73 +11,21 @@
   "NLog": {
     "autoReload": true,
     "throwConfigExceptions": true,
-    "internalLogLevel": "Info",
+    "internalLogLevel": "Off",
     "internalLogFile": "${basedir}/internal-nlog.txt",
     "extensions": [
       { "assembly": "NLog.Extensions.Logging" },
       { "assembly": "NLog.Web.AspNetCore" }
     ],
     "variables": {
-      "var_logdir": "c:/temp"
+      "var_logdir": "c:/temp",
+      "myLevel": "Error"
     },
     "default-wrapper": {
       "type": "AsyncWrapper",
       "overflowAction": "Block"
     },
     "targets": {
-      "all-file": {
-        "type": "File",
-        "fileName": "${var_logdir}/nlog-all-${shortdate}.log",
-        "layout": {
-          "type": "JsonLayout",
-          "Attributes": [
-            {
-              "name": "timestamp",
-              "layout": "${date:format=o}"
-            },
-            {
-              "name": "level",
-              "layout": "${level}"
-            },
-            {
-              "name": "logger",
-              "layout": "${logger}"
-            },
-            {
-              "name": "message",
-              "layout": "${message:raw=true}"
-            },
-            {
-              "name": "properties",
-              "encode": false,
-              "layout": {
-                "type": "JsonLayout",
-                "includeallproperties": "true"
-              }
-            }
-          ]
-        }
-      },
-      "own-console": {
-        "type": "LimitingWrapper",
-        "interval": "00:00:01",
-        "messageLimit": 100,
-        "target": {
-          "type": "ColoredConsole",
-          "layout": "${longdate}|${event-properties:item=EventId_Id:whenEmpty=0}|${uppercase:${level}}|${logger}|${message} ${exception:format=tostring}|${callsite}",
-          "rowHighlightingRules": [
-            {
-              "condition": "level == LogLevel.Error",
-              "foregroundColor": "Red"
-            },
-            {
-              "condition": "level == LogLevel.Fatal",
-              "foregroundColor": "Red",
-              "backgroundColor": "White"
-            }
-          ]
-        }
-      },
       "database": {
         "type": "Database",
         "dbProvider": "System.Data.SqlClient",
@@ -124,12 +72,17 @@
     "rules": [
       {
         "logger": "*",
-        "minLevel": "Trace",
-        "writeTo": "all-file, database"
+        "minLevel": "${myLevel}",
+        "writeTo": "database"
       },
       {
         "logger": "Microsoft.*",
-        "maxLevel": "Info",
+        "maxLevel": "${myLevel}",
+        "final": true
+      },
+      {
+        "logger": "Test.*",
+        "level": "${myLevel}",
         "final": true
       },
       {
