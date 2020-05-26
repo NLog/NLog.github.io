@@ -851,26 +851,45 @@
     }
   },
   "properties": {
-    "Logging": {  "$ref": "#/definitions/MicrosoftExtensionsLogging"},
-    "NLog": {  "$ref": "#/definitions/NLog"}
+    "Logging": {
+      "$ref": "#/definitions/MicrosoftExtensionsLogging"
+    },
+    "NLog": {
+      "$ref": "#/definitions/NLog"
+    },
+    "ElmahIo": {
+      "$ref": "#/definitions/ElmahIo"
+    },
+    "webOptimizer": {
+      "$ref": "#/definitions/webOptimizer"
+    },
+    "cdn": {
+      "$ref": "#/definitions/cdn"
+    },
+    "pwa": {
+      "$ref": "#/definitions/pwa"
+    },
+    "AllowedHosts": {
+      "$ref": "#/definitions/AllowedHosts"
+    },
+    "Kestrel": {
+      "$ref": "#/definitions/Kestrel"
+    }
   },
   "patternProperties": {
     "^WebOptimizer$": {
       "$ref": "#/definitions/webOptimizer"
     },
-    "^webOptimizer$": {
-      "$ref": "#/definitions/webOptimizer"
-    },
     "^weboptimizer$": {
       "$ref": "#/definitions/webOptimizer"
     },
-    "^(cdn|Cdn)$": {
+    "^(Cdn)$": {
       "$ref": "#/definitions/cdn"
     },
-    "^(pwa|PWA|Pwa)$": {
+    "^(PWA|Pwa)$": {
       "$ref": "#/definitions/pwa"
     },
-    "^(ElmahIo|Elmahio|elmahIo|elmahio)$": {
+    "^(Elmahio|elmahIo|elmahio)$": {
       "$ref": "#/definitions/ElmahIo"
     },
     "^(logging)$": {
@@ -879,10 +898,10 @@
     "^(nlog)$": {
       "$ref": "#/definitions/NLog"
     },
-    "^(allowedhosts|Allowedhosts|allowedHosts|AllowedHosts)$": {
+    "^(allowedhosts|Allowedhosts|allowedHosts)$": {
       "$ref": "#/definitions/AllowedHosts"
     },
-    "^(kestrel|Kestrel)$": {
+    "^(kestrel)$": {
       "$ref": "#/definitions/Kestrel"
     }
   }
