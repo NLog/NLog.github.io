@@ -1,5 +1,5 @@
 {
-  "$schema": "../nlog-appsettings.schema.json",
+  "$schema": "../appsettings.schema.json",
   "Logging": {
     "LogLevel": {
       "Default": "Debug"
