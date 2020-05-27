@@ -1,0 +1,106 @@
+{
+  "$schema": "../appsettings.schema.json",
+  "Logging": {
+    "LogLevel": {
+      "Default": "Debug"
+    },
+    "NLog": {
+      "IncludeScopes": true
+    }
+  },
+  "NLog": {
+    "autoReload": true,
+    "throwConfigExceptions": true,
+    "internalLogLevel": "Off",
+    "internalLogFile": "${basedir}/internal-nlog.txt",
+    "extensions": [
+      { "assembly": "NLog.Extensions.Logging" },
+      { "assembly": "NLog.Web.AspNetCore" }
+    ],
+    "variables": {
+      "var_logdir": "c:/temp",
+      "myLevel": "Error"
+    },
+    "default-wrapper": {
+      "type": "AsyncWrapper",
+      "overflowAction": "Block"
+    },
+    "targets": {
+      "database": {
+        "type": "Database",
+        "dbProvider": "System.Data.SqlClient",
+        "connectionString": "Data Source=database server;Initial Catalog=database;Trusted_Connection=False;User Id=AppUser;Password=AppUserPassword;",
+        "keepConnection": "true",
+        "commandText": "insert into dbo.log (Guid, MachineName,Timestamp,Level,Message,Logger,Callsite,Exception) values (@Guid, @MachineName, @Timestamp, @Level, @Message, @Logger, @Callsite, @Exception);",
+        "parameters": [
+          {
+            "name": "@Guid",
+            "layout": "${guid}"
+          },
+          {
+            "name": "@MachineName",
+            "layout": "${machinename}"
+          },
+          {
+            "name": "@Timestamp",
+            "layout": "${date:format=o}",
+            "dbType": "DbType.DateTime"
+          },
+          {
+            "name": "@Level",
+            "layout": "${level}"
+          },
+          {
+            "name": "@Message",
+            "layout": "${message}"
+          },
+          {
+            "name": "@Logger",
+            "layout": "${logger}"
+          },
+          {
+            "name": "@Callsite",
+            "layout": "${callsite}"
+          },
+          {
+            "name": "@Exception",
+            "layout": "${exception:tostring}"
+          }
+        ]
+      }
+    },
+    "rules": [
+      {
+        "logger": "*",
+        "minLevel": "${myLevel}",
+        "writeTo": "database"
+      },
+      {
+        "logger": "Microsoft.*",
+        "maxLevel": "${myLevel}",
+        "final": true
+      },
+      {
+        "logger": "Test.*",
+        "level": "${myLevel}",
+        "final": true
+      },
+      {
+        "logger": "*",
+        "minLevel": "Debug",
+        "writeTo": "own-console",
+        "filters": {
+          "whenRepeated": {
+            "layout": "${message}",
+            "action": "Ignore"
+          }
+        }
+      },
+      {
+        "logger": "*",
+        "minLevel": "Debug",
+        "writeTo": "database"
+      }
+    ]
+  }
+}
