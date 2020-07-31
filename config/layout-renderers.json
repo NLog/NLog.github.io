@@ -165,7 +165,7 @@
     {
         "name": "callsite-filename",
         "page": "Callsite-file-name-layout-renderer",
-        "description": "The call site source line number.",
+        "description": "The call site source file name.",
         "platforms": [
             "net35",
             "net40",
