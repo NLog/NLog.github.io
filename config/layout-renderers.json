@@ -163,6 +163,23 @@
         "category": "Callsite and stacktraces"
     },
     {
+        "name": "callsite-filename",
+        "page": "Callsite-file-name-layout-renderer",
+        "description": "The call site source line number.",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono"
+        ],
+        "category": "Callsite and stacktraces"
+    },    
+    {
         "name": "counter",
         "page": "Counter-Layout-Renderer",
         "description": "A counter value (increases on each layout rendering)",
