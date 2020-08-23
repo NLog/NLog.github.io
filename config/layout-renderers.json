@@ -126,6 +126,28 @@
         "category": "Files and directories"
     },
     {
+        "name": "dir-separator",
+        "page": "Directory-separator",
+        "description": "The the OS dependent directory separator.",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.3",
+            "netstandard1.5",
+            "netstandard2.0",
+            "ios",
+            "android",
+            "mono"
+        ],
+        "keywords": [
+            "directory",
+            "directories",
+            "folders"
+        ],
+        "category": "Files and directories"
+    },
+    {
         "name": "callsite",
         "page": "Callsite-Layout-Renderer",
         "description": "The call site (class name, method name and source information)",
