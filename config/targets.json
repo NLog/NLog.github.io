@@ -651,6 +651,14 @@
         "category": "Integrations"
     },
     {
+        "name": "NLog.Targets.GraylogHttp",
+        "page": "https://github.com/dustinchilson/NLog.Targets.GraylogHttp",
+        "package": "NLog.Targets.GraylogHttp",
+        "description": "NLog target that pushes log messages to Graylog using the Http input.",
+        "external": true,
+        "category": "Integrations"
+    },
+    {
         "name": "EasyGelf",
         "page": "https://github.com/Pliner/EasyGelf",
         "package": "EasyGelf.NLog",
