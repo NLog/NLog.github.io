@@ -845,7 +845,7 @@
         "category": "Integrations (Cloud)"
     },
     {
-        "name": "Microsoft Azure CosmosDb Tables",
+        "name": "Microsoft Azure Tables",
         "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage",
         "package": "NLog.Extensions.AzureCosmosTable",
         "description": "Batch writing of NLog messages to Azure Table Storage or Azure CosmosDb Tables",
@@ -853,7 +853,7 @@
         "category": "Integrations (Cloud)"
     },
     {
-        "name": "Microsoft Azure Event Hubs",
+        "name": "Microsoft Azure EventHubs",
         "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage",
         "package": "NLog.Extensions.AzureEventHub",
         "description": "Batch writing of NLog messages to Azure Event Hubs",
@@ -865,6 +865,14 @@
         "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage",
         "package": "NLog.Extensions.AzureQueueStorage",
         "description": "Batch writing of NLog messages to Azure Queue Storage",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Microsoft Azure ServiceBus",
+        "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage",
+        "package": "NLog.Extensions.AzureServiceBus",
+        "description": "Batch writing of NLog messages to Azure Service Bus",
         "external": true,
         "category": "Integrations (Cloud)"
     },
