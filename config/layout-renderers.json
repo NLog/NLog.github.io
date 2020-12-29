@@ -2249,8 +2249,10 @@
             "netstandard2.0"
         ],
         "keywords": [
+            "Identity authentication",
             "forms authentication",
-            "windows authentication"
+            "windows authentication",
+            "Authorize"
         ],
         "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -2271,8 +2273,10 @@
             "netstandard2.0"
         ],
         "keywords": [
+            "Identity authentication",
             "forms authentication",
-            "windows authentication"
+            "windows authentication",
+            "Authorize"
         ],
         "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -2294,11 +2298,33 @@
         ],
         "keywords": [
             "forms authentication",
-            "windows authentication"
+            "windows authentication",
+            "Authorize"
         ],
         "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
+    {
+        "name": "aspnet-User-Claim",
+        "page": "AspNet-User-Claim-layout-renderer",
+        "package": [
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET User Claims authorization values",
+        "platforms": [
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "keywords": [
+            "Identity authentication",
+            "Authorize",
+            "claims checks",
+            "policy",
+            "policies"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },    
     {
         "name": "iis-site-name",
         "page": "IIS-site-name-Layout-Renderer",
