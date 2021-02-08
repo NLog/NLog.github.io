@@ -948,5 +948,5 @@
         "page": "https://github.com/task-it/TaskIt.NLog.Targets.Teams",
         "external": true,
         "category": "Integrations"
-    },
+    }
 ]
