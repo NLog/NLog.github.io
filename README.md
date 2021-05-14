@@ -44,6 +44,3 @@ I prefer markdown when it's possible (the hyperlink).
 - You can preview you changes to rename your fork to `<your-name>.github.io` and browse to it!
 - Changes are visible in about a minute. 
 
-Update version
-===
-Update `version` variable in [_config.yml](_config.yml)
