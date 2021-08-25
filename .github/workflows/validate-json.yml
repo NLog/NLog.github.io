@@ -4,10 +4,10 @@ on:
   push:
     branches: [ master ]
   pull_request:
-    branches: [ master, validate-json-githubaction]
+    branches: [ master]
 
 jobs:
-  greeting:
+  check:
     runs-on: ubuntu-latest
     steps:
     - name: 'Validate JSON config files'
