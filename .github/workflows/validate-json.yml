@@ -1,0 +1,25 @@
+name: 'Validate JSON Schemas'
+
+on: 
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: 'Validate JSON config files'
+      shell: pwsh
+      run: |
+        .\validate-json.ps1
+    - name: 'Validate appsettings JSON schema and examples'
+      shell: pwsh
+      run: |
+        .\validate-json-examples.ps1
+      working-directory: 'schemas'  
