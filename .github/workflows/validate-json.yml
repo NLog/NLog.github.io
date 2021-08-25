@@ -13,7 +13,7 @@ jobs:
     - name: 'Validate JSON config files'
       shell: pwsh
       run: |
-        .\validate-json.ps1
+        \validate-json.ps1
     - name: 'Validate appsettings JSON schema and examples'
       shell: pwsh
       run: |
