@@ -942,9 +942,9 @@
     },
     {
         "name": "Microsoft Teams",
-        "package": "NLog.Targets.Teams",
-        "description": "Writes NLog messages to MS Teams incoming Webhook connectors",
         "page": "https://github.com/task-it/TaskIt.NLog.Targets.Teams",
+        "description": "Writes NLog messages to MS Teams incoming Webhook connectors",
+        "package": "TaskIt.NLog.Targets.Teams",
         "external": true,
         "category": "Integrations"
     }
