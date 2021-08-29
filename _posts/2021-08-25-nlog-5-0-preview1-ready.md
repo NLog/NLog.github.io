@@ -544,6 +544,24 @@ To `Ignore` as default value:
 
 * **Workaround:** Explicit assign `defaultAction` on the `<filters>`-element, or change to `action="Log"`.
 
+### NLog.Extensions.Logging without any filter
+NLog LoggingProvider no longer follows the Microsoft Logger filtering configuration.
+
+* **Impact:** Microsoft Logger filtering in appsettings.json will no longer have any effect.
+
+* **Reason:** It was confusing to have two seperate systems for controlling logging output.
+
+* **Workaround:** Explicit specify NLogProviderOptions RemoveLoggerFactoryFilter = true to enable old behavior.
+
+### NLog.Extensions.Logging skips capture of EventId
+NLog LoggingProvider has changed from capturing the EventId-struct, to only capture EventId_Id-number and EventId_Name-identifier.
+
+* **Impact:** EventId-property is no longer available by default.
+
+* **Reason:** Avoid the overhead from capturing and boxing the EventId-struct.
+
+* **Workaround:** Explicit specify NLogProviderOptions CaptureEntireEventId = true to enable old behavior.
+
 ## Many other improvements
 
 For a full list of all the enhancements and performance improvements: [NLog 5.0 PullRequests](https://github.com/NLog/NLog/pulls?q=is%3Apr+is%3Amerged+milestone:%225.0%20%28new%29%22)
