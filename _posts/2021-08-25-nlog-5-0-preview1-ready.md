@@ -274,16 +274,17 @@ NLog have removed direct support for .NET Framework v4.0, instead it will fallba
 
 ### NLog Targets extracted into their own nuget-packages
 The following NLog targets has been extracted from the NLog-nuget-package to their own isolated nuget-packages:
-- DatabaseTarget - NLog.Database-package
-- OutputDebugStringTarget - NLog.OutputDebugStringTarget-package
-- PerformanceCounterTarget - NLog.PerformanceCounter-package
-- ImpersonatingTargetWrapper - NLog.WindowsIdentity-package
-- LogReceiverWebServiceTarget - NLog.Wcf-package
+- DatabaseTarget - [NLog.Database](https://www.nuget.org/packages/NLog.Database)-package
+- OutputDebugStringTarget - [NLog.OutputDebugString](https://www.nuget.org/packages/NLog.OutputDebugString)-package
+    - [DebugSystem](https://github.com/NLog/NLog/wiki/DebugSystem-target)-target is available for `System.Diagnostics.Debug`-output.
+- PerformanceCounterTarget - [NLog.PerformanceCounter](https://www.nuget.org/packages/NLog.PerformanceCounter)-package
+- ImpersonatingTargetWrapper - [NLog.WindowsIdentity](https://www.nuget.org/packages/NLog.WindowsIdentity)-package
+- LogReceiverWebServiceTarget - [NLog.Wcf](https://www.nuget.org/packages/NLog.Wcf)-package
 
 The following NLog layoutrenderers has been extracted from the NLog-nuget-package to their own isolated nuget-packages:
-- PerformanceCounterLayoutRenderer - NLog.PerformanceCounter-package
-- RegistryLayoutRenderer - NLog.WindowsRegistry-package
-- WindowsIdentityLayoutRenderer - NLog.WindowsIdentity-package
+- PerformanceCounterLayoutRenderer - [NLog.PerformanceCounter](https://www.nuget.org/packages/NLog.PerformanceCounter)-package
+- RegistryLayoutRenderer - [NLog.WindowsRegistry](https://www.nuget.org/packages/NLog.WindowsRegistry)-package
+- WindowsIdentityLayoutRenderer - [NLog.WindowsIdentity](https://www.nuget.org/packages/NLog.WindowsIdentity)-package
 - QueryPerformanceCounterLayoutRenderer - Dropped into the ocean of dead code.
 
 * **Impact:** The default NLog-nuget-package will no longer provide the same number of targets and layoutrenderers.
