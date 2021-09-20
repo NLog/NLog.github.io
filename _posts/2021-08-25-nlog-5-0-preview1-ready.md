@@ -569,7 +569,7 @@ NLog LoggingProvider no longer follows the Microsoft Logger filtering configurat
 
 * **Reason:** It was confusing to have two seperate systems for controlling logging output.
 
-* **Workaround:** Explicit specify NLogProviderOptions `RemoveLoggerFactoryFilter = true` to enable old behavior.
+* **Workaround:** Explicit specify NLogProviderOptions `RemoveLoggerFactoryFilter = false` to enable old behavior.
 
 ### NLog.Extensions.Logging skips capture of EventId
 NLog LoggingProvider has changed from capturing the EventId-struct, to only capture EventId_Id-number and EventId_Name-identifier.
