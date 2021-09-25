@@ -321,28 +321,6 @@ NLog.Config nuget-package will no longer be released.
 * **Workaround:** Manually create the NLog.config file and add it to the application-project. Manually add NLog.Schema-package
   for intellisense in NLog.config.
 
-### NLog InternalLogger will not initialize itself from app.config or environment variables
-
-* **Impact:** NLog InternalLogger will no longer activate itself based on appsettings or environment variables.
-
-* **Reason:** NLog initialization becomes slower when having to check for environment variables or app.config.
-  When using NLog in the cloud then overhead from logging should be minimal.
-
-* **Workaround:** NLog InternalLogger can be enabled from NLog.config as always:
-  ```xml
-  <nlog internalLogToConsole="true" internalLogLevel="Debug">
-  </nlog>
-  ```
-  NLog InternalLogger can be enabled from code as always:
-  ```c#
-  NLog.Common.InternalLogger.LogToConsole = true;
-  NLog.Common.InternalLogger.LogLevel = LogLevel.Debug;
-  ```
-  NLog InternalLogger can be initialized from environment-variables from code:
-  ```c#
-  NLog.LogManager.Setup().SetupInternalLogger(log => log.SetupFromEnvironmentVariables());
-  ```
-
 ### Automatic loading of NLog.config now first check for exe.nlog
 NLog will now first check for `Application.exe.nlog` at startup, before using `NLog.config`
 
@@ -360,6 +338,17 @@ NLog Configuration Variables assigned at runtime will now automatically survive 
 * **Reason:** Better user experience when using `autoReload="true"` and updating NLog Configuration Variables at runtime.
 
 * **Workaround:** Explictly configure `KeepVariablesOnReload="false"` in NLog.config
+
+### Layout and LayoutRenderer are now threadsafe by default
+NLog now always expects Layout and LayoutRenderer to be threadsafe, and will no longer check the `[ThreadSafe]`-class-attribute.
+
+* **Impact:** NLog Targets will no longer attempt to protect against 3rd Party Layout-logic that might not be threadsafe.
+
+* **Reason:** The `[ThreadSafe]`-class-attribute was intended as a temporary workaround, to avoid breaking stuff with NLog ver. 4.5.3
+  Having to apply special class-attributes to get the expected performance is not very user-friendly.
+
+* **Workaround:** Explicitly configure the Target-option `LayoutWithLock="true"` if target is using 3rd Party Layout-logic
+  that is not threadsafe.
 
 ### Default Layout for NLog Targets has been updated
 Changed from this default value:
@@ -395,6 +384,28 @@ ${exception:format=tostring,data}
   all exception information is usually important.
 
 * **Workaround:** Explicit specify `${exception:format=message}` to only get the `Exception.Message`.
+
+### NLog InternalLogger will not initialize itself from app.config or environment variables
+
+* **Impact:** NLog InternalLogger will no longer activate itself based on appsettings or environment variables.
+
+* **Reason:** NLog initialization becomes slower when having to check for environment variables or app.config.
+  When using NLog in the cloud then overhead from logging should be minimal.
+
+* **Workaround:** NLog InternalLogger can be enabled from NLog.config as always:
+  ```xml
+  <nlog internalLogToConsole="true" internalLogLevel="Debug">
+  </nlog>
+  ```
+  NLog InternalLogger can be enabled from code as always:
+  ```c#
+  NLog.Common.InternalLogger.LogToConsole = true;
+  NLog.Common.InternalLogger.LogLevel = LogLevel.Debug;
+  ```
+  NLog InternalLogger can be initialized from environment-variables from code:
+  ```c#
+  NLog.LogManager.Setup().SetupInternalLogger(log => log.SetupFromEnvironmentVariables());
+  ```
 
 ### Removed obsolete method Target.Write(AsyncLogEventInfo[]) and OptimizeBufferReuse is always true
 
