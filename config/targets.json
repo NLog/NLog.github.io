@@ -584,12 +584,20 @@
         "category": "Integrations (Cloud)"
     },
     {
-        "name": "Microsoft Azure AppCenter",
-        "page": "https://github.com/NLog/NLog.AzureAppCenter",
-        "description": "Writes NLog messages to Microsoft Visual Studio AppCenter with Azure",
-        "package": "NLog.Targets.AppCenter",
-        "external": true,
-        "category": "Integrations (Cloud)"
+      "name": "Microsoft Azure AppCenter",
+      "page": "https://github.com/NLog/NLog.AzureAppCenter",
+      "description": "Writes NLog messages to Microsoft Visual Studio AppCenter with Azure",
+      "package": "NLog.Targets.AppCenter",
+      "external": true,
+      "category": "Integrations (Cloud)"
+    },
+    {
+      "name": "Microsoft DiagnosticSource",
+      "page": "https://github.com/NLog/NLog.DiagnosticSource",
+      "description": "DiagnosticListenerTarget as a named source of instrumentation events",
+      "package": "NLog.DiagnosticSource",
+      "external": true,
+      "category": "Integrations"
     },
     {
         "name": "Elastic Search",
@@ -838,23 +846,23 @@
     },
     {
         "name": "Microsoft Azure Blob Storage",
-        "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage",
+        "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage/blob/master/src/NLog.Extensions.AzureBlobStorage/README.md",
         "package": "NLog.Extensions.AzureBlobStorage",
         "description": "Batch writing of NLog messages to Azure BlobStorage",
         "external": true,
         "category": "Integrations (Cloud)"
     },
     {
-        "name": "Microsoft Azure Tables",
-        "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage",
-        "package": "NLog.Extensions.AzureCosmosTable",
+        "name": "Microsoft Azure DataTables Storage",
+        "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage/blob/master/src/NLog.Extensions.AzureDataTables/README.md",
         "description": "Batch writing of NLog messages to Azure Table Storage or Azure CosmosDb Tables",
+        "package": "NLog.Extensions.AzureDataTables",
         "external": true,
         "category": "Integrations (Cloud)"
     },
     {
         "name": "Microsoft Azure EventHubs",
-        "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage",
+        "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage/blob/master/src/NLog.Extensions.AzureEventHub/README.md",
         "package": "NLog.Extensions.AzureEventHub",
         "description": "Batch writing of NLog messages to Azure Event Hubs",
         "external": true,
@@ -862,7 +870,7 @@
     },
     {
         "name": "Microsoft Azure Queue Storage",
-        "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage",
+        "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage/blob/master/src/NLog.Extensions.AzureQueueStorage/README.md",
         "package": "NLog.Extensions.AzureQueueStorage",
         "description": "Batch writing of NLog messages to Azure Queue Storage",
         "external": true,
@@ -870,7 +878,7 @@
     },
     {
         "name": "Microsoft Azure ServiceBus",
-        "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage",
+        "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage/blob/master/src/NLog.Extensions.AzureServiceBus/README.md",
         "package": "NLog.Extensions.AzureServiceBus",
         "description": "Batch writing of NLog messages to Azure Service Bus",
         "external": true,
