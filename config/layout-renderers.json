@@ -2350,9 +2350,17 @@
     {
         "name": "gelf",
         "page": "https://github.com/farzadpanahi/NLog.GelfLayout",
-        "description": "Converts log to GELF format",
+        "description": "Converts LogEvents into GELF format for sending to Graylog",
         "package": "NLog.GelfLayout",
         "external": true,
         "category": "Integrations"
+    },
+    {
+        "name": "activity",
+        "page": "https://github.com/NLog/NLog.DiagnosticSource",
+        "description": "Capture trace context from System.Diagnostics.Activity.Current",
+        "package": "NLog.DiagnosticSource",
+        "external": true,
+        "category": "Context information"
     }
 ]
