@@ -77,7 +77,7 @@ ScopeContext merges MDC and MDLC together, as it has been a long standing wish n
 ScopeContext also includes NDC and NDLC to better support [ILogger.BeginScope](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.logging.ilogger.beginscope)
 way of pushing context-properties and nested context-state in a single call.
 
-NLog Logger object also includes new methods `Logger.PushScopeProperty` and `Logger.PushScopeState` to make it easy to update the NLog ScopeContext.
+NLog Logger object also includes new methods `Logger.PushScopeProperty` and `Logger.PushScopeNested` to make it easy to update the NLog ScopeContext.
 
 ### NLog Layout stored as NLog Configuration Variables
 NLog Configuration Variables now has support for other types of Layouts than `SimpleLayout`. This means a NLog Configuration Variable
@@ -98,7 +98,7 @@ can hold a `JsonLayout`, and it can be referenced by multiple targets.
     <rules>
         <logger minLevel="Debug" writeTo="console,file" />
     </rules>
-</nlog>");
+</nlog>
 ```
 
 ### Fluent API for NLog LoggingConfiguration
@@ -321,28 +321,6 @@ NLog.Config nuget-package will no longer be released.
 * **Workaround:** Manually create the NLog.config file and add it to the application-project. Manually add NLog.Schema-package
   for intellisense in NLog.config.
 
-### NLog InternalLogger will not initialize itself from app.config or environment variables
-
-* **Impact:** NLog InternalLogger will no longer activate itself based on appsettings or environment variables.
-
-* **Reason:** NLog initialization becomes slower when having to check for environment variables or app.config.
-  When using NLog in the cloud then overhead from logging should be minimal.
-
-* **Workaround:** NLog InternalLogger can be enabled from NLog.config as always:
-  ```xml
-  <nlog internalLogToConsole="true" internalLogLevel="Debug">
-  </nlog>
-  ```
-  NLog InternalLogger can be enabled from code as always:
-  ```c#
-  NLog.Common.InternalLogger.LogToConsole = true;
-  NLog.Common.InternalLogger.LogLevel = LogLevel.Debug;
-  ```
-  NLog InternalLogger can be initialized from environment-variables from code:
-  ```c#
-  NLog.LogManager.Setup().SetupInternalLogger(log => log.SetupFromEnvironmentVariables());
-  ```
-
 ### Automatic loading of NLog.config now first check for exe.nlog
 NLog will now first check for `Application.exe.nlog` at startup, before using `NLog.config`
 
@@ -360,6 +338,17 @@ NLog Configuration Variables assigned at runtime will now automatically survive 
 * **Reason:** Better user experience when using `autoReload="true"` and updating NLog Configuration Variables at runtime.
 
 * **Workaround:** Explictly configure `KeepVariablesOnReload="false"` in NLog.config
+
+### Layout and LayoutRenderer are now threadsafe by default
+NLog now always expects Layout and LayoutRenderer to be threadsafe, and will no longer check the `[ThreadSafe]`-class-attribute.
+
+* **Impact:** NLog Targets will no longer attempt to protect against 3rd Party Layout-logic that might not be threadsafe.
+
+* **Reason:** The `[ThreadSafe]`-class-attribute was intended as a temporary workaround, to avoid breaking stuff with NLog ver. 4.5.3
+  Having to apply special class-attributes to get the expected performance is not very user-friendly.
+
+* **Workaround:** Explicitly configure the Target-option `LayoutWithLock="true"` if target is using 3rd Party Layout-logic
+  that is not threadsafe.
 
 ### Default Layout for NLog Targets has been updated
 Changed from this default value:
@@ -396,6 +385,28 @@ ${exception:format=tostring,data}
 
 * **Workaround:** Explicit specify `${exception:format=message}` to only get the `Exception.Message`.
 
+### NLog InternalLogger will not initialize itself from app.config or environment variables
+
+* **Impact:** NLog InternalLogger will no longer activate itself based on appsettings or environment variables.
+
+* **Reason:** NLog initialization becomes slower when having to check for environment variables or app.config.
+  When using NLog in the cloud then overhead from logging should be minimal.
+
+* **Workaround:** NLog InternalLogger can be enabled from NLog.config as always:
+  ```xml
+  <nlog internalLogToConsole="true" internalLogLevel="Debug">
+  </nlog>
+  ```
+  NLog InternalLogger can be enabled from code as always:
+  ```c#
+  NLog.Common.InternalLogger.LogToConsole = true;
+  NLog.Common.InternalLogger.LogLevel = LogLevel.Debug;
+  ```
+  NLog InternalLogger can be initialized from environment-variables from code:
+  ```c#
+  NLog.LogManager.Setup().SetupInternalLogger(log => log.SetupFromEnvironmentVariables());
+  ```
+
 ### Removed obsolete method Target.Write(AsyncLogEventInfo[]) and OptimizeBufferReuse is always true
 
 * **Impact:** NLog extensions targets that depends on batch writing LogEvents using the method `Write(AsyncLogEventInfo[] logEvent)`
@@ -430,7 +441,7 @@ context-state on an async stack, until actual logging requires scope-property lo
 
 * **Workaround:** MappedDiagnosticContext (MDC) and MappedDiagnosticLogicalContext (MDLC) still exists with all their API-methods,
   but they have been redirected to the new NLog ScopeContext. Many of the old API-methods introduces a huge overhead compared to using
-  the NLog ScopeContext directly. NLog Logger object now also provides the methods `Logger.PushScopeProperty` and `Logger.PushScopeState`
+  the NLog ScopeContext directly. NLog Logger object now also provides the methods `Logger.PushScopeProperty` and `Logger.PushScopeNested`
   for easier availability.
 
 ### MappedDiagnosticContext (MDC), MappedDiagnosticLogicalContext (MDLC), GlobalDiagnosticContext (GDC) now case-insensitive
@@ -482,6 +493,23 @@ When the encoding requires a BOM preamble for proper parsing, then FileTarget wi
 * **Reason:** Better user experience when using default configuration. Most file viewers will fail to handle these file encodings without correct BOM.
 
 * **Workaround:** Explicit assign `WriteBom` on the FileTarget.
+
+### NetworkTarget will Discard by default on overflow
+NetworkTarget behaves asynchronous and never had any throttle of network requests pending.
+With `KeepConnection = true` then network requests would be put in a pending-queue without
+any upper limit. With `KeepConnection=false` then network connections would be created
+without any upper limit.
+
+This could cause the application to experience out-of-memory issues, which is not wanted
+from the logging framework by default. For `KeepConnection = true` there has been
+introduced a new setting `OnQueueOverflow` with default value Discard. For `KeepConnection = false`
+the existing setting `OnConnectionOverflow` is now by default Discard.
+
+* **Impact:** LogEvents might be lost during high loads, where network cannot keep up.
+
+* **Reason:** Better user experience by not taking the application down during high loads.
+
+* **Workaround:** Explicit assign `OnQueueOverflow` and `OnConnectionOverflow` to use `Grow` or `Block`.
 
 ### JsonLayout MaxRecursionLimit default value changed to 1
 JsonLayout will by default perform reflection of property-values and output direct object-properties.
@@ -552,7 +580,7 @@ NLog LoggingProvider no longer follows the Microsoft Logger filtering configurat
 
 * **Reason:** It was confusing to have two seperate systems for controlling logging output.
 
-* **Workaround:** Explicit specify NLogProviderOptions RemoveLoggerFactoryFilter = true to enable old behavior.
+* **Workaround:** Explicit specify NLogProviderOptions `RemoveLoggerFactoryFilter = false` to enable old behavior.
 
 ### NLog.Extensions.Logging skips capture of EventId
 NLog LoggingProvider has changed from capturing the EventId-struct, to only capture EventId_Id-number and EventId_Name-identifier.
@@ -561,7 +589,7 @@ NLog LoggingProvider has changed from capturing the EventId-struct, to only capt
 
 * **Reason:** Avoid the overhead from capturing and boxing the EventId-struct.
 
-* **Workaround:** Explicit specify NLogProviderOptions CaptureEntireEventId = true to enable old behavior.
+* **Workaround:** Explicit specify NLogProviderOptions `CaptureEntireEventId = true` to enable old behavior.
 
 ## Many other improvements
 
