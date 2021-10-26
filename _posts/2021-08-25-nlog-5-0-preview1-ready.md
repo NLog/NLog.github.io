@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NLog 5.0 Preview-1 ready for release testing
+title: NLog 5.0 Preview ready for release testing
 ---
 
 NLog 5.0 is a major version bump, and includes several breaking changes and lots of improvements.
@@ -600,11 +600,11 @@ NLog LoggingProvider no longer follows the Microsoft Logger filtering configurat
 ### NLog.Extensions.Logging skips capture of EventId
 NLog LoggingProvider has changed from capturing the EventId-struct, to only capture EventId_Id-number and EventId_Name-identifier.
 
-* **Impact:** EventId-property is no longer available by default.
+* **Impact:** EventId-property is no longer captured by default.
 
 * **Reason:** Avoid the overhead from capturing and boxing the EventId-struct.
 
-* **Workaround:** Explicit specify NLogProviderOptions `CaptureEntireEventId = true` to enable old behavior.
+* **Workaround:** Explicit specify NLogProviderOptions `CaptureEventId = All` to enable old behavior.
 
 ## Many other improvements
 
