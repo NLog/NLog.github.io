@@ -448,20 +448,35 @@ context-state on an async stack, until actual logging requires scope-property lo
 NLog have changed the default dictionary comparer to StringComparer.OrdinalIgnoreCase.
 
 * **Impact:** Property lookup with key `RequestId` will now match item-key `requestid`. This also means it will also overwrite independent
-  of casing.
+  of casing. Notice that LogEventInfo.Properties is still case-sensitive, but `${event-properties}` will now ignore casing on property lookup by default.
 
 * **Reason:** Making it easier to lookup a single property without having to ensure all code-locations are using exact same casing.
 
 * **Workaround:** Instead just add a prefix (or suffix) to make it easier to distinguish the properties, when needing to store
   two different `requestid` values.
 
-### FileTarget ConcurrentWrites default value changed to false
-FileTarget will by default not attempt to use operating system global mutexes for synchronized file-access between multiple applications on the same machine.
+### FileTarget KeepFileOpen = true by default
+FileTarget will now keep file handles open by default, and will not release file handle after each write.
+
+* **Impact:** External applications that tries to acquire exclusive file-locks for the log-file will now fail,
+  instead of possibly blocking the application. Ex. `File.OpenText` or `File.ReadAllText` will now fail with
+  `System.IO.IOException: The process cannot access the file`.
+
+* **Reason:** Avoid unexpected behavior caused by external applications (ex. malware scanner) suddenly taking over file handles,
+  thus blocking the application from logging so log-events are lost. Keeping the file open also gives much
+  better performance, than to open/close the file handle for each write.
+
+* **Workaround:** Explicitly specify `KeepFileOpen=false` to enforce old behavior similar to log4net/log4j MinimalLock.
+  But if the problem comes from external application no longer being able to acquire exclusive file-lock, then it is better
+  to fix the external application to use `FileShare.ReadWrite`.
+
+### FileTarget ConcurrentWrites = false by default
+FileTarget will now by default not attempt to use operating system global mutexes for synchronized file-access between multiple applications on the same machine.
 
 * **Impact:** If multiple application instances on the same machine uses the same NLog FileTarget file-path with KeepFileOpen=true,
   then it will lead to failure if not having explictly configured ConcurrentWrites=true. This means IIS applications where multiple
   AppDomain application instances can be used, should check that ConcurrentWrites=true is explictly enabled. If using
-  KeepFileOpen=false (default value) then it will use the operating system file-locks for synchronization, and then ConcurrentWrites=true
+  KeepFileOpen=false, then it will use the operating system file-locks for synchronization, and then ConcurrentWrites=true
   is only needed if making use of static-filename-archive-logic.
 
 * **Reason:** NLog FileTarget was initially built for Desktop applications, Windows Services and IIS running on the Windows platform,
