@@ -2117,6 +2117,27 @@
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
+        "name": "aspnet-Request-RouteParameters",
+        "page": "AspNetRequest-RouteParameters-Renderer",
+        "package": [
+            "NLog.Web",
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Request route parameters.",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "keywords": [
+            "http"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
         "name": "aspnet-Request-UserAgent",
         "page": "AspNetRequest-UserAgent-Layout-Renderer",
         "package": [
