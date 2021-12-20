@@ -597,14 +597,15 @@ NLog LoggingProvider no longer follows the Microsoft Logger filtering configurat
 
 * **Workaround:** Explicit specify NLogProviderOptions `RemoveLoggerFactoryFilter = false` to enable old behavior.
 
-### NLog.Extensions.Logging skips capture of EventId
-NLog LoggingProvider has changed from capturing the EventId-struct, to only capture EventId_Id-number and EventId_Name-identifier.
+### NLog.Extensions.Logging skips capture of EventId struct
+NLog LoggingProvider has changed from capturing the EventId-struct + EventId_Id-number + EventId_Name to just
+capture EventId-number and EventName-identifier.
 
-* **Impact:** EventId-property is no longer captured by default.
+* **Impact:** EventId_Id and EventId_Name will not be included by default. Instead it will be EventId and EventName.
 
-* **Reason:** Avoid the overhead from capturing and boxing the EventId-struct.
+* **Reason:** Avoid the overhead from capturing and boxing the EventId-struct. And provide more human readable names.
 
-* **Workaround:** Explicit specify NLogProviderOptions `CaptureEventId = All` to enable old behavior.
+* **Workaround:** Adjust to the new property-names, or explicity specify NLogProviderOptions `CaptureEventId = Legacy` to enable old behavior.
 
 ## Many other improvements
 
