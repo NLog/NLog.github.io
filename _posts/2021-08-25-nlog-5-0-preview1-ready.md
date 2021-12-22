@@ -601,7 +601,7 @@ NLog LoggingProvider no longer follows the Microsoft Logger filtering configurat
 NLog LoggingProvider will no longer capture `EventId`-struct + `EventId_Id`-number + `EventId_Name`, instead it will 
 by default capture the properties `EventId` (integer) and `EventName` (string).
 
-* **Impact:** `EventId_Id` and `EventId_Name` will not be included by default. Instead it will be properties `EventId` and `EventName`.
+* **Impact:** `EventId_Id` and `EventId_Name` are no longer included by default. They have been replaced with the properties `EventId` and `EventName`.
 
 * **Reason:** Avoid the overhead from capturing and boxing the EventId-struct. And provide more human readable names.
 
