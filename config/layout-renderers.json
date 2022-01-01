@@ -1770,7 +1770,7 @@
             "NLog.Web",
             "NLog.Web.AspNetCore"
         ],
-        "description": "ASP.NET Lookup MVC 'action' route parameter value",
+        "description": "ASP.NET MVC Action Name from routing parameters",
         "platforms": [
             "net35",
             "net40",
@@ -1791,7 +1791,7 @@
             "NLog.Web",
             "NLog.Web.AspNetCore"
         ],
-        "description": "ASP.NET Lookup MVC 'controller' route parameter value",
+        "description": "ASP.NET MVC Controller Name from routing parameters",
         "platforms": [
             "net35",
             "net40",
