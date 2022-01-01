@@ -1765,12 +1765,12 @@
     },
     {
         "name": "aspnet-MVC-Action",
-        "page": "AspNet-MVC-Action-Layout-Renderer)",
+        "page": "AspNet-MVC-Action-Layout-Renderer",
         "package": [
             "NLog.Web",
             "NLog.Web.AspNetCore"
         ],
-        "description": "ASP.NET MVC action name",
+        "description": "ASP.NET Lookup MVC 'action' route parameter value",
         "platforms": [
             "net35",
             "net40",
@@ -1791,7 +1791,7 @@
             "NLog.Web",
             "NLog.Web.AspNetCore"
         ],
-        "description": "ASP.NET MVC controller name",
+        "description": "ASP.NET Lookup MVC 'controller' route parameter value",
         "platforms": [
             "net35",
             "net40",
@@ -2118,7 +2118,7 @@
     },
     {
         "name": "aspnet-Request-RouteParameters",
-        "page": "AspNetRequest-RouteParameters-Renderer",
+        "page": "AspNetRequest-RouteParameters-Layout-Renderer",
         "package": [
             "NLog.Web",
             "NLog.Web.AspNetCore"
