@@ -715,6 +715,14 @@
         "category": "Integrations (Cloud)"
     },
     {
+        "name": "Loki",
+        "page": "https://github.com/corentinaltepe/nlog.loki",
+        "package": "NLog.Targets.Loki",
+        "description": "Writes NLog messages to Grafana Loki https://github.com/grafana/loki",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
         "name": "Loupe",
         "page": "https://github.com/GibraltarSoftware/Gibraltar.Agent.NLog2",
         "package": "Gibraltar.Agent.NLog4",
