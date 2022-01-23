@@ -7,10 +7,7 @@
             "net35",
             "net40",
             "net45",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono"
+            "netstandard2.0"
         ],
         "category": "Context information"
     },
@@ -18,16 +15,6 @@
         "name": "db-null",
         "page": "db-null-layout-renderer",
         "description": "Render DbNull for the database",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "mono",
-            "wp8"
-        ],
         "keywords": [
             "database",
             "db",
@@ -42,19 +29,6 @@
         "name": "all-event-properties",
         "page": "All-Event-Properties-Layout-Renderer",
         "description": "Log all event context data.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "platform-notes": "Include Caller Information: .NET 4.5 only",
         "keywords": [
             "structured"
@@ -65,38 +39,12 @@
         "name": "appdomain",
         "page": "AppDomain-Layout-Renderer",
         "description": "Current app domain.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "category": "Processes, threads and assemblies"
     },
     {
         "name": "assembly-version",
         "page": "AssemblyVersion-Layout-Renderer",
         "description": "The version of the executable in the default application domain.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "attribute",
             "dll"
@@ -107,17 +55,6 @@
         "name": "basedir",
         "page": "Basedir-Layout-Renderer",
         "description": "The current application domain's base directory.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono"
-        ],
         "keywords": [
             "directory",
             "directories",
@@ -129,17 +66,6 @@
         "name": "dir-separator",
         "page": "Directory-separator",
         "description": "The the OS dependent directory separator.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono"
-        ],
         "keywords": [
             "directory",
             "directories",
@@ -151,19 +77,6 @@
         "name": "callsite",
         "page": "Callsite-Layout-Renderer",
         "description": "The call site (class name, method name and source information)",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "platform-notes": "Silverlight:  no file name or source path",
         "category": "Callsite and stacktraces"
     },
@@ -171,53 +84,18 @@
         "name": "callsite-linenumber",
         "page": "Callsite-line-number-layout-renderer",
         "description": "The call site source line number.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono"
-        ],
         "category": "Callsite and stacktraces"
     },
     {
         "name": "callsite-filename",
         "page": "Callsite-file-name-layout-renderer",
         "description": "The call site source file name.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono"
-        ],
         "category": "Callsite and stacktraces"
     },    
     {
         "name": "counter",
         "page": "Counter-Layout-Renderer",
         "description": "A counter value (increases on each layout rendering)",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "unique, number"
         ],
@@ -227,19 +105,6 @@
         "name": "currentdir",
         "page": "CurrentDir-Layout-Renderer",
         "description": "The current working directory of the application.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "folders, directories"
         ],
@@ -254,10 +119,7 @@
             "net40",
             "net45",
             "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono"
+            "netstandard2.0"
         ],
         "keywords": [
             "folders, directories"
@@ -268,19 +130,6 @@
         "name": "date",
         "page": "Date-Layout-Renderer",
         "description": "Current date and time.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "now, today",
             "iso8601"
@@ -288,30 +137,9 @@
         "category": "Date and time"
     },
     {
-        "name": "document-uri",
-        "page": "DocumentUri-Layout-Renderer",
-        "description": "URI of the HTML page which hosts the current Silverlight application.",
-        "platforms": [
-            "sl"
-        ],
-        "category": "Silverlight"
-    },
-    {
         "name": "environment",
         "page": "Environment-Layout-Renderer",
         "description": "The environment variable. (e.g PATH, OSVersion)",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8"
-        ],
         "keywords": [
             "Path",
             "TMP",
@@ -322,42 +150,9 @@
         "category": "Environment and config files"
     },
     {
-        "name": "event-context",
-        "page": "EventProperties-Layout-Renderer",
-        "description": "Log event properties data - replaced with ${event-properties}",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
-        "legacy": true,
-        "category": "Context information"
-    },
-    {
         "name": "event-properties",
         "page": "EventProperties-Layout-Renderer",
         "description": "Log event properties data - rename of ${event-context}",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "category": "Context information"
     },
     {
@@ -368,11 +163,7 @@
             "net35",
             "net40",
             "net45",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8"
+            "netstandard2.0"
         ],
         "keywords": [
             "USERPROFILE",
@@ -384,19 +175,6 @@
         "name": "exception",
         "page": "Exception-Layout-Renderer",
         "description": "Exception information provided through a call to one of the Logger methods",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "platform-notes": "Silverlight:  no method name",
         "category": ""
     },
@@ -404,37 +182,12 @@
         "name": "file-contents",
         "page": "FileContents-Layout-Renderer",
         "description": "Renders contents of the specified file.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "category": "Files and directories"
     },
     {
         "name": "gc",
         "page": "Gc-Layout-Renderer",
         "description": "The information about the garbage collector.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "wp8",
-            "sl"
-        ],
         "platform-notes": "Silverlight:  no file name or source path",
         "category": "Processes, threads and assemblies"
     },
@@ -442,94 +195,30 @@
         "name": "gdc",
         "page": "Gdc-Layout-Renderer",
         "description": "Global Diagnostic Context item. Dictionary structure to hold per-application-instance values.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "category": "Context information"
     },
     {
         "name": "guid",
         "page": "Guid-Layout-Renderer",
         "description": "Globally-unique identifier(GUID).",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "category": "Counters"
     },
     {
         "name": "hostname",
         "page": "HostName-Layout-Renderer",
         "description": "The host name of the computer that the process is running on.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8"
-        ],
         "category": "Processes, threads and assemblies"
     },
     {
         "name": "identity",
         "page": "Identity-Layout-Renderer",
         "description": "Thread identity information (name and authentication information).",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "category": "Identity"
     },
     {
         "name": "install-context",
         "page": "InstallContext-Layout-Renderer",
         "description": "Installation parameter (passed to InstallNLogConfig).",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "context"
         ],
@@ -539,19 +228,6 @@
         "name": "level",
         "page": "Level-Layout-Renderer",
         "description": "The log level (e.g. ERROR, DEBUG) or level ordinal (number)",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "trace",
             "info",
@@ -564,19 +240,6 @@
         "name": "literal",
         "page": "Literal-Layout-Renderer",
         "description": "A string literal. (text) - useful to escape brackets",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "category": ""
     },
     {
@@ -595,19 +258,6 @@
         "name": "log4jxmlevent",
         "page": "Log4JXMLEvent-Layout-Renderer",
         "description": "XML event description compatible with log4j, Chainsaw and NLogViewer.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "xml",
             "log4j"
@@ -618,19 +268,6 @@
         "name": "logger",
         "page": "Logger-Layout-Renderer",
         "description": "The logger name. GetLogger, GetCurrentClassLogger etc",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "name",
             "rule"
@@ -641,149 +278,48 @@
         "name": "longdate",
         "page": "LongDate-Layout-Renderer",
         "description": "The date and time in a long, sortable format `yyyy-MM-dd HH:mm:ss.ffff`.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "category": "Date and time"
     },
     {
         "name": "machinename",
         "page": "MachineName-Layout-Renderer",
         "description": "The machine name that the process is running on.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8"
-        ],
         "category": "Processes, threads and assemblies"
     },
     {
         "name": "mdc",
         "page": "Mdc-Layout-Renderer",
         "description": "Mapped Diagnostics Context - a thread-local structure.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "category": "Context information"
     },
     {
         "name": "mdlc",
         "page": "Mdlc-Layout-Renderer",
         "description": "Async Mapped Diagnostics Context - a thread-local structure for scoped context. Async version of the MDC. ",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8"
-        ],
         "category": "Context information"
     },
     {
         "name": "message",
         "page": "Message-Layout-Renderer",
         "description": "The (formatted) log message.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "category": ""
     },
     {
         "name": "ndc",
         "page": "Ndc-Layout-Renderer",
         "description": "Nested Diagnostics Context - a thread-local structure.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "category": "Context information"
     },
     {
         "name": "ndlc",
         "page": "Ndlc-Layout-Renderer",
         "description": "Async Nested Diagnostics Context  - thread-local structure.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8"
-        ],
         "category": "Context information"
     },
     {
         "name": "newline",
         "page": "Newline-Layout-Renderer",
         "description": "A newline literal.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "eof",
             "nl",
@@ -800,10 +336,7 @@
             "net40",
             "net45",
             "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono"
+            "netstandard2.0"
         ],
         "category": "Files and directories"
     },
@@ -814,8 +347,7 @@
         "platforms": [
             "net35",
             "net40",
-            "net45",
-            "mono"
+            "net45"
         ],
         "category": "Processes, threads and assemblies"
     },
@@ -828,10 +360,7 @@
             "net40",
             "net45",
             "netstandard1.5",
-            "netstandard2.0",
-            "android",
-            "mono",
-            "wp8"
+            "netstandard2.0"
         ],
         "category": "Processes, threads and assemblies"
     },
@@ -844,11 +373,7 @@
             "net40",
             "net45",
             "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8"
+            "netstandard2.0"
         ],
         "category": "Processes, threads and assemblies"
     },
@@ -861,48 +386,15 @@
             "net40",
             "net45",
             "netstandard1.5",
-            "netstandard2.0",
-            "android",
-            "mono",
-            "wp8"
+            "netstandard2.0"
         ],
         "category": "Processes, threads and assemblies"
     },
     {
         "name": "processtime",
         "page": "ProcessTime-Layout-Renderer",
-        "description": "The process time in format HH:mm:ss.mmm.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
+        "description": "The process lifetime in format HH:mm:ss.mmm.",
         "category": "Processes, threads and assemblies"
-    },
-    {
-        "name": "qpc",
-        "page": "QPC-Layout-Renderer",
-        "description": "High precision timer, based on the value returned from QueryPerformanceCounter.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "mono",
-            "wp8"
-        ],
-        "keywords": [
-            "time",
-            "sec"
-        ],
-        "category": "Date and time"
     },
     {
         "name": "registry",
@@ -911,8 +403,7 @@
         "platforms": [
             "net35",
             "net40",
-            "net45",
-            "mono"
+            "net45"
         ],
         "keywords": [
             "windows"
@@ -923,19 +414,6 @@
         "name": "sequenceid",
         "page": "SequenceId-layout-renderer",
         "description": "The log sequence id",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "counter"
         ],
@@ -945,32 +423,10 @@
         "name": "shortdate",
         "page": "ShortDate-Layout-Renderer",
         "description": "The short date in a sortable format yyyy-MM-dd.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "today"
         ],
         "category": "Date and time"
-    },
-    {
-        "name": "sl-appinfo",
-        "page": "Sl-AppInfor-Layout-Renderer",
-        "description": "Information about Silverlight application.",
-        "platforms": [
-            "sl"
-        ],
-        "category": "Silverlight"
     },
     {
         "name": "specialfolder",
@@ -980,12 +436,7 @@
             "net35",
             "net40",
             "net45",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
+            "netstandard2.0"
         ],
         "category": "Files and directories"
     },
@@ -993,19 +444,6 @@
         "name": "stacktrace",
         "page": "Stack-Trace-Layout-Renderer",
         "description": "Render the Stack trace",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "callstack"
         ],
@@ -1015,19 +453,6 @@
         "name": "tempdir",
         "page": "TempDir-Layout-Renderer",
         "description": "A temporary directory.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "directories"
         ],
@@ -1037,19 +462,6 @@
         "name": "threadid",
         "page": "ThreadId-Layout-Renderer",
         "description": "The identifier of the current thread.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "threading"
         ],
@@ -1064,12 +476,7 @@
             "net40",
             "net45",
             "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
+            "netstandard2.0"
         ],
         "keywords": [
             "threading"
@@ -1080,19 +487,6 @@
         "name": "ticks",
         "page": "Ticks-Layout-Renderer",
         "description": "The Ticks value of current date and time.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "now"
         ],
@@ -1102,19 +496,6 @@
         "name": "time",
         "page": "Time-Layout-Renderer",
         "description": "The time in a 24-hour, sortable format HH:mm:ss.mmm.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "now"
         ],
@@ -1124,19 +505,6 @@
         "name": "var",
         "page": "Var-Layout-Renderer",
         "description": "Render variable",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "variables",
             "constants",
@@ -1148,30 +516,14 @@
     {
         "name": "windows-identity",
         "page": "Windows-Identity-Layout-Renderer",
-        "description": "Thread Windows identity information (username)",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "ios",
-            "android",
-            "mono"
-        ],
-        "keywords": [
-            "username",
-            "domain"
-        ],
-        "platform-notes": "For .NET Standard: NLog.WindowsIdentity nuget package required",
-        "category": "Identity"
-    },
-    {
-        "name": "windows-identity",
-        "page": "Windows-Identity-Layout-Renderer",
         "package": [
             "Nlog.WindowsIdentity"
         ],
         "description": "Thread Windows identity information (username)",
         "platforms": [
+            "net35",
+            "net40",
+            "net45",  
             "netstandard1.5",
             "netstandard2.0"
         ],
@@ -1186,19 +538,6 @@
         "name": "cached",
         "page": "Cached-Layout-Renderer",
         "description": "Applies caching to another layout output.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "performance"
         ],
@@ -1209,21 +548,7 @@
         "name": "norawvalue",
         "page": "NoRawValue-Layout-Renderer",
         "description": "Prevents the output of another layout renderer to be treated as raw value",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
-            "performance",
             "dbtype",
             "parametertype",
             "string",
@@ -1238,19 +563,6 @@
         "name": "filesystem-normalize",
         "page": "Filesystem-Normalize-Layout-Renderer",
         "description": "Filters characters not allowed in the file names by replacing them with safe character.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "wrapper": true,
         "category": "Files and directories"
     },
@@ -1258,19 +570,6 @@
         "name": "object-path",
         "page": "ObjectPath-Layout-Renderer",
         "description": "Render a (nested) property of an object",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "reflection"
         ],
@@ -1281,19 +580,6 @@
         "name": "json-encode",
         "page": "Json-Encode-Layout-Renderer",
         "description": "Escapes output of another layout using JSON rules.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "string",
             "text"
@@ -1305,19 +591,6 @@
         "name": "lowercase",
         "page": "Lowercase-Layout-Renderer",
         "description": "Converts the result of another layout output to lower case.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "string",
             "text"
@@ -1329,19 +602,6 @@
         "name": "onexception",
         "page": "OnException-Layout-Renderer",
         "description": "Only outputs the inner layout when exception has been defined for log message.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "wrapper": true,
         "category": ""
     },
@@ -1349,19 +609,6 @@
         "name": "onhasproperties",
         "page": "OnHasProperties-Layout-Renderer",
         "description": "Only outputs the inner layout when event properties are included with the logevent.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "wrapper": true,
         "category": ""
     },
@@ -1369,19 +616,6 @@
         "name": "pad",
         "page": "Pad-Layout-Renderer",
         "description": "Applies padding to another layout output.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "string",
             "text"
@@ -1393,19 +627,6 @@
         "name": "replace",
         "page": "Replace-Layout-Renderer",
         "description": "Replaces a string in the output of another layout with another string. Optional with regex",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "string",
             "text",
@@ -1419,19 +640,6 @@
         "name": "replace-newlines",
         "page": "Replace-NewLines-Layout-Renderer",
         "description": "Replaces newline characters with another string.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "EOF",
             "nl"
@@ -1443,19 +651,6 @@
         "name": "rot13",
         "page": "Rot13-Layout-Renderer",
         "description": "Decodes text \"encrypted\"with ROT-13.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "encode"
         ],
@@ -1466,19 +661,6 @@
         "name": "trim-whitespace",
         "page": "Trim-Whitespace-Layout-Renderer",
         "description": "Trims the whitespace from the result of another layout renderer.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "string",
             "text"
@@ -1490,19 +672,6 @@
         "name": "uppercase",
         "page": "Uppercase-Layout-Renderer",
         "description": "Converts the result of another layout output to upper case.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "string",
             "text"
@@ -1514,19 +683,6 @@
         "name": "url-encode",
         "page": "Url-Encode-Layout-Renderer",
         "description": "Encodes the result of another layout output for use with URLs.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "url",
             "uri",
@@ -1540,19 +696,6 @@
         "name": "when",
         "page": "When-Layout-Renderer",
         "description": "Only outputs the inner layout when the specified condition has been met.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "condition",
             "conditional",
@@ -1567,19 +710,6 @@
         "name": "whenEmpty",
         "page": "WhenEmpty-Layout-Renderer",
         "description": "Outputs alternative layout when the inner layout produces empty result.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "condition",
             "conditional",
@@ -1594,19 +724,6 @@
         "name": "WrapLine",
         "page": "WrapLine-layout-renderer",
         "description": "Wraps the result of another layout output at specified line length.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "newline",
             "line break"
@@ -1618,19 +735,6 @@
         "name": "Left",
         "page": "Left-layout-renderer",
         "description": "Left part of a text",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "substring",
             "text"
@@ -1642,19 +746,6 @@
         "name": "Right",
         "page": "Right-layout-renderer",
         "description": "Right part of a text",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "substring",
             "text"
@@ -1666,19 +757,6 @@
         "name": "Substring",
         "page": "Substring-layout-renderer",
         "description": "Substring of a text",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "left",
             "text",
@@ -1692,19 +770,6 @@
         "name": "xml-encode",
         "page": "Xml-Encode-Layout-Renderer",
         "description": "Converts the result of another layout output to be XML-compliant.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "encoding"
         ],
@@ -1719,15 +784,7 @@
         "platforms": [
             "net35",
             "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
+            "net45"
         ],
         "keywords": [
             "config",
@@ -1748,9 +805,9 @@
         ],
         "description": "Value from the appsettings.json or other configuration in ASP.NET Core & .NET Core",
         "platforms": [
+            "net461",
             "netstandard1.3",
             "netstandard1.5",
-            "netstandard1.6",
             "netstandard2.0"
         ],
         "keywords": [
@@ -1773,7 +830,6 @@
         "description": "ASP.NET MVC Action Name from routing parameters",
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard1.5",
             "netstandard2.0"

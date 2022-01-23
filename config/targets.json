@@ -3,19 +3,6 @@
         "name": "Chainsaw",
         "page": "Chainsaw-target",
         "description": "Sends log messages to the remote instance of Chainsaw application from log4j.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ],
         "keywords": [
             "tool",
             "gui",
@@ -32,10 +19,7 @@
             "net40",
             "net45",
             "netstandard1.5",
-            "netstandard2.0",
-            "mono",
-            "wp8",
-            "sl"
+            "netstandard2.0"
         ],
         "keywords": [
             "cmd"
@@ -64,16 +48,6 @@
             "Entity Framework",
             "db"
         ],
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "mono",
-            "wp8"
-        ],
         "category": "Databases"
     },
     {
@@ -99,8 +73,7 @@
         "platforms": [
             "net35",
             "net40",
-            "net45",
-            "mono"
+            "net45"
         ],
         "category": "Integrations"
     },
@@ -200,11 +173,7 @@
             "net35",
             "net40",
             "net45",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8"
+            "netstandard2.0"
         ],
         "category": ""
     },
@@ -280,11 +249,7 @@
         "platforms": [
             "net35",
             "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "mono"
+            "net45"
         ],
         "category": "Integrations"
     },
@@ -299,8 +264,7 @@
         "platforms": [
             "net35",
             "net40",
-            "net45",
-            "mono"
+            "net45"
         ],
         "category": "Integrations"
     },
@@ -313,11 +277,7 @@
             "net40",
             "net45",
             "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8"
+            "netstandard2.0"
         ],
         "category": "Integrations"
     },
@@ -392,8 +352,7 @@
         "platforms": [
             "net35",
             "net40",
-            "net45",
-            "mono"
+            "net45"
         ],
         "category": "Security"
     },
