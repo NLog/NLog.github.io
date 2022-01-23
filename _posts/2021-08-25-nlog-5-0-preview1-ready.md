@@ -110,7 +110,7 @@ NLog has extended its `NLog.LogManager.Setup()` to make it easy to setup NLog Ta
 ```c#
 var logger = LogManager.Setup().LoadConfiguration(c =>
 {
-   c.ForLogger("*").FilterMinLevel(LogLevel.Info).WriteTo(new ConsoleTarget("logconsole")).WithAsync();
+   c.ForLogger("*").FilterMinLevel(NLog.LogLevel.Info).WriteTo(new ConsoleTarget("logconsole")).WithAsync();
    c.ForLogger().WriteTo(new FileTarget("logfile") { FileName = "file.txt" }).WithAsync();
 }).GetCurrentClassLogger();
 ```
@@ -121,13 +121,16 @@ This is also possible with the new fluent API:
 ```c#
 var logger = LogManager.Setup().LoadConfiguration(c =>
 {
-   var consoleTarget = c.ForTarget("console").WriteTo(new ConsoleTarget()).WithAsync();
-   var fileTarget = c.ForTarget("logfile").WriteTo(new FileTarget() { FileName = "file.txt" }).WithAsync();
+    var consoleTarget = c.ForTarget("console").WriteTo(new ConsoleTarget()).WithAsync();
+    var fileTarget = c.ForTarget("logfile").WriteTo(new FileTarget() { FileName = "file.txt" }).WithAsync();
 
-   c.ForLogger("Microsoft.Hosting.Lifetime").FilterMinLevel(LogLevel.Info).WriteTo(consoleTarget);
-   c.ForLogger("Microsoft*").WriteToNil(LogLevel.Warn); // Suppress output when lower than LogLevel.Warn
-   c.ForLogger("*").FilterMinLevel(LogLevel.Warn).WriteTo(consoleTarget);
-   c.ForLogger().WriteTo(fileTarget);
+    // Suppress noise from Microsoft-classes, except from Microsoft.Hosting.Lifetime for startup detection
+    c.ForLogger("Microsoft.Hosting.Lifetime*").FilterMinLevel(NLog.LogLevel.Info).WriteTo(consoleTarget);
+    c.ForLogger("System*").WriteToNil(NLog.LogLevel.Warn);
+    c.ForLogger("Microsoft*").WriteToNil(NLog.LogLevel.Warn);
+
+    c.ForLogger().FilterMinLevel(NLog.LogLevel.Info).WriteTo(consoleTarget);
+    c.ForLogger().FilterMinLevel(NLog.LogLevel.Debug).WriteTo(fileTarget);
 }).GetCurrentClassLogger();
 ```
 
@@ -593,9 +596,23 @@ NLog LoggingProvider no longer follows the Microsoft Logger filtering configurat
 
 * **Impact:** Microsoft Logger filtering in appsettings.json will no longer have any effect.
 
-* **Reason:** It was confusing to have two seperate systems for controlling logging output.
+* **Reason:** It is confusing to have two seperate systems for filtering logging output. New users might
+think NLog is not working correctly after having configured NLog LoggingRules, because Microsoft LoggerFactory filters are interfering.
 
-* **Workaround:** Explicit specify NLogProviderOptions `RemoveLoggerFactoryFilter = false` to enable old behavior.
+* **Workaround:** Explicit specify NLogProviderOptions `RemoveLoggerFactoryFilter = false` to enable old behavior,
+where Microsoft LoggerFactory filters specified in appsetting.json also applies to NLog.
+
+Notice NLog LoggingRules now have the `finalMinLevel`-option that allows one to replicate behavior of Microsoft Logging Filters:
+```xml
+<rules>
+    <logger name="System*" finalMinLevel="Warn" />
+    <logger name="Microsoft*" finalMinLevel="Warn" />
+    <logger name="Microsoft.Hosting.Lifetime*" finalMinLevel="Info" />
+    <logger name="*" minLevel="Debug" writeTo="console" />
+</rules>
+```
+
+Notice it is also possible to have [NLog Configuration in appsetting.json](https://github.com/NLog/NLog.Extensions.Logging/wiki/NLog-configuration-with-appsettings.json).
 
 ### NLog.Extensions.Logging changes capture of EventId
 NLog LoggingProvider will no longer capture `EventId`-struct + `EventId_Id`-number + `EventId_Name`, instead it will 
