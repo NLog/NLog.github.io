@@ -343,6 +343,7 @@
     },
     {
         "name": "event-properties",
+        "aliases": ["event-property"],
         "page": "EventProperties-Layout-Renderer",
         "description": "Log event properties data - rename of ${event-context}",
         "platforms": [
@@ -616,6 +617,7 @@
     },
     {
         "name": "logger",
+        "aliases": ["loggername"],
         "page": "Logger-Layout-Renderer",
         "description": "The logger name. GetLogger, GetCurrentClassLogger etc",
         "platforms": [
