@@ -112,7 +112,7 @@ title: Config
                             <span v-for="alias in item.aliasList()" :title="'Alias: '+ alias">
                                 <span v-text="alias" class="label alias-label"></span>
                             </span>
-                            <a v-for="package in item.packageList()" target="_blank" :href="'https://www.nuget.org/packages/' + package" :title="'Needs package '+ package">
+                            <a v-for="package in item.packageList()" target="_blank" :href="'https://www.nuget.org/packages/' + package" :title="package.packageListTooltip()">
                                 <span class="label label-default package-label">package <span v-text="package"></span></span>
                             </a>
                             <span v-if="item.external" class="label label-info">External</span>
