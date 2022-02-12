@@ -3,7 +3,7 @@ layout: default
 header: Configuration options
 title: Config
 ---
-<link type="text/css" rel="stylesheet" href="../css/config.css?{{ site.time }}" />
+<link type="text/css" rel="stylesheet" href="../css/config.css?c={{ site.time }}" />
 <div id="app">
     <div>
         <p>Config options for NLog's configuration <a class="read-more" @click.prevent="toggleShowInfo"><span v-if="!showInfo">read more...</span><span v-else>(read less)</span></a> </p>
@@ -130,6 +130,6 @@ title: Config
 </script>
 
 
-<script src="item-type.js?{{ site.time }}"></script>
-<script src="itemList.js?{{ site.time }}"></script>
-<script src="searchPage.js?{{ site.time }}"></script>
+<script src="item-type.js?c={{ site.time }}"></script>
+<script src="itemList.js?c={{ site.time }}"></script>
+<script src="searchPage.js?c={{ site.time }}"></script>
