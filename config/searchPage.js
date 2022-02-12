@@ -1,8 +1,5 @@
-
-
-
-var url = 'https://nlog-project.org/config/'
-
+// var url = 'https://nlog-project.org/config/'
+var url = 'https://304notmodified.github.io/config/'
 
 function getQueryStringValue(key, defaultValue) {
     var match = RegExp('[?&]' + key + '=([^&]*)').exec(window.location.search);
