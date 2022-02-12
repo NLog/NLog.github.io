@@ -12,6 +12,16 @@ Item.prototype.packageList = function () {
     return [this.package];
 }
 
+Item.prototype.aliasList = function () {
+    if (!this.aliases) {
+        return [];
+    }
+    if (_.isArray(this.aliases)) {
+        return this.aliases;
+    }
+    return [this.aliases];
+}
+
 Item.prototype.href = function () {
 
     if (!this.page) {

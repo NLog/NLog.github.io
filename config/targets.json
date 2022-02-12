@@ -53,6 +53,7 @@
     },
     {
         "name": "Database",
+        "aliases": ["DB", "SMTP", "SMTP-client"],
         "page": "Database-target",
         "description": "Writes log messages to the database using an ADO.NET provider.",
         "keywords": [

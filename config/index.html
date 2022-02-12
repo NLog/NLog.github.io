@@ -109,9 +109,11 @@ title: Config
                             <span class="fa fa-thumbs-o-down" v-if="item.legacy" title="Legacy"></span>
                             <span v-text="item.description"></span>
 
-
+                            <span v-for="alias in item.aliasList()" :title="'Alias '+ alias">
+                                <span v-text="alias" class="label alias-label"></span>
+                            </span>
                             <a v-for="package in item.packageList()" target="_blank" :href="'https://www.nuget.org/packages/' + package" :title="'Needs package '+ package">
-                                <span v-text="package" class="label label-default package-label"></span>
+                                <span class="label label-default package-label">package <span v-text="package"></span></span>
                             </a>
                             <span v-if="item.external" class="label label-info">External</span>
                             <span v-if="item.githubRepoUrl"><a :href="item.githubRepoUrl" target="_blank"><span class="fa fa-github"></span></a></span>

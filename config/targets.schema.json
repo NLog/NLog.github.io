@@ -103,6 +103,17 @@
                     "Integrations (Cloud)"
                 ]
             },
+            "aliases": {
+                "$id": "#/items/properties/aliases",
+                "type": "array",
+                "title": "aliases",
+                "items": {
+                    "$id": "#/items/properties/aliases/items",
+                    "type": "string",
+                    "title": "Items",
+                    "default": ""
+                }
+            },
             "wrapper": {
                 "type": [
                     "boolean",
