@@ -12,6 +12,21 @@ Item.prototype.packageList = function () {
     return [this.package];
 }
 
+Item.prototype.packageListTooltip = function () {
+    if (!this.packageList) {
+        return null;
+    }
+
+    if(this.packageList.length === 1){
+        return 'Needs package: ' + this.packageList[0];
+    }
+
+    if(this.packageList.length >1){
+        return 'Needs one of the packages: ' + this.packageList.toString();
+    }
+}
+
+
 Item.prototype.aliasList = function () {
     if (!this.aliases) {
         return [];
