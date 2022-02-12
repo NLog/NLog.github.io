@@ -6,10 +6,11 @@ Item.prototype.packageList = function () {
     if (!this.package) {
         return [];
     }
-    if (_.isArray(this.package)) {
-        return this.package;
+    var packages = this.package;
+    if (!_.isArray(packages)) {
+        packages = [packages];
     }
-    return [this.package];
+    return packages;
 }
 
 Item.prototype.packageListTooltip = function () {
@@ -31,10 +32,15 @@ Item.prototype.aliasList = function () {
     if (!this.aliases) {
         return [];
     }
-    if (_.isArray(this.aliases)) {
-        return this.aliases;
+    var aliases = this.aliases;
+    if (!_.isArray(aliases)) {
+        aliases = [aliases];
     }
-    return [this.aliases];
+    
+    if (this.isLayoutRenderer) {
+        return _.map(aliases, toLayoutName);
+    }
+    return aliases;
 }
 
 Item.prototype.href = function () {
