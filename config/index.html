@@ -115,7 +115,7 @@ title: Config
                             <a v-for="package in item.packageList()" target="_blank" :href="'https://www.nuget.org/packages/' + package" :title="item.packageListTooltip()">
                                 <span class="label label-default package-label">package <span v-text="package"></span></span>
                             </a>
-                            <span v-if="item.external" class="label label-info">External</span>
+                            <span v-if="item.external" class="label label-info" title="External package, no support from NLog">External</span>
                             <span v-if="item.githubRepoUrl"><a :href="item.githubRepoUrl" target="_blank"><span class="fa fa-github"></span></a></span>
                         </li>
                     </ul>
