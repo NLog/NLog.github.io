@@ -79,20 +79,6 @@ Vue.component('item-list', {
 
     },
     methods: {
-
-        /**
-         * @returns {[]}
-         */
-        getPackageList: function (item) {
-            if (!item.package) {
-                return [];
-            }
-            if (_.isArray(item.package)) {
-                return item.package;
-            }
-            return [item.package];
-        },
-
         countGroup: function (obj) {
             var count = 0;
             for (var k in obj) {
