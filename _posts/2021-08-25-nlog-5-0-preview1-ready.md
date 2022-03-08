@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NLog 5.0 Preview ready for release testing
+title: NLog 5.0 - List of major changes
 ---
 
 NLog 5.0 is a major version bump, and includes several breaking changes and lots of improvements.
@@ -121,16 +121,16 @@ This is also possible with the new fluent API:
 ```c#
 var logger = LogManager.Setup().LoadConfiguration(c =>
 {
-    var consoleTarget = c.ForTarget("console").WriteTo(new ConsoleTarget()).WithAsync();
-    var fileTarget = c.ForTarget("logfile").WriteTo(new FileTarget() { FileName = "file.txt" }).WithAsync();
+   var consoleTarget = c.ForTarget("console").WriteTo(new ConsoleTarget()).WithAsync();
+   var fileTarget = c.ForTarget("logfile").WriteTo(new FileTarget() { FileName = "file.txt" }).WithAsync();
 
-    // Suppress noise from Microsoft-classes, except from Microsoft.Hosting.Lifetime for startup detection
-    c.ForLogger("Microsoft.Hosting.Lifetime*").FilterMinLevel(NLog.LogLevel.Info).WriteTo(consoleTarget);
-    c.ForLogger("System*").WriteToNil(NLog.LogLevel.Warn);
-    c.ForLogger("Microsoft*").WriteToNil(NLog.LogLevel.Warn);
+   // Suppress noise from Microsoft-classes, except from Microsoft.Hosting.Lifetime for startup detection
+   c.ForLogger("Microsoft.Hosting.Lifetime*").FilterMinLevel(NLog.LogLevel.Info).WriteTo(consoleTarget);
+   c.ForLogger("System*").WriteToNil(NLog.LogLevel.Warn);
+   c.ForLogger("Microsoft*").WriteToNil(NLog.LogLevel.Warn);
 
-    c.ForLogger().FilterMinLevel(NLog.LogLevel.Info).WriteTo(consoleTarget);
-    c.ForLogger().FilterMinLevel(NLog.LogLevel.Debug).WriteTo(fileTarget);
+   c.ForLogger().FilterMinLevel(NLog.LogLevel.Info).WriteTo(consoleTarget);
+   c.ForLogger().FilterMinLevel(NLog.LogLevel.Debug).WriteTo(fileTarget);
 }).GetCurrentClassLogger();
 ```
 
@@ -227,6 +227,11 @@ platform restrictions and are now obsolete.
 * **Workaround:** Because all features in the .NET Standard build are not supported on all platforms, then one should ensure not to
   explicitly enable FileTarget ConcurrentWrites-option as it will enable use of operating system global mutex,
   which is not available on Xamarin Mobile platforms and will make the application fail.
+
+  Instead of using assets-folder on Android, then change to Embedded Resource, and load NLog-config from application-assembly (Works for both iOS and Android):
+  ```csharp
+  NLog.LogManager.Setup().LoadConfigurationFromAssemblyResource(typeof(App).GetTypeInfo().Assembly);
+  ```
 
 ### .NET Framework v4.0 platform removed and replaced with .NET Framework v4.6
 NLog have removed direct support for .NET Framework v4.0, instead it will fallback to .NET Framework v3.5.
