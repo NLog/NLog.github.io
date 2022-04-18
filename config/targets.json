@@ -619,6 +619,14 @@
         "category": "Integrations (Cloud)"
     },
     {
+        "name": "blipboard.io",
+        "page": "https://github.com/bliptech-blipboard/nlog",
+        "description": "Sends logs to the Blipboard",
+        "package": "Bliptech.Blipboard.NLog",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },    
+    {
         "name": "ExceptionLess",
         "page": "https://github.com/exceptionless/Exceptionless.Net",
         "description": "Writes NLog messages to https://www.exceptionless.com",
