@@ -2,109 +2,31 @@
     {
         "name": "CSV",
         "page": "CsvLayout",
-        "description": "Renders events to CSV-format.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ]
+        "description": "Renders events to CSV-format"
     },
     {
         "name": "JSON",
         "page": "JsonLayout",
-        "description": "Render events to JSON",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ]
+        "description": "Render events to JSON-format"
     },
     {
         "name": "XML",
         "page": "XmlLayout",
-        "description": "Render events to XML",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ]
+        "description": "Render events to XML-format"
     },
     {
         "name": "Log4JXml",
         "page": "Log4JXmlEventLayout",
-        "description": "Render events to Log4j-compatible XML",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ]
+        "description": "Render events to Log4j-compatible XML-format"
     },
     {
         "name": "Compound",
         "page": "CompoundLayout",
-        "description": "Combine layouts",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ]
+        "description": "Combine layouts"
     },
     {
         "name": "Simple (plain text)",
         "page": "TextLayout",
-        "description": "Write events as plain text. The default layout when no Layout type is specified.",
-        "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.3",
-            "netstandard1.5",
-            "netstandard2.0",
-            "ios",
-            "android",
-            "mono",
-            "wp8",
-            "sl"
-        ]
+        "description": "Write events as plain text. The default layout when no Layout type is specified."
     }
 ]
