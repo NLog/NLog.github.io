@@ -3,7 +3,7 @@ layout: default
 header: Configuration options
 title: Config
 ---
-<link type="text/css" rel="stylesheet" href="../css/config.css?{{ site.time }}" />
+<link type="text/css" rel="stylesheet" href="../css/config.css?c={{ site.time }}" />
 <div id="app">
     <div>
         <p>Config options for NLog's configuration <a class="read-more" @click.prevent="toggleShowInfo"><span v-if="!showInfo">read more...</span><span v-else>(read less)</span></a> </p>
@@ -109,11 +109,13 @@ title: Config
                             <span class="fa fa-thumbs-o-down" v-if="item.legacy" title="Legacy"></span>
                             <span v-text="item.description"></span>
 
-
-                            <a v-for="package in item.packageList()" target="_blank" :href="'https://www.nuget.org/packages/' + package" :title="'Needs package '+ package">
-                                <span v-text="package" class="label label-default package-label"></span>
+                            <span v-for="alias in item.aliasList()" :title="'Alias: '+ alias + ' (NLog 5 only)'" >
+                                <span v-text="alias" class="label alias-label"></span>
+                            </span>
+                            <a v-for="package in item.packageList()" target="_blank" :href="'https://www.nuget.org/packages/' + package" :title="item.packageListTooltip()">
+                                <span class="label label-default package-label">package <span v-text="package"></span></span>
                             </a>
-                            <span v-if="item.external" class="label label-info">External</span>
+                            <span v-if="item.external" class="label label-info" title="External package, no support from NLog">External</span>
                             <span v-if="item.githubRepoUrl"><a :href="item.githubRepoUrl" target="_blank"><span class="fa fa-github"></span></a></span>
                         </li>
                     </ul>
@@ -128,6 +130,6 @@ title: Config
 </script>
 
 
-<script src="item-type.js"></script>
-<script src="itemList.js"></script>
-<script src="searchPage.js?c=1"></script>
+<script src="item-type.js?c={{ site.time }}"></script>
+<script src="itemList.js?c={{ site.time }}"></script>
+<script src="searchPage.js?c={{ site.time }}"></script>

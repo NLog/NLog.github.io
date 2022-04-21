@@ -162,6 +162,7 @@
     },
     {
         "name": "Mail",
+        "aliases": ["E-mail", "SMTP", "SMTP-client"],
         "page": "Mail-target",
         "description": "Sends log messages by email using SMTP protocol or pickup folder.",
         "keywords": [
@@ -270,6 +271,7 @@
     },
     {
         "name": "Trace",
+        "aliases": ["TraceSystem"],
         "page": "Trace-target",
         "description": "Sends log messages through System.Diagnostics.Trace.",
         "platforms": [

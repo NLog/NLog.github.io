@@ -79,20 +79,6 @@ Vue.component('item-list', {
 
     },
     methods: {
-
-        /**
-         * @returns {[]}
-         */
-        getPackageList: function (item) {
-            if (!item.package) {
-                return [];
-            }
-            if (_.isArray(item.package)) {
-                return item.package;
-            }
-            return [item.package];
-        },
-
         countGroup: function (obj) {
             var count = 0;
             for (var k in obj) {
@@ -239,6 +225,16 @@ Vue.component('item-list', {
                         }
                     }
 
+                    if (!isMatch && item.aliases) {
+                        for (var i = 0; i < item.aliases.length; i++) {
+                            var alias = item.aliases[i].toLowerCase();
+                            // console.log("search alias", alias)
+                            isMatch = self.includesAll(alias, searchValues)
+                            if (isMatch) {
+                                break;
+                            }
+                        }
+                    }
 
                     return isMatch;
                 })
