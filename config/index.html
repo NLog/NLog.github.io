@@ -109,7 +109,7 @@ title: Config
                             <span class="fa fa-thumbs-o-down" v-if="item.legacy" title="Legacy"></span>
                             <span v-text="item.description"></span>
 
-                            <span v-for="alias in item.aliasList()" :title="'Alias: '+ alias">
+                            <span v-for="alias in item.aliasList()" :title="'Alias: '+ alias + ' (NLog 5 only)" >
                                 <span v-text="alias" class="label alias-label"></span>
                             </span>
                             <a v-for="package in item.packageList()" target="_blank" :href="'https://www.nuget.org/packages/' + package" :title="item.packageListTooltip()">
