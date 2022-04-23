@@ -1457,7 +1457,7 @@
     {
         "name": "activity",
         "page": "https://github.com/NLog/NLog.DiagnosticSource",
-        "description": "Capture trace context from System.Diagnostics.Activity.Current",
+        "description": "Capture span context details like request TraceId from System.Diagnostics.Activity.Current",
         "package": "NLog.DiagnosticSource",
         "external": true,
         "category": "Context information"
