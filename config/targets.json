@@ -53,6 +53,13 @@
         "category": "Databases"
     },
     {
+        "name": "DebugSystem",
+        "page": "DebugSystem-target",
+        "description": "Sends log messages through System.Diagnostics.Debug.",
+        "platform-notes": "For NLog 4.7 (and older) then use OutputDebugString-target instead",
+        "category": "Integrations"
+    },
+    {
         "name": "Debug",
         "page": "Debug-target",
         "description": "Mock target - useful for testing.",
@@ -61,7 +68,7 @@
     {
         "name": "Debugger",
         "page": "Debugger-target",
-        "description": "Writes log messages to the attached managed debugger.",
+        "description": "Writes log messages to the attached debugger through System.Diagnostics.Debugger.Log",
         "category": "Integrations"
     },
     {
