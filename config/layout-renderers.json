@@ -167,13 +167,19 @@
             "USERPROFILE",
             "usr"
         ],
-        "category": "Environment and config files"
+        "category": "Identity"
     },
     {
         "name": "exception",
         "page": "Exception-Layout-Renderer",
         "description": "Exception information provided through a call to one of the Logger methods",
-        "category": ""
+        "category": "Context Information"
+    },
+    {
+        "name": "exceptiondata",
+        "page": "ExceptionData-Layout-Renderer",
+        "description": "Lookup item in Exception.Data-Dictionary from Exception provided together with the LogEven",
+        "category": "Context Information"
     },
     {
         "name": "file-contents",
@@ -268,7 +274,7 @@
             "name",
             "rule"
         ],
-        "category": ""
+        "category": "Context Information"
     },
     {
         "name": "longdate",
@@ -625,14 +631,14 @@
         "page": "OnException-Layout-Renderer",
         "description": "Only outputs the inner layout when exception has been defined for log message.",
         "wrapper": true,
-        "category": ""
+        "category": "Context Information"
     },
     {
         "name": "onhasproperties",
         "page": "OnHasProperties-Layout-Renderer",
         "description": "Only outputs the inner layout when event properties are included with the logevent.",
         "wrapper": true,
-        "category": ""
+        "category": "Context Information"
     },
     {
         "name": "pad",
