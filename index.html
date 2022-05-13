@@ -14,42 +14,64 @@ layout: default
       
         <p>
             NLog has support for <a href="https://github.com/NLog/NLog/wiki/How-to-use-structured-logging">structured</a> 
-            and traditional logging. 
+            and traditional logging.
         </p>
-          <p>
+
+        <p>
             The focus for NLog: high performance, easy-to-use, easy to extend and flexible to configure. 
         </p>
     </section>
     <section>
         <h1 class="page-header" id="features">Features</h1>
-        <div class="row">
-            <div class="col-sm-3">
-                <h4>Easy to configure</h4>
-                <p>
-                    NLog is very easy to configure, both through <a href="https://github.com/nlog/NLog/wiki/Configuration-file">configuration file</a>
-                    and <a href="https://github.com/nlog/NLog/wiki/Configuration-API">programmatically</a>. 
-                    Even without restarting the application, the configuration can be changed.
-                </p>
+        <div id="features-list">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4>Easy to configure</h4>
+                    <p>
+                        NLog is very easy to configure, both through <a href="https://github.com/nlog/NLog/wiki/Configuration-file">configuration file</a>
+                        and <a href="https://github.com/nlog/NLog/wiki/Configuration-API">programmatically</a>.
+                        Even without restarting the application, the configuration can be changed.
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <h4>Templatable</h4>
+                    <p>
+                        Every log message can be templated with various <a href="{{ site.baseurl }}/config/?tab=layout-renderers">layout renders</a>
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <h4>Extensible</h4>
+                    <p>
+                        NLog already includes several targets and pre-defined layouts, but you can also extend
+                        with your own <a href="https://github.com/nlog/nlog/wiki/How-to-write-a-Target"> custom targets</a> or pass <a href="https://github.com/nlog/nlog/wiki/Event-Context-Layout-Renderer"> custom values</a>
+                    </p>
+                </div>
             </div>
-            <div class="col-sm-3">
-                <h4>Templatable</h4>
-                <p>
-                 Every log message can be templated with various <a href="{{ site.baseurl }}/config/?tab=layout-renderers">layout renders</a>
-                </p>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4>Structured logging</h4>
+                    <p>
+                        Full support for <a href="https://github.com/NLog/NLog/wiki/How-to-use-structured-logging"> structured logging</a> and
+                        handles both message-templates and custom logevent properties.
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <h4>Microsoft Extension Logging</h4>
+                    <p>
+                        NLog can be fully integrated with Microsoft Extensible Logging and ASP.NET Core, without it needing to replace the standard Microsoft LoggerFactory.
+                        NLog automatically captures <a href="NLog properties with Microsoft Extension Logging">LogEvent properties</a> and can use them in structured logging target output.
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <h4>appsettings.json</h4>
+                    <p>
+                        NLog configuration can be loaded from <a href="https://github.com/NLog/NLog.Extensions.Logging/wiki/NLog-configuration-with-appsettings.json">appsettings.json</a>
+                        as an alternative to the <a href="https://github.com/NLog/NLog/wiki/Tutorial">NLog.config</a> XML file. It is also possible
+                        to configure NLog targets using values from appsettings.json with <a href="https://github.com/NLog/NLog/wiki/Tutorial">${configsetting}</a>
+                    </p>
+                </div>
+
             </div>
-            <div class="col-sm-3">
-                <h4>Extensible</h4>
-                <p>
-                    Even though NLog has targets and pre-defined layouts, 
-                    you can write <a href="https://github.com/nlog/nlog/wiki/How-to-write-a-Target"> custom targets</a> or pass <a href="https://github.com/nlog/nlog/wiki/Event-Context-Layout-Renderer"> custom values</a>
-                </p>
-            </div>
-               <div class="col-sm-3">
-                <h4>Structured logging</h4>
-                <p>
-                    Fully support for <a href="https://github.com/NLog/NLog/wiki/How-to-use-structured-logging"> structured logging</a></p>
-            </div>
-        
         </div>
     </section>
     <section>
@@ -67,8 +89,7 @@ layout: default
                         Files
                     </h4>
                     Write logs to any number of files, 
-                    with <a href="https://github.com/nlog/NLog/wiki/File-target">automatic file naming and archival</a>. 
-                    NLog won't lock your files by default.
+                    with <a href="https://github.com/nlog/NLog/wiki/File-target">automatic file naming and archival</a>.
                 </div>
                 <div class="col-sm-4">
                     <h4>
@@ -98,9 +119,10 @@ layout: default
                     You can send <a href="https://github.com/nlog/NLog/wiki/Mail-target">emails</a> whenever application errors occur
                 </div>
                 <div class="col-sm-4">
-                    <h4> <i class="fa fa-file-o fa-fw"></i> ASP.NET core Logging</h4>
-                    Write log messages to the ASP.NET Core Logging
-                 
+                    <h4> <i class="fa fa-file-o fa-fw"></i>
+                        Debugger output
+                    </h4>
+                    Write to the <a href="https://github.com/NLog/NLog/wiki/Debugger-target">Debugger</a> Output Window, when debugging the application.
                 </div>
             </div>
         </div>
@@ -130,7 +152,7 @@ layout: default
                 <li>UWP (.NET Standard)</li>
                 <li>Mono 4</li>
                 <li>ASP.NET Core (NLog.Web.AspNetCore package)</li>
-                <li>ASP.NET (non core) (NLog.Web package)</li>
+                <li>ASP.NET Classic (NLog.Web package)</li>
             </ul>
           </div>
     </section>
