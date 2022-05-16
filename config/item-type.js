@@ -14,16 +14,17 @@ Item.prototype.packageList = function () {
 }
 
 Item.prototype.packageListTooltip = function () {
-    if (!this.packageList()) {
+    var packages = this.packageList();
+    if (!packages) {
         return null;
     }
 
-    if(this.packageList.length === 1){
-        return 'Needs package: ' + this.packageList[0];
+    if(packages.length === 1){
+        return 'Needs package: ' +packages[0];
     }
 
-    if(this.packageList.length >1){
-        return 'Needs one of the packages: ' + this.packageList.toString();
+    if(packages.length >1){
+        return 'Needs one of the packages: ' + packages.toString();
     }
 }
 
