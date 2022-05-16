@@ -17,7 +17,7 @@ NLog 5.0 has completed preview testing, and is ready for release.
 
 For more details see [List of major changes in NLog 5.0](https://nlog-project.org/2021/08/25/nlog-5-0-preview1-ready.html)
 
-For full list of all changes: [NLog 5.0 PullRequests](https://github.com/NLog/NLog/pulls?q=is%3Apr+is%3Amerged+milestone:%225.0%20%28new%29%22)
+For full list of all changes: [NLog 5.0 Pull Requests](https://github.com/NLog/NLog/pulls?q=is%3Apr+is%3Amerged+milestone:%225.0%20%28new%29%22)
 
 ## Credits
 Additional thanks to contributers:
