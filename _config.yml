@@ -1,8 +1,8 @@
 news:
- # enabled: true
- # text: NLog 4.7 has been released!
+  enabled: true
+  text: NLog 5 is live!
   readmore_text: See new post
-  readmore_link: https://nlog-project.org/2020/03/28/nlog-4-7-has-been-released.html
+  readmore_link: https://nlog-project.org/2022/05/16/nlog-5-0-finally-ready.html
 highlighter: rouge
 markdown: kramdown
 kramdown:
