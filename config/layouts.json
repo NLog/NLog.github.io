@@ -7,7 +7,12 @@
     {
         "name": "JSON",
         "page": "JsonLayout",
-        "description": "Render events to JSON-format"
+        "description": "Render events to JSON-Dictionary-format"
+    },
+    {
+        "name": "JsonArray",
+        "page": "JsonArrayLayout",
+        "description": "Render events to JSON-Array-format"
     },
     {
         "name": "XML",
@@ -28,5 +33,42 @@
         "name": "Simple (plain text)",
         "page": "TextLayout",
         "description": "Write events as plain text. The default layout when no Layout type is specified."
+    },
+    {
+        "name": "MicrosoftConsoleLayout",
+        "page": "MicrosoftConsoleLayout",
+        "description": "Write events to text format similar to Microsoft AddConsole Formatter.",
+        "package": [
+          "NLog.Extensions.Logging",
+          "NLog.Extensions.Hosting",
+          "NLog.Web.AspNetCore"
+        ]
+    },
+    {
+        "name": "MicrosoftConsoleJson",
+        "page": "MicrosoftConsoleJsonLayout",
+        "description": "Write events to JSON-format similar to Microsoft AddJsonConsole Formatter.",
+        "package": [
+          "NLog.Extensions.Logging",
+          "NLog.Extensions.Hosting",
+          "NLog.Web.AspNetCore"
+        ]
+    },
+    {
+        "name": "W3CExtendedLogLayout",
+        "page": "W3CExtendedLogLayout",
+        "description": "Write events to W3C Extended Log Format (ELF) like IIS.",
+        "package": [
+          "NLog.Web",
+          "NLog.Web.AspNetCore"
+        ]
+    },
+    {
+        "name": "Gelf",
+        "page": "https://github.com/farzadpanahi/NLog.GelfLayout",
+        "description": "Write events to GELF JSON-format for GrayLog server.",
+        "package": [
+          "NLog.GelfLayout"
+        ]
     }
 ]

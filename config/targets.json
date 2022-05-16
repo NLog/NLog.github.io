@@ -39,6 +39,8 @@
         "name": "Database",
         "page": "Database-target",
         "description": "Writes log messages to the database using an ADO.NET provider.",
+        "package": "NLog.Database",
+        "platform-notes": "For NLog 5.0: NLog.Database nuget package required",
         "keywords": [
             "sql",
             "mysql",
@@ -51,6 +53,13 @@
         "category": "Databases"
     },
     {
+        "name": "DebugSystem",
+        "page": "DebugSystem-target",
+        "description": "Sends log messages through System.Diagnostics.Debug.",
+        "platform-notes": "For NLog 4.7 (and older) then use OutputDebugString-target instead",
+        "category": "Integrations"
+    },
+    {
         "name": "Debug",
         "page": "Debug-target",
         "description": "Mock target - useful for testing.",
@@ -59,13 +68,15 @@
     {
         "name": "Debugger",
         "page": "Debugger-target",
-        "description": "Writes log messages to the attached managed debugger.",
+        "description": "Writes log messages to the attached debugger through System.Diagnostics.Debugger.Log",
         "category": "Integrations"
     },
     {
         "name": "EventLog",
         "page": "EventLog-target",
+        "package": "NLog.WindowsEventLog",
         "description": "Writes log message to the Windows Event Log.",
+        "platform-notes": "For .NET Standard: NLog.WindowsEventLog nuget package required",
         "keywords": [
             "event viewer",
             "eventviewer"
@@ -73,20 +84,7 @@
         "platforms": [
             "net35",
             "net40",
-            "net45"
-        ],
-        "category": "Integrations"
-    },
-    {
-        "name": "EventLog",
-        "page": "EventLog-target",
-        "description": "Writes log message to the Windows Event Log (.NET Core)",
-        "package": "NLog.WindowsEventLog",
-        "keywords": [
-            "event viewer",
-            "eventviewer"
-        ],
-        "platforms": [
+            "net45",
             "netstandard2.0"
         ],
         "category": "Integrations"
@@ -125,26 +123,13 @@
     {
         "name": "LogReceiverService",
         "page": "LogReceiverService-target",
+        "package": "NLog.WCF",
         "description": "Sends log messages to a NLog Receiver Service (using WCF or Web Services).",
+        "platform-notes": "For NLog 5.0 and .NET Standard: NLog.WCF nuget package required",
         "platforms": [
             "net35",
             "net40",
-            "net45"
-        ],
-        "keywords": [
-            "http",
-            "https",
-            "SOAP",
-            "POST",
-            "web"
-        ],
-        "category": "Webservices and networking"
-    },
-    {
-        "name": "LogReceiverService",
-        "page": "LogReceiverService-target",
-        "description": "(.NET standard) Sends log messages to a NLog Receiver Service (using WCF or Web Services).",
-        "platforms": [
+            "net45",
             "netstandard1.3",
             "netstandard1.5",
             "netstandard2.0"
@@ -156,8 +141,6 @@
             "POST",
             "web"
         ],
-        "package": "NLog.WCF",
-        "platform-notes": "NLog.WCF nuget package for .NET standard",
         "category": "Webservices and networking"
     },
     {
@@ -181,19 +164,19 @@
     {
         "name": "Mail",
         "page": "Mail-target",
+        "package": "NLog.MailKit",
         "description": "Mail Target using MailKit. Only SMTP supported.",
+        "platform-notes": "For .NET 4.5: NLog.MailKit ver. 3.4.0 nuget package required",
         "keywords": [
             "email",
             "e-mail"
         ],
         "platforms": [
-            "net40",
             "net45",
             "netstandard1.3",
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "package": "NLog.MailKit",
         "category": ""
     },
     {
@@ -247,6 +230,8 @@
         "name": "OutputDebugString",
         "page": "OutputDebugString-target",
         "description": "Outputs log messages through the OutputDebugString() Win32 API.",
+        "package": "NLog.OutputDebugString",
+        "platform-notes": "For NLog 5.0: NLog.OutputDebugString nuget package required",
         "platforms": [
             "net35",
             "net40",
@@ -258,6 +243,8 @@
         "name": "PerfCounter",
         "page": "PerfCounter-target",
         "description": "Updates specified Windows Performance Counter on each write.",
+        "package": "NLog.PerformanceCounter",
+        "platform-notes": "For NLog 5.0: NLog.PerformanceCounter nuget package required",
         "keywords": [
             "performance counter",
             "Diagnostics"
@@ -265,7 +252,8 @@
         "platforms": [
             "net35",
             "net40",
-            "net45"
+            "net45",
+            "netstandard2.0"
         ],
         "category": "Integrations"
     },
@@ -347,14 +335,17 @@
         "name": "ImpersonatingWrapper",
         "page": "ImpersonatingWrapper-target",
         "description": "Impersonates another user for the duration of the write.",
-        "wrapper": true,
-        "keywords": [
-            "security"
-        ],
+        "package": "NLog.WindowsIdentity",
+        "platform-notes": "For NLog 5.0: NLog.WindowsIdentity nuget package required",
         "platforms": [
             "net35",
             "net40",
-            "net45"
+            "net45",
+            "netstandard2.0"
+        ],
+        "wrapper": true,
+        "keywords": [
+            "security"
         ],
         "category": "Security"
     },
@@ -415,12 +406,13 @@
         "name": "MSMQ",
         "page": "MSMQ-target",
         "description": "Writes log message to the specified message queue handled by MSMQ.",
-        "package": "NLog.Extended",
+        "package": "NLog.MSMQ",
         "platforms": [
             "net35",
             "net40",
             "net45"
         ],
+        "platform-notes": "For NLog 4.7 (and older) then NLog.Extended nuget package required",
         "keywords": [
             "message queue"
         ],
@@ -460,7 +452,12 @@
             "winforms",
             "gui"
         ],
-        "external": true,
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard2.0"
+        ],
         "category": "Windows Forms"
     },
     {
@@ -475,13 +472,14 @@
         "platforms": [
             "net35",
             "net40",
-            "net45"
+            "net45",
+            "netstandard2.0"
         ],
         "category": "Windows Forms"
     },
     {
         "name": "RichTextBox",
-        "page": "https://github.com/NLog/NLog.Windows.Forms/wiki/RichTextBoxTarget",
+        "page": "RichTextBoxTarget",
         "description": "Log text a Rich Text Box control in an existing or new form.",
         "package": "NLog.Windows.Forms",
         "keywords": [
@@ -491,7 +489,8 @@
         "platforms": [
             "net35",
             "net40",
-            "net45"
+            "net45",
+            "netstandard2.0"
         ],
         "category": "Windows Forms"
     },
@@ -726,7 +725,7 @@
     {
         "name": "RabbitMQ",
         "page": "https://github.com/adolya/NLog.RabbitMQ",
-        "package": "Nlog.RabbitMQ.Target",
+        "package": "NLog.RabbitMQ.Target",
         "description": "Sends logs over a RabbitMQ message broker",
         "external": true,
         "keywords": [
@@ -760,7 +759,7 @@
     {
         "name": "RavenDB",
         "page": "https://github.com/kentcooper/NLog.Raven",
-        "package": "Nlog.Raven",
+        "package": "NLog.Raven",
         "description": "Writes NLog messages to https://ravendb.net",
         "external": true,
         "category": "Integrations (Cloud)"

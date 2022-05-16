@@ -29,7 +29,6 @@
         "name": "all-event-properties",
         "page": "All-Event-Properties-Layout-Renderer",
         "description": "Log all event context data.",
-        "platform-notes": "Include Caller Information: .NET 4.5 only",
         "keywords": [
             "structured"
         ],
@@ -77,7 +76,6 @@
         "name": "callsite",
         "page": "Callsite-Layout-Renderer",
         "description": "The call site (class name, method name and source information)",
-        "platform-notes": "Silverlight:  no file name or source path",
         "category": "Callsite and stacktraces"
     },
     {
@@ -170,14 +168,19 @@
             "USERPROFILE",
             "usr"
         ],
-        "category": "Environment and config files"
+        "category": "Identity"
     },
     {
         "name": "exception",
         "page": "Exception-Layout-Renderer",
         "description": "Exception information provided through a call to one of the Logger methods",
-        "platform-notes": "Silverlight:  no method name",
-        "category": ""
+        "category": "Context Information"
+    },
+    {
+        "name": "exceptiondata",
+        "page": "ExceptionData-Layout-Renderer",
+        "description": "Lookup item in Exception.Data-Dictionary from Exception provided together with the LogEven",
+        "category": "Context Information"
     },
     {
         "name": "file-contents",
@@ -189,7 +192,6 @@
         "name": "gc",
         "page": "Gc-Layout-Renderer",
         "description": "The information about the garbage collector.",
-        "platform-notes": "Silverlight:  no file name or source path",
         "category": "Processes, threads and assemblies"
     },
     {
@@ -274,7 +276,7 @@
             "name",
             "rule"
         ],
-        "category": ""
+        "category": "Context Information"
     },
     {
         "name": "longdate",
@@ -292,12 +294,14 @@
         "name": "mdc",
         "page": "Mdc-Layout-Renderer",
         "description": "Mapped Diagnostics Context - a thread-local structure.",
+        "platform-notes": "For NLog 5.0 this has been replaced with ScopeProperty",
         "category": "Context information"
     },
     {
         "name": "mdlc",
         "page": "Mdlc-Layout-Renderer",
         "description": "Async Mapped Diagnostics Context - a thread-local structure for scoped context. Async version of the MDC. ",
+        "platform-notes": "For NLog 5.0 this has been replaced with ScopeProperty",
         "category": "Context information"
     },
     {
@@ -310,12 +314,14 @@
         "name": "ndc",
         "page": "Ndc-Layout-Renderer",
         "description": "Nested Diagnostics Context - a thread-local structure.",
+        "platform-notes": "For NLog 5.0 this has been replaced with ScopeNested",
         "category": "Context information"
     },
     {
         "name": "ndlc",
         "page": "Ndlc-Layout-Renderer",
         "description": "Async Nested Diagnostics Context  - thread-local structure.",
+        "platform-notes": "For NLog 5.0 this has been replaced with ScopeNested",
         "category": "Context information"
     },
     {
@@ -346,10 +352,13 @@
         "name": "performancecounter",
         "page": "PerformanceCounter-Layout-Renderer",
         "description": "The performance counter.",
+        "package": "NLog.PerformanceCounter",
+        "platform-notes": "For NLog 5.0: NLog.PerformanceCounter nuget package required",
         "platforms": [
             "net35",
             "net40",
-            "net45"
+            "net45",
+            "netstandard2.0"
         ],
         "category": "Processes, threads and assemblies"
     },
@@ -402,15 +411,36 @@
         "name": "registry",
         "page": "Registry-Layout-Renderer",
         "description": "A value from the Windows Registry.",
+        "package": "NLog.WindowsRegistry",
+        "platform-notes": "For NLog 5.0: NLog.WindowsRegistry nuget package required",
         "platforms": [
-            "net35",
-            "net40",
-            "net45"
+          "net35",
+          "net40",
+          "net45",
+          "netstandard2.0"
         ],
         "keywords": [
-            "windows"
+          "windows"
         ],
         "category": "Environment and config files"
+    },
+    {
+        "name": "scopenested",
+        "page": "ScopeNested-Layout-Renderer",
+        "description": "ScopeContext Nested states from the thread execution context (Ex. BeginScope). Similar to Nested Diagnostic Context (NDC) in Log4j",
+        "category": "Context information"
+    },
+    {
+        "name": "scopeproperty",
+        "page": "ScopeProperty-Layout-Renderer",
+        "description": "ScopeContext Properties from the thread execution context (Ex. BeginScope). Similar to Mapped Diagnostic Context (MDC) in Log4j",
+        "category": "Context information"
+    },
+    {
+        "name": "scopetiming",
+        "page": "ScopeTiming-Layout-Renderer",
+        "description": "ScopeContext Timing formats scope duration time  (Ex. BeginScope).",
+        "category": "Context information"
     },
     {
         "name": "sequenceid",
@@ -518,10 +548,9 @@
     {
         "name": "windows-identity",
         "page": "Windows-Identity-Layout-Renderer",
-        "package": [
-            "Nlog.WindowsIdentity"
-        ],
+        "package": "NLog.WindowsIdentity",
         "description": "Thread Windows identity information (username)",
+        "platform-notes": "For NLog 5.0 and .NET Standard: NLog.WindowsIdentity nuget package required",
         "platforms": [
             "net35",
             "net40",
@@ -533,7 +562,6 @@
             "username",
             "domain"
         ],
-        "platform-notes": "For .NET Standard: NLog.WindowsIdentity nuget package required",
         "category": "Identity"
     },
     {
@@ -605,14 +633,14 @@
         "page": "OnException-Layout-Renderer",
         "description": "Only outputs the inner layout when exception has been defined for log message.",
         "wrapper": true,
-        "category": ""
+        "category": "Context Information"
     },
     {
         "name": "onhasproperties",
         "page": "OnHasProperties-Layout-Renderer",
         "description": "Only outputs the inner layout when event properties are included with the logevent.",
         "wrapper": true,
-        "category": ""
+        "category": "Context Information"
     },
     {
         "name": "pad",
@@ -781,8 +809,8 @@
     {
         "name": "appsetting",
         "page": "AppSetting-Layout-Renderer",
-        "package": "NLog.Extended",
         "description": "App config setting from .config file",
+        "platform-notes": "For NLog 4.5 (and older) then NLog.Extended nuget package required",
         "platforms": [
             "net35",
             "net40",
@@ -1437,7 +1465,7 @@
     {
         "name": "activity",
         "page": "https://github.com/NLog/NLog.DiagnosticSource",
-        "description": "Capture trace context from System.Diagnostics.Activity.Current",
+        "description": "Capture span context details like request TraceId from System.Diagnostics.Activity.Current",
         "package": "NLog.DiagnosticSource",
         "external": true,
         "category": "Context information"
