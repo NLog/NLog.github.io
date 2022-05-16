@@ -14,7 +14,7 @@ Item.prototype.packageList = function () {
 }
 
 Item.prototype.packageListTooltip = function () {
-    if (!this.packageList) {
+    if (!this.packageList()) {
         return null;
     }
 
