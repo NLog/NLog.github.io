@@ -35,3 +35,5 @@ Additional thanks to contributers:
 - @Orace
 - @GitHubPang
 - @KurnakovMaksim
+- @mickelsonmichael
+- @ThomasArdal
