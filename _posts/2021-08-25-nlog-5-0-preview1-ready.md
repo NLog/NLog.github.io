@@ -187,7 +187,7 @@ Having the logging-layer making calls into the dependency-injection-layer can ca
 or deadlocks. Both issues are extremely annoying to debug and diagnose, so one should be very careful to ensure interfaces
 are implemented with singleton-lifetime.
 
-### Aliases support for targets, layouts, layout renderers and conditions.
+### Aliases support for targets, layouts, layout renderers and conditions
 
 The following attributes are now allowed multiple times for a class:
 
