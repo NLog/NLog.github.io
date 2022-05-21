@@ -206,6 +206,14 @@ The following aliases are added:
 
 All aliases are also listed and searchable on https://nlog-project.org/config/
 
+Creating your own extension? So this is now allowed:
+
+```c#
+[Target("MyTarget")]
+[Target("MyFancyTarget")]
+public class MyTarget { ... }
+```
+
 ### Dashes (-) will be ignored when parsing names
 Dashes in names in targets, layout renderers, layouts, filters are ignored. For example: `${loggername}` could be written als `${logger-name}`, and ColoredConsole could be written als Colored-Console.
 
