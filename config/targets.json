@@ -479,7 +479,7 @@
     },
     {
         "name": "RichTextBox",
-        "page": "RichTextBoxTarget",
+        "page": "RichTextBox-target",
         "description": "Log text a Rich Text Box control in an existing or new form.",
         "package": "NLog.Windows.Forms",
         "keywords": [
