@@ -188,6 +188,15 @@ or deadlocks. Both issues are extremely annoying to debug and diagnose, so one s
 are implemented with singleton-lifetime.
 
 ### Aliases support for targets, layouts, layout renderers and conditions
+It's now possible to add  aliases for your targets, layouts, layout renderers and conditions.
+
+For example, this is now allowed:
+
+```c#
+[Target("MyTarget")]
+[Target("MyFancyTarget")]
+public class MyTarget { ... }
+```
 
 The following attributes are now allowed multiple times for a class:
 
@@ -196,23 +205,13 @@ The following attributes are now allowed multiple times for a class:
 - `LayoutRenderer]`
 - `[Filter]`
 
-This will give the possibilty to add aliases for your targets, layouts, layout renderers and conditions.
-
-The following aliases are added: 
+The following aliases are added in NLog: 
 - The Mail Target has now the aliases Email, SMTP and SMTP-Client
 - The Trace Target has now the alias TraceSystem
 - ${Event-properties} has now the alias {Event-property}
 - ${logger} has now the alias ${loggername}
 
 All aliases are also listed and searchable on https://nlog-project.org/config/
-
-Creating your own extension? So this is now allowed:
-
-```c#
-[Target("MyTarget")]
-[Target("MyFancyTarget")]
-public class MyTarget { ... }
-```
 
 ### Dashes (-) will be ignored when parsing names
 Dashes in names in targets, layout renderers, layouts, filters are ignored. For example: `${loggername}` could be written als `${logger-name}`, and ColoredConsole could be written als Colored-Console.
