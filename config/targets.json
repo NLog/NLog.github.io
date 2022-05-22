@@ -495,6 +495,23 @@
         "category": "Windows Forms"
     },
     {
+        "name": "ToolStripItem",
+        "page": "ToolStripItem-target",
+        "description": "Logs text to Windows.Forms.ToolStripItem property control of specified Name",
+        "package": "NLog.Windows.Forms",
+        "keywords": [
+            "winforms",
+            "gui"
+        ],
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard2.0"
+        ],
+        "category": "Windows Forms"
+    },
+    {
         "name": "Elmah",
         "description": "Logs to Elmah",
         "package": "NLog.Elmah",
