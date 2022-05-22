@@ -187,6 +187,38 @@ Having the logging-layer making calls into the dependency-injection-layer can ca
 or deadlocks. Both issues are extremely annoying to debug and diagnose, so one should be very careful to ensure interfaces
 are implemented with singleton-lifetime.
 
+### Aliases support for targets, layouts, layout renderers and conditions
+It's now possible to add  aliases for your targets, layouts, layout renderers and conditions.
+
+For example, this is now allowed:
+
+```c#
+[Target("MyTarget")]
+[Target("MyFancyTarget")]
+public class MyTarget { ... }
+```
+
+The following attributes are now allowed multiple times for a class:
+
+- `[Target]`
+- `[Layout]`
+- `LayoutRenderer]`
+- `[Filter]`
+
+The following aliases are added in NLog: 
+- The Mail Target has now the aliases Email, SMTP and SMTP-Client
+- The Trace Target has now the alias TraceSystem
+- ${Event-properties} has now the alias {Event-property}
+- ${logger} has now the alias ${loggername}
+
+All aliases are also listed and searchable on https://nlog-project.org/config/
+
+### Dashes (-) will be ignored when parsing names
+Dashes in names in targets, layout renderers, layouts, filters are ignored. For example: `${loggername}` could be written als `${logger-name}`, and ColoredConsole could be written als Colored-Console.
+
+Reason: It's hard to maintain consistency between the names. There where also some inconsistencies already. 
+Also, when registering custom items, it is confusing to have names with only dashes as difference. For example: ${activityid} and ${activity-id}
+
 ## Breaking Changes
 
 ### Strong Version Changed
@@ -628,6 +660,25 @@ by default capture the properties `EventId` (integer) and `EventName` (string).
 * **Reason:** Avoid the overhead from capturing and boxing the EventId-struct. And provide more human readable names.
 
 * **Workaround:** Adjust to the new property-names, or explicity specify NLogProviderOptions `CaptureEventId = Legacy` to enable old behavior.
+
+### The Simplelayout.ToString() has been changed
+The ToString won't add aditional quotes.
+
+For example:
+
+```
+Layout l = "a";
+l.ToString();
+```
+
+In NLog 4 this results in `'a'` and in NLog 5 this results in `a`.
+
+* **Impact:** There are maybe changes needed when parsing the ToString value of a `Layout`
+
+* **Reason:** The additional quotes won't has any value, it could be confusing and also it's a good practive that the ToString value could be parsed by the Layout again. 
+
+* **Workaround:** Add quotes manually when needed. 
+
 
 ## Many other improvements
 

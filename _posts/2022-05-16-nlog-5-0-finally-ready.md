@@ -15,6 +15,10 @@ NLog 5.0 has completed preview testing, and is ready for release.
 - NLog Callsite from caller member attributes
 - LogFactory with Dependency Injection
 - Updated default values for better out-of-the-box experience
+- Aliases support for targets, layouts, layout renderers and conditions\
+- Dashes (-) will be ignored when parsing names
+
+See details [here](https://nlog-project.org/2021/08/25/nlog-5-0-preview1-ready.html)
 
 ## Breaking Changes
 
@@ -55,6 +59,7 @@ See rationale [here](https://nlog-project.org/2021/08/25/nlog-5-0-preview1-ready
 - LoggingRule Filters DefaultAction changed to FilterResult.Ignore
 - NLog.Extensions.Logging without any filter
 - NLog.Extensions.Logging changes capture of EventId
+- The Simplelayout.ToString() has been changed
 
 For full list of all changes: [NLog 5.0 Pull Requests](https://github.com/NLog/NLog/pulls?q=is%3Apr+is%3Amerged+milestone:%225.0%20%28new%29%22)
 
