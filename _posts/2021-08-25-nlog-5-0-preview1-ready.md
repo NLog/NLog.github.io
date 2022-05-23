@@ -187,8 +187,8 @@ Having the logging-layer making calls into the dependency-injection-layer can ca
 or deadlocks. Both issues are extremely annoying to debug and diagnose, so one should be very careful to ensure interfaces
 are implemented with singleton-lifetime.
 
-### Aliases support for targets, layouts, layout renderers and conditions
-It's now possible to add  aliases for your targets, layouts, layout renderers and conditions.
+### Symbol type-name aliases can now be defined
+It's now possible to add aliases for your targets, layouts, layout renderers and conditions.
 
 For example, this is now allowed:
 
@@ -202,18 +202,18 @@ The following attributes are now allowed multiple times for a class:
 
 - `[Target]`
 - `[Layout]`
-- `LayoutRenderer]`
+- `[LayoutRenderer]`
 - `[Filter]`
 
 The following aliases are added in NLog: 
 - The Mail Target has now the aliases Email, SMTP and SMTP-Client
 - The Trace Target has now the alias TraceSystem
-- ${Event-properties} has now the alias {Event-property}
-- ${logger} has now the alias ${loggername}
+- `${Event-properties}` has now the alias `${Event-property}`
+- `${logger}` has now the alias `${loggername}`
 
 All aliases are also listed and searchable on https://nlog-project.org/config/
 
-### Dashes (-) will be ignored when parsing names
+### Parsing of symbol type-name will now ignore dashes (-)
 Dashes in names in targets, layout renderers, layouts, filters are ignored. For example: `${loggername}` could be written als `${logger-name}`, and ColoredConsole could be written als Colored-Console.
 
 Reason: It's hard to maintain consistency between the names. There where also some inconsistencies already. 

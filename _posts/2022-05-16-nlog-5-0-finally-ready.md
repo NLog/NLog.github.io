@@ -15,8 +15,8 @@ NLog 5.0 has completed preview testing, and is ready for release.
 - NLog Callsite from caller member attributes
 - LogFactory with Dependency Injection
 - Updated default values for better out-of-the-box experience
-- Aliases support for targets, layouts, layout renderers and conditions\
-- Dashes (-) will be ignored when parsing names
+- Symbol type-name aliases can now be defined for targets, layouts, layout renderers and conditions
+- Parsing of symbol type-name will now ignore dashes (-)
 
 See details [here](https://nlog-project.org/2021/08/25/nlog-5-0-preview1-ready.html)
 
