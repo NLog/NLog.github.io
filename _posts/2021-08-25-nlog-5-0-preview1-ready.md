@@ -187,8 +187,8 @@ Having the logging-layer making calls into the dependency-injection-layer can ca
 or deadlocks. Both issues are extremely annoying to debug and diagnose, so one should be very careful to ensure interfaces
 are implemented with singleton-lifetime.
 
-### Multiple aliases for type symbol-name can be defined
-It's now possible to add aliases for your targets, layouts, layout renderers and conditions.
+### Multiple type-aliases can be defined for use in NLog configuration
+It's now possible to add multiple type-aliases for your targets, layouts, layout renderers and conditions.
 
 For example, this is now allowed:
 
@@ -198,7 +198,7 @@ For example, this is now allowed:
 public class MyTarget { ... }
 ```
 
-The following attributes are now allowed multiple times for a class:
+The following attributes can now be defined multiple times for a class:
 
 - `[Target]`
 - `[Layout]`
@@ -206,18 +206,18 @@ The following attributes are now allowed multiple times for a class:
 - `[Filter]`
 
 The following aliases are added in NLog: 
-- The Mail Target has now the aliases Email, SMTP and SMTP-Client
-- The Trace Target has now the alias TraceSystem
-- `${Event-properties}` has now the alias `${Event-property}`
-- `${logger}` has now the alias `${loggername}`
+- The Mail Target has now the type-aliases Email, SMTP and SMTP-Client
+- The Trace Target has now the type-alias TraceSystem
+- `${Event-properties}` has now the type-alias `${Event-property}`
+- `${logger}` has now the type-alias `${loggername}`
 
-All aliases are also listed and searchable on https://nlog-project.org/config/
+All type-aliases are also listed and searchable on https://nlog-project.org/config/
 
-### Parsing of type symbol-name will now ignore dashes (-)
-Dashes in names in targets, layout renderers, layouts, filters are ignored. For example: `${loggername}` could be written als `${logger-name}`, and ColoredConsole could be written als Colored-Console.
+### Parsing of type-alias will now ignore dashes (-)
+Dashes in type-alias names in targets, layout renderers, layouts, filters are ignored. For example: `${loggername}` could be written als `${logger-name}`, and ColoredConsole could be written als Colored-Console.
 
-Reason: It's hard to maintain consistency between the names. There where also some inconsistencies already. 
-Also, when registering custom items, it is confusing to have names with only dashes as difference. For example: ${activityid} and ${activity-id}
+Reason: It's hard to maintain consistency between the different type-aliases. There where also some inconsistencies already. 
+Also, when registering custom extensions, it is confusing to have type-aliases with only dashes as difference. For example: ${activityid} and ${activity-id}
 
 ## Breaking Changes
 
