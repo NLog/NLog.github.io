@@ -265,7 +265,7 @@ platform restrictions and are now obsolete.
   NLog.LogManager.Setup().LoadConfigurationFromAssemblyResource(typeof(App).GetTypeInfo().Assembly);
   ```
 
-### .NET Framework v4.0 platform removed and replaced with .NET Framework v4.6
+### .NET Framework v4.0 platform replaced by .NET Framework v3.5
 NLog have removed direct support for .NET Framework v4.0, instead it will fallback to .NET Framework v3.5.
 
 * **Impact:** There is very little difference between NLog for .NET Framework v3.5 and NLog for .NET Framework v4.

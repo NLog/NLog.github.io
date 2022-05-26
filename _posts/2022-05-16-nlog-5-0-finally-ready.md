@@ -25,8 +25,8 @@ See details [here](https://nlog-project.org/2021/08/25/nlog-5-0-preview1-ready.h
 See rationale [here](https://nlog-project.org/2021/08/25/nlog-5-0-preview1-ready.html)
 
 - Strong Version Changed
-- Xamarin, Windows Phone and Silverlight platforms have been removed, and replaced by .NET Standard
-- .NET Framework v4.0 platform removed and replaced with .NET Framework v4.6
+- Xamarin, Windows Phone and Silverlight platforms replaced by .NET Standard
+- .NET Framework v4.0 platform replaced by .NET Framework v3.5 platform
 - NLog Extensions assemblies will not be loaded automatically, so [extensions must be explicitly added](https://github.com/NLog/NLog/wiki/Register-your-custom-component).
 - NLog DatabaseTarget extracted into its own [NLog.Database](https://www.nuget.org/packages/NLog.Database) nuget-package
 - NLog OutputDebugStringTarget extracted into its own [NLog.OutputDebugString](https://www.nuget.org/packages/NLog.OutputDebugString) nuget-package
