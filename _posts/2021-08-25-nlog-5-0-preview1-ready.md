@@ -277,7 +277,7 @@ think NLog is not working correctly after having configured NLog LoggingRules, b
 * **Workaround:** Explicit specify `RemoveLoggerFactoryFilter = false` for NLogProviderOptions when calling `UseNLog()` to enable old behavior,
 where Microsoft LoggerFactory filters specified in appsetting.json also applies to NLog.
 
-Notice NLog LoggingRules now have the `finalMinLevel`-option that allows one to replicate behavior of Microsoft Logging Filters:
+Alternatively the new `finalMinLevel`-option can be used to replicate the behavior of Microsoft Logging Filters:
 ```xml
 <rules>
     <logger name="System.*" finalMinLevel="Warn" />
