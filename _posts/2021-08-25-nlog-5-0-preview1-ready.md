@@ -242,39 +242,62 @@ Lots of obsolete methods and properties in the NLog API has now been removed.
 * **Workaround:** If unable to built with NLog 5 directly, then downgrade to latest NLog v4 and
   follow the guidelines from the obsolete-attribute. When having fixed the obsolete warnings then update to NLog 5.
 
-### Xamarin, Windows Phone and Silverlight platforms have been removed
-NLog have now removed Xamarin platform specific builds for iOS and Android. Instead they will rely on the .NET Standard-builds.
-Windows Phone and Silverlight has also been removed together with the Xamarin-platforms as they shared a lot of the same
-platform restrictions and are now obsolete.
+### LoggingRule Filters DefaultAction changed to FilterResult.Ignore
+Changed from `Neutral` default value:
+```xml
+<logger name="*" minLevel="Debug" writo="target">
+    <filters defaultAction="Neutral">
+        <when condition="'${exception:format=shorttype}' != ''" action="Log" />
+    </filters>
+</logger>
+```
+To `Ignore` as default value:
+```xml
+<logger name="*" minLevel="Debug" writo="target">
+    <filters defaultAction="Ignore">
+        <when condition="'${exception:format=shorttype}' != ''" action="Log" />
+    </filters>
+</logger>
+```
 
-* **Impact:** Xamarin platforms will no longer have special restrictions, but will have all the features from the .NET Standard-build.
-  This also means it can access features like global mutex in the operating system (Now disabled by default), that will cause the
-  application to fail on the restricted mobile platforms. This also means the Android platform will no longer automatically load
-  NLog.config from assets-folder. This also mean that NLog 5 cannot be used in LOB Silverlight or Windows Phone applications.
+* **Impact:** This means NO output, if using dynamic filters and not already using `defaulAction="Ignore"`.
 
-* **Reason:** The Xamarin platforms have now embraced the .NET Standard-API, so it is no longer necessary with platform specific builds.
-  Removing platform specific logic reduces code complexity and code maintenance. Windows Phone and Silverlight are no longer supported
-  by Microsoft and have reached end of the line.
+* **Reason:** Better user experience for new users when trying to use filters, as it will have effect right away.
 
-* **Workaround:** Because all features in the .NET Standard build are not supported on all platforms, then one should ensure not to
-  explicitly enable FileTarget ConcurrentWrites-option as it will enable use of operating system global mutex,
-  which is not available on Xamarin Mobile platforms and will make the application fail.
+* **Workaround:** Explicit assign `defaultAction="Log"` on the `<filters>`-element, or rewrite conditions to use `action="Log"`.
 
-  Instead of using assets-folder on Android, then change to Embedded Resource, and load NLog-config from application-assembly (Works for both iOS and Android):
-  ```csharp
-  NLog.LogManager.Setup().LoadConfigurationFromAssemblyResource(typeof(App).GetTypeInfo().Assembly);
-  ```
+### NLog.Extensions.Logging without any filter
+NLog LoggingProvider no longer follows the Microsoft Logger filtering configuration.
 
-### .NET Framework v4.0 platform replaced by .NET Framework v3.5
-NLog have removed direct support for .NET Framework v4.0, instead it will fallback to .NET Framework v3.5.
+* **Impact:** This means LOTS of unwanted output, if have been depending on Microsoft Logger filtering in appsettings.json.
 
-* **Impact:** There is very little difference between NLog for .NET Framework v3.5 and NLog for .NET Framework v4.
+* **Reason:** It is confusing to have two seperate systems for filtering logging output. New users might
+think NLog is not working correctly after having configured NLog LoggingRules, because Microsoft LoggerFactory filters are interfering.
 
-* **Reason:** Removing platforms that are no longer supported by Microsoft reduces code complexity and code maintenance.
-  There is suddenly also one less platform to execute continuous integration builds with unit-tests.
+* **Workaround:** Explicit specify `RemoveLoggerFactoryFilter = false` for NLogProviderOptions when calling `UseNLog()` to enable old behavior,
+where Microsoft LoggerFactory filters specified in appsetting.json also applies to NLog.
 
-* **Workaround:** Application rebuild will automatically fallback to NLog for .NET Framework 3.5 that will work just fine.
-  Alternative update the application from .NET Framework v4.0 to something newer.
+Notice NLog LoggingRules now have the `finalMinLevel`-option that allows one to replicate behavior of Microsoft Logging Filters:
+```xml
+<rules>
+    <logger name="System.*" finalMinLevel="Warn" />
+    <logger name="Microsoft.*" finalMinLevel="Warn" />
+    <logger name="Microsoft.Hosting.Lifetime*" finalMinLevel="Info" />
+    <logger name="*" minLevel="Debug" writeTo="console" />
+</rules>
+```
+
+Notice it is also possible to have [NLog Configuration in appsetting.json](https://github.com/NLog/NLog.Extensions.Logging/wiki/NLog-configuration-with-appsettings.json).
+
+### NLog.Extensions.Logging changes capture of EventId
+NLog LoggingProvider will no longer capture `EventId`-struct + `EventId_Id`-number + `EventId_Name`, instead it will 
+by default capture the properties `EventId` (integer) and `EventName` (string).
+
+* **Impact:** `EventId_Id` and `EventId_Name` are no longer included by default. They have been replaced with the properties `EventId` and `EventName`.
+
+* **Reason:** Avoid the overhead from capturing and boxing the EventId-struct. And provide more human readable names.
+
+* **Workaround:** Adjust to the new property-names, or explicity specify NLogProviderOptions `CaptureEventId = Legacy` to enable old behavior.
 
 ### NLog Extensions assemblies will not load automatically
 
@@ -360,6 +383,40 @@ NLog.Config nuget-package will no longer be released.
 
 * **Workaround:** Manually create the NLog.config file and add it to the application-project. Manually add NLog.Schema-package
   for intellisense in NLog.config.
+
+### Xamarin, Windows Phone and Silverlight platforms have been removed
+NLog have now removed Xamarin platform specific builds for iOS and Android. Instead they will rely on the .NET Standard-builds.
+Windows Phone and Silverlight has also been removed together with the Xamarin-platforms as they shared a lot of the same
+platform restrictions and are now obsolete.
+
+* **Impact:** Xamarin platforms will no longer have special restrictions, but will have all the features from the .NET Standard-build.
+  This also means it can access features like global mutex in the operating system (Now disabled by default), that will cause the
+  application to fail on the restricted mobile platforms. This also means the Android platform will no longer automatically load
+  NLog.config from assets-folder. This also mean that NLog 5 cannot be used in LOB Silverlight or Windows Phone applications.
+
+* **Reason:** The Xamarin platforms have now embraced the .NET Standard-API, so it is no longer necessary with platform specific builds.
+  Removing platform specific logic reduces code complexity and code maintenance. Windows Phone and Silverlight are no longer supported
+  by Microsoft and have reached end of the line.
+
+* **Workaround:** Because all features in the .NET Standard build are not supported on all platforms, then one should ensure not to
+  explicitly enable FileTarget ConcurrentWrites-option as it will enable use of operating system global mutex,
+  which is not available on Xamarin Mobile platforms and will make the application fail.
+
+  Instead of using assets-folder on Android, then change to Embedded Resource, and load NLog-config from application-assembly (Works for both iOS and Android):
+  ```csharp
+  NLog.LogManager.Setup().LoadConfigurationFromAssemblyResource(typeof(App).GetTypeInfo().Assembly);
+  ```
+
+### .NET Framework v4.0 platform replaced by .NET Framework v3.5
+NLog have removed direct support for .NET Framework v4.0, instead it will fallback to .NET Framework v3.5.
+
+* **Impact:** There is very little difference between NLog for .NET Framework v3.5 and NLog for .NET Framework v4.
+
+* **Reason:** Removing platforms that are no longer supported by Microsoft reduces code complexity and code maintenance.
+  There is suddenly also one less platform to execute continuous integration builds with unit-tests.
+
+* **Workaround:** Application rebuild will automatically fallback to NLog for .NET Framework 3.5 that will work just fine.
+  Alternative update the application from .NET Framework v4.0 to something newer.
 
 ### Automatic loading of NLog.config now first check for exe.nlog
 NLog will now first check for `Application.exe.nlog` at startup, before using `NLog.config`
@@ -603,63 +660,6 @@ JsonLayout will now by default add decimal point for properties of the type `dec
 * **Reason:** Better user experience when using default configuration, and doing logging in async-methods.
 
 * **Workaround:** Explicit assign `CleanNamesOfAnonymousDelegates` and `CleanNamesOfAsyncContinuations` when using `${callsite}`.
-
-### LoggingRule Filters DefaultAction changed to FilterResult.Ignore
-Changed from `Neutral` default value:
-```xml
-<logger name="*" minLevel="Debug" writo="target">
-    <filters defaultAction="Neutral">
-        <when condition="'${exception:format=shorttype}' != ''" action="Log" />
-    </filters>
-</logger>
-```
-To `Ignore` as default value:
-```xml
-<logger name="*" minLevel="Debug" writo="target">
-    <filters defaultAction="Ignore">
-        <when condition="'${exception:format=shorttype}' != ''" action="Log" />
-    </filters>
-</logger>
-```
-
-* **Impact:** Will give unexpected behavior for ALL users that are using `action="Ignore"`, as it will lead to always ignore (no output)
-
-* **Reason:** Better user experience when trying to use filters, as it will have effect right away.
-
-* **Workaround:** Explicit assign `defaultAction` on the `<filters>`-element, or change to `action="Log"`.
-
-### NLog.Extensions.Logging without any filter
-NLog LoggingProvider no longer follows the Microsoft Logger filtering configuration.
-
-* **Impact:** Microsoft Logger filtering in appsettings.json will no longer have any effect.
-
-* **Reason:** It is confusing to have two seperate systems for filtering logging output. New users might
-think NLog is not working correctly after having configured NLog LoggingRules, because Microsoft LoggerFactory filters are interfering.
-
-* **Workaround:** Explicit specify NLogProviderOptions `RemoveLoggerFactoryFilter = false` to enable old behavior,
-where Microsoft LoggerFactory filters specified in appsetting.json also applies to NLog.
-
-Notice NLog LoggingRules now have the `finalMinLevel`-option that allows one to replicate behavior of Microsoft Logging Filters:
-```xml
-<rules>
-    <logger name="System*" finalMinLevel="Warn" />
-    <logger name="Microsoft*" finalMinLevel="Warn" />
-    <logger name="Microsoft.Hosting.Lifetime*" finalMinLevel="Info" />
-    <logger name="*" minLevel="Debug" writeTo="console" />
-</rules>
-```
-
-Notice it is also possible to have [NLog Configuration in appsetting.json](https://github.com/NLog/NLog.Extensions.Logging/wiki/NLog-configuration-with-appsettings.json).
-
-### NLog.Extensions.Logging changes capture of EventId
-NLog LoggingProvider will no longer capture `EventId`-struct + `EventId_Id`-number + `EventId_Name`, instead it will 
-by default capture the properties `EventId` (integer) and `EventName` (string).
-
-* **Impact:** `EventId_Id` and `EventId_Name` are no longer included by default. They have been replaced with the properties `EventId` and `EventName`.
-
-* **Reason:** Avoid the overhead from capturing and boxing the EventId-struct. And provide more human readable names.
-
-* **Workaround:** Adjust to the new property-names, or explicity specify NLogProviderOptions `CaptureEventId = Legacy` to enable old behavior.
 
 ### The Simplelayout.ToString() has been changed
 The ToString won't add aditional quotes.
