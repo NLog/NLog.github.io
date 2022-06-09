@@ -317,7 +317,7 @@ by default capture the properties `EventId` (integer) and `EventName` (string).
     </extensions>
   </nlog>
   ```
-  NLog extensions assemblies can also be extracted from the type-name in the NLog.config:
+  NLog 5.0 makes it possible to just specify the extension assembly-name directly in the type-alias:
   ```xml
     <nlog>
     <targets>
