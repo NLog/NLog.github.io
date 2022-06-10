@@ -25,8 +25,10 @@ See details [here](https://nlog-project.org/2021/08/25/nlog-5-0-preview1-ready.h
 See rationale [here](https://nlog-project.org/2021/08/25/nlog-5-0-preview1-ready.html)
 
 - Strong Version Changed
-- Xamarin, Windows Phone and Silverlight platforms replaced by .NET Standard
-- .NET Framework v4.0 platform replaced by .NET Framework v3.5 platform
+- Obsolete methods have been removed
+- LoggingRule Filters DefaultAction changed to FilterResult.Ignore, that can cause NO output.
+- NLog.Extensions.Logging without any filter, that can give LOTS of unexpected output.
+- NLog.Extensions.Logging changes capture of EventId, so missing EventId_Id-property.
 - NLog Extensions assemblies will not be loaded automatically, so [extensions must be explicitly added](https://github.com/NLog/NLog/wiki/Register-your-custom-component).
 - NLog DatabaseTarget extracted into its own [NLog.Database](https://www.nuget.org/packages/NLog.Database) nuget-package
 - NLog OutputDebugStringTarget extracted into its own [NLog.OutputDebugString](https://www.nuget.org/packages/NLog.OutputDebugString) nuget-package
@@ -38,6 +40,8 @@ See rationale [here](https://nlog-project.org/2021/08/25/nlog-5-0-preview1-ready
 - NLog WindowsIdentityLayoutRenderer extracted into its own [NLog.WindowsIdentity](https://www.nuget.org/packages/NLog.WindowsIdentity) nuget-package
 - Deprecated NLog.Extended nuget-package
 - Deprecated NLog.Config nuget-package
+- Xamarin, Windows Phone and Silverlight platforms replaced by .NET Standard
+- .NET Framework v4.0 platform replaced by .NET Framework v3.5 platform
 - Automatic loading of NLog.config now first check for exe.nlog
 - NLog Configuration will have KeepVariablesOnReload enabled by default
 - Layout and LayoutRenderer are now threadsafe by default
@@ -56,9 +60,6 @@ See rationale [here](https://nlog-project.org/2021/08/25/nlog-5-0-preview1-ready
 - JsonLayout EscapeForwardSlash default value changed to false
 - JsonLayout always includes decimal point for floating-point types
 - CallSite-renderer will automatically clean async callstacks
-- LoggingRule Filters DefaultAction changed to FilterResult.Ignore
-- NLog.Extensions.Logging without any filter
-- NLog.Extensions.Logging changes capture of EventId
 - The Simplelayout.ToString() has been changed
 
 For full list of all changes: [NLog 5.0 Pull Requests](https://github.com/NLog/NLog/pulls?q=is%3Apr+is%3Amerged+milestone:%225.0%20%28new%29%22)

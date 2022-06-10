@@ -269,7 +269,7 @@ To `Ignore` as default value:
 ### NLog.Extensions.Logging without any filter
 NLog LoggingProvider no longer follows the Microsoft Logger filtering configuration.
 
-* **Impact:** This means LOTS of unwanted output, if have been depending on Microsoft Logger filtering in appsettings.json.
+* **Impact:** This means LOTS of unexpected output, if have been depending on Microsoft Logger filtering in appsettings.json.
 
 * **Reason:** It is confusing to have two seperate systems for filtering logging output. New users might
 think NLog is not working correctly after having configured NLog LoggingRules, because Microsoft LoggerFactory filters are interfering.
