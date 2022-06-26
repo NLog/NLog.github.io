@@ -124,10 +124,9 @@ var logger = LogManager.Setup().LoadConfiguration(c =>
    var consoleTarget = c.ForTarget("console").WriteTo(new ConsoleTarget()).WithAsync();
    var fileTarget = c.ForTarget("logfile").WriteTo(new FileTarget() { FileName = "file.txt" }).WithAsync();
 
-   // Suppress noise from Microsoft-classes, except from Microsoft.Hosting.Lifetime for startup detection
-   c.ForLogger("Microsoft.Hosting.Lifetime*").FilterMinLevel(NLog.LogLevel.Info).WriteTo(consoleTarget);
-   c.ForLogger("System*").WriteToNil(NLog.LogLevel.Warn);
-   c.ForLogger("Microsoft*").WriteToNil(NLog.LogLevel.Warn);
+   c.ForLogger("System.*").WriteToNil(NLog.LogLevel.Warn);
+   c.ForLogger("Microsoft.*").WriteToNil(NLog.LogLevel.Warn);
+   c.ForLogger("Microsoft.Hosting.Lifetime*").WriteToNil(NLog.LogLevel.Info);   // finalMinLevel overrides previous rule
 
    c.ForLogger().FilterMinLevel(NLog.LogLevel.Info).WriteTo(consoleTarget);
    c.ForLogger().FilterMinLevel(NLog.LogLevel.Debug).WriteTo(fileTarget);
