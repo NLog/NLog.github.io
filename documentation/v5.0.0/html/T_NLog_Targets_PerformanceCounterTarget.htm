@@ -37,7 +37,7 @@
             Gets or sets the performance counter instance name.
             </div></td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protproperty.gif" alt="Protected property" title="Protected property" /></td><td><a href="P_NLog_Targets_Target_IsInitialized.htm">IsInitialized</a></td><td><div class="summary">
             Gets a value indicating whether the target has been initialized.
-            </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_Target_LayoutWithLock.htm">LayoutWithLock</a></td><td><div class="summary">
+            </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_Target_LayoutWithLock.htm">LayoutWithLock</a></td><td> <strong>Obsolete. </strong><div class="summary">
             NLog Layout are by default threadsafe, so multiple threads can be rendering logevents at the same time.
             This ensure high concurrency with no lock-congestion for the application-threads, especially when using <a href="T_NLog_Targets_Wrappers_AsyncTargetWrapper.htm">AsyncTargetWrapper</a>
             or AsyncTaskTarget.
@@ -112,7 +112,7 @@
             own synchronization mechanism. <a href="T_NLog_Layouts_Layout.htm">Layout</a>-objects are not guaranteed to be
             thread-safe, so using them without a SyncRoot-object can be dangerous.
             </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="M_NLog_Targets_Target_WriteFailedNotInitialized.htm">WriteFailedNotInitialized</a></td><td><div class="summary">
-            LogEvent is written to target, but target failed to succesfully initialize
+            LogEvent is written to target, but target failed to successfully initialize
             </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID6RB')" onkeypress="SectionExpandCollapse_CheckKey('ID6RB', event)" tabindex="0"><img id="ID6RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Remarks</span></div><div id="ID6RBSection" class="collapsibleSection">
             TODO:
             1. Unable to create a category allowing multiple counter instances (.Net 2.0 API only, probably)
