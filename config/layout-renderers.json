@@ -904,13 +904,45 @@
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
-        "name": "aspnet-Item",
-        "page": "AspNetItem-layout-renderer",
+        "name": "aspnet-request-connection-id",
+        "page": "AspNet-Request-ConnectionId-Layout-Renderer",
+        "package": [
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Http Request Connection Id. The unique identifier that represents the connection.",
+        "platforms": [
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-request-duration",
+        "page": "AspNet-Request-Duration-Layout-Renderer",
         "package": [
             "NLog.Web",
             "NLog.Web.AspNetCore"
         ],
-        "description": "ASP.NET `HttpContext` item variable.",
+        "description": "ASP.NET Request Duration.",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-Item",
+        "page": "AspNet-HttpContext-Item-Layout-Renderer",
+        "package": [
+            "NLog.Web",
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET `HttpContext` Items Dictionary Value.",
         "platforms": [
             "net35",
             "net40",
@@ -936,13 +968,241 @@
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
+        "name": "aspnet-request-bidirectional-stream",
+        "page": "AspNet-Request-Bidirectional-Stream-Layout-Renderer",
+        "package": [
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Request capable of upgrading connection to an opaque, bidirectional stream.",
+        "platforms": [
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-request-client-certificate",
+        "page": "AspNet-Request-Client-Certificate-Layout-Renderer",
+        "package": [
+            "NLog.Web",
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Request Client Certificate",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-request-contentlength",
+        "page": "AspNet-Request-ContentLength-Layout-Renderer",
+        "package": [
+          "NLog.Web",
+          "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Request Header Content-Length",
+        "platforms": [
+          "net35",
+          "net40",
+          "net45",
+          "netstandard1.5",
+          "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
         "name": "aspnet-request-contenttype",
         "page": "AspNet-Request-ContentType-layout-renderer",
         "package": [
+            "NLog.Web",
             "NLog.Web.AspNetCore"
         ],
         "description": "ASP.NET Content-Type header (Ex. application/json)",
         "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-request-http-transport-type",
+        "page": "AspNet-Request-HTTP-Transport-Type-Layout-Renderer",
+        "package": [
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET supported transport types that the client can use to send HTTP requests",
+        "platforms": [
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-request-inherent-keep-alive",
+        "page": "AspNet-Request-Inherent-KeepAlive-Layout-Renderer",
+        "package": [
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Request using connection transport capable of 'inherent keep-alive'",
+        "platforms": [
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-request-local-ip",
+        "page": "AspNet-Request-Local-IP-Layout-Renderer",
+        "package": [
+            "NLog.Web",
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Request HttpContext.Connection.LocalIpAddress",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-request-local-port",
+        "page": "AspNet-Request-Local-Port-Layout-Renderer",
+        "package": [
+            "NLog.Web",
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Request HttpContext.Connection.LocalPort",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-request-remote-port",
+        "page": "AspNet-Request-Remote-Port-Layout-Renderer",
+        "package": [
+            "NLog.Web",
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Request HttpContext.Connection.RemotePort",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-request-servervariable",
+        "page": "AspNet-Request-ServerVariable-Layout-Renderer",
+        "package": [
+            "NLog.Web",
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Server Variable (Ex. APP_POOL_ID)",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-request-tls-handshake",
+        "page": "AspNet-Request-TLS-Handshake-Layout-Renderer",
+        "package": [
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET TLS Handshake Features ITlsHandshakeFeature of the connection.",
+        "platforms": [
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-request-tls-token-binding",
+        "page": "AspNet-Request-TLS-Token-Bindng-Layout-Renderer",
+        "package": [
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET TLS Token Bindings for Provider and Referrer",
+        "platforms": [
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-request-tracking-consent",
+        "page": "AspNet-Request-Tracking-Consent-Layout-Renderer",
+        "package": [
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Tracking Consent",
+        "platforms": [
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-request-trailers",
+        "page": "AspNet-Request-Trailers-Layout-Renderer",
+        "package": [
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Request Trailers",
+        "platforms": [
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-request-web-socket-requested-protocols",
+        "page": "AspNet-Request-WebSocket-Requested-Protocols-Layout-Renderer",
+        "package": [
+            "NLog.Web",
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Request HttpContext.WebSockets.WebSocketRequestedProtocols",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
             "netstandard1.5",
             "netstandard2.0"
         ],
@@ -953,16 +1213,16 @@
         "name": "aspnet-TraceIdentifier",
         "page": "AspNetTraceIdentifier-Layout-Renderer",
         "package": [
-            "NLog.Web",
-            "NLog.Web.AspNetCore"
+          "NLog.Web",
+          "NLog.Web.AspNetCore"
         ],
         "description": "ASP.NET trace identifier",
         "platforms": [
-            "net35",
-            "net40",
-            "net45",
-            "netstandard1.5",
-            "netstandard2.0"
+          "net35",
+          "net40",
+          "net45",
+          "netstandard1.5",
+          "netstandard2.0"
         ],
         "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1281,8 +1541,8 @@
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
-        "name": "aspnet-Response-StatusCode",
-        "page": "AspNetResponse-StatusCode-Layout-Renderer",
+        "name": "aspnet-response-contentlength",
+        "page": "AspNet-Response-ContentLength-Layout-Renderer",
         "package": [
             "NLog.Web",
             "NLog.Web.AspNetCore"
@@ -1294,6 +1554,124 @@
             "net45",
             "netstandard1.5",
             "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-response-contenttype",
+        "page": "AspNet-Response-ContentType-Layout-Renderer",
+        "package": [
+            "NLog.Web",
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Response Header Content-Type (Ex. application/json)",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-response-cookie",
+        "page": "AspNet-Response-Cookie-Layout-Renderer",
+        "package": [
+            "NLog.Web",
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "Cookie Name and Values stored in the ASP.NET Response Cookies collection.",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-response-has-started",
+        "page": "AspNet-Response-HasStarted-Layout-Renderer",
+        "package": [
+            "NLog.Web",
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Http Response HasStarted ",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-response-headers",
+        "page": "AspNet-Response-Headers-Layout-Renderer",
+        "package": [
+            "NLog.Web",
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Response Headers key/value pairs.",
+        "platforms": [
+            "net35",
+            "net40",
+            "net45",
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-response-https-compression",
+        "page": "AspNet-Response-HTTPS-Compression-Layout-Renderer",
+        "package": [
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Response HTTPS Compression Mode",
+        "platforms": [
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-Response-StatusCode",
+        "page": "AspNetResponse-StatusCode-Layout-Renderer",
+        "package": [
+          "NLog.Web",
+          "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Response status code content.",
+        "platforms": [
+          "net35",
+          "net40",
+          "net45",
+          "netstandard1.5",
+          "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-response-trailers",
+        "page": "AspNet-Response-Trailers-Layout-Renderer",
+        "package": [
+          "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Response Trailers",
+        "platforms": [
+          "netstandard1.5",
+          "netstandard2.0"
         ],
         "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
