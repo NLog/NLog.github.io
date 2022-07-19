@@ -1793,10 +1793,12 @@
         "name": "aspnet-User-Claim",
         "page": "AspNet-User-Claim-layout-renderer",
         "package": [
+            "NLog.Web",
             "NLog.Web.AspNetCore"
         ],
         "description": "ASP.NET User Claims authorization values",
         "platforms": [
+            "net45",
             "netstandard1.5",
             "netstandard2.0"
         ],
