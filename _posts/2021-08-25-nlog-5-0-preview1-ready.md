@@ -268,7 +268,7 @@ To `Ignore` as default value:
 ### NLog.Extensions.Logging without any filter
 NLog LoggingProvider no longer follows the Microsoft Logger filtering configuration.
 
-* **Impact:** This means LOTS of unexpected output, if have been depending on Microsoft Logger filtering in appsettings.json.
+* **Impact:** This means LOTS of unexpected output. Because NLog will by default not react to Microsoft Logger filters defined in the Logging-section in appsettings.json.
 
 * **Reason:** It is confusing to have two seperate systems for filtering logging output. New users might
 think NLog is not working correctly after having configured NLog LoggingRules, because Microsoft LoggerFactory filters are interfering.
@@ -281,10 +281,15 @@ Alternatively the new `finalMinLevel`-option can be used to replicate the behavi
 <rules>
     <logger name="System.*" finalMinLevel="Warn" />
     <logger name="Microsoft.*" finalMinLevel="Warn" />
-    <logger name="Microsoft.Hosting.Lifetime*" finalMinLevel="Info" />
+    <logger name="Microsoft.Hosting.Lifetime*" finalMinLevel="Info" /> <!-- Overrides previous rule -->
     <logger name="*" minLevel="Debug" writeTo="console" />
 </rules>
 ```
+
+The `finalMinLevel`-option has been introduced with NLog 5.0 to make it simpler to translate Micrsoft Logging Filters into NLog LoggingRules.
+If one already knows about NLog LoggingRules, then `finalMinLevel` is similar to combination of `maxLevel="..."` and `final="true"`.
+But `finalMinLevel` has the ability override previous `finalMinLevel`-rules, which is not possible with `final="true"`.
+This makes it easier to customize LogLevels for different logger namespaces (Ex. `Microsoft.Hosting.Lifetime` within `Microsoft`-namspace).
 
 Notice it is also possible to have [NLog Configuration in appsetting.json](https://github.com/NLog/NLog.Extensions.Logging/wiki/NLog-configuration-with-appsettings.json).
 
