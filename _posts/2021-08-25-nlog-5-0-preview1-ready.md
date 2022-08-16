@@ -213,10 +213,11 @@ The following aliases are added in NLog:
 All type-aliases are also listed and searchable on https://nlog-project.org/config/
 
 ### Parsing of type-alias will now ignore dashes (-)
-Dashes in type-alias names in targets, layout renderers, layouts, filters are ignored. For example: `${loggername}` could be written als `${logger-name}`, and ColoredConsole could be written als Colored-Console.
+Dashes in type-alias names for targets, layout renderers, layouts, filters are ignored. For example: `${loggername}` can also be written as `${logger-name}`, and target-type ColoredConsole can be written as Colored-Console.
 
-Reason: It's hard to maintain consistency between the different type-aliases. There where also some inconsistencies already. 
-Also, when registering custom extensions, it is confusing to have type-aliases with only dashes as difference. For example: ${activityid} and ${activity-id}
+Reason: It's hard to maintain consistency between the different type-aliases, and there were some inconsistencies already.
+
+Also, when registering custom extensions, then it is confusing to have type-aliases with only dashes as difference. For example: `${activityid}` and `${activity-id}`
 
 ## Breaking Changes
 
