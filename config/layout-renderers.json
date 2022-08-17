@@ -911,7 +911,6 @@
         ],
         "description": "ASP.NET Http Request Connection Id. The unique identifier that represents the connection.",
         "platforms": [
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "wrapper": false,
@@ -961,7 +960,6 @@
         ],
         "description": "ASP.NET Environment name",
         "platforms": [
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "wrapper": false,
@@ -975,7 +973,6 @@
         ],
         "description": "ASP.NET Request capable of upgrading connection to an opaque, bidirectional stream.",
         "platforms": [
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "wrapper": false,
@@ -1043,7 +1040,6 @@
         ],
         "description": "ASP.NET supported transport types that the client can use to send HTTP requests",
         "platforms": [
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "wrapper": false,
@@ -1057,7 +1053,6 @@
         ],
         "description": "ASP.NET Request using connection transport capable of 'inherent keep-alive'",
         "platforms": [
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "wrapper": false,
@@ -1143,7 +1138,6 @@
         ],
         "description": "ASP.NET Http Request Stream Id. The unique identifier that represents the reusable socket.",
         "platforms": [
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "wrapper": false,
@@ -1157,7 +1151,6 @@
         ],
         "description": "ASP.NET TLS Handshake Features ITlsHandshakeFeature of the connection.",
         "platforms": [
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "wrapper": false,
@@ -1171,7 +1164,6 @@
         ],
         "description": "ASP.NET TLS Token Bindings for Provider and Referrer",
         "platforms": [
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "wrapper": false,
@@ -1185,7 +1177,6 @@
         ],
         "description": "ASP.NET Tracking Consent",
         "platforms": [
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "wrapper": false,
@@ -1199,7 +1190,6 @@
         ],
         "description": "ASP.NET Request Trailers",
         "platforms": [
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "wrapper": false,
@@ -1316,13 +1306,12 @@
     },
     {
         "name": "aspnet-request-has-posted-body",
-        "page": "AspNet-Request-has-posted-body-layout-renderer",
+        "page": "AspNet-Request-Has-Posted-Body-Layout-Renderer",
         "package": [
             "NLog.Web.AspNetCore"
         ],
         "description": "ASP.NET posted body / payload was included with the request",
         "platforms": [
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "wrapper": false,
@@ -1666,7 +1655,6 @@
         ],
         "description": "ASP.NET Response HTTPS Compression Mode",
         "platforms": [
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "wrapper": false,
@@ -1698,7 +1686,6 @@
         ],
         "description": "ASP.NET Response Trailers",
         "platforms": [
-          "netstandard1.5",
           "netstandard2.0"
         ],
         "wrapper": false,
