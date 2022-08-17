@@ -1136,6 +1136,20 @@
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
+        "name": "aspnet-request-stream-id",
+        "page": "AspNet-Request-StreamId-Layout-Renderer",
+        "package": [
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Http Request Stream Id. The unique identifier that represents the reusable socket.",
+        "platforms": [
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
         "name": "aspnet-request-tls-handshake",
         "page": "AspNet-Request-TLS-Handshake-Layout-Renderer",
         "package": [
@@ -1294,6 +1308,20 @@
             "net35",
             "net40",
             "net45",
+            "netstandard1.5",
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-request-has-posted-body",
+        "page": "AspNet-Request-has-posted-body-layout-renderer",
+        "package": [
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET posted body / payload was included with the request",
+        "platforms": [
             "netstandard1.5",
             "netstandard2.0"
         ],
