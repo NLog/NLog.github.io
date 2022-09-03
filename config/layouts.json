@@ -37,7 +37,7 @@
     {
         "name": "MicrosoftConsoleLayout",
         "page": "MicrosoftConsoleLayout",
-        "description": "Write events to text format similar to Microsoft AddConsole Formatter.",
+        "description": "Write events to text format similar to Microsoft AddConsole Formatter for Microsoft.Hosting.Lifetime",
         "package": [
           "NLog.Extensions.Logging",
           "NLog.Extensions.Hosting",
