@@ -851,6 +851,17 @@
         "category": "Environment and config files"
     },
     {
+        "name": "MicrosoftConsoleLayout",
+        "page": "MicrosoftConsoleLayout",
+        "description": "Write events to text format similar to Microsoft AddConsole Formatter for Microsoft.Hosting.Lifetime",
+        "package": [
+          "NLog.Extensions.Logging",
+          "NLog.Extensions.Hosting",
+          "NLog.Web.AspNetCore"
+        ],
+        "category": "Integrations"
+    },
+    {
         "name": "aspnet-MVC-Action",
         "page": "AspNet-MVC-Action-Layout-Renderer",
         "package": [
@@ -1581,7 +1592,7 @@
         "package": [
             "NLog.Web",
             "NLog.Web.AspNetCore"
-        ],
+         ],
         "description": "ASP.NET Response Header Content-Type (Ex. application/json)",
         "platforms": [
             "net35",
