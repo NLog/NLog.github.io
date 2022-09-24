@@ -304,6 +304,17 @@ by default capture the properties `EventId` (integer) and `EventName` (string).
 
 * **Workaround:** Adjust to the new property-names, or explicity specify NLogProviderOptions `CaptureEventId = Legacy` to enable old behavior.
 
+### NLog.Extensions.Logging makes NLog-section reserved in appsettings.json
+NLog LoggingProvider will now by default check for `"NLog":`-section in appsettings.json, and will automatically
+load the NLog configuration. This works together with JSON SchemaStore has been updated to provide basic intellisense
+when editing `"NLog":`-section in appsetting.json.
+
+* **Impact:** Now `"NLog":`-section is reserved, and if already using this section for something else than NLog configuration, then it will cause NLog not to load its configuration.
+
+* **Reason:** Making [NLog Configuration in appsetting.json](https://github.com/NLog/NLog.Extensions.Logging/wiki/NLog-configuration-with-appsettings.json) closer to a first class citizen, that works out of the box.
+
+* **WorkAround:** Assign `NLogProviderOptions.LoggingConfigurationSectionName = ""` (not recommended), or stop using the reserved `"NLog":`-section for other settings than NLog configuration.
+
 ### NLog Extensions assemblies will not load automatically
 
 * **Impact:** NLog will no longer automatic scan and load assemblies where their filename starts with NLog.
