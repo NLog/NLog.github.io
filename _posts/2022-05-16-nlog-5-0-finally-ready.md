@@ -29,6 +29,7 @@ See rationale [here](https://nlog-project.org/2021/08/25/nlog-5-0-preview1-ready
 - LoggingRule Filters DefaultAction changed to FilterResult.Ignore, that can cause NO output.
 - NLog.Extensions.Logging without any filter, that can give LOTS of unexpected output.
 - NLog.Extensions.Logging changes capture of EventId, so missing EventId_Id-property.
+- NLog.Extensions.Logging makes NLog-section reserved in appsettings.json
 - NLog Extensions assemblies will not be loaded automatically, so [extensions must be explicitly added](https://github.com/NLog/NLog/wiki/Register-your-custom-component).
 - NLog DatabaseTarget extracted into its own [NLog.Database](https://www.nuget.org/packages/NLog.Database) nuget-package
 - NLog OutputDebugStringTarget extracted into its own [NLog.OutputDebugString](https://www.nuget.org/packages/NLog.OutputDebugString) nuget-package
