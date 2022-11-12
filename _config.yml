@@ -1,5 +1,5 @@
 news:
-  enabled: true
+#  enabled: true
   text: NLog 5 is live!
   readmore_text: See news post
   readmore_link: https://nlog-project.org/2022/05/16/nlog-5-0-finally-ready.html
