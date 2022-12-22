@@ -174,13 +174,13 @@
         "name": "exception",
         "page": "Exception-Layout-Renderer",
         "description": "Exception information provided through a call to one of the Logger methods",
-        "category": "Context Information"
+        "category": "Context information"
     },
     {
         "name": "exceptiondata",
         "page": "ExceptionData-Layout-Renderer",
         "description": "Lookup item in Exception.Data-Dictionary from Exception provided together with the LogEven",
-        "category": "Context Information"
+        "category": "Context information"
     },
     {
         "name": "file-contents",
@@ -276,7 +276,7 @@
             "name",
             "rule"
         ],
-        "category": "Context Information"
+        "category": "Context information"
     },
     {
         "name": "longdate",
@@ -536,14 +536,14 @@
     {
         "name": "var",
         "page": "Var-Layout-Renderer",
-        "description": "Render variable",
+        "description": "NLog Logging Configuration Variable Value",
         "keywords": [
             "variables",
             "constants",
             "context",
             "parameters"
         ],
-        "category": ""
+        "category": "Context information"
     },
     {
         "name": "windows-identity",
@@ -633,14 +633,14 @@
         "page": "OnException-Layout-Renderer",
         "description": "Only outputs the inner layout when exception has been defined for log message.",
         "wrapper": true,
-        "category": "Context Information"
+        "category": "Context information"
     },
     {
         "name": "onhasproperties",
         "page": "OnHasProperties-Layout-Renderer",
         "description": "Only outputs the inner layout when event properties are included with the logevent.",
         "wrapper": true,
-        "category": "Context Information"
+        "category": "Context information"
     },
     {
         "name": "pad",
