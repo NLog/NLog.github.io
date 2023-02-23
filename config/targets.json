@@ -948,5 +948,17 @@
         "page": "https://github.com/task-it/TaskIt.NLog.Targets.Teams",
         "external": true,
         "category": "Integrations"
+    },
+    {
+        "name": "Ntfy.sh",
+        "package": "MichelMichels.NLog.Targets.Ntfy",
+        "description": "Writes NLog messages to a topic on https://ntfy.sh/",
+        "page": "https://github.com/MichelMichels/nlog-ntfy",
+        "external": true,
+        "category": "Integrations",
+        "keywords": [
+            "ntfy",
+            "ntfy.sh"
+        ]
     }
 ]
