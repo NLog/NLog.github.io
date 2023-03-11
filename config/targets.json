@@ -435,7 +435,7 @@
         "page": "AspNetBufferingWrapper-target",
         "description": "Buffers log events for the duration of ASP.NET request and sends them down to the wrapped target at the end of a request.",
         "package": "NLog.Web",
-        "wrapper": "true",
+        "wrapper": true,
         "platforms": [
             "net35",
             "net40",
