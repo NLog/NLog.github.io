@@ -3,11 +3,9 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "http://nlog-project.org/targets.json",
     "type": "array",
-    "title": "Targets",
     "items": {
         "$id": "#/items",
         "type": "object",
-        "title": "Target",
         "required": [
             "name",
             "page",
@@ -18,7 +16,6 @@
             "name": {
                 "$id": "#/items/properties/name",
                 "type": "string",
-                "title": "Target Name",
                 "default": "",
                 "examples": [
                     "Chainsaw"
@@ -28,7 +25,6 @@
             "page": {
                 "$id": "#/items/properties/page",
                 "type": "string",
-                "title": "Page",
                 "default": "",
                 "examples": [
                     "Database-target",
@@ -40,18 +36,15 @@
             "description": {
                 "$id": "#/items/properties/description",
                 "type": "string",
-                "title": "Description",
                 "default": "",
                 "pattern": "^(.*)$"
             },
             "platforms": {
                 "$id": "#/items/properties/platforms",
                 "type": "array",
-                "title": "Platforms",
                 "items": {
                     "$id": "#/items/properties/platforms/items",
                     "type": "string",
-                    "title": "Items",
                     "enum": [
                         "net35",
                         "net40",
@@ -65,17 +58,14 @@
                         "wp8",
                         "sl"
                     ]
-                },
-                "additionalItems": false
+                }
             },
             "keywords": {
                 "$id": "#/items/properties/keywords",
                 "type": "array",
-                "title": "Keywords",
                 "items": {
                     "$id": "#/items/properties/keywords/items",
                     "type": "string",
-                    "title": "Items",
                     "default": "",
                     "examples": [
                         "web",
@@ -87,7 +77,6 @@
             "category": {
                 "$id": "#/items/properties/category",
                 "type": "string",
-                "title": "Category",
                 "default": "",
                 "enum": [
                     "Integrations (GUI tools)",
@@ -106,19 +95,14 @@
             "aliases": {
                 "$id": "#/items/properties/aliases",
                 "type": "array",
-                "title": "aliases",
                 "items": {
                     "$id": "#/items/properties/aliases/items",
                     "type": "string",
-                    "title": "Items",
                     "default": ""
                 }
             },
             "wrapper": {
-                "type": [
-                    "boolean",
-                    "string"
-                ],
+                "type": "boolean",
                 "description": "Wraps another target"
             },
             "external": {
@@ -127,7 +111,6 @@
             },
             "package": {
                 "type": "string",
-                "Title": "Package id",
                 "examples": [
                     "NLog.Web"
                 ]
