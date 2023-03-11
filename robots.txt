@@ -1,0 +1,14 @@
+---
+layout: null
+sitemap: false
+---
+User-agent: *
+Disallow: /documentation/v2.0.1/
+Disallow: /documentation/v3.2.0/
+Disallow: /documentation/v3.2.1/
+Disallow: /documentation/v4.0.0/
+Disallow: /documentation/v4.3.0/
+Disallow: /documentation/v4.4.0/
+Disallow: /documentation/v4.5.0/
+Disallow: /documentation/v4.6.0/
+Disallow: /documentation/v4.7.0/
