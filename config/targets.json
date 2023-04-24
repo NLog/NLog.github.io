@@ -960,5 +960,13 @@
             "ntfy",
             "ntfy.sh"
         ]
+    },
+        {
+        "name": "Bugsnag",
+        "page": "https://github.com/lucaritossa/NLog.Targets.Bugsnag",
+        "package": "NLog.Targets.Bugsnag",
+        "description": "Writes NLog messages to https://www.bugsnag.com",
+        "external": true,
+        "category": "Integrations (Cloud)"
     }
 ]
