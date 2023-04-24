@@ -968,5 +968,5 @@
         "description": "Writes NLog messages to https://www.bugsnag.com",
         "external": true,
         "category": "Integrations (Cloud)"
-    },
+    }
 ]
