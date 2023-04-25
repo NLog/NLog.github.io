@@ -1,0 +1,4 @@
+mkdocs
+mkdocs-ezlinks-plugin
+mkdocs-github-wiki-edit-url
+mkdocs-redirects
