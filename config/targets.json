@@ -545,6 +545,14 @@
         "category": "Integrations (Cloud)"
     },
     {
+        "name": "Microsoft Azure Data Explorer",
+        "page": "https://github.com/Azure/azure-kusto-nlog-sink",
+        "description": "Writes NLog messages to Azure Data Explorer (Kusto) cluster ",
+        "package": "NLog.Azure.Kusto",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
         "name": "Microsoft Azure Table Storage",
         "page": "https://github.com/abkonsta/NLog.Extensions.AzureTableStorage",
         "description": "Writes NLog messages to Azure TableStorage",
