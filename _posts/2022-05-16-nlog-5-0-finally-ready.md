@@ -17,10 +17,13 @@ NLog 5.0 has completed preview testing, and is ready for release.
 - Updated default values for better out-of-the-box experience
 - Multiple type-aliases can be defined for targets, layouts, layout renderers and conditions
 - Parsing of type-alias will now ignore dashes (-)
+- NLog v5.2 includes annotations for application trimming without build warnings.
 
 See details [here](https://nlog-project.org/2021/08/25/nlog-5-0-preview1-ready.html)
 
 ## Breaking Changes
+
+NLog v5.2 marks additional methods as obsolete as they conflict with [application trimming](https://nlog-project.org/2023/05/30/nlog-5-2-trim-warnings.html).
 
 See rationale [here](https://nlog-project.org/2021/08/25/nlog-5-0-preview1-ready.html)
 
