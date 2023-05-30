@@ -34,6 +34,8 @@ configuration:
 var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
 ```
 
+## Obsoleted methods that conflicts with application trimming
+
 NLog v5.2 marks several methods as obsolete, to move towards the following goals:
 
 - Move all dynamic assembly loading logic from `ConfigurationItemFactory` into `Setup()` extensions methods. Later moved into separate NLog-nuget-package with next major version.
