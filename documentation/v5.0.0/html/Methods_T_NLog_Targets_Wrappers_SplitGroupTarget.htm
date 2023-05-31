@@ -12,9 +12,6 @@
             Flush any pending log messages for all wrapped targets.
             </div> (Inherited from <a href="T_NLog_Targets_Wrappers_CompoundTargetBase.htm">CompoundTargetBase</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="M_NLog_Targets_Target_InitializeTarget.htm">InitializeTarget</a></td><td><div class="summary">
             Initializes the target before writing starts
-            </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="M_NLog_Targets_Target_MergeEventProperties.htm">MergeEventProperties</a></td><td> <strong>Obsolete. </strong><div class="summary">
-            Merges (copies) the event context properties from any event info object stored in
-            parameters of the given event info object.
             </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_Targets_Target_PrecalculateVolatileLayouts.htm">PrecalculateVolatileLayouts</a></td><td><div class="summary">
             Calls the <a href="M_NLog_Layouts_Layout_Precalculate.htm">Precalculate(LogEventInfo)</a> on each volatile layout
             used by this target.
@@ -31,7 +28,7 @@
             events and passes them to "Write" method. Inheriting classes can use this method to
             optimize batch writes.
             </div> (Overrides <a href="M_NLog_Targets_Target_Write_2.htm">Target<span id="LST5B25E93E_10"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5B25E93E_10?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>Write(IList<span id="LST5B25E93E_11"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5B25E93E_11?cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=(");</script>AsyncLogEventInfo<span id="LST5B25E93E_12"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5B25E93E_12?cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)");</script>)</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="M_NLog_Targets_Wrappers_CompoundTargetBase_Write.htm">Write(LogEventInfo)</a></td><td><div class="summary">
-            Writes logging event to the log target.
+            Writes logging event to the target destination
             </div> (Inherited from <a href="T_NLog_Targets_Wrappers_CompoundTargetBase.htm">CompoundTargetBase</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_Targets_Target_WriteAsyncLogEvent.htm">WriteAsyncLogEvent</a></td><td><div class="summary">
             Writes the log to the target.
             </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_Targets_Target_WriteAsyncLogEvents.htm">WriteAsyncLogEvents(<span id="LST5B25E93E_13"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5B25E93E_13?cpp=array&lt;");</script>AsyncLogEventInfo<span id="LST5B25E93E_14"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5B25E93E_14?cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]");</script>)</a></td><td><div class="summary">
