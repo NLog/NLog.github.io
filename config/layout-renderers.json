@@ -990,6 +990,19 @@
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
+        "name": "aspnet-request-endpoint",
+        "page": "AspNet-Request-EndPoint-Layout-Renderer",
+        "package": [
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Request EndPoint display name.",
+        "platforms": [
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
         "name": "aspnet-request-client-certificate",
         "page": "AspNet-Request-Client-Certificate-Layout-Renderer",
         "package": [
