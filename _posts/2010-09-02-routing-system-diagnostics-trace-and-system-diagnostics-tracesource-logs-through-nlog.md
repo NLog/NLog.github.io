@@ -50,12 +50,20 @@ As you can see the example is just using WebClient from System.Net namespace, an
 </configuration>
 {% endhighlight %}
 
-Obviously you also need NLog.dll and [NLog.config](https://github.com/NLog/NLog/wiki/Configuration-file) to be located in the application directory. For our purposes we’ll use simple configuration with single target:
+Alternative one can register [NLogTraceListener](https://github.com/NLog/NLog/wiki/NLog-Trace-Listener-for-System-Diagnostics-Trace) from code:
+
+{% highlight csharp %}
+System.Diagnostics.Trace.Listeners.Clear();
+System.Diagnostics.Trace.Listeners.Add(new NLog.NLogTraceListener { Name = "NLog" });
+System.Diagnostics.Trace.WriteLine("Hello World");
+{% endhighlight %}
+
+To redirect output to NLog target, then obviously you also need NLog.dll and [NLog.config](https://github.com/NLog/NLog/wiki/Configuration-file) to be located in the application directory. For our purposes we’ll use simple configuration with single target:
 
 {% highlight xml %}
 <nlog>
   <targets>
-    <target name="console" type="ColoredConsole" layout="${longdate} ${windows-identity} ${message}" />
+    <target name="console" type="ColoredConsole" layout="${longdate} ${level} ${message}" />
   </targets>
 
   <rules>
