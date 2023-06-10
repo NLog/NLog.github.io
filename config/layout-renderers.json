@@ -946,7 +946,7 @@
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
-        "name": "aspnet-Item",
+        "name": "aspnet-httpcontext-item",
         "page": "AspNet-HttpContext-Item-Layout-Renderer",
         "package": [
             "NLog.Web",

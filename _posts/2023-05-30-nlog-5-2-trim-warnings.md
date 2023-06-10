@@ -72,9 +72,9 @@ The following methods has been marked obsolete on `LogManager` / `LogFactory`, w
 
 - `LogManager.LoadConfiguration(string configFile)`-Method replaced by `LogManager.Setup().LoadConfigurationFromFile(...)`
 - `LogManager.ConfigurationReloaded`-EventHandler replaced by ConfigurationChanged-EventHandler.
-- `LogManager.GetCandidateConfigFilePaths()`-Method replaced by just explicitly specifying file-path.
-- `LogManager.SetCandidateConfigFilePaths()`-Method replaced by just explicitly specifying file-path.
-- `LogManager.ResetCandidateConfigFilePath()`-Method replaced by just explicitly specifying file-path.
+- `LogManager.GetCandidateConfigFilePaths()`-Method replaced by chaining `LogManager.Setup().LoadConfigurationFromFile(...)`
+- `LogManager.SetCandidateConfigFilePaths()`-Method replaced by chaining `LogManager.Setup().LoadConfigurationFromFile(...)`
+- `LogManager.ResetCandidateConfigFilePath()`-Method replaced by chaining `LogManager.Setup().LoadConfigurationFromFile(...)`
 
 The following methods has been marked obsolete on `SimpleConfigurator`, with redirection to `Setup()` extension methods:
 
@@ -84,15 +84,15 @@ The following methods has been marked obsolete on `SimpleConfigurator`, with red
 
 The following methods has been marked obsolete on `XmlLoggingConfiguration`, with redirection to `Setup()` extension methods:
 
-- `XmlLoggingConfiguration.GetCandidateConfigFilePaths()`-Method replaced by just explicitly specifying file-path.
-- `XmlLoggingConfiguration.SetCandidateConfigFilePaths()`-Method replaced by just explicitly specifying file-path.
-- `XmlLoggingConfiguration.ResetCandidateConfigFilePath()`-Method replaced by just explicitly specifying file-path.
+- `XmlLoggingConfiguration.GetCandidateConfigFilePaths()`-Method replaced by chaining `LogManager.Setup().LoadConfigurationFromFile(...)`
+- `XmlLoggingConfiguration.SetCandidateConfigFilePaths()`-Method replaced by chaining `LogManager.Setup().LoadConfigurationFromFile(...)`
+- `XmlLoggingConfiguration.ResetCandidateConfigFilePath()`-Method replaced by chaining `LogManager.Setup().LoadConfigurationFromFile(...)`
 
 The following methods has been marked obsolete on `LayoutRenderer`, with redirection to `Setup()` extension methods:
 
-- `Target.Register`-Method replaced by `RegisterTarget<T>`-extension-method
-- `Layout.Register`-Method replaced by `RegisterLayout<T>`-extension-method
-- `LayoutRenderer.Register`-Method replaced by `RegisterLayoutRenderer<T>`-extension-method
+- `Target.Register`-Method replaced by `LogManager.Setup().SetupExtensions(ext => ext.RegisterTarget<T>())`-extension-method
+- `Layout.Register`-Method replaced by `LogManager.Setup().SetupExtensions(ext => ext.RegisterLayout<T>())`-extension-method
+- `LayoutRenderer.Register`-Method replaced by `LogManager.Setup().SetupExtensions(ext => ext.RegisterLayoutRenderer<T>())`-extension-method
 
 For normal NLog users these changes should not give any noise. The more advanced NLog users and maintainers of NLog-extension-libraries,
 are encouraged to move away from the obsoleted methods, and provide alternative way without using dynamic assembly loading.
