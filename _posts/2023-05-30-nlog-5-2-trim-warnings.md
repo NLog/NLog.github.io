@@ -71,7 +71,7 @@ The following methods has been marked obsolete on `ConfigurationItemFactory`, wi
 The following methods has been marked obsolete on `LogManager` / `LogFactory`, with redirection to `Setup()` extension methods:
 
 - `LogManager.LoadConfiguration(string configFile)`-Method replaced by `LogManager.Setup().LoadConfigurationFromFile(...)`
-- `LogManager.ConfigurationReloaded`-EventHandler replaced by ConfigurationChanged-EventHandler.
+- `LogManager.ConfigurationReloaded`-EventHandler replaced by `LogManager.ConfigurationChanged`-EventHandler (Remember to check for `args.ActivatedConfiguration != null`)
 - `LogManager.GetCandidateConfigFilePaths()`-Method replaced by chaining `LogManager.Setup().LoadConfigurationFromFile(...)`
 - `LogManager.SetCandidateConfigFilePaths()`-Method replaced by chaining `LogManager.Setup().LoadConfigurationFromFile(...)`
 - `LogManager.ResetCandidateConfigFilePath()`-Method replaced by chaining `LogManager.Setup().LoadConfigurationFromFile(...)`
