@@ -946,7 +946,7 @@
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
-        "name": "aspnet-Item",
+        "name": "aspnet-httpcontext-item",
         "page": "AspNet-HttpContext-Item-Layout-Renderer",
         "package": [
             "NLog.Web",
@@ -983,6 +983,19 @@
             "NLog.Web.AspNetCore"
         ],
         "description": "ASP.NET Request capable of upgrading connection to an opaque, bidirectional stream.",
+        "platforms": [
+            "netstandard2.0"
+        ],
+        "wrapper": false,
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-request-endpoint",
+        "page": "AspNet-Request-EndPoint-Layout-Renderer",
+        "package": [
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Request EndPoint display name.",
         "platforms": [
             "netstandard2.0"
         ],
