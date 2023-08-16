@@ -976,5 +976,16 @@
         "description": "Writes NLog messages to https://www.bugsnag.com",
         "external": true,
         "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "nlog-kafka-target",
+        "package": "NLog.Targets.KafkaAppender",
+        "description": "Writes NLog messages to kafka which provides the custom topics pattern",
+        "page": "https://github.com/hayrullahcansu/nlog-kafka-target",
+        "external": true,
+        "category": "Integrations",
+        "keywords": [
+            "kafka"
+        ]
     }
 ]
