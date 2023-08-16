@@ -15,23 +15,12 @@
         "name": "db-null",
         "page": "db-null-layout-renderer",
         "description": "Render DbNull for the database",
-        "keywords": [
-            "database",
-            "db",
-            "empty",
-            "ignore",
-            "sql",
-            "sqlparameter"
-        ],
         "category": ""
     },
     {
         "name": "all-event-properties",
         "page": "All-Event-Properties-Layout-Renderer",
         "description": "Log all event context data.",
-        "keywords": [
-            "structured"
-        ],
         "category": "Context information"
     },
     {
@@ -44,32 +33,18 @@
         "name": "assembly-version",
         "page": "AssemblyVersion-Layout-Renderer",
         "description": "The version of the executable in the default application domain.",
-        "keywords": [
-            "attribute",
-            "dll"
-        ],
         "category": "Processes, threads and assemblies"
     },
     {
         "name": "basedir",
         "page": "Basedir-Layout-Renderer",
         "description": "The current application domain's base directory.",
-        "keywords": [
-            "directory",
-            "directories",
-            "folders"
-        ],
         "category": "Files and directories"
     },
     {
         "name": "dir-separator",
         "page": "Directory-separator",
         "description": "The the OS dependent directory separator.",
-        "keywords": [
-            "directory",
-            "directories",
-            "folders"
-        ],
         "category": "Files and directories"
     },
     {
@@ -94,18 +69,12 @@
         "name": "counter",
         "page": "Counter-Layout-Renderer",
         "description": "A counter value (increases on each layout rendering)",
-        "keywords": [
-            "unique, number"
-        ],
         "category": "Counters"
     },
     {
         "name": "currentdir",
         "page": "CurrentDir-Layout-Renderer",
         "description": "The current working directory of the application.",
-        "keywords": [
-            "folders, directories"
-        ],
         "category": "Files and directories"
     },
     {
@@ -119,32 +88,18 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "folders, directories"
-        ],
         "category": "Files and directories"
     },    
     {
         "name": "date",
         "page": "Date-Layout-Renderer",
         "description": "Current date and time.",
-        "keywords": [
-            "now, today",
-            "iso8601"
-        ],
         "category": "Date and time"
     },
     {
         "name": "environment",
         "page": "Environment-Layout-Renderer",
         "description": "The environment variable. (e.g PATH, OSVersion)",
-        "keywords": [
-            "Path",
-            "TMP",
-            "USERPROFILE",
-            "PROCESSOR_ARCHITECTURE",
-            "OSVersion"
-        ],
         "category": "Environment and config files"
     },
     {
@@ -164,10 +119,6 @@
             "net45",
             "netstandard2.0"
         ],
-        "keywords": [
-            "USERPROFILE",
-            "usr"
-        ],
         "category": "Identity"
     },
     {
@@ -179,7 +130,7 @@
     {
         "name": "exceptiondata",
         "page": "ExceptionData-Layout-Renderer",
-        "description": "Lookup item in Exception.Data-Dictionary from Exception provided together with the LogEven",
+        "description": "Lookup item in Exception.Data-Dictionary from Exception provided together with the LogEvent",
         "category": "Context information"
     },
     {
@@ -222,21 +173,12 @@
         "name": "install-context",
         "page": "InstallContext-Layout-Renderer",
         "description": "Installation parameter (passed to InstallNLogConfig).",
-        "keywords": [
-            "context"
-        ],
         "category": "Context information"
     },
     {
         "name": "level",
         "page": "Level-Layout-Renderer",
         "description": "The log level (e.g. ERROR, DEBUG) or level ordinal (number)",
-        "keywords": [
-            "trace",
-            "info",
-            "warn",
-            "fatal"
-        ],
         "category": ""
     },
     {
@@ -261,10 +203,6 @@
         "name": "log4jxmlevent",
         "page": "Log4JXMLEvent-Layout-Renderer",
         "description": "XML event description compatible with log4j, Chainsaw and NLogViewer.",
-        "keywords": [
-            "xml",
-            "log4j"
-        ],
         "category": "Integrations"
     },
     {
@@ -272,10 +210,6 @@
         "aliases": ["loggername"],
         "page": "Logger-Layout-Renderer",
         "description": "The logger name. GetLogger, GetCurrentClassLogger etc",
-        "keywords": [
-            "name",
-            "rule"
-        ],
         "category": "Context information"
     },
     {
@@ -328,11 +262,6 @@
         "name": "newline",
         "page": "Newline-Layout-Renderer",
         "description": "A newline literal.",
-        "keywords": [
-            "eof",
-            "nl",
-            "line break"
-        ],
         "category": ""
     },
     {
@@ -419,9 +348,6 @@
           "net45",
           "netstandard2.0"
         ],
-        "keywords": [
-          "windows"
-        ],
         "category": "Environment and config files"
     },
     {
@@ -446,18 +372,12 @@
         "name": "sequenceid",
         "page": "SequenceId-layout-renderer",
         "description": "The log sequence id",
-        "keywords": [
-            "counter"
-        ],
         "category": "Counters"
     },
     {
         "name": "shortdate",
         "page": "ShortDate-Layout-Renderer",
         "description": "The short date in a sortable format yyyy-MM-dd.",
-        "keywords": [
-            "today"
-        ],
         "category": "Date and time"
     },
     {
@@ -476,27 +396,18 @@
         "name": "stacktrace",
         "page": "Stack-Trace-Layout-Renderer",
         "description": "Render the Stack trace",
-        "keywords": [
-            "callstack"
-        ],
         "category": "Callsite and stacktraces"
     },
     {
         "name": "tempdir",
         "page": "TempDir-Layout-Renderer",
         "description": "A temporary directory.",
-        "keywords": [
-            "directories"
-        ],
         "category": "Files and directories"
     },
     {
         "name": "threadid",
         "page": "ThreadId-Layout-Renderer",
         "description": "The identifier of the current thread.",
-        "keywords": [
-            "threading"
-        ],
         "category": "Processes, threads and assemblies"
     },
     {
@@ -510,39 +421,24 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "threading"
-        ],
         "category": "Processes, threads and assemblies"
     },
     {
         "name": "ticks",
         "page": "Ticks-Layout-Renderer",
         "description": "The Ticks value of current date and time.",
-        "keywords": [
-            "now"
-        ],
         "category": "Date and time"
     },
     {
         "name": "time",
         "page": "Time-Layout-Renderer",
         "description": "The time in a 24-hour, sortable format HH:mm:ss.mmm.",
-        "keywords": [
-            "now"
-        ],
         "category": "Date and time"
     },
     {
         "name": "var",
         "page": "Var-Layout-Renderer",
         "description": "NLog Logging Configuration Variable Value",
-        "keywords": [
-            "variables",
-            "constants",
-            "context",
-            "parameters"
-        ],
         "category": "Context information"
     },
     {
@@ -558,19 +454,12 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "username",
-            "domain"
-        ],
         "category": "Identity"
     },
     {
         "name": "cached",
         "page": "Cached-Layout-Renderer",
         "description": "Applies caching to another layout output.",
-        "keywords": [
-            "performance"
-        ],
         "wrapper": true,
         "category": ""
     },
@@ -578,14 +467,6 @@
         "name": "norawvalue",
         "page": "NoRawValue-Layout-Renderer",
         "description": "Prevents the output of another layout renderer to be treated as raw value",
-        "keywords": [
-            "dbtype",
-            "parametertype",
-            "string",
-            "text",
-            "parse",
-            "render"
-        ],
         "wrapper": true,
         "category": "Encoding and string transformations"
     },
@@ -600,9 +481,6 @@
         "name": "object-path",
         "page": "ObjectPath-Layout-Renderer",
         "description": "Render a (nested) property of an object",
-        "keywords": [
-            "reflection"
-        ],
         "wrapper": true,
         "category": ""
     },
@@ -610,10 +488,6 @@
         "name": "json-encode",
         "page": "Json-Encode-Layout-Renderer",
         "description": "Escapes output of another layout using JSON rules.",
-        "keywords": [
-            "string",
-            "text"
-        ],
         "wrapper": true,
         "category": "Encoding and string transformations"
     },
@@ -621,10 +495,6 @@
         "name": "lowercase",
         "page": "Lowercase-Layout-Renderer",
         "description": "Converts the result of another layout output to lower case.",
-        "keywords": [
-            "string",
-            "text"
-        ],
         "wrapper": true,
         "category": "Encoding and string transformations"
     },
@@ -646,10 +516,6 @@
         "name": "pad",
         "page": "Pad-Layout-Renderer",
         "description": "Applies padding to another layout output.",
-        "keywords": [
-            "string",
-            "text"
-        ],
         "wrapper": true,
         "category": "Encoding and string transformations"
     },
@@ -657,12 +523,6 @@
         "name": "replace",
         "page": "Replace-Layout-Renderer",
         "description": "Replaces a string in the output of another layout with another string. Optional with regex",
-        "keywords": [
-            "string",
-            "text",
-            "regular",
-            "expression"
-        ],
         "wrapper": true,
         "category": "Encoding and string transformations"
     },
@@ -670,10 +530,6 @@
         "name": "replace-newlines",
         "page": "Replace-NewLines-Layout-Renderer",
         "description": "Replaces newline characters with another string.",
-        "keywords": [
-            "EOF",
-            "nl"
-        ],
         "wrapper": true,
         "category": "Encoding and string transformations"
     },
@@ -681,9 +537,6 @@
         "name": "rot13",
         "page": "Rot13-Layout-Renderer",
         "description": "Decodes text \"encrypted\"with ROT-13.",
-        "keywords": [
-            "encode"
-        ],
         "wrapper": true,
         "category": "Encoding and string transformations"
     },
@@ -691,10 +544,6 @@
         "name": "trim-whitespace",
         "page": "Trim-Whitespace-Layout-Renderer",
         "description": "Trims the whitespace from the result of another layout renderer.",
-        "keywords": [
-            "string",
-            "text"
-        ],
         "wrapper": true,
         "category": "Encoding and string transformations"
     },
@@ -702,10 +551,6 @@
         "name": "uppercase",
         "page": "Uppercase-Layout-Renderer",
         "description": "Converts the result of another layout output to upper case.",
-        "keywords": [
-            "string",
-            "text"
-        ],
         "wrapper": true,
         "category": "Encoding and string transformations"
     },
@@ -713,12 +558,6 @@
         "name": "url-encode",
         "page": "Url-Encode-Layout-Renderer",
         "description": "Encodes the result of another layout output for use with URLs.",
-        "keywords": [
-            "url",
-            "uri",
-            "encoding",
-            "hyperlink"
-        ],
         "wrapper": true,
         "category": "Encoding and string transformations"
     },
@@ -726,13 +565,6 @@
         "name": "when",
         "page": "When-Layout-Renderer",
         "description": "Only outputs the inner layout when the specified condition has been met.",
-        "keywords": [
-            "condition",
-            "conditional",
-            "if",
-            "logic",
-            "filter"
-        ],
         "wrapper": true,
         "category": "Conditions"
     },
@@ -740,13 +572,6 @@
         "name": "whenEmpty",
         "page": "WhenEmpty-Layout-Renderer",
         "description": "Outputs alternative layout when the inner layout produces empty result.",
-        "keywords": [
-            "condition",
-            "conditional",
-            "if",
-            "logic",
-            "filter"
-        ],
         "wrapper": true,
         "category": "Conditions"
     },
@@ -754,10 +579,6 @@
         "name": "WrapLine",
         "page": "WrapLine-layout-renderer",
         "description": "Wraps the result of another layout output at specified line length.",
-        "keywords": [
-            "newline",
-            "line break"
-        ],
         "wrapper": true,
         "category": "Encoding and string transformations"
     },
@@ -765,10 +586,6 @@
         "name": "Left",
         "page": "Left-layout-renderer",
         "description": "Left part of a text",
-        "keywords": [
-            "substring",
-            "text"
-        ],
         "wrapper": true,
         "category": "Encoding and string transformations"
     },
@@ -776,10 +593,6 @@
         "name": "Right",
         "page": "Right-layout-renderer",
         "description": "Right part of a text",
-        "keywords": [
-            "substring",
-            "text"
-        ],
         "wrapper": true,
         "category": "Encoding and string transformations"
     },
@@ -787,12 +600,6 @@
         "name": "Substring",
         "page": "Substring-layout-renderer",
         "description": "Substring of a text",
-        "keywords": [
-            "left",
-            "text",
-            "right",
-            "middle"
-        ],
         "wrapper": true,
         "category": "Encoding and string transformations"
     },
@@ -800,9 +607,6 @@
         "name": "xml-encode",
         "page": "Xml-Encode-Layout-Renderer",
         "description": "Converts the result of another layout output to be XML-compliant.",
-        "keywords": [
-            "encoding"
-        ],
         "wrapper": true,
         "category": "Encoding and string transformations"
     },
@@ -816,13 +620,6 @@
             "net40",
             "net45"
         ],
-        "keywords": [
-            "config",
-            "<appsettings>",
-            "web.config",
-            "app.config"
-        ],
-        "wrapper": false,
         "category": "Environment and config files"
     },
     {
@@ -840,14 +637,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "config",
-            "appsetting.json",
-            "ASP.NET Core",
-            "Application Settings",
-            "connectionstrings"
-        ],
-        "wrapper": false,
         "category": "Environment and config files"
     },
     {
@@ -875,10 +664,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "routing"
-        ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -896,7 +681,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -911,7 +695,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -924,7 +707,6 @@
         "platforms": [
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -942,7 +724,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -960,7 +741,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -973,7 +753,6 @@
         "platforms": [
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -986,7 +765,6 @@
         "platforms": [
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -999,7 +777,6 @@
         "platforms": [
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1017,7 +794,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1035,7 +811,6 @@
           "netstandard1.5",
           "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1053,7 +828,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1066,7 +840,6 @@
         "platforms": [
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1079,7 +852,6 @@
         "platforms": [
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1097,7 +869,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1115,7 +886,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1133,7 +903,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1151,7 +920,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1164,7 +932,6 @@
         "platforms": [
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1177,7 +944,6 @@
         "platforms": [
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1190,7 +956,6 @@
         "platforms": [
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1203,7 +968,6 @@
         "platforms": [
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1216,7 +980,6 @@
         "platforms": [
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1234,7 +997,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1252,7 +1014,6 @@
           "netstandard1.5",
           "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1270,17 +1031,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "files",
-            "directories",
-            "directory",
-            "root",
-            "application",
-            "MapPath",
-            "AppBasePath",
-            "IHostingEnvironment"
-        ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1298,16 +1048,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "files",
-            "directories",
-            "directory",
-            "root",
-            "application",
-            "MapPath",
-            "IHostingEnvironment"
-        ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1325,7 +1065,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1338,7 +1077,6 @@
         "platforms": [
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1356,7 +1094,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1374,7 +1111,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1392,13 +1128,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "Content-Type",
-            "accept-language",
-            "accept-encoding",
-            "user-agent"
-        ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1416,7 +1145,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1434,7 +1162,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1451,12 +1178,6 @@
             "net45",
             "netstandard1.5",
             "netstandard2.0"
-        ],
-        "wrapper": false,
-        "keywords": [
-            "ipaddress",
-            "ipv4",
-            "ipv6"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
     },
@@ -1475,11 +1196,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "url",
-            "http"
-        ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1497,10 +1213,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "http"
-        ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1518,10 +1230,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "http"
-        ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1539,10 +1247,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "http"
-        ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1560,7 +1264,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1578,7 +1281,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1596,7 +1298,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1614,7 +1315,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1632,7 +1332,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1650,7 +1349,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1668,7 +1366,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1681,7 +1378,6 @@
         "platforms": [
             "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1699,7 +1395,6 @@
           "netstandard1.5",
           "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1712,7 +1407,6 @@
         "platforms": [
           "netstandard2.0"
         ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1730,10 +1424,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "state"
-        ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1751,10 +1441,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "state"
-        ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1772,13 +1458,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "Identity authentication",
-            "forms authentication",
-            "windows authentication",
-            "Authorize"
-        ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1796,13 +1475,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "Identity authentication",
-            "forms authentication",
-            "windows authentication",
-            "Authorize"
-        ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1820,12 +1492,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "forms authentication",
-            "windows authentication",
-            "Authorize"
-        ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
@@ -1841,14 +1507,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "Identity authentication",
-            "Authorize",
-            "claims checks",
-            "policy",
-            "policies"
-        ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },    
     {
@@ -1866,11 +1524,6 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "website",
-            "webserver"
-        ],
-        "wrapper": false,
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {

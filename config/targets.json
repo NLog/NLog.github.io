@@ -3,11 +3,6 @@
         "name": "Chainsaw",
         "page": "Chainsaw-target",
         "description": "Sends log messages to the remote instance of Chainsaw application from log4j.",
-        "keywords": [
-            "tool",
-            "gui",
-            "java"
-        ],
         "category": "Integrations (GUI tools)"
     },
     {
@@ -21,18 +16,12 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "cmd"
-        ],
         "category": ""
     },
     {
         "name": "Console",
         "page": "Console-target",
         "description": "Writes log messages to the console.",
-        "keywords": [
-            "cmd"
-        ],
         "category": ""
     },
     {
@@ -41,15 +30,6 @@
         "description": "Writes log messages to the database using an ADO.NET provider.",
         "package": "NLog.Database",
         "platform-notes": "For NLog 5.0: NLog.Database nuget package required",
-        "keywords": [
-            "sql",
-            "mysql",
-            "oracle",
-            "PostgreSQL",
-            "SQLite",
-            "Entity Framework",
-            "db"
-        ],
         "category": "Databases"
     },
     {
@@ -77,10 +57,6 @@
         "package": "NLog.WindowsEventLog",
         "description": "Writes log message to the Windows Event Log.",
         "platform-notes": "For .NET Standard: NLog.WindowsEventLog nuget package required",
-        "keywords": [
-            "event viewer",
-            "eventviewer"
-        ],
         "platforms": [
             "net35",
             "net40",
@@ -93,9 +69,6 @@
         "name": "File",
         "page": "File-target",
         "description": "Writes log messages to one or more files.",
-        "keywords": [
-            "document"
-        ],
         "category": ""
     },
     {
@@ -103,21 +76,11 @@
         "page": "https://github.com/DarekDan/NLog.Targets.HTTP/blob/master/README.md",
         "package": "NLog.Targets.Http",
         "description": "Sends messages to a designated HTTP target using POST by default. Combined with JSON Formatter supports Splunk.",
-        "keywords": [
-            "http",
-            "https",
-            "Splunk",
-            "Proxy",
-            "Nagle algorithm",
-            "GET",
-            "PUT",
-            "web"
-        ],
         "platforms": [
             "netstandard2.0",
             "net45"
         ],
-        "category": "Webservices and networking",
+        "category": "Integrations",
         "external": true
     },
     {
@@ -134,32 +97,20 @@
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "http",
-            "https",
-            "SOAP",
-            "POST",
-            "web"
-        ],
-        "category": "Webservices and networking"
+        "category": "Integrations"
     },
     {
         "name": "Mail",
         "aliases": ["E-mail", "SMTP", "SMTP-client"],
         "page": "Mail-target",
         "description": "Sends log messages by email using SMTP protocol or pickup folder.",
-        "keywords": [
-            "email",
-            "e-mail",
-            "pickup"
-        ],
         "platforms": [
             "net35",
             "net40",
             "net45",
             "netstandard2.0"
         ],
-        "category": ""
+        "category": "Integrations"
     },
     {
         "name": "Mail",
@@ -167,17 +118,13 @@
         "package": "NLog.MailKit",
         "description": "Mail Target using MailKit. Only SMTP supported.",
         "platform-notes": "For .NET 4.5: NLog.MailKit ver. 3.4.0 nuget package required",
-        "keywords": [
-            "email",
-            "e-mail"
-        ],
         "platforms": [
             "net45",
             "netstandard1.3",
             "netstandard1.5",
             "netstandard2.0"
         ],
-        "category": ""
+        "category": "Integrations"
     },
     {
         "name": "Memory",
@@ -195,35 +142,18 @@
         "name": "Network",
         "page": "Network-target",
         "description": "Sends log messages over the network.",
-        "keywords": [
-            "tcp",
-            "udp",
-            "ip",
-            "ipv6",
-            "http",
-            "https",
-            "POST",
-            "web"
-        ],
-        "category": "Webservices and networking"
+        "category": "Integrations"
     },
     {
         "name": "NLogViewer",
         "page": "NLogViewer-target",
         "description": "Sends log messages to the remote instance of NLog Viewer.",
-        "keywords": [
-            "tool",
-            "gui"
-        ],
         "category": "Integrations (GUI tools)"
     },
     {
         "name": "Null",
         "page": "Null-target",
         "description": "Discards log messages. Used mainly for debugging and benchmarking.",
-        "keywords": [
-            "blackhole"
-        ],
         "category": "Programmatically"
     },
     {
@@ -245,10 +175,6 @@
         "description": "Updates specified Windows Performance Counter on each write.",
         "package": "NLog.PerformanceCounter",
         "platform-notes": "For NLog 5.0: NLog.PerformanceCounter nuget package required",
-        "keywords": [
-            "performance counter",
-            "Diagnostics"
-        ],
         "platforms": [
             "net35",
             "net40",
@@ -275,29 +201,13 @@
         "name": "WebService",
         "page": "WebService-target",
         "description": "Calls the specified web service on each log message.",
-        "keywords": [
-            "SOAP",
-            "SOAP 1.1",
-            "SOAP 1.2",
-            "POST",
-            "https",
-            "proxy",
-            "Rfc3986",
-            "web",
-            "json",
-            "xml",
-            "WebServices"
-        ],
-        "category": "Webservices and networking"
+        "category": "Integrations"
     },
     {
         "name": "AsyncWrapper",
         "page": "AsyncWrapper-target",
         "description": "Provides asynchronous, buffered execution of target writes.",
         "wrapper": true,
-        "keywords": [
-            "performance"
-        ],
         "category": "Async and buffering"
     },
     {
@@ -319,9 +229,6 @@
         "page": "FallbackGroup-target",
         "description": "Provides fallback-on-error.",
         "wrapper": true,
-        "keywords": [
-            "alternative"
-        ],
         "category": "Filtering, throttling and error handling"
     },
     {
@@ -344,9 +251,6 @@
             "netstandard2.0"
         ],
         "wrapper": true,
-        "keywords": [
-            "security"
-        ],
         "category": "Security"
     },
     {
@@ -354,10 +258,6 @@
         "page": "LimitingWrapper-target",
         "description": "Limits number of log events sent to target.",
         "wrapper": true,
-        "keywords": [
-            "throtte",
-            "throttling"
-        ],
         "category": "Filtering, throttling and error handling"
     },
     {
@@ -413,9 +313,6 @@
             "net45"
         ],
         "platform-notes": "For NLog 4.7 (and older) then NLog.Extended nuget package required",
-        "keywords": [
-            "message queue"
-        ],
         "category": "Integrations"
     },
     {
@@ -448,10 +345,6 @@
         "page": "FormControl-target",
         "description": "Logs text to Windows.Forms.Control.Text property control of specified Name.",
         "package": "NLog.Windows.Forms",
-        "keywords": [
-            "winforms",
-            "gui"
-        ],
         "platforms": [
             "net35",
             "net40",
@@ -465,10 +358,6 @@
         "page": "MessageBox-target",
         "description": "Pops up log messages as message boxes.",
         "package": "NLog.Windows.Forms",
-        "keywords": [
-            "winforms",
-            "gui"
-        ],
         "platforms": [
             "net35",
             "net40",
@@ -482,10 +371,6 @@
         "page": "RichTextBox-target",
         "description": "Log text a Rich Text Box control in an existing or new form.",
         "package": "NLog.Windows.Forms",
-        "keywords": [
-            "winforms",
-            "gui"
-        ],
         "platforms": [
             "net35",
             "net40",
@@ -499,10 +384,6 @@
         "page": "ToolStripItem-target",
         "description": "Logs text to Windows.Forms.ToolStripItem property control of specified Name",
         "package": "NLog.Windows.Forms",
-        "keywords": [
-            "winforms",
-            "gui"
-        ],
         "platforms": [
             "net35",
             "net40",
@@ -516,9 +397,6 @@
         "description": "Logs to Elmah",
         "package": "NLog.Elmah",
         "page": "https://github.com/NLog/NLog.elmah",
-        "keywords": [
-            "errors"
-        ],
         "category": "Integrations"
     },
     {
@@ -590,10 +468,7 @@
         "description": "Writes to Elastic Search servers",
         "package": "NLog.Targets.ElasticSearch",
         "external": true,
-        "category": "Integrations",
-        "keywords": [
-            "Elasticsearch"
-        ]
+        "category": "Integrations"
     },
     {
         "name": "elmah.io",
@@ -753,9 +628,6 @@
         "package": "NLog.RabbitMQ.Target",
         "description": "Sends logs over a RabbitMQ message broker",
         "external": true,
-        "keywords": [
-            "message queue"
-        ],
         "category": "Integrations"
     },
     {
@@ -963,13 +835,9 @@
         "description": "Writes NLog messages to a topic on https://ntfy.sh/",
         "page": "https://github.com/MichelMichels/nlog-ntfy",
         "external": true,
-        "category": "Integrations",
-        "keywords": [
-            "ntfy",
-            "ntfy.sh"
-        ]
+        "category": "Integrations"
     },
-        {
+    {
         "name": "Bugsnag",
         "page": "https://github.com/lucaritossa/NLog.Targets.Bugsnag",
         "package": "NLog.Targets.Bugsnag",
@@ -978,14 +846,11 @@
         "category": "Integrations (Cloud)"
     },
     {
-        "name": "nlog-kafka-target",
-        "package": "NLog.Targets.KafkaAppender",
-        "description": "Writes NLog messages to kafka which provides the custom topics pattern",
+        "name": "Kafka",
         "page": "https://github.com/hayrullahcansu/nlog-kafka-target",
+        "package": "NLog.Targets.KafkaAppender",
+        "description": "Writes NLog messages to Kafka Queue Topic",
         "external": true,
-        "category": "Integrations",
-        "keywords": [
-            "kafka"
-        ]
+        "category": "Integrations"
     }
 ]
