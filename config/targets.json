@@ -141,7 +141,7 @@
     {
         "name": "Network",
         "page": "Network-target",
-        "description": "Sends log messages over the network.",
+        "description": "Sends log messages over the network using TCP / UDP / SSL / TLS.",
         "category": "Integrations"
     },
     {
