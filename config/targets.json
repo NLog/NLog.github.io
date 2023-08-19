@@ -519,6 +519,14 @@
         "category": "Integrations"
     },
     {
+        "name": "InfluxDB",
+        "page": "https://github.com/tomcheney/nlog-influx-target",
+        "package": "NLog.Targets.InfluxDB",
+        "description": "Writes NLog messages to InfluxDB v2",
+        "external": true,
+        "category": "Databases"
+    },
+    {
         "name": "NLog.Gelf",
         "page": "https://github.com/mantasaudickas/NLog.Gelf",
         "package": "NLog.Gelf",
@@ -657,9 +665,9 @@
         "name": "RavenDB",
         "page": "https://github.com/kentcooper/NLog.Raven",
         "package": "NLog.Raven",
-        "description": "Writes NLog messages to https://ravendb.net",
+        "description": "Writes NLog messages to RavenDB",
         "external": true,
-        "category": "Integrations (Cloud)"
+        "category": "Databases"
     },
     {
         "name": "Sentry (Unified SDK)",
