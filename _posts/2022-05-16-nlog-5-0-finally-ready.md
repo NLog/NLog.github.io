@@ -22,7 +22,7 @@ NLog 5.0 has completed preview testing, and is ready for release.
 
 See details [here](https://nlog-project.org/2021/08/25/nlog-5-0-preview1-ready.html)
 
-## Breaking Changes
+## Major Breaking Changes
 
 NLog v5.2 marks additional methods as obsolete as they conflict with [application trimming](https://nlog-project.org/2023/05/30/nlog-5-2-trim-warnings.html).
 
