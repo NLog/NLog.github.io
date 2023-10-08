@@ -1,0 +1,38 @@
+name: 'Build Wiki'
+
+on: 
+  repository_dispatch:
+    types: [build-wiki]
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: Checkout wiki repo
+      uses: actions/checkout@v3
+      with:
+        repository: NLog/NLog.wiki
+        path: _wiki/wiki-src
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    - run: pip install -r _wiki/requirements.txt
+    - run: mkdocs build --config-file _wiki/mkdocs.yml
+    - name: Commit files
+      run: |
+        cd ./wiki
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add ./
+        git commit -m "Build Wiki" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: master
+        directory: ./wiki
