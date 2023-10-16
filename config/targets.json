@@ -101,9 +101,9 @@
     },
     {
         "name": "Mail",
-        "aliases": ["E-mail", "SMTP", "SMTP-client"],
+        "aliases": ["Mail", "E-mail", "SMTP", "SMTP-client"],
         "page": "Mail-target",
-        "description": "Sends log messages by email using SMTP protocol or pickup folder.",
+        "description": "Sends log messages with SmtpClient using SMTP protocol or pickup folder.",
         "platforms": [
             "net35",
             "net40",
@@ -113,11 +113,11 @@
         "category": "Integrations"
     },
     {
-        "name": "Mail",
+        "name": "MailKit",
+        "aliases": ["Mail", "MailKit"],
         "page": "Mail-target",
         "package": "NLog.MailKit",
-        "description": "Mail Target using MailKit. Only SMTP supported.",
-        "platform-notes": "For .NET 4.5: NLog.MailKit ver. 3.4.0 nuget package required",
+        "description": "Sends log messages with MailKit using SMTP protocol or pickup folder.",
         "platforms": [
             "net45",
             "netstandard1.3",
