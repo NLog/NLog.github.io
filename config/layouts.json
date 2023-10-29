@@ -31,7 +31,7 @@
     },
     {
         "name": "Simple (plain text)",
-        "page": "TextLayout",
+        "page": "SimpleLayout",
         "description": "Write events as plain text. The default layout when no Layout type is specified."
     },
     {
@@ -64,11 +64,27 @@
         ]
     },
     {
-        "name": "Gelf",
+        "name": "GELF JSON",
         "page": "https://github.com/farzadpanahi/NLog.GelfLayout",
-        "description": "Write events to GELF JSON-format for GrayLog server.",
+        "description": "Write events to GELF JSON-format for GrayLog-server.",
         "package": [
           "NLog.GelfLayout"
+        ]
+    },
+    {
+        "name": "CLEF JSON",
+        "page": "https://github.com/paulem/nlog-layouts-clef",
+        "description": "Write events in JSON using the Compact Log Event Format (CLEF) for Seq-server.",
+        "package": [
+          "NLog.Layouts.ClefJsonLayout"
+        ]
+    },
+    {
+        "name": "Elastic JSON",
+        "page": "https://github.com/elastic/ecs-dotnet/tree/main/src/Elastic.CommonSchema.NLog",
+        "description": "Write events in JSON using Elastic Common Schema (ECS) for ElasticSearch-server.",
+        "package": [
+          "Elastic.CommonSchema.NLog"
         ]
     }
 ]
