@@ -580,8 +580,9 @@ FileTarget will now keep file handles open by default, and will not release file
   better performance, than to open/close the file handle for each write.
 
 * **Workaround:** Explicitly specify `KeepFileOpen=false` to enforce old behavior similar to log4net/log4j MinimalLock.
-  But if the problem comes from external application no longer being able to acquire exclusive file-lock, then it is better
-  to fix the external application to use `FileShare.ReadWrite`.
+  This is mostly important when FileName points to network-path on remote network-host, to avoid undetected invalidation of FileStream-handle.
+  But if having issues with external application on the local machine, that is no longer being able to acquire exclusive file-lock,
+  then it is better to fix the external application to use `FileShare.ReadWrite`.
 
 ### FileTarget ConcurrentWrites = false by default
 FileTarget will now by default not attempt to use operating system global mutexes for synchronized file-access between multiple applications on the same machine.
