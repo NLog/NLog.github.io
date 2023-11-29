@@ -56,24 +56,14 @@
             Flush any pending log messages (in case of asynchronous targets).
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_LogFactory_Flush_2.htm">Flush(AsyncContinuation, TimeSpan)</a></td><td><div class="summary">
             Flush any pending log messages (in case of asynchronous targets).
-            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_LogFactory_GetCandidateConfigFilePaths.htm">GetCandidateConfigFilePaths</a></td><td> <strong>Obsolete. </strong><div class="summary">
-            Get file paths (including filename) for the possible NLog config files. 
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_LogFactory_GetCurrentClassLogger.htm">GetCurrentClassLogger<span id="LST52427C2D_8"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST52427C2D_8?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a></td><td><div class="summary">
             Gets the logger with the full name of the current class, so namespace and class name.
-            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_LogFactory_GetCurrentClassLogger_1.htm">GetCurrentClassLogger(Type)</a></td><td> <strong>Obsolete. </strong><div class="summary">
-            Gets a custom logger with the full name of the current class, so namespace and class name.
-            Use <span class="parameter">loggerType</span> to create instance of a custom <a href="T_NLog_Logger.htm">Logger</a>.
-            If you haven't defined your own <a href="T_NLog_Logger.htm">Logger</a> class, then use the overload without the loggerType.
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_LogFactory_GetCurrentClassLogger__1.htm">GetCurrentClassLogger<span id="LST52427C2D_9"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST52427C2D_9?cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=(");</script>T<span id="LST52427C2D_10"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST52427C2D_10?cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)");</script><span id="LST52427C2D_11"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST52427C2D_11?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a></td><td><div class="summary">
             Gets the logger with the full name of the current class, so namespace and class name.
             Use <span class="typeparameter">T</span>  to create instance of a custom <a href="T_NLog_Logger.htm">Logger</a>.
             If you haven't defined your own <a href="T_NLog_Logger.htm">Logger</a> class, then use the overload without the type parameter.
-            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_LogFactory_GetLogger_1.htm">GetLogger(String)</a></td><td><div class="summary">
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_LogFactory_GetLogger.htm">GetLogger(String)</a></td><td><div class="summary">
             Gets the specified named logger.
-            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_LogFactory_GetLogger.htm">GetLogger(String, Type)</a></td><td> <strong>Obsolete. </strong><div class="summary">
-            Gets the specified named logger.
-            Use <span class="parameter">loggerType</span> to create instance of a custom <a href="T_NLog_Logger.htm">Logger</a>.
-            If you haven't defined your own <a href="T_NLog_Logger.htm">Logger</a> class, then use the overload without the loggerType.
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_LogFactory_GetLogger__1.htm">GetLogger<span id="LST52427C2D_12"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST52427C2D_12?cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=(");</script>T<span id="LST52427C2D_13"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST52427C2D_13?cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)");</script>(String)</a></td><td><div class="summary">
             Gets the specified named logger.
             Use <span class="typeparameter">T</span>  to create instance of a custom <a href="T_NLog_Logger.htm">Logger</a>.
@@ -94,12 +84,8 @@
             Loops through all loggers previously returned by GetLogger and recalculates their 
             target and filter list. Useful after modifying the configuration programmatically
             to ensure that all loggers have been properly configured.
-            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_LogFactory_ResetCandidateConfigFilePath.htm">ResetCandidateConfigFilePath</a></td><td> <strong>Obsolete. </strong><div class="summary">
-            Clear the candidate file paths and return to the defaults.
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_LogFactory_ResumeLogging.htm">ResumeLogging</a></td><td><div class="summary">
             Resumes logging if having called <a href="M_NLog_LogFactory_SuspendLogging.htm">SuspendLogging<span id="LST52427C2D_16"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST52427C2D_16?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a>.
-            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_LogFactory_SetCandidateConfigFilePaths.htm">SetCandidateConfigFilePaths</a></td><td> <strong>Obsolete. </strong><div class="summary">
-            Overwrite the candidates paths (including filename) for the possible NLog config files.
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_LogFactory_Setup.htm">Setup<span id="LST52427C2D_17"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST52427C2D_17?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a></td><td><div class="summary">
             Begins configuration of the LogFactory options using fluent interface
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_LogFactory_Setup_1.htm">Setup(Action<span id="LST52427C2D_18"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST52427C2D_18?cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=(");</script>ISetupBuilder<span id="LST52427C2D_19"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST52427C2D_19?cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)");</script>)</a></td><td><div class="summary">
@@ -111,6 +97,4 @@
 								 
 							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubevent.gif" alt="Public event" title="Public event" /></td><td><a href="E_NLog_LogFactory_ConfigurationChanged.htm">ConfigurationChanged</a></td><td><div class="summary">
             Occurs when logging <a href="P_NLog_LogFactory_Configuration.htm">Configuration</a> changes.
-            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubevent.gif" alt="Public event" title="Public event" /></td><td><a href="E_NLog_LogFactory_ConfigurationReloaded.htm">ConfigurationReloaded</a></td><td> <strong>Obsolete. </strong><div class="summary">
-            Occurs when logging <a href="P_NLog_LogFactory_Configuration.htm">Configuration</a> gets reloaded.
             </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID7RB')" onkeypress="SectionExpandCollapse_CheckKey('ID7RB', event)" tabindex="0"><img id="ID7RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID7RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="N_NLog.htm">NLog Namespace</a></div></div></div></div><div id="pageFooter" class="pageFooter"><p><a href="https://nlog-project.org/" target="_blank" rel="noopener noreferrer">Copyright (c) 2004-2022 NLog</a></p> </div></body></html>
