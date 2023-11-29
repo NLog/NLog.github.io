@@ -35,15 +35,7 @@
             Gets a value indicating whether the target has been initialized.
             </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_TargetWithContext_Layout.htm">Layout</a></td><td><div class="summary">
             Gets or sets the layout used to format log messages.
-            </div> (Overrides <a href="P_NLog_Targets_TargetWithLayout_Layout.htm">TargetWithLayout<span id="LST6F68583F_7"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST6F68583F_7?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>Layout</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_Target_LayoutWithLock.htm">LayoutWithLock</a></td><td> <strong>Obsolete. </strong><div class="summary">
-            NLog Layout are by default threadsafe, so multiple threads can be rendering logevents at the same time.
-            This ensure high concurrency with no lock-congestion for the application-threads, especially when using <a href="T_NLog_Targets_Wrappers_AsyncTargetWrapper.htm">AsyncTargetWrapper</a>
-            or AsyncTaskTarget.
-            
-            But if using custom <a href="T_NLog_Layouts_Layout.htm">Layout</a> or <a href="T_NLog_LayoutRenderers_LayoutRenderer.htm">LayoutRenderer</a> that are not
-            threadsafe, then this option can enabled to protect against thread-concurrency-issues. Allowing one
-            to update to NLog 5.0 without having to fix custom/external layout-dependencies.
-            </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protproperty.gif" alt="Protected property" title="Protected property" /></td><td><a href="P_NLog_Targets_Target_LoggingConfiguration.htm">LoggingConfiguration</a></td><td><div class="summary">
+            </div> (Overrides <a href="P_NLog_Targets_TargetWithLayout_Layout.htm">TargetWithLayout<span id="LST6F68583F_7"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST6F68583F_7?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>Layout</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protproperty.gif" alt="Protected property" title="Protected property" /></td><td><a href="P_NLog_Targets_Target_LoggingConfiguration.htm">LoggingConfiguration</a></td><td><div class="summary">
             Gets the logging configuration this target is part of.
             </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_Target_Name.htm">Name</a></td><td><div class="summary">
             Gets or sets the name of the target.

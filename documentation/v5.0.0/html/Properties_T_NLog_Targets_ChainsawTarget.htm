@@ -34,15 +34,7 @@
             Gets or sets a value indicating whether to keep connection open whenever possible.
             </div> (Inherited from <a href="T_NLog_Targets_NetworkTarget.htm">NetworkTarget</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_NLogViewerTarget_Layout.htm">Layout</a></td><td><div class="summary">
             Gets or sets the instance of <a href="T_NLog_Layouts_Log4JXmlEventLayout.htm">Log4JXmlEventLayout</a> that is used to format log messages.
-            </div> (Inherited from <a href="T_NLog_Targets_NLogViewerTarget.htm">NLogViewerTarget</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_Target_LayoutWithLock.htm">LayoutWithLock</a></td><td> <strong>Obsolete. </strong><div class="summary">
-            NLog Layout are by default threadsafe, so multiple threads can be rendering logevents at the same time.
-            This ensure high concurrency with no lock-congestion for the application-threads, especially when using <a href="T_NLog_Targets_Wrappers_AsyncTargetWrapper.htm">AsyncTargetWrapper</a>
-            or AsyncTaskTarget.
-            
-            But if using custom <a href="T_NLog_Layouts_Layout.htm">Layout</a> or <a href="T_NLog_LayoutRenderers_LayoutRenderer.htm">LayoutRenderer</a> that are not
-            threadsafe, then this option can enabled to protect against thread-concurrency-issues. Allowing one
-            to update to NLog 5.0 without having to fix custom/external layout-dependencies.
-            </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_NetworkTarget_LineEnding.htm">LineEnding</a></td><td><div class="summary">
+            </div> (Inherited from <a href="T_NLog_Targets_NLogViewerTarget.htm">NLogViewerTarget</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_NetworkTarget_LineEnding.htm">LineEnding</a></td><td><div class="summary">
             Gets or sets the end of line value if a newline is appended at the end of log message <a href="P_NLog_Targets_NetworkTarget_NewLine.htm">NewLine</a>.
             </div> (Inherited from <a href="T_NLog_Targets_NetworkTarget.htm">NetworkTarget</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_NLogViewerTarget_LoggerName.htm">LoggerName</a></td><td><div class="summary">
             Gets or sets the renderer for log4j:event logger-xml-attribute (Default ${logger})
