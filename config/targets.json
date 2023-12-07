@@ -336,7 +336,8 @@
         "platforms": [
             "net35",
             "net40",
-            "net45"
+            "net45",
+            "netstandard2.0"
         ],
         "category": "Async and buffering"
     },

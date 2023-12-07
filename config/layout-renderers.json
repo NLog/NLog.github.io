@@ -1071,10 +1071,12 @@
         "name": "aspnet-request-has-posted-body",
         "page": "AspNet-Request-Has-Posted-Body-Layout-Renderer",
         "package": [
+            "NLog.Web",
             "NLog.Web.AspNetCore"
         ],
         "description": "ASP.NET posted body / payload was included with the request",
         "platforms": [
+            "net45",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
