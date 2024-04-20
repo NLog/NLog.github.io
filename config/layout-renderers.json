@@ -613,7 +613,7 @@
     {
         "name": "appsetting",
         "page": "AppSetting-Layout-Renderer",
-        "description": "App config setting from .config file",
+        "description": "AppSetting value from application app.config or web.config file",
         "platform-notes": "For NLog 4.5 (and older) then NLog.Extended nuget package required",
         "platforms": [
             "net35",
