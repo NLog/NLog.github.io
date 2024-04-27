@@ -25,11 +25,11 @@
             Gets the logger with type <span class="typeparameter">T</span>.
             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_LogFactory_IsLoggingEnabled.htm">IsLoggingEnabled</a></td><td><div class="summary">
             Returns <span class="keyword"><span id="LSTBB137666_6"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTBB137666_6?vb=True|nu=true");</script></span> if logging is currently enabled.
-            </div> (Inherited from <a href="T_NLog_LogFactory.htm">LogFactory</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_LogFactory_LoadConfiguration.htm">LoadConfiguration</a></td><td> <strong>Obsolete. </strong><div class="summary">
-            Loads logging configuration from file (Currently only XML configuration files supported)
             </div> (Inherited from <a href="T_NLog_LogFactory.htm">LogFactory</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="M_NLog_LogFactory_OnConfigurationChanged.htm">OnConfigurationChanged</a></td><td><div class="summary">
             Raises the event when the configuration is reloaded. 
             </div> (Inherited from <a href="T_NLog_LogFactory.htm">LogFactory</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="M_NLog_LogFactory_OnConfigurationReloaded.htm">OnConfigurationReloaded</a></td><td> <strong>Obsolete. </strong><div class="summary">
+            Obsolete and replaced by <a href="M_NLog_LogFactory_OnConfigurationReloaded.htm">OnConfigurationReloaded(LoggingConfigurationReloadedEventArgs)</a> with NLog 5.2.
+            
             Raises the event when the configuration is reloaded. 
             </div> (Inherited from <a href="T_NLog_LogFactory.htm">LogFactory</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_LogFactory_ReconfigExistingLoggers.htm">ReconfigExistingLoggers<span id="LSTBB137666_7"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTBB137666_7?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a></td><td><div class="summary">
             Loops through all loggers previously returned by GetLogger and recalculates their 
