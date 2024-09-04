@@ -864,7 +864,7 @@
     },
     {
         "name": "Nats",
-        "page": "https://github.com/Siqsuruq/NLog.Targets.Nats",
+        "page": "https://github.com/Siqsuruq/NLog-Target.Nats",
         "package": "NLog.Targets.Nats",
         "description": "Writes NLog messages to NATS messaging server",
         "external": true,
