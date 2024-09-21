@@ -869,5 +869,13 @@
         "description": "Writes NLog messages to NATS messaging server",
         "external": true,
         "category": "Integrations"
+    },
+    {
+        "name": "ActiveMQ",
+        "page": "https://github.com/YuraSidorets/NLog.Targets.ActiveMQ",
+        "package": "NLog.Targets.ActiveMQ",
+        "description": "Writes NLog messages using Apache ActiveMQ NMS native OpenWire protocol",
+        "external": true,
+        "category": "Integrations"
     }
 ]
