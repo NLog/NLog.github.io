@@ -601,9 +601,9 @@
     },
     {
         "name": "Loupe",
-        "page": "https://github.com/GibraltarSoftware/Gibraltar.Agent.NLog2",
-        "package": "Gibraltar.Agent.NLog4",
-        "description": "Writes NLog messages to Gibraltar https://www.onloupe.com",
+        "page": "https://github.com/gibraltarsoftware/gibraltar.agent.nlog2",
+        "package": "Loupe.Agent.NLog",
+        "description": "Writes NLog messages to Gibraltar Loupe Agent https://www.onloupe.com",
         "external": true,
         "category": "Integrations (Cloud)"
     },
