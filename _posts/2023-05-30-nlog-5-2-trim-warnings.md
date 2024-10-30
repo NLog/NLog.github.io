@@ -3,19 +3,19 @@ layout: post
 title: NLog 5.2 without trim warnings
 ---
 
-NLog v5.2 changes the recommended way for explicit registration of NLog extensions.
-Already now the automatic scanning for assemblies containing NLog extensions was disabled with NLog v5.
-Instead NLog users are encouraged to explicitly specify what NLog extensions to load.
+NLog v5.2 is changing the recommended way for explicit registration of NLog extensions.
+NLog v5.0 stopped the automatic scanning for assemblies with NLog extensions,
+instead NLog uses was encouraged to explicitly specify what NLog extensions to load.
 
 NLog extensions are normally loaded by just specifying the assembly-name, and then NLog will dynamically
-load the assembly, and NLog will then use reflection to enumerate the types inside the assembly.
+load the assembly, and use reflection to enumerate the types inside the assembly.
 
 When using NET trimming to strip away all unreferenced code, then dynamic assembly loading will not work well.
 Dynamically loaded assemblies might reference code that have been stripped from the application. To prevent
 all these issues then NET trimming will make build warnings about such possible pitfalls. Thus previous versions
 of NLog are reported as being unsafe for NET trimming, because of the ability to dynamically load assemblies.
 
-NLog v5.2 now recommends that one registers the individual NLog extension types like this:
+NLog v5.2 now recommends to register the individual NLog extension types like this:
 ```csharp
 NLog.LogManager.Setup().SetupExtensions(ext => {
 	ext.RegisterTarget<MyCustomTarget>();

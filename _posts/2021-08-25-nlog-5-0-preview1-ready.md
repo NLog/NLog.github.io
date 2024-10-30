@@ -274,16 +274,17 @@ NLog LoggingProvider no longer follows the Microsoft Logger filtering configurat
 * **Reason:** It is confusing to have two seperate systems for filtering logging output. New users might
 think NLog is not working correctly after having configured NLog LoggingRules, because Microsoft LoggerFactory filters are interfering.
 
-* **Workaround:** Explicit specify `RemoveLoggerFactoryFilter = false` for NLogProviderOptions when calling `UseNLog()` to enable old behavior,
+* **Workaround:** Update NLog Logging rules to suppress the unwanted output using the new [finalMinLevel](https://github.com/NLog/NLog/wiki/Logging-Rules-FinalMinLevel)-option.
+Alternative specify `RemoveLoggerFactoryFilter = false` for NLogProviderOptions when calling `UseNLog()` to revert to old behavior,
 where Microsoft LoggerFactory filters specified in appsetting.json also applies to NLog.
 
-Alternatively the new `finalMinLevel`-option can be used to replicate the behavior of Microsoft Logging Filters:
+The new [finalMinLevel](https://github.com/NLog/NLog/wiki/Logging-Rules-FinalMinLevel)-option can be used to replicate the behavior of Microsoft Logging Filters:
 ```xml
 <rules>
     <logger name="System.*" finalMinLevel="Warn" />
     <logger name="Microsoft.*" finalMinLevel="Warn" />
     <logger name="Microsoft.Hosting.Lifetime*" finalMinLevel="Info" /> <!-- Overrides previous rule -->
-    <logger name="*" minLevel="Debug" writeTo="console" />
+    <logger name="*" minLevel="Debug" writeTo="console" /> <!-- Replace with your targets -->
 </rules>
 ```
 
