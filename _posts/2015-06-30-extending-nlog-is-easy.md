@@ -7,7 +7,7 @@ title: Extending NLog is... easy!
 
 Not everyone knows NLog is easy to extend to your own wishes. 
 There can be various reasons for wanting to extend NLog. 
-For example when you want to write your log messages to a custom output or you would like to use your own `${}` macros. 
+For example when you want to write your log messages to a custom output target, or include additional details in the output with own custom `${layout-renderer}`. 
 
 With some attributes you can create your own custom target, layout or layout renderer with ease. 
 Also creating your own conditions for filter messages is possible!
@@ -78,7 +78,7 @@ Example usages:
 
 
 ## How to write a custom target?
-Creating a custom target is almost identical to creating a custom layout renderer. 
+Creating a custom target is very similar to creating a custom layout renderer. 
 
 The created class should now inherit from `NLog.Targets.TargetWithLayout` and override the `Write()` method. In the body of the method invoke `this.Layout.Render()` to render the message text.
 
@@ -96,13 +96,14 @@ public sealed class MyFirstTarget: TargetWithLayout
     }
  
     [RequiredParameter] 
-    public string Host { get; set; }
+    public Layout Host { get; set; }
  
     protected override void Write(LogEventInfo logEvent) 
     { 
        string logMessage = this.Layout.Render(logEvent); 
+       string hostName = this.Host.Render(logEvent); 
 
-       SendTheMessageToRemoteHost(this.Host, logMessage); 
+       SendTheMessageToRemoteHost(hostName, logMessage); 
     } 
  
     private void SendTheMessageToRemoteHost(string host, string message) 
@@ -144,7 +145,7 @@ Configuration file example:
 
 
 ### Do I really need to create a separate assembly?
-Not really. You should then register your target programmatically. Just make sure to register your stuff at the very beginning of your program, before any log messages are written. 
+Not really. You should then register your target programmatically. Just make sure to register your stuff at the very beginning of your program, before the loading of NLog config and actual logging. 
 {% highlight csharp %}
 static void Main(string[] args) 
 { 
@@ -156,7 +157,7 @@ static void Main(string[] args)
     ConfigurationItemFactory.Default.Targets
           .RegisterDefinition("MyFirst", typeof(MyNamespace.MyFirstTarget));
  
-    // start logging here 
+    // start loading NLog config and logging here
 }
 {% endhighlight %}
 
