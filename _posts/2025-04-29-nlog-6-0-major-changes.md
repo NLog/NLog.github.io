@@ -3,16 +3,16 @@ layout: post
 title: NLog 6.0 - List of major changes
 ---
 
-NLog 6.0 is a major version release that introduces breaking changes, including the splitting into multiple NuGet packages, and other improvements to support AOT builds.
+NLog 6.0 is a major version release, and introduces breaking changes to support AOT-builds by splitting into multiple nuget packages.
 
 ## Major changes
 
 ### NLog supports AOT
 
 NLog has traditionally relied on reflection to dynamically discover requirements for target output.
-But reflection does not always work well with build trimming, and before NLog marked itself to have trimming disabled.
+But reflection does not always work well with build trimming, and before NLog marked itself to be excluded from trimming.
 
-NLog includes many features, each of these feature often introduce additional dependencies on the .NET library.
+NLog includes many features, and each feature often introduces additional dependencies on the .NET library.
 This can lead to overhead for AOT builds, as it must include and compile all the relevant source code.
 
 NLog v6 attempts to reduce its footprint by extracting several features into separate nuget-packages:
@@ -20,37 +20,21 @@ NLog v6 attempts to reduce its footprint by extracting several features into sep
 - NLog.RegEx - Depends on System.Text.RegularExpressions which is a huge dependency for a logging library.
 - NLog.Targets.ConcurrentFile - ConcurrentWrites using global mutex from operating system API.
 - NLog.Targets.AtomicFile - ConcurrentWrites using atomic file-append from operating system API.
+- NLog.Targets.GZipFile - EnableArchiveFileCompression using GZipStream for writing GZip compressed log-files.
 - NLog.Targets.Mail - Depends on System.Net.Mail.SmtpClient.
-- NLog.Targets.Network - Depends on TCP and UDP Network Socket.
+- NLog.Targets.Network - Depends on TCP and UDP Network Socket, and adds support for Syslog and Graylog.
 - NLog.Targets.Trace - Depends on System.Diagnostics.TraceListener.
 - NLog.Targets.WebService - Depends on System.Net.Http.HttpClient.
 
-NLog v6 also no longer supports automatic loading of `NLog.config`-file. This is because dynamic configuration 
-loading, prevents build trimming of any NLog types, as the AOT-build cannot determine upfront what types
-will be used by the `NLog.config`-file.
+NLog v6 also no longer depends on `System.Xml.XmlReader`, but now includes its own basic XmlParser for loading `NLog.config` files.
 
-### NLog without automatic loading of NLog.config
+NLog v6 still introduces an overhead when compared with just using `Console.WriteLine`,
+but now reduced to 5 MByte in comparison to 14 MBytes with NLog v5. 
 
-NLog will no longer automatically load the NLog LoggingConfiguration, when creating the first NLog Logger by calling `LogManger.GetCurrentClassLogger()` or `LogManger.GetLogger()`.
-
-Instead one must explicit load the `NLog.config` file at application-startup:
-```csharp
-var logger = NLog.LogManager.Setup().LoadConfigurationFromFile().GetCurrentClassLogger();
-logger.Info("Hello World");
-```
-
-When using Microsoft HostBuilder with `UseNLog()`, then it will continue to automatically load the NLog LoggingConfiguration without having to make any changes.
-
-.NET Framework will continue to probe NLog LoggingConfiguration from the `app.config` / `web.config`, so one can consider doing this:
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
-<configuration>
-  <configSections>
-    <section name="nlog" type="NLog.Config.ConfigSectionHandler, NLog"/>
-  </configSections>
-  <nlog include="NLog.config" />
-</configuration>
-```
+If the `NLog.config`-file had to be explicitly loaded, then the AOT-build could trim much more,
+since right now the AOT-build cannot predict what types will be required by the `NLog.config`-file.
+But disabling automatic loading of the `NLog.config`-file is a huge breaking change,
+and would hurt lots of existing applications.
 
 ### NLog FileTarget without ConcurrentWrites
 
@@ -71,7 +55,8 @@ The old archive-logic:
 - LogFile.2.txt
 
 NLog FileTarget still support static archive logic with `File.Move`, but it must be explictly activated
-by specifying `ArchiveFileName`.
+by specifying `ArchiveFileName`. If not using `ArchiveFileName` but want to revert to old archive-logic
+with `File.Move` then just ensure to assign `ArchiveFileName="..."` with the same value as `FileName="..."`.
 
 NLog FileTarget no longer has the following options:
 
@@ -91,6 +76,18 @@ NLog FileTarget no longer has the following options:
 - ArchiveNumbering - Marked as obsolete. Instead use new ArchiveSuffixFormat (Rolling is unsupported).
 
 If one still requires these options, then one can use the new NLog.Targets.ConcurrentFile-nuget-package.
+NLog.Targets.ConcurrentFile-nuget-package is the original NLog FileTarget with all its features and complexity.
+The goal is that NLog.Targets.ConcurrentFile-nuget-package should become legacy, but it might help some when upgrading to NLog v6.
+
+Alternative options for replacing `ConcurrentWrites = true`:
+- Use the new nuget-package NLog.Targets.AtomicFile where AtomicFileTarget uses atomic file-appends and supports Windows / Linux with NET8.
+- Change to use `KeepFileOpen = false` where file is opened / closed when writing LogEvents. Recommended to use `<targets async="true">`.
+
+Alternative options for replacing `EnableArchiveFileCompression = true`:
+- Activate NTFS compression for the logging-folder.
+- Setup cron-job / scheduled-task that performs ZIP-compression and cleanup of the logging-folder.
+- Implement background task in the application, which monitors the logging-folder and performs ZIP-compression and cleanup.
+- Use the new nuget-package NLog.Targets.GZipFile where GZipFileTarget writes directly to a compressed log-file using GZipStream.
 
 ### NLog AtomicFileTarget without mutex
 
@@ -178,6 +175,19 @@ The `NetworkTarget` can now perform SSL handshake with custom SSL certificate fr
 
 ## Breaking changes
 
+### Removed legacy Target-Frameworks
+NetStandard 1.3 and NetStandard 1.5 has now been removed, since less relevant as most have moved to NetStandard 2.0 (or newer).
+
+Removes platform support for:
+
+- NET CoreApp 1.0 + 1.1
+- UAP + UAP10.0 (UWP ver. 1)
+- Tizen30
+
+Considering to also remove NET35 + NET45, since those Target-Frameworks requires extra effort to build when using Visual Studio 2022.
+Removing old Target-Frameworks will also reduce the file-size of the NLog-nuget-package.
+If this will break your entire eco-system then [Please tell](https://github.com/NLog/NLog/issues/4931).
+
 ### NLog Structured Message formatting without quotes
 
 NLog v4.5 introduced support for message-templates, where it followed the Serilog approach by adding quotes around string-values:
@@ -204,7 +214,7 @@ marks the NLog `JsonLayout` `EscapeForwardSlash` as completely obsolete and no l
 
 ### NLog JsonLayout SuppressSpaces default true
 
-The `JsonLayout` has now have a new default value for `SuppressSpaces = true`, 
+The `JsonLayout` now have the new default value `SuppressSpaces = true`, 
 since log-file-size / network-traffic-usage doesn't benefit from the extra spaces.
 
 If the output from `JsonLayout` needs to be more human readable, then one can explictly assign
@@ -256,6 +266,9 @@ The .NET `System.Xml.XmlReader` is a heavy dependency that both loads XML using 
 code generation to optimize serialization for types. To reduce dependencies and minimize AOT-build-filesize,
 then NLog now includes its own XML-parser.
 
+It could have been nice if Microsoft could refactor `System.Xml.XmlReader`,
+so it only introduced a minimal AOT-footprint, but that is probably too late.
+
 The NLog XML-parser only provides basic XML support, but it should be able to load any XML file that was
 working with NLog v5. 
 
@@ -263,7 +276,7 @@ working with NLog v5.
 Use Layout for Log + MachineName + MaxMessageLength + MaxKilobytes
 
 ### NLog SimpleLayout Immutable
-NLog `SimpleLayout` have removed the setter-method for its `Text`-property.
+NLog `SimpleLayout` have removed the setter-method for its `Text`-property, and is now a sealed class.
 
 This is to simpilfy the NLog `SimpleLayout` API, and to make it clear that NLog will optimize based on the initial layout.
 
