@@ -137,7 +137,7 @@ The `GelfTarget` extends the standard `NetworkTarget` with the new `GelfLayout`.
 It depends on the builtin NLog JSON serializer, but follows the 'standard' of prefixing all
 custom property-names with underscore `_`.
 
-## NLog SyslogTarget and SyslogLayout
+### NLog SyslogTarget and SyslogLayout
 
 The NLog.Targets.NetworkTarget nuget-package also includes support for the Syslog Output Format.
 
