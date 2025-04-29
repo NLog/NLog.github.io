@@ -17,14 +17,14 @@ This can lead to overhead for AOT builds, as it must include and compile all the
 
 NLog v6 attempts to reduce its footprint by extracting several features into separate nuget-packages:
 
-- NLog.RegEx - Depends on System.Text.RegularExpressions which is a huge dependency for a logging library.
-- NLog.Targets.ConcurrentFile - ConcurrentWrites using global mutex from operating system API.
-- NLog.Targets.AtomicFile - ConcurrentWrites using atomic file-append from operating system API.
-- NLog.Targets.GZipFile - EnableArchiveFileCompression using GZipStream for writing GZip compressed log-files.
-- NLog.Targets.Mail - Depends on System.Net.Mail.SmtpClient.
-- NLog.Targets.Network - Depends on TCP and UDP Network Socket, and adds support for Syslog and Graylog.
-- NLog.Targets.Trace - Depends on System.Diagnostics.TraceListener.
-- NLog.Targets.WebService - Depends on System.Net.Http.HttpClient.
+- [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) - ConcurrentWrites using atomic file-append from operating system API.
+- [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile) - ConcurrentWrites using global mutex from operating system API.
+- [NLog.Targets.GZipFile](https://www.nuget.org/packages/NLog.Targets.GZipFile) - EnableArchiveFileCompression using GZipStream for writing GZip compressed log-files.
+- [NLog.Targets.Mail](https://www.nuget.org/packages/NLog.Targets.Mail) - Depends on System.Net.Mail.SmtpClient.
+- [NLog.Targets.Network](https://www.nuget.org/packages/NLog.Targets.Network) - Depends on TCP and UDP Network Socket, and adds support for Syslog and Graylog.
+- [NLog.Targets.Trace](https://www.nuget.org/packages/NLog.Targets.Trace) - Depends on System.Diagnostics.TraceListener.
+- [NLog.Targets.WebService](https://www.nuget.org/packages/NLog.Targets.WebService) - Depends on System.Net.Http.HttpClient.
+- [NLog.RegEx](https://www.nuget.org/packages/NLog.RegEx) - Depends on System.Text.RegularExpressions which is a huge dependency for a logging library.
 
 NLog v6 also no longer depends on `System.Xml.XmlReader`, but now includes its own basic XmlParser for loading `NLog.config` files.
 
@@ -75,24 +75,24 @@ NLog FileTarget no longer has the following options:
 - ArchiveDateFormat - Marked as obsolete. Instead use new ArchiveSuffixFormat
 - ArchiveNumbering - Marked as obsolete. Instead use new ArchiveSuffixFormat (Rolling is unsupported).
 
-If one still requires these options, then one can use the new NLog.Targets.ConcurrentFile-nuget-package.
-NLog.Targets.ConcurrentFile-nuget-package is the original NLog FileTarget with all its features and complexity.
-The goal is that NLog.Targets.ConcurrentFile-nuget-package should become legacy, but it might help some when upgrading to NLog v6.
+If one still requires these options, then one can use the new [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package.
+[NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package is the original NLog FileTarget with all its features and complexity.
+The goal is that [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package should become legacy, but it might help some when upgrading to NLog v6.
 
 Alternative options for replacing `ConcurrentWrites = true`:
-- Use the new nuget-package NLog.Targets.AtomicFile where AtomicFileTarget uses atomic file-appends and supports Windows / Linux with NET8.
+- Use the new nuget-package [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) where AtomicFileTarget uses atomic file-appends and supports Windows / Linux with NET8.
 - Change to use `KeepFileOpen = false` where file is opened / closed when writing LogEvents. Recommended to use `<targets async="true">`.
 
 Alternative options for replacing `EnableArchiveFileCompression = true`:
 - Activate NTFS compression for the logging-folder.
 - Setup cron-job / scheduled-task that performs ZIP-compression and cleanup of the logging-folder.
 - Implement background task in the application, which monitors the logging-folder and performs ZIP-compression and cleanup.
-- Use the new nuget-package NLog.Targets.GZipFile where GZipFileTarget writes directly to a compressed log-file using GZipStream.
+- Use the new nuget-package [NLog.Targets.GZipFile](https://www.nuget.org/packages/NLog.Targets.GZipFile) where GZipFileTarget writes directly to a compressed log-file using GZipStream.
 
 ### NLog AtomicFileTarget without mutex
 
-New AtomicFileTarget has been introduced, that supports atomic file-append with help from the operating system,
-and supports both Windows and Linux (with help from Mono Posix) for NET8 (and newer).
+New AtomicFileTarget has been introduced with [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile),
+that supports atomic file-append with help from the operating system, and supports both Windows and Linux (with help from Mono Posix) for NET8 (and newer).
 
 Extends the standard FileTarget and adds support for `ConcurrentWrites = true`, but without using global mutex.
 
@@ -101,7 +101,8 @@ correct publish of the `Mono.Posix.NETStandard`-nuget-package dependency.
 
 ### NLog GZipFileTarget with GZipStream
 
-New GZipFileTarget has been introduced, that writes directly to a compressed log-file using GZipStream.
+New GZipFileTarget has been introduced with [NLog.Targets.GZipFile](https://www.nuget.org/packages/NLog.Targets.GZipFile) nuget-package,
+that writes directly to a compressed log-file using GZipStream.
 
 Extends the standard FileTarget and adds support for `EnableArchiveFileCompression = true`, but only supports
 GZip file compression.
@@ -130,7 +131,7 @@ but will only perform synchronous NLog Target Close.
 
 ### NLog GelfTarget and GelfLayout
 
-The NLog.Targets.NetworkTarget nuget-package also includes support for the Graylog Extended Log Format (GELF).
+The [NLog.Targets.Network](https://www.nuget.org/packages/NLog.Targets.Network) nuget-package also includes support for the Graylog Extended Log Format (GELF).
 
 The `GelfTarget` extends the standard `NetworkTarget` with the new `GelfLayout`.
 
@@ -139,7 +140,7 @@ custom property-names with underscore `_`.
 
 ### NLog SyslogTarget and SyslogLayout
 
-The NLog.Targets.NetworkTarget nuget-package also includes support for the Syslog Output Format.
+The [NLog.Targets.Network](https://www.nuget.org/packages/NLog.Targets.Network) nuget-package also includes support for the Syslog Output Format.
 
 The `SyslogTarget` extends the standard `NetworkTarget` with the new `SyslogLayout`.
 
@@ -147,7 +148,7 @@ The `SyslogLayout` supports both RFC-3164 (simple) + RFC-5424 (structured) loggi
 
 ### NLog NetworkTarget with NoDelay = true
 
-The NLog.Targets.NetworkTarget nuget-package includes support for configuring TCP_NODELAY.
+The [NLog.Targets.Network](https://www.nuget.org/packages/NLog.Targets.Network) nuget-package includes support for configuring TCP_NODELAY.
 The `NetworkTarget` will by default use `NoDelay = true` to turn off delayed ACK,
 to avoid delays of 200ms because of nagle-algorithm.
 
@@ -156,7 +157,7 @@ a delay of 200ms.
 
 ### NLog NetworkTarget with SendTimeoutSeconds = 100
 
-The NLog.Targets.NetworkTarget nuget-package changes the default value of TCP SendTimeout
+The [NLog.Targets.Network](https://www.nuget.org/packages/NLog.Targets.Network) nuget-package changes the default value of TCP SendTimeout
 from waiting forever to 100 secs. 
 
 The `NetworkTarget` should now react to the network-cable being unplugged and the TCP send-window being filled.
@@ -165,7 +166,7 @@ The `NetworkTarget` should now automatically attempt to reconnect when the endpo
 
 ### NLog NetworkTarget with SslCertificateFile
 
-The NLog.Targets.NetworkTarget nuget-package introduces the ability to specify custom SSL certificate from file.
+The [NLog.Targets.Network](https://www.nuget.org/packages/NLog.Targets.Network) nuget-package introduces the ability to specify custom SSL certificate from file.
 
 The `NetworkTarget` now recognizes these new settings:
  - `Layout SslCertificateFile`
