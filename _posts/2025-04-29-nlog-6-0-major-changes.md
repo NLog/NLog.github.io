@@ -138,6 +138,31 @@ The `GelfTarget` extends the standard `NetworkTarget` with the new `GelfLayout`.
 It depends on the builtin NLog JSON serializer, but follows the 'standard' of prefixing all
 custom property-names with underscore `_`.
 
+```xml
+<nlog>
+  <extensions>
+    <add assembly="NLog.Targets.Network" />
+  </extensions>
+  
+  <targets async="true">
+	<target xsi:type="Gelf" name="GelfTcp" address="tcp://localhost:12200" newLine="true" lineEnding="Null">
+        <GelfField name="MyPropertyName" layout="MyPropertyValue" />
+	</target>
+  </targets>
+
+  <rules>
+    <logger name="*" minlevel="Debug" writeTo="GelfTcp" />
+  </rules>
+</nlog>
+``` 
+
+Available `GelfTarget`-options that can be adjusted:
+- GelfHostName
+- GelfShortMessage
+- GelfFullMessage
+- IncludeEventProperties
+- IncludeScopeProperties
+
 ### NLog SyslogTarget and SyslogLayout
 
 The [NLog.Targets.Network](https://www.nuget.org/packages/NLog.Targets.Network) nuget-package also includes support for the Syslog Output Format.
@@ -145,6 +170,35 @@ The [NLog.Targets.Network](https://www.nuget.org/packages/NLog.Targets.Network) 
 The `SyslogTarget` extends the standard `NetworkTarget` with the new `SyslogLayout`.
 
 The `SyslogLayout` supports both RFC-3164 (simple) + RFC-5424 (structured) logging output.
+
+```xml
+<nlog>
+  <extensions>
+    <add assembly="NLog.Targets.Network" />
+  </extensions>
+  
+  <targets async="true">
+	<target xsi:type="SysLog" name="SyslogTcp" address="tcp://localhost:514">
+            <Rfc3164>false</Rfc3164>
+            <Rfc5424>true</Rfc5424>
+            <StructuredDataParam name="MyPropertyName" layout="MyPropertyValue" />
+	</target>
+  </targets>
+
+  <rules>
+    <logger name="*" minlevel="Debug" writeTo="SyslogTcp" />
+  </rules>
+</nlog>
+``` 
+
+Available `SyslogLayout`-options that can be adjusted:
+- SyslogAppName
+- SyslogHostName
+- SyslogMessage
+- SyslogLevel
+- SyslogFacility
+- StructuredDataId
+- IncludeEventProperties
 
 ### NLog NetworkTarget with NoDelay = true
 
