@@ -81,7 +81,7 @@ The goal is that [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NL
 
 Alternative options for replacing `ConcurrentWrites = true`:
 - Use the new nuget-package [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) where AtomicFileTarget uses atomic file-appends and supports Windows / Linux with NET8.
-- Change to use `KeepFileOpen = false` where file is opened / closed when writing LogEvents. Recommended to use `<targets async="true">`.
+- Change to use `KeepFileOpen = false` where file is opened / closed when writing LogEvents. To avoid performance issues, then consider to also use `<targets async="true">`.
 
 Alternative options for replacing `EnableArchiveFileCompression = true`:
 - Activate NTFS compression for the logging-folder.
