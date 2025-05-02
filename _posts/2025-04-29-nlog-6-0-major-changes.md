@@ -363,4 +363,4 @@ For full list of all changes: [NLog 6.0 Pull Requests](https://github.com/NLog/N
 - [Improvements](https://github.com/NLog/NLog/pulls?q=is%3Apr+label%3A%22Enhancement%22+is%3Amerged+milestone:%226.0%22)
 - [Performance](https://github.com/NLog/NLog/pulls?q=is%3Apr+label%3A%22Performance%22+is%3Amerged+milestone:%226.0%22)
 
-[Comments and feedback are wellcome](https://github.com/NLog/NLog/issues/4931)
+[Comments and feedback](https://github.com/NLog/NLog/issues/4931) are wellcome.
