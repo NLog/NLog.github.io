@@ -317,12 +317,12 @@ Alternative one can setup custom subscriber to NLog `InternalLogger.InternalEven
 
 ### NLog XmlParser replaces XmlReader
 
-The .NET `System.Xml.XmlReader` is a heavy dependency that both loads XML using HttpClient, and support
-code generation to optimize serialization for types. To reduce dependencies and minimize AOT-build-filesize,
-then NLog now includes its own XML-parser.
+The .NET `System.Xml.XmlReader` is a heavy dependency that depend on HttpClient for loading external XML,
+and depend on IL-code-generation to optimize type serialization. To reduce dependencies and minimize AOT-build-filesize,
+then NLog now includes its own basic XML-parser.
 
-It could have been nice if Microsoft could refactor `System.Xml.XmlReader`,
-so it only introduced a minimal AOT-footprint, but that is probably too late.
+It could have been nice if Microsoft could refactor `System.Xml.XmlReader`, so it only introduced a minimal AOT-footprint,
+but that is probably too late.
 
 The NLog XML-parser only provides basic XML support, but it should be able to load any XML file that was
 working with NLog v5. 
