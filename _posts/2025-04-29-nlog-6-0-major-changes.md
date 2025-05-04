@@ -56,7 +56,7 @@ The old archive-logic:
 
 NLog FileTarget still support static archive logic with `File.Move`, but it must be explictly activated
 by specifying `ArchiveFileName`. If not using `ArchiveFileName` but want to revert to old archive-logic
-with `File.Move` then just ensure to assign `ArchiveFileName="..."` with the same value as `FileName="..."`.
+with `File.Move`, then just assign `ArchiveFileName="..."` to have the same value as `FileName="..."`.
 
 NLog FileTarget no longer has the following options:
 
