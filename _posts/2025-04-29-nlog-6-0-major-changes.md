@@ -363,4 +363,26 @@ For full list of all changes: [NLog 6.0 Pull Requests](https://github.com/NLog/N
 - [Improvements](https://github.com/NLog/NLog/pulls?q=is%3Apr+label%3A%22Enhancement%22+is%3Amerged+milestone:%226.0%22)
 - [Performance](https://github.com/NLog/NLog/pulls?q=is%3Apr+label%3A%22Performance%22+is%3Amerged+milestone:%226.0%22)
 
-[Comments and feedback](https://github.com/NLog/NLog/issues/4931) are wellcome.
+[Comments and feedback](https://github.com/NLog/NLog/issues/4931) are welcome.
+
+## Credits
+Additional thanks to contributers, since last major release:
+
+- [ana1250](https://github.com/ana1250)
+- [Pavan8374](https://github.com/Pavan8374)
+- [smnsht](https://github.com/smnsht)
+- [RomanSoloweow](https://github.com/RomanSoloweow)
+- [wadebaird](https://github.com/wadebaird)
+- [hangy](https://github.com/hangy)
+- [lavige777](https://github.com/lavige777)
+- [jokoyoski](https://github.com/jokoyoski)
+- [saltukkos](https://github.com/saltukkos)
+- [nih0n](https://github.com/nih0n)
+- [michaelplavnik](https://github.com/michaelplavnik)
+- [Aaronmsv](https://github.com/Aaronmsv)
+- [ShadowDancer](https://github.com/ShadowDancer)
+- [RyanGaudion](https://github.com/RyanGaudion)
+- [Orace](https://github.com/Orace)
+- [tvogel-nid](https://github.com/tvogel-nid)
+- [martinzding](https://github.com/martinzding)
+- [kurnakovv](https://github.com/kurnakovv)
