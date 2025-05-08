@@ -381,7 +381,6 @@ Additional thanks to contributers, since last major release:
 - [michaelplavnik](https://github.com/michaelplavnik)
 - [Aaronmsv](https://github.com/Aaronmsv)
 - [ShadowDancer](https://github.com/ShadowDancer)
-- [RyanGaudion](https://github.com/RyanGaudion)
 - [Orace](https://github.com/Orace)
 - [tvogel-nid](https://github.com/tvogel-nid)
 - [martinzding](https://github.com/martinzding)
