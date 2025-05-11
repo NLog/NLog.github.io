@@ -78,8 +78,8 @@ NLog FileTarget no longer has the following options:
 - ArchiveNumbering - Marked as obsolete. Instead use new ArchiveSuffixFormat (Rolling is unsupported).
 
 If one still requires these options, then one can use the new [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package.
-[NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package is the original NLog FileTarget with all its features and complexity.
-The goal is that [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package should become legacy, but it might help some when upgrading to NLog v6.
+The [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package is the original NLog FileTarget with all its features and complexity.
+It is the goal that [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package should become legacy, but it might be helpful when upgrading to NLog v6.
 
 Alternative options for replacing `ConcurrentWrites = true`:
 - Use the new nuget-package [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) where AtomicFileTarget uses atomic file-appends and supports Windows / Linux with NET8.
@@ -89,7 +89,7 @@ Alternative options for replacing `EnableArchiveFileCompression = true`:
 - Activate NTFS compression for the logging-folder.
 - Setup cron-job / scheduled-task that performs ZIP-compression and cleanup of the logging-folder.
 - Implement background task in the application, which monitors the logging-folder and performs ZIP-compression and cleanup.
-- Use the new nuget-package [NLog.Targets.GZipFile](https://www.nuget.org/packages/NLog.Targets.GZipFile) where GZipFileTarget writes directly to a compressed log-file using GZipStream.
+- Use the new nuget-package [NLog.Targets.GZipFile](https://www.nuget.org/packages/NLog.Targets.GZipFile) where GZipFileTarget writes directly to a compressed log-file using `GZipStream`.
 
 ### NLog AtomicFileTarget without mutex
 
