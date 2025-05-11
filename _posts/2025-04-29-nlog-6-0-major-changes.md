@@ -9,8 +9,10 @@ NLog 6.0 is a major version release, and introduces breaking changes to support 
 
 ### NLog supports AOT
 
+NLog v6 now supports AOT-builds without warnings, and optimizes the support for build-trimming that was added with [NLog v5.2.2](https://nlog-project.org/2023/05/30/nlog-5-2-trim-warnings.html).
+
 NLog has traditionally relied on reflection to dynamically discover requirements for target output.
-But reflection does not always work well with build trimming, and before NLog marked itself to be excluded from trimming.
+But reflection does not always work well with build-trimming, and before NLog marked itself to be excluded from trimming.
 
 NLog includes many features, and each feature often introduces additional dependencies on the .NET library.
 This can lead to overhead for AOT builds, as it must include and compile all the relevant source code.
