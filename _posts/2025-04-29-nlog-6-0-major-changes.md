@@ -368,7 +368,7 @@ For full list of all changes: [NLog 6.0 Pull Requests](https://github.com/NLog/N
 [Comments and feedback](https://github.com/NLog/NLog/issues/4931) are welcome.
 
 ## Credits
-Additional thanks to contributers, since last major release:
+Additional thanks to all contributers, since last major release:
 
 - [ana1250](https://github.com/ana1250)
 - [Pavan8374](https://github.com/Pavan8374)
