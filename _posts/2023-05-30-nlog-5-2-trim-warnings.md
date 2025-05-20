@@ -4,7 +4,7 @@ title: NLog 5.2 without trim warnings
 ---
 
 NLog v5.2 is changing the recommended way for explicit registration of NLog extensions.
-NLog v5.0 stopped the automatic scanning for assemblies with NLog extensions,
+[NLog v5.0](https://nlog-project.org/2021/08/25/nlog-5-0-preview1-ready.html) stopped the automatic scanning for assemblies with NLog extensions,
 instead users of NLog are encouraged to explicitly specify what NLog extensions to load.
 
 NLog extensions are normally loaded by just specifying the assembly-name, and then NLog will dynamically
