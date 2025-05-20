@@ -88,7 +88,7 @@ The following methods has been marked obsolete on `XmlLoggingConfiguration`, wit
 - `XmlLoggingConfiguration.SetCandidateConfigFilePaths()`-Method replaced by chaining `LogManager.Setup().LoadConfigurationFromFile(...)`
 - `XmlLoggingConfiguration.ResetCandidateConfigFilePath()`-Method replaced by chaining `LogManager.Setup().LoadConfigurationFromFile(...)`
 
-The following methods has been marked obsolete on `LayoutRenderer`, with redirection to `Setup()` extension methods:
+The following static methods to register custom NLog extensions, with redirection to `Setup()` extension methods:
 
 - `Target.Register`-Method replaced by `LogManager.Setup().SetupExtensions(ext => ext.RegisterTarget<T>())`-extension-method
 - `Layout.Register`-Method replaced by `LogManager.Setup().SetupExtensions(ext => ext.RegisterLayout<T>())`-extension-method
