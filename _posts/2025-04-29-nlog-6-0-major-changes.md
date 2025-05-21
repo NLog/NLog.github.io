@@ -147,9 +147,9 @@ custom property-names with underscore `_`.
   </extensions>
   
   <targets async="true">
-	<target xsi:type="Gelf" name="GelfTcp" address="tcp://localhost:12200" newLine="true" lineEnding="Null">
-        <GelfField name="MyPropertyName" layout="MyPropertyValue" />
-	</target>
+    <target xsi:type="Gelf" name="GelfTcp" address="tcp://localhost:12200" newLine="true" lineEnding="Null">
+      <GelfField name="MyPropertyName" layout="MyPropertyValue" />
+    </target>
   </targets>
 
   <rules>
@@ -180,11 +180,11 @@ The `SyslogLayout` supports both RFC-3164 (simple) + RFC-5424 (structured) loggi
   </extensions>
   
   <targets async="true">
-	<target xsi:type="SysLog" name="SyslogTcp" address="tcp://localhost:514">
-            <Rfc3164>false</Rfc3164>
-            <Rfc5424>true</Rfc5424>
-            <StructuredDataParam name="MyPropertyName" layout="MyPropertyValue" />
-	</target>
+    <target xsi:type="SysLog" name="SyslogTcp" address="tcp://localhost:514">
+      <Rfc3164>false</Rfc3164>
+      <Rfc5424>true</Rfc5424>
+      <StructuredDataParam name="MyPropertyName" layout="MyPropertyValue" />
+    </target>
   </targets>
 
   <rules>
