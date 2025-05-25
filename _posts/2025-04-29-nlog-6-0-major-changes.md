@@ -131,6 +131,23 @@ await using var logFactory = NLog.LogManager.Setup().LoadConfigurationFromFile()
 The NLog LogFactory `Dispose()`-method has been changed to skip flush with help from worker-threads,
 but will only perform synchronous NLog Target Close.
 
+### NLog API with nullable references
+NLog API has been updated to enable nullable, and has been compiled using C# v9 for all target-platforms.
+
+NET3 introduced C# v8 with support for nullable reference types, that allows static analysis to avoid
+NullReferenceException (NRE). NET5 introduced C# v9 with improved support for nullable generics.
+
+This will improve the user-experience, when using the NLog API directly instead of NLog configuration files.
+
+### NLog Logger API with ReadOnlySpan
+NLog Logger now supports `params ReadOnlySpan` and can skip `params object[]`-allocation, when many parameters
+and LogLevel is not enabled.
+
+NET9 introduced C# v13 that introduced `params ReadOnlySpan`, which is now supported by NLog for NetStandard2.1.
+
+NLog extends the optimization to completely skip the `params object[]`-allocation, when using message-templates
+and it is not possible to defer the parsing of the message-template on background thread.
+
 ### NLog GelfTarget and GelfLayout
 
 The [NLog.Targets.Network](https://www.nuget.org/packages/NLog.Targets.Network) nuget-package also includes support for the Graylog Extended Log Format (GELF).
@@ -148,7 +165,7 @@ custom property-names with underscore `_`.
   
   <targets async="true">
     <target xsi:type="Gelf" name="GelfTcp" address="tcp://localhost:12200" newLine="true" lineEnding="Null">
-      <GelfField name="MyPropertyName" layout="MyPropertyValue" />
+      <GelfField name="ThreadId" layout="${ThreadId}" />
     </target>
   </targets>
 
@@ -183,7 +200,7 @@ The `SyslogLayout` supports both RFC-3164 (simple) + RFC-5424 (structured) loggi
     <target xsi:type="SysLog" name="SyslogTcp" address="tcp://localhost:514">
       <Rfc3164>false</Rfc3164>
       <Rfc5424>true</Rfc5424>
-      <StructuredDataParam name="MyPropertyName" layout="MyPropertyValue" />
+      <StructuredDataParam name="ThreadId" layout="${ThreadId}" />
     </target>
   </targets>
 
@@ -329,31 +346,10 @@ but that is probably too late.
 The NLog XML-parser only provides basic XML support, but it should be able to load any XML file that was
 working with NLog v5. 
 
-### NLog EventLog with more Layout
-Use Layout for Log + MachineName + MaxMessageLength + MaxKilobytes
-
 ### NLog SimpleLayout Immutable
 NLog `SimpleLayout` have removed the setter-method for its `Text`-property, and is now a sealed class.
 
 This is to simpilfy the NLog `SimpleLayout` API, and to make it clear that NLog will optimize based on the initial layout.
-
-### Minimal Logger-API
-Not ready yet, and post-poned because major breaking change, which makes it harder to test first NLog v6-Preview.
-
-### Logger API with string interpolation
-Not ready yet, and post-poned because waiting for minimal Logger-API
-
-Idea is to skip string interpolation, when LogLevel is not enabled.
-
-### Logger API with ReadOnlySpan params
-Not ready yet, and post-poned because waiting for minimal Logger-API
-
-Idea is to skip params array-allocation, when LogLevel is not enabled.
-
-And if structured-logging then skip params allocation, but only rely on properties-dictionary.
-
-### NLog Nullable References
-Not ready yet, and post-poned because waiting for minimal Logger-API
 
 ## Many other improvements
 
