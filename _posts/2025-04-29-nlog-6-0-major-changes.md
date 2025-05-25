@@ -140,13 +140,21 @@ NullReferenceException (NRE). NET5 introduced C# v9 with improved support for nu
 This will improve the user-experience, when using the NLog API directly instead of NLog configuration files.
 
 ### NLog Logger API with ReadOnlySpan
-NLog Logger now supports `params ReadOnlySpan` and can skip `params object[]`-allocation, when many parameters
+NLog Logger API now supports `params ReadOnlySpan` and can skip `params object[]`-allocation, when many parameters
 and LogLevel is not enabled.
 
-NET9 introduced C# v13 that introduced `params ReadOnlySpan`, which is now supported by NLog for NetStandard2.1.
+NET9 introduced C# v13 that supports `params ReadOnlySpan`, which is now supported by NLog for NetStandard2.1.
 
 NLog extends the optimization to completely skip the `params object[]`-allocation, when using message-templates
 and it is not possible to defer the parsing of the message-template on background thread.
+
+### Legacy NLog Logger API reduced priority
+NLog Logger API has legacy methods from .NET Framework 1.0 without generics.
+
+NET9 introduced C# v13 that supports `[OverloadResolutionPriority(-1)]` to change priority of methods, when other methods are available.
+
+NLog Logger API will now promote the generic-methods and ReadOnlySpan-methods, instead of the legacy methods.
+This will hopefully reduce the friction when finally cleaning up these legacy methods, when not being in use.
 
 ### NLog GelfTarget and GelfLayout
 
