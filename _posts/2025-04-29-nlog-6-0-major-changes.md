@@ -266,9 +266,7 @@ Removes platform support for:
 - UAP + UAP10.0 (UWP ver. 1)
 - Tizen30
 
-Considering to also remove NET35 + NET45, since those Target-Frameworks requires extra effort to build when using Visual Studio 2022.
-Removing old Target-Frameworks will also reduce the file-size of the NLog-nuget-package.
-If this will break your entire eco-system then [Please tell](https://github.com/NLog/NLog/issues/4931).
+Descided to keep support for NET35 + NET45, since there are many nuget-packages with NLog Targets, that still depend on NET45.
 
 ### NLog Structured Message formatting without quotes
 
