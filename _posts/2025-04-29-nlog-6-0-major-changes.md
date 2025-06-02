@@ -255,6 +255,37 @@ The `NetworkTarget` now recognizes these new settings:
 
 The `NetworkTarget` can now perform SSL handshake with custom SSL certificate from file, without needing to register the certificate in the global operating-system cache.
 
+### NLog.Schema for more intellisense
+
+The [NLog.Schema](https://www.nuget.org/packages/NLog.Schema/) nuget-package now includes copy of NLog.xsd XML schema file to local project folder.
+
+The NLog.Schema-nuget-package has been updated to also include Intellisense for NLog Targets / Layouts outside the default NLog-nuget-package.
+
+When adding the NLog.Schema-nuget-package to the application-project that includes `NLog.config` XML-file, then Intellisense will work with this:
+```xml
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.nlog-project.org/schemas/NLog.xsd NLog.xsd">
+  <!-- configuration goes here --> 
+</nlog>
+```
+
+Alternative one can enable "Automatically download DTDs and schemas" (Visual Studio Options), then Intellisense works with using direct URL:
+```xml
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.nlog-project.org/schemas/NLog.xsd http://www.nlog-project.org/schemas/NLog.xsd">
+  <!-- configuration goes here --> 
+</nlog>
+```
+
+Notice Intellisense will only work in Visual Studio when using `xsi:type="..."`:
+```xml
+<target xsi:type="TypeName"/>
+```
+And not:
+```xml
+<target type="TypeName"/>
+```
+
 ## Breaking changes
 
 ### Removed legacy Target-Frameworks
@@ -286,6 +317,20 @@ It is possible to globally revert to old behavior:
 ```csharp
 LogManager.Setup().SetupSerialization(s => s.RegisterValueFormatterWithStringQuotes());
 ```
+
+### NLog Console without WriteLine
+The Console for an application is usually a singleton, and there is an overhead for every write-operation.
+The normal work-around is to send output to a queue, and let a background thread do the actual Console writing.
+But if the application threads are running at full speed, then they can easily produce more output than the background thread can handle.
+
+NLog has the ability to batch multiple LogEvents into a single write-operation, when combining the NLog ConsoleTarget with 
+AsyncWrapperTarget (Ex. `<targets async="true">`). When enabled then it would double the performance of the Console-output.
+This ability was introduced with NLog v4.6.8 and protected with the feature-flag `WriteBuffer`.
+
+NLog v6 enables this feature and will not use Console.WriteLine by default. 
+The feature-flag has also changed name to `ForceWriteLine` (Default = false).
+If depending on console redirection where output must reach `Console.WriteLine`,
+then one can explicit assign `ForceWriteLine = true` for the NLog ConsoleTarget.
 
 ### NLog JsonLayout EscapeForwardSlash obsolete
 
@@ -339,6 +384,25 @@ removing references to `System.Diagnostics.Trace` and `System.Diagnostics.TraceL
 If it is important to redirect NLog InternalLogger output to `System.Diagnostics.Trace`,
 then one can use NLog `InternalLogger.LogWriter` to assign a custom `StringWriter` that performs the forwarding.
 Alternative one can setup custom subscriber to NLog `InternalLogger.InternalEventOccurred` event handler.
+
+### NLog RequiredParameter attribute ignored
+
+NLog have removed its validation of properties marked with `[RequiredParameter]`, where it would alert
+when Target- or Layout-options was missing a value. NLog have now changed to nullable references,
+so options that must have a value are not nullable and always have a value.
+
+This means that authors of NLog Targets or Layouts should not rely on `[RequiredParameter]`,
+but should instead perform their own validation of options during initialization. Ex:
+
+```csharp
+protected override void InitializeTarget()
+{
+    base.InitializeTarget();
+
+    if (FileName is null || ReferenceEquals(FileName, Layout.Empty))
+        throw new NLogConfigurationException("FileTarget FileName-property must be assigned.");
+}
+```
 
 ### NLog XmlParser replaces XmlReader
 
