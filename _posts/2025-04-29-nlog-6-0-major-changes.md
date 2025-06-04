@@ -38,9 +38,10 @@ since right now the AOT-build cannot predict what types will be required by the 
 But disabling automatic loading of the `NLog.config`-file is a huge breaking change,
 and would hurt lots of existing applications.
 
-### NLog FileTarget without ConcurrentWrites
+### NLog FileTarget and ArchiveSuffixFormat
 
-NLog FileTarget no longer uses `File.Move` by default, but instead rolls to the next filename.
+NLog FileTarget has received a major rewrite to simplify the archive-logic. NLog FileTarget
+no longer uses `File.Move` by default, but instead rolls to the next filename.
 This is to prevent file-locking issues with other background-applications, or if the log-file is
 held open by file-viewer.
 
@@ -50,7 +51,7 @@ The new archive-logic:
 - LogFile_1.txt
 - LogFile_2.txt (Newest file)
 
-The old archive-logic:
+The old static archive-logic:
 
 - LogFile.txt (Newest file)
 - LogFile.1.txt (Oldest file)
@@ -60,36 +61,71 @@ NLog FileTarget still support static archive logic with `File.Move`, but it must
 by specifying `ArchiveFileName`. If not using `ArchiveFileName` but want to revert to old archive-logic
 with `File.Move`, then just assign `ArchiveFileName="..."` to have the same value as `FileName="..."`.
 
-NLog FileTarget no longer has the following options:
+NLog FileTarget no longer has the following archive-options:
 
-- ConcurrentWrites - Removed because of dependency on global mutex and exotic file-locks.
 - EnableArchiveFileCompression - Removed because of dependency on compression-libraries.
-- CleanupFileName - Removed because it is now implicit.
-- FileNameKind - Removed because it is now implicit.
-- ArchiveFileKind - Removed because it is now implicit.
-- FileAttributes - Removed because of dependency on Windows-only API.
-- ForceManaged - Removed because of dependency on Windows-only API.
-- ConcurrentWriteAttempts - Removed together with ConcurrentWrites.
-- ConcurrentWriteAttemptDelay - Removed together with ConcurrentWrites.
-- ForceMutexConcurrentWrites - Removed together with ConcurrentWrites.
-- NetworkWrites - Replaced by KeepFileOpen.
 - ArchiveOldFileOnStartupAboveSize - Instead use ArchiveAboveSize / ArchiveOldFileOnStartup.
 - ArchiveDateFormat - Marked as obsolete. Instead use new ArchiveSuffixFormat
 - ArchiveNumbering - Marked as obsolete. Instead use new ArchiveSuffixFormat (Rolling is unsupported).
+- ArchiveFileKind - Removed because it is now implicit.
+- FileNameKind - Removed because it is now implicit.
 
-If one still requires these options, then one can use the new [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package.
-The [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package is the original NLog FileTarget with all its features and complexity.
-It is the goal that [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package should become legacy, but it might be helpful when upgrading to NLog v6.
+The `ArchiveSuffixFormat`-option has been introduced to handle `{#}`, and instead of specifying 
+`archiveFilename="LogFile.{##}.txt"` then one should specify `archiveFilename="LogFile.txt"` with `archiveSuffixFormat="{1:yyyyMMdd}_{0:00}"`.
+The `ArchiveSuffixFormat`-option doesn't support NLog Layout, and works like `string.Format` and supports these place-holders:
+- `{0}` - The archive sequence-number. Supports format option `{0:000}`.
+- `{1}` - The archive created-datetime. Supports format option `{1:yyyyMMdd}` (Only works when also specifying `archiveFileName="..."`).
 
-Alternative options for replacing `ConcurrentWrites = true`:
-- Use the new nuget-package [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) where AtomicFileTarget uses atomic file-appends and supports Windows / Linux with NET8.
-- Change to use `KeepFileOpen = false` where file is opened / closed when writing LogEvents. For better performance then consider to also use `<targets async="true">`.
+Old Configuration Example:
+```xml
+<target xsi:type="file" name="logfile"
+        fileName="logfile.txt"
+        archiveFilename="logfile.{#}.txt"
+        archiveNumbering="Date"
+        archiveEvery="Day"
+        archiveDateFormat="yyyyMMdd">
+```
+New Configuration Example:
+```xml
+<target xsi:type="file" name="logfile"
+        fileName="logfile.txt"
+        archiveFilename="logfile.txt"
+        archiveEvery="Day"
+        archiveSuffixFormat="{1:yyyyMMdd}">
+```
 
 Alternative options for replacing `EnableArchiveFileCompression = true`:
 - Activate NTFS compression for the logging-folder.
 - Setup cron-job / scheduled-task that performs ZIP-compression and cleanup of the logging-folder.
 - Implement background task in the application, which monitors the logging-folder and performs ZIP-compression and cleanup.
 - Use the new nuget-package [NLog.Targets.GZipFile](https://www.nuget.org/packages/NLog.Targets.GZipFile) where GZipFileTarget writes directly to a compressed log-file using `GZipStream`.
+
+### NLog FileTarget without ConcurrentWrites
+
+NLog FileTarget no longer supports `ConcurrentWrites`-option, where multiple processes running
+on the same machine can write to the same file with help from global operating-system-mutex.
+
+This feature was removed to simplify the NLog FileTarget, and not rely on features that was
+only supported on certain operating system platforms. Still there is support for `KeepFileOpen` = true / false.
+
+NLog FileTarget no longer has the following options:
+
+- ConcurrentWrites - Removed because of dependency on global mutex and exotic file-locks.
+- CleanupFileName - Removed because it is now implicit.
+- FileAttributes - Removed because of dependency on Windows-only API.
+- ForceManaged - Removed because of dependency on Windows-only API.
+- ConcurrentWriteAttempts - Removed together with ConcurrentWrites.
+- ConcurrentWriteAttemptDelay - Removed together with ConcurrentWrites.
+- ForceMutexConcurrentWrites - Removed together with ConcurrentWrites.
+- NetworkWrites - Replaced by KeepFileOpen.
+
+There is a new [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package, which is
+the original NLog FileTarget with all its features and complexity. It is the goal that [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package
+should become legacy, but it might be helpful when upgrading to NLog v6.
+
+Alternative options for replacing `ConcurrentWrites = true`:
+- Use the new nuget-package [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) where AtomicFileTarget uses atomic file-appends and supports Windows / Linux with NET8.
+- Change to use `KeepFileOpen = false` where file is opened / closed when writing LogEvents. For better performance then consider to also use `<targets async="true">`.
 
 ### NLog AtomicFileTarget without mutex
 
