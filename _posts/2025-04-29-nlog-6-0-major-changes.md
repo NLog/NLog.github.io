@@ -83,7 +83,7 @@ Old Configuration Example:
         archiveFilename="logfile.{#}.txt"
         archiveNumbering="Date"
         archiveEvery="Day"
-        archiveDateFormat="yyyyMMdd">
+        archiveDateFormat="yyyyMMdd" />
 ```
 New Configuration Example:
 ```xml
@@ -91,7 +91,7 @@ New Configuration Example:
         fileName="logfile.txt"
         archiveFilename="logfile.txt"
         archiveEvery="Day"
-        archiveSuffixFormat="{1:yyyyMMdd}">
+        archiveSuffixFormat="{1:yyyyMMdd}" />
 ```
 
 Alternative options for replacing `EnableArchiveFileCompression = true`:
