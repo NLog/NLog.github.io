@@ -80,7 +80,7 @@ Old Configuration Example:
 ```xml
 <target xsi:type="file" name="logfile"
         fileName="logfile.txt"
-        archiveFilename="logfile.{#}.txt"
+        archiveFilename="logfile_{#}.txt"
         archiveNumbering="Date"
         archiveEvery="Day"
         archiveDateFormat="yyyyMMdd" />
@@ -91,7 +91,7 @@ New Configuration Example:
         fileName="logfile.txt"
         archiveFilename="logfile.txt"
         archiveEvery="Day"
-        archiveSuffixFormat="{1:yyyyMMdd}" />
+        archiveSuffixFormat="_{1:yyyyMMdd}" />
 ```
 
 Alternative options for replacing `EnableArchiveFileCompression = true`:
