@@ -119,13 +119,14 @@ NLog FileTarget no longer has the following options:
 - ForceMutexConcurrentWrites - Removed together with ConcurrentWrites.
 - NetworkWrites - Replaced by KeepFileOpen.
 
-There is a new [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package, which is
-the original NLog FileTarget with all its features and complexity. It is the goal that [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package
-should become legacy, but it might be helpful when upgrading to NLog v6.
-
 Alternative options for replacing `ConcurrentWrites = true`:
 - Use the new nuget-package [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) where AtomicFileTarget uses atomic file-appends and supports Windows / Linux with NET8.
 - Change to use `KeepFileOpen = false` where file is opened / closed when writing LogEvents. For better performance then consider to also use `<targets async="true">`.
+
+There is also a new [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package, which is
+the original NLog FileTarget with all its features and complexity. It supports ConcurrentWrites using global mutex,
+but the goal is that [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package will become legacy,
+but it might be helpful when upgrading to NLog v6.
 
 ### NLog AtomicFileTarget without mutex
 
