@@ -70,9 +70,10 @@ NLog FileTarget no longer has the following archive-options:
 - ArchiveFileKind - Removed because it is now implicit.
 - FileNameKind - Removed because it is now implicit.
 
-The `ArchiveSuffixFormat`-option has been introduced to handle `{#}`, and instead of specifying 
-`archiveFilename="LogFile.{##}.txt"` then one should specify `archiveFilename="LogFile.txt"` with `archiveSuffixFormat="{1:yyyyMMdd}_{0:00}"`.
-The `ArchiveSuffixFormat`-option doesn't support NLog Layout, and works like `string.Format` and supports these place-holders:
+The `ArchiveSuffixFormat`-option has been introduced to replace `{#}`, and instead of specifying 
+`archiveFilename="LogFile_{##}.txt"` then one should specify `archiveFilename="LogFile.txt"` with `archiveSuffixFormat="_{1:yyyyMMdd}_{0:00}"`.
+The `ArchiveSuffixFormat`-option specifies the filename-suffix to apply, when the archive-logic is rolling to the next file.
+It is intended to be very basic to simplify the file-wildcard-logic, and has no NLog Layout-logic. Instead it works like `string.Format` with support for these place-holders:
 - `{0}` - The archive sequence-number. Supports format option `{0:000}`.
 - `{1}` - The archive created-datetime. Supports format option `{1:yyyyMMdd}` (Only works when also specifying `archiveFileName="..."`).
 
