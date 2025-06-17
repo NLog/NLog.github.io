@@ -154,6 +154,28 @@ Therefore these options are set by default `KeepFileOpen = true` and `ArchiveOld
 The GZip File compression has better handling of large log-files compared to the old `EnableArchiveFileCompression = true`,
 where the old ZIP compression would stall the file-logging until completed.
 
+### NLog DatabaseTarget supports AOT
+
+NLog DatabaseTarget uses by default type-reflection for resolving DbConnection-factory from the `DbProvider`-option.
+
+NLog DatabaseTarget now have a new constructor, where one can specify method-delegate when configuring from code:
+```csharp
+var databaseTarget = new NLog.Targets.DatabaseTarget(() => new Npgsql.NpgsqlConnection());
+NLog.LogManager.Setup().LoadConfiguration(cfg => cfg.ForLogger().WriteTo(databaseTarget));
+```
+
+When specifying DbType for database-call-parameters, then NLog DatabaseTarget uses type-reflection to parse and
+assign the DbType. NLog `DatabaseParameterInfo` now have a new constructor, where one can specify method-delegate:
+```csharp
+var databaseParameter = new DatabaseParameterInfo("@context",
+    "${all-event-properties}",
+    (p) => ((NpgsqlParameter)p).NpgsqlDbType = NpgsqlDbType.VarChar);
+databaseTarget.Parameters.Add(databaseParameter);
+```
+
+When using these new constructors from the [NLog.Database](https://www.nuget.org/packages/NLog.Database)-nuget-package,
+then it will not trigger AOT-build-warnings.
+
 ### NLog LogFactory FlushAsync
 
 NLog LogFactory `Flush()` and `Shutdown()` are synchronous API methods, that schedules background worker-threads
@@ -362,11 +384,11 @@ The Console for an application is usually a singleton, and there is an overhead 
 The normal work-around is to send output to a queue, and let a background thread do the actual Console writing.
 But if the application threads are running at full speed, then they can easily produce more output than the background thread can handle.
 
-NLog has the ability to batch multiple LogEvents into a single write-operation, when combining the NLog ConsoleTarget with 
+The NLog ConsoleTarget supports batch writing of multiple LogEvents in a single write-operation, when combined with
 AsyncWrapperTarget (Ex. `<targets async="true">`). When enabled then it would double the performance of the Console-output.
 This ability was introduced with NLog v4.6.8 and protected with the feature-flag `WriteBuffer`.
 
-NLog v6 enables this feature and will not use Console.WriteLine by default. 
+NLog v6 enables batch-writing and will not use `Console.WriteLine` by default.
 The feature-flag has also changed name to `ForceWriteLine` (Default = false).
 If depending on console redirection where output must reach `Console.WriteLine`,
 then one can explicit assign `ForceWriteLine = true` for the NLog ConsoleTarget.
@@ -417,7 +439,7 @@ If RegEx replace-logic is important then one can use the new nuget-package `NLog
 
 ### NLog InternalLogger without LogToTrace
 
-NLog `InternalLogger.LogToTrace` has been remnoved. This reduces the NLog footprint by
+NLog `InternalLogger.LogToTrace` has been removed. This reduces the NLog footprint by
 removing references to `System.Diagnostics.Trace` and `System.Diagnostics.TraceListener`.
 
 If it is important to redirect NLog InternalLogger output to `System.Diagnostics.Trace`,
