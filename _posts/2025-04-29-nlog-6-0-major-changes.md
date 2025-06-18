@@ -514,3 +514,5 @@ Additional thanks to all contributers, since last major release:
 - [tvogel-nid](https://github.com/tvogel-nid)
 - [martinzding](https://github.com/martinzding)
 - [kurnakovv](https://github.com/kurnakovv)
+- [dance](https://github.com/dance)
+- [JohnVerheij](https://github.com/JohnVerheij)
