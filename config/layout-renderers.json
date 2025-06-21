@@ -660,7 +660,7 @@
             "NLog.Extensions.Hosting",
             "NLog.Web.AspNetCore"
         ],
-        "description": "HostEnvironment Enviroment",
+        "description": "HostEnvironment Environment",
         "platforms": [
             "net462",
             "netstandard2.0"
