@@ -640,6 +640,48 @@
         "category": "Environment and config files"
     },
     {
+        "name": "host-appname",
+        "page": "Host-AppName-Layout-Renderer",
+        "package": [
+            "NLog.Extensions.Hosting",
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "HostEnvironment ApplicationName",
+        "platforms": [
+            "net462",
+            "netstandard2.0"
+        ],
+        "category": "Environment and config files"
+    },
+    {
+        "name": "host-environment",
+        "page": "Host-Environment-Layout-Renderer",
+        "package": [
+            "NLog.Extensions.Hosting",
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "HostEnvironment Enviroment",
+        "platforms": [
+            "net462",
+            "netstandard2.0"
+        ],
+        "category": "Environment and config files"
+    },
+    {
+        "name": "host-rootdir",
+        "page": "Host-RootDir-Layout-Renderer",
+        "package": [
+            "NLog.Extensions.Hosting",
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "HostEnvironment ContentRoot",
+        "platforms": [
+            "net462",
+            "netstandard2.0"
+        ],
+        "category": "Files and directories"
+    },
+    {
         "name": "MicrosoftConsoleLayout",
         "page": "MicrosoftConsoleLayout",
         "description": "Write events to text format similar to Microsoft AddConsole Formatter for Microsoft.Hosting.Lifetime",
