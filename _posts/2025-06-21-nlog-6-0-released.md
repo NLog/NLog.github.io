@@ -23,7 +23,7 @@ NLog v6 reducing its footprint by extracting features into separate nuget-packag
 - [NLog.Targets.WebService](https://www.nuget.org/packages/NLog.Targets.WebService) - Depends on System.Net.Http.HttpClient.
 - [NLog.RegEx](https://www.nuget.org/packages/NLog.RegEx) - Depends on System.Text.RegularExpressions which is a huge dependency for a logging library.
 
-See also [List of major changes in NLog v6](https://nlog-project.org/2025/04/29/nlog-6-0-major-changes.html) with more details.
+See also [List of major changes in NLog v6](https://nlog-project.org/2025/04/29/nlog-6-0-major-changes.html) for more details.
 
 ## Many other improvements
 
