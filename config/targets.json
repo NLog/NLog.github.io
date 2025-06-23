@@ -476,6 +476,14 @@
       "category": "Integrations"
     },
     {
+      "name": "Elastic Common Schema",
+      "page": "https://github.com/elastic/ecs-dotnet/tree/main/src/Elastic.NLog.Targets",
+      "description": "Writes logs directly to Elasticsearch or Elastic Cloud using the Elastic Common Schema (ECS)",
+      "package": "Elastic.NLog.Targets",
+      "external": true,
+      "category": "Integrations"
+    },
+    {
         "name": "Elastic Search",
         "page": "https://github.com/ReactiveMarkets/NLog.Targets.ElasticSearch",
         "description": "Writes to Elastic Search servers",
