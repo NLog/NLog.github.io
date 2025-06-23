@@ -11,9 +11,7 @@
         "description": "Writes log messages to the console with customizable coloring.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": ""
@@ -59,7 +57,6 @@
         "platform-notes": "For .NET Standard: NLog.WindowsEventLog nuget package required",
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
@@ -91,10 +88,7 @@
         "platform-notes": "For NLog 5.0 and .NET Standard: NLog.WCF nuget package required",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.3",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Integrations"
@@ -106,7 +100,6 @@
         "description": "Sends log messages with SmtpClient using SMTP protocol or pickup folder.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
@@ -120,8 +113,6 @@
         "description": "Sends log messages with MailKit using SMTP protocol or pickup folder.",
         "platforms": [
             "net45",
-            "netstandard1.3",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Integrations"
@@ -164,7 +155,6 @@
         "platform-notes": "For NLog 5.0: NLog.OutputDebugString nuget package required",
         "platforms": [
             "net35",
-            "net40",
             "net45"
         ],
         "category": "Integrations"
@@ -177,7 +167,6 @@
         "platform-notes": "For NLog 5.0: NLog.PerformanceCounter nuget package required",
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
@@ -190,9 +179,7 @@
         "description": "Sends log messages through System.Diagnostics.Trace.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Integrations"
@@ -246,7 +233,6 @@
         "platform-notes": "For NLog 5.0: NLog.WindowsIdentity nuget package required",
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
@@ -309,7 +295,6 @@
         "package": "NLog.MSMQ",
         "platforms": [
             "net35",
-            "net40",
             "net45"
         ],
         "platform-notes": "For NLog 4.7 (and older) then NLog.Extended nuget package required",
@@ -322,7 +307,6 @@
         "package": "NLog.Web",
         "platforms": [
             "net35",
-            "net40",
             "net45"
         ],
         "category": "Integrations"
@@ -335,7 +319,6 @@
         "wrapper": true,
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
@@ -348,7 +331,6 @@
         "package": "NLog.Windows.Forms",
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
@@ -361,7 +343,6 @@
         "package": "NLog.Windows.Forms",
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
@@ -374,7 +355,6 @@
         "package": "NLog.Windows.Forms",
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
@@ -387,7 +367,6 @@
         "package": "NLog.Windows.Forms",
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],

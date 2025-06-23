@@ -5,7 +5,6 @@
         "description": "Puts into log a System.Diagnostics trace correlation id.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
@@ -83,9 +82,7 @@
         "description": "The executable process directory of the application.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Files and directories"
@@ -115,7 +112,6 @@
         "description": "User identity information (username).",
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
@@ -193,7 +189,6 @@
         "description": "Local IP Address from Network Interface.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
@@ -270,9 +265,7 @@
         "description": "The directory where NLog.dll is located.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Files and directories"
@@ -285,7 +278,6 @@
         "platform-notes": "For NLog 5.0: NLog.PerformanceCounter nuget package required",
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
@@ -297,9 +289,7 @@
         "description": "The identifier of the current process.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Processes, threads and assemblies"
@@ -310,9 +300,7 @@
         "description": "The information about the running process. e.g. StartTime, PagedMemorySize",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Processes, threads and assemblies"
@@ -323,9 +311,7 @@
         "description": "The name of the current process.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Processes, threads and assemblies"
@@ -344,7 +330,6 @@
         "platform-notes": "For NLog 5.0: NLog.WindowsRegistry nuget package required",
         "platforms": [
           "net35",
-          "net40",
           "net45",
           "netstandard2.0"
         ],
@@ -386,7 +371,6 @@
         "description": "System special folder path (includes My Documents, My Music, Program Files, Desktop, and more).",
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
@@ -416,9 +400,7 @@
         "description": "The name of the current thread.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Processes, threads and assemblies"
@@ -449,9 +431,7 @@
         "platform-notes": "For NLog 5.0 and .NET Standard: NLog.WindowsIdentity nuget package required",
         "platforms": [
             "net35",
-            "net40",
             "net45",  
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Identity"
@@ -617,7 +597,6 @@
         "platform-notes": "For NLog 4.5 (and older) then NLog.Extended nuget package required",
         "platforms": [
             "net35",
-            "net40",
             "net45"
         ],
         "category": "Environment and config files"
@@ -633,8 +612,6 @@
         "description": "Value from the appsettings.json or other configuration in ASP.NET Core & .NET Core",
         "platforms": [
             "net461",
-            "netstandard1.3",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Environment and config files"
@@ -703,7 +680,6 @@
         "platforms": [
             "net35",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -718,9 +694,7 @@
         "description": "ASP.NET MVC Controller Name from routing parameters",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -732,9 +706,7 @@
         "description": "ASP.NET Application variable.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -761,9 +733,7 @@
         "description": "ASP.NET Request Duration.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -778,9 +748,7 @@
         "description": "ASP.NET `HttpContext` Items Dictionary Value.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -831,9 +799,7 @@
         "description": "ASP.NET Request Client Certificate",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -848,9 +814,7 @@
         "description": "ASP.NET Request Header Content-Length",
         "platforms": [
           "net35",
-          "net40",
           "net45",
-          "netstandard1.5",
           "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -865,9 +829,7 @@
         "description": "ASP.NET Content-Type header (Ex. application/json)",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -906,9 +868,7 @@
         "description": "ASP.NET Request HttpContext.Connection.LocalIpAddress",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -923,9 +883,7 @@
         "description": "ASP.NET Request HttpContext.Connection.LocalPort",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -940,9 +898,7 @@
         "description": "ASP.NET Request HttpContext.Connection.RemotePort",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -957,9 +913,7 @@
         "description": "ASP.NET Server Variable (Ex. APP_POOL_ID)",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1034,9 +988,7 @@
         "description": "ASP.NET Request HttpContext.WebSockets.WebSocketRequestedProtocols",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1051,9 +1003,7 @@
         "description": "ASP.NET trace identifier",
         "platforms": [
           "net35",
-          "net40",
           "net45",
-          "netstandard1.5",
           "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1068,9 +1018,7 @@
         "description": "ASP.NET Application base path (Content Root)",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1085,9 +1033,7 @@
         "description": "ASP.NET Web root path (wwwroot)",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1102,9 +1048,7 @@
         "description": "ASP.NET Request variable.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1133,9 +1077,7 @@
         "description": "ASP.NET posted body / payload",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1150,9 +1092,7 @@
         "description": "ASP.NET Request cookie content.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1167,9 +1107,7 @@
         "description": "ASP.NET Header key/value pairs.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1184,9 +1122,7 @@
         "description": "ASP.NET Request host.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1201,9 +1137,7 @@
         "description": "ASP.NET Request method (GET, POST etc).",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1218,9 +1152,7 @@
         "description": "Client IP.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1235,9 +1167,7 @@
         "description": "ASP.NET Request querystring.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1252,9 +1182,7 @@
         "description": "ASP.NET Request referrer.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1269,9 +1197,7 @@
         "description": "ASP.NET Request route parameters.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1286,9 +1212,7 @@
         "description": "ASP.NET Request useragent.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1303,9 +1227,7 @@
         "description": "ASP.NET Request URL.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1320,9 +1242,7 @@
         "description": "ASP.NET Request form content.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1337,9 +1257,7 @@
         "description": "ASP.NET Response status code content.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1354,9 +1272,7 @@
         "description": "ASP.NET Response Header Content-Type (Ex. application/json)",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1371,9 +1287,7 @@
         "description": "Cookie Name and Values stored in the ASP.NET Response Cookies collection.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1388,9 +1302,7 @@
         "description": "ASP.NET Http Response HasStarted ",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1405,9 +1317,7 @@
         "description": "ASP.NET Response Headers key/value pairs.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1434,9 +1344,7 @@
         "description": "ASP.NET Response status code content.",
         "platforms": [
           "net35",
-          "net40",
           "net45",
-          "netstandard1.5",
           "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1463,9 +1371,7 @@
         "description": "ASP.NET Session variable.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1480,9 +1386,7 @@
         "description": "ASP.NET Session ID variable.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1497,9 +1401,7 @@
         "description": "ASP.NET User authenticated?",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1514,9 +1416,7 @@
         "description": "ASP.NET User auth.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1531,9 +1431,7 @@
         "description": "ASP.NET User variable.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1548,7 +1446,6 @@
         "description": "ASP.NET User Claims authorization values",
         "platforms": [
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
@@ -1563,9 +1460,7 @@
         "description": "IIS site name.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Web, ASP.NET and ASP.NET Core"
