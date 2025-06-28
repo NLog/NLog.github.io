@@ -124,6 +124,7 @@ NLog FileTarget no longer has the following options:
 Alternative options for replacing `ConcurrentWrites = true`:
 - Use the new nuget-package [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) where AtomicFileTarget uses atomic file-appends and supports Windows / Linux with NET8.
 - Change to use `KeepFileOpen = false` where file is opened / closed when writing LogEvents. For better performance then consider to also use `<targets async="true">`.
+- Update FileName to include suffix `_${appdomain:format=short}_${processid}` to support IIS that can juggle multiple AppDomains during recycle of app-pools.
 
 There is also a new [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package, which is
 the original NLog FileTarget with all its features and complexity. It supports ConcurrentWrites using global mutex,
