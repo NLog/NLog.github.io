@@ -24,7 +24,7 @@ NLog v6 reducing its footprint by extracting features into separate nuget-packag
 - [NLog.Targets.GZipFile](https://www.nuget.org/packages/NLog.Targets.GZipFile) - EnableArchiveFileCompression using GZipStream for writing GZip compressed log-files.
 - [NLog.Targets.Mail](https://www.nuget.org/packages/NLog.Targets.Mail) - Depends on System.Net.Mail.SmtpClient.
 - [NLog.Targets.Network](https://www.nuget.org/packages/NLog.Targets.Network) - Depends on TCP and UDP Network Socket, and adds support for Syslog and Graylog.
-- [NLog.Targets.Trace](https://www.nuget.org/packages/NLog.Targets.Trace) - Depends on System.Diagnostics.TraceListener.
+- [NLog.Targets.Trace](https://www.nuget.org/packages/NLog.Targets.Trace) - Depends on System.Diagnostics.TraceListener and System.Diagnostics.Trace.CorrelationManager.
 - [NLog.Targets.WebService](https://www.nuget.org/packages/NLog.Targets.WebService) - Depends on System.Net.Http.HttpClient.
 - [NLog.RegEx](https://www.nuget.org/packages/NLog.RegEx) - Depends on System.Text.RegularExpressions which is a huge dependency for a logging library.
 
