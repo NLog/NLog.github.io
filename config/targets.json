@@ -558,7 +558,7 @@
     {
         "name": "GrayNLog",
         "page": "https://gitlab.com/nlog/nlog-graylog",
-        "package": " GrayNLog",
+        "package": "GrayNLog",
         "description": "Write log messages to Graylog - Gelf UDP.",
         "external": true,
         "category": "Integrations"
