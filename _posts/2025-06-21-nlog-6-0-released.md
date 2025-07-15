@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NLog 6.0 with AOT support
+title: NLog 6.0 supports AOT
 ---
 
 NLog v6 with the following major changes:
