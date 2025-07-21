@@ -3,16 +3,16 @@ layout: post
 title: NLog 6.0 with AOT support
 ---
 
-NLog v6 with the following major changes:
+NLog v6 includes the following major changes:
 
-- Support Ahead-of-Time (AOT) builds without warnings
-- Support Nullable references
-- Support ReadOnlySpan to reduce memory allocations
-- LogFactory supports FlushAsync and IDisposableAsync
-- FileTarget removed support for ConcurrentWrites
-- FileTarget refactored file-archive-logic with ArchiveSuffixFormat
+- Support Ahead-of-Time (AOT) builds without warnings.
+- Support Nullable references.
+- Support ReadOnlySpan to reduce memory allocations.
+- LogFactory supports FlushAsync and IDisposableAsync.
+- FileTarget removed support for ConcurrentWrites.
+- FileTarget refactored file-archive-logic with ArchiveSuffixFormat.
 
-NLog v6 reducing its footprint by extracting features into separate nuget-packages:
+NLog v6 has reduced its footprint by extracting features into separate nuget-packages:
 
 - [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) - ConcurrentWrites using atomic file-append from operating system API.
 - [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile) - Original FileTarget with ConcurrentWrites using global mutex from operating system API.

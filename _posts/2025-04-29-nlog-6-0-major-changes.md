@@ -17,7 +17,7 @@ But reflection does not always work well with build-trimming, and before NLog ma
 NLog includes many features, and each feature often introduces additional dependencies on the .NET library.
 This can lead to overhead for AOT builds, as it must include and compile all the relevant source code.
 
-NLog v6 reducing its footprint by extracting features into separate nuget-packages:
+NLog v6 has reduced its footprint by extracting features into separate nuget-packages:
 
 - [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) - ConcurrentWrites using atomic file-append from operating system API.
 - [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile) - ConcurrentWrites using global mutex from operating system API.
