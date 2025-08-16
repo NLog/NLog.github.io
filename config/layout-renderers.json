@@ -790,6 +790,30 @@
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
+        "name": "aspnet-request-endpoint-group",
+        "page": "AspNet-Request-EndPoint-Group-Layout-Renderer",
+        "package": [
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Request EndPoint Group name.",
+        "platforms": [
+            "netstandard2.0"
+        ],
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
+        "name": "aspnet-request-endpoint-name",
+        "page": "AspNet-Request-EndPoint-Name-Layout-Renderer",
+        "package": [
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "ASP.NET Request EndPoint Name name.",
+        "platforms": [
+            "netstandard2.0"
+        ],
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
         "name": "aspnet-request-client-certificate",
         "page": "AspNet-Request-Client-Certificate-Layout-Renderer",
         "package": [

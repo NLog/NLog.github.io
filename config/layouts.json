@@ -7,22 +7,32 @@
     {
         "name": "JSON",
         "page": "JsonLayout",
-        "description": "Render events to JSON-Dictionary-format"
+        "description": "Renders events to JSON-Dictionary-format"
     },
     {
         "name": "JsonArray",
         "page": "JsonArrayLayout",
-        "description": "Render events to JSON-Array-format"
+        "description": "Renders events to JSON-Array-format"
     },
     {
         "name": "XML",
         "page": "XmlLayout",
-        "description": "Render events to XML-format"
+        "description": "Renders events to XML-format"
     },
     {
         "name": "Log4JXml",
         "page": "Log4JXmlEventLayout",
-        "description": "Render events to Log4j-compatible XML-format"
+        "description": "Renders events to Log4j-compatible XML-format"
+    },
+    {
+        "name": "Syslog",
+        "page": "SyslogLayout",
+        "description": "Renders events to Syslog-format"
+    },
+    {
+        "name": "Gelf",
+        "page": "GelfLayout",
+        "description": "Renders events to Graylog GELF JSON-format"
     },
     {
         "name": "Compound",
@@ -32,12 +42,12 @@
     {
         "name": "Simple (plain text)",
         "page": "SimpleLayout",
-        "description": "Write events as plain text. The default layout when no Layout type is specified."
+        "description": "Renders events as plain text. The default layout when no Layout type is specified."
     },
     {
         "name": "MicrosoftConsoleLayout",
         "page": "MicrosoftConsoleLayout",
-        "description": "Write events to text format similar to Microsoft AddConsole Formatter for Microsoft.Hosting.Lifetime",
+        "description": "Renders events to text format similar to Microsoft AddConsole Formatter for Microsoft.Hosting.Lifetime",
         "package": [
           "NLog.Extensions.Logging",
           "NLog.Extensions.Hosting",
@@ -47,7 +57,7 @@
     {
         "name": "MicrosoftConsoleJson",
         "page": "MicrosoftConsoleJsonLayout",
-        "description": "Write events to JSON-format similar to Microsoft AddJsonConsole Formatter.",
+        "description": "Renders events to JSON-format similar to Microsoft AddJsonConsole Formatter.",
         "package": [
           "NLog.Extensions.Logging",
           "NLog.Extensions.Hosting",
@@ -57,7 +67,7 @@
     {
         "name": "W3CExtendedLogLayout",
         "page": "W3CExtendedLogLayout",
-        "description": "Write events to W3C Extended Log Format (ELF) like IIS.",
+        "description": "Renders events to W3C Extended Log Format (ELF) like IIS.",
         "package": [
           "NLog.Web",
           "NLog.Web.AspNetCore"
@@ -66,7 +76,7 @@
     {
         "name": "GELF JSON",
         "page": "https://github.com/farzadpanahi/NLog.GelfLayout",
-        "description": "Write events to GELF JSON-format for GrayLog-server.",
+        "description": "Renders events to GELF JSON-format for GrayLog-server.",
         "package": [
           "NLog.GelfLayout"
         ]
@@ -74,7 +84,7 @@
     {
         "name": "CLEF JSON",
         "page": "https://github.com/paulem/nlog-layouts-clef",
-        "description": "Write events in JSON using the Compact Log Event Format (CLEF) for Seq-server.",
+        "description": "Renders events in JSON using the Compact Log Event Format (CLEF) for Seq-server.",
         "package": [
           "NLog.Layouts.ClefJsonLayout"
         ]
@@ -82,7 +92,7 @@
     {
         "name": "Elastic JSON",
         "page": "https://github.com/elastic/ecs-dotnet/tree/main/src/Elastic.CommonSchema.NLog",
-        "description": "Write events in JSON using Elastic Common Schema (ECS) for ElasticSearch-server.",
+        "description": "Renders events in JSON using Elastic Common Schema (ECS) for ElasticSearch-server.",
         "package": [
           "Elastic.CommonSchema.NLog"
         ]
