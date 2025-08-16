@@ -19,20 +19,14 @@
             </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID4RB')" onkeypress="SectionExpandCollapse_CheckKey('ID4RB', event)" tabindex="0"><img id="ID4RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Properties</span></div><div id="ID4RBSection" class="collapsibleSection"><table class="members" id="propertyList"><tr><th class="iconColumn">
 								 
 							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_ArchiveAboveSize.htm">ArchiveAboveSize</a></td><td><div class="summary">
-            Gets or sets the size in bytes above which log files will be automatically archived.
-            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_ArchiveDateFormat.htm">ArchiveDateFormat</a></td><td> <strong>Obsolete. </strong><div class="summary">
-            Gets or sets a value specifying the date format when using <a href="P_NLog_Targets_FileTarget_ArchiveFileName.htm">ArchiveFileName</a>.
-            Obsolete and only here for Legacy reasons, instead use <a href="P_NLog_Targets_FileTarget_ArchiveSuffixFormat.htm">ArchiveSuffixFormat</a>.
+            Gets or sets the size in bytes above which log files will be automatically archived. Zero or negative means disabled.
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_ArchiveEvery.htm">ArchiveEvery</a></td><td><div class="summary">
              Gets or sets a value indicating whether to trigger archive operation based on time-period, by moving active-file to file-path specified by <a href="P_NLog_Targets_FileTarget_ArchiveFileName.htm">ArchiveFileName</a></div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_ArchiveFileName.htm">ArchiveFileName</a></td><td><div class="summary">
              Legacy archive logic where file-archive-logic moves active file to path specified by <a href="P_NLog_Targets_FileTarget_ArchiveFileName.htm">ArchiveFileName</a>, and then recreates the active file.
             
              Use <a href="P_NLog_Targets_FileTarget_ArchiveSuffixFormat.htm">ArchiveSuffixFormat</a> to control suffix format, instead of now obsolete token {#}
-             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_ArchiveNumbering.htm">ArchiveNumbering</a></td><td> <strong>Obsolete. </strong><div class="summary">
-            Gets or sets the way file archives are numbered.
-            Obsolete and only here for Legacy reasons, instead use <a href="P_NLog_Targets_FileTarget_ArchiveSuffixFormat.htm">ArchiveSuffixFormat</a>.
-            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_ArchiveOldFileOnStartup.htm">ArchiveOldFileOnStartup</a></td><td><div class="summary">
-            Gets or sets a value indicating whether to archive old log file on startup.
+             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_ArchiveOldFileOnStartup.htm">ArchiveOldFileOnStartup</a></td><td><div class="summary">
+            Gets or sets a value indicating whether any existing log-file should be archived on startup.
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_ArchiveSuffixFormat.htm">ArchiveSuffixFormat</a></td><td><div class="summary">
              Gets or sets the format-string to convert archive sequence-number by using string.Format
              </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_AutoFlush.htm">AutoFlush</a></td><td><div class="summary">
@@ -61,21 +55,19 @@
             </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_KeepFileOpen.htm">KeepFileOpen</a></td><td><div class="summary">
             Gets or sets a value indicating whether to keep log file open instead of opening and closing it on each logging event.
             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_TargetWithLayoutHeaderAndFooter_Layout.htm">Layout</a></td><td><div class="summary">
-            Gets or sets the text to be rendered.
+            Gets or sets the layout used to format log messages.
             </div> (Inherited from <a href="T_NLog_Targets_TargetWithLayoutHeaderAndFooter.htm">TargetWithLayoutHeaderAndFooter</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_LineEnding.htm">LineEnding</a></td><td><div class="summary">
             Gets or sets the line ending mode.
             </div></td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protproperty.gif" alt="Protected property" title="Protected property" /></td><td><a href="P_NLog_Targets_Target_LoggingConfiguration.htm">LoggingConfiguration</a></td><td><div class="summary">
             Gets the logging configuration this target is part of.
             </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_MaxArchiveDays.htm">MaxArchiveDays</a></td><td><div class="summary">
-            Gets or sets the maximum days of archive files that should be kept.
+            Gets or sets the maximum days of archive files that should be kept. Zero or negative means disabled.
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_MaxArchiveFiles.htm">MaxArchiveFiles</a></td><td><div class="summary">
-            Gets or sets the maximum number of archive files that should be kept.
+            Gets or sets the maximum number of archive files that should be kept. Negative means disabled.
             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_Target_Name.htm">Name</a></td><td><div class="summary">
             Gets or sets the name of the target.
             </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_OpenFileCacheSize.htm">OpenFileCacheSize</a></td><td><div class="summary">
-            Gets or sets the number of files to be kept open. Setting this to a higher value may improve performance
-            in a situation where a single File target is writing to many files
-            (such as splitting by level or by logger).
+            Gets or sets the maximum number of files to be kept open.
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_OpenFileCacheTimeout.htm">OpenFileCacheTimeout</a></td><td><div class="summary">
             Gets or sets the maximum number of seconds that files are kept open. Zero or negative means disabled.
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_OpenFileFlushTimeout.htm">OpenFileFlushTimeout</a></td><td><div class="summary">
@@ -85,10 +77,8 @@
             </div></td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protproperty.gif" alt="Protected property" title="Protected property" /></td><td><a href="P_NLog_Targets_Target_SyncRoot.htm">SyncRoot</a></td><td><div class="summary">
             Gets the object which can be used to synchronize asynchronous operations that must rely on the .
             </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_WriteBom.htm">WriteBom</a></td><td><div class="summary">
-             Gets or sets a value indicating whether to write BOM (byte order mark) in created files.
-            
-             Defaults to true for UTF-16 and UTF-32
-             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_WriteFooterOnArchivingOnly.htm">WriteFooterOnArchivingOnly</a></td><td><div class="summary">
+            Gets or sets a value indicating whether to write BOM (byte order mark) in created files.
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_WriteFooterOnArchivingOnly.htm">WriteFooterOnArchivingOnly</a></td><td><div class="summary">
             Gets or sets a value indicating whether the footer should be written only when the file is archived.
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_FileTarget_WriteHeaderWhenInitialFileNotEmpty.htm">WriteHeaderWhenInitialFileNotEmpty</a></td><td><div class="summary">
             Gets or sets whether to write the Header on initial creation of file appender, even if the file is not empty.

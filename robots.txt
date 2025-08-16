@@ -12,4 +12,4 @@ Disallow: /documentation/v4.4.0/
 Disallow: /documentation/v4.5.0/
 Disallow: /documentation/v4.6.0/
 Disallow: /documentation/v4.7.0/
-Disallow: /documentation/v6.0.0/
+Disallow: /documentation/v5.0.0/
