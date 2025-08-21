@@ -101,6 +101,7 @@ Alternative options for replacing `EnableArchiveFileCompression = true`:
 - Setup cron-job / scheduled-task that performs ZIP-compression and cleanup of the logging-folder.
 - Implement background task in the application, which monitors the logging-folder and performs ZIP-compression and cleanup.
 - Use the new nuget-package [NLog.Targets.GZipFile](https://www.nuget.org/packages/NLog.Targets.GZipFile) where GZipFileTarget writes directly to a compressed log-file using `GZipStream`.
+- Use the legacy nuget-package [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile) that is the original NLog v5 FileTarget with all features and complexity.
 
 ### NLog FileTarget without ConcurrentWrites
 
@@ -125,11 +126,7 @@ Alternative options for replacing `ConcurrentWrites = true`:
 - Use the new nuget-package [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) where AtomicFileTarget uses atomic file-appends and supports Windows / Linux with NET8 (Remember changing to `xsi:type="atomfile"`)
 - Change to use `KeepFileOpen = false` where file is opened / closed when writing LogEvents. For better performance then consider to also use `<targets async="true">`.
 - Update FileName to include suffix `_${appdomain:format=short}_${processid}` to support IIS that can juggle multiple AppDomains during recycle of app-pools.
-
-There is also a new [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package, which is
-the original NLog FileTarget with all its features and complexity. It supports ConcurrentWrites using global mutex,
-but the goal is that [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile)-nuget-package will become legacy,
-but it might be helpful when upgrading to NLog v6.
+- Use the legacy nuget-package [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile) that is the original NLog v5 FileTarget with all features and complexity.
 
 ### NLog AtomicFileTarget without mutex
 
