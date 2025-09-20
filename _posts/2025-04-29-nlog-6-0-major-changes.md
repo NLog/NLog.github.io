@@ -420,6 +420,12 @@ This means word-highlighting rules no longer can scan for word-matches using Reg
 But logic has been implemented to continue support `IgnoreCase` and `WholeWords`
 for the string-matching logic.
 
+NLog v6.0.3 introduces new `Words`-option to configure the same highlighting for multple words.
+Use a comma-separated word-list like this: `words="FastHeaders, FastSync, SnapSync"`.
+
+NLog v6.0.4 extends the `WholeWords`-option, so the `Text`-option can include special characters
+like `text="|Warn|"` for matching, but will only highlight the word-part `Warn`.
+
 ### NLog Replace LayoutRenderer without RegEx
 
 RegularExpressions (RegEx) is a huge API, and a big dependency for a logging library,
