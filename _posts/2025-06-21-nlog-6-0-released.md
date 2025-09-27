@@ -15,7 +15,7 @@ NLog v6 includes the following major changes:
 NLog v6 has reduced its footprint by extracting features into separate nuget-packages:
 
 - [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) - ConcurrentWrites using atomic file-append from operating system API.
-- [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile) - Original FileTarget with ConcurrentWrites using global mutex from operating system API.
+- [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile) - Legacy FileTarget from NLog v5 with ConcurrentWrites using global operating system mutex.
 - [NLog.Targets.GZipFile](https://www.nuget.org/packages/NLog.Targets.GZipFile) - EnableArchiveFileCompression using GZipStream for writing GZip compressed log-files.
 - [NLog.Targets.Mail](https://www.nuget.org/packages/NLog.Targets.Mail) - Depends on System.Net.Mail.SmtpClient.
 - [NLog.Targets.Network](https://www.nuget.org/packages/NLog.Targets.Network) - Depends on TCP and UDP Network Socket, and adds support for Syslog and Graylog.
