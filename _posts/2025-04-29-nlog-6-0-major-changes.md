@@ -421,7 +421,7 @@ But logic has been implemented to continue support `IgnoreCase` and `WholeWords`
 for the string-matching logic.
 
 NLog v6.0.3 introduces new `Words`-option to configure the same highlighting for multple words.
-Use a comma-separated word-list like this: `words="FastHeaders, FastSync, SnapSync"`.
+Use a comma-separated word-list like this: `words="FastHeaders,FastSync,SnapSync"` (Remove leading/trailing between words)
 
 NLog v6.0.4 extends the `WholeWords`-option, so the `Text`-option can include special characters
 like `text="|Warn|"` for matching, but will only highlight the word-part `Warn`.
