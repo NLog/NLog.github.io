@@ -359,7 +359,7 @@
     },
     {
         "name": "FormControl",
-        "page": "FormControl-target",
+        "page": "https://github.com/NLog/NLog.Windows.Forms/wiki/FormControlTarget",
         "description": "Logs text to Windows.Forms.Control.Text property control of specified Name.",
         "package": "NLog.Windows.Forms",
         "platforms": [
@@ -371,7 +371,7 @@
     },
     {
         "name": "MessageBox",
-        "page": "MessageBox-target",
+        "page": "https://github.com/NLog/NLog.Windows.Forms/wiki/MessageBoxTarget",
         "description": "Pops up log messages as message boxes.",
         "package": "NLog.Windows.Forms",
         "platforms": [
@@ -383,7 +383,7 @@
     },
     {
         "name": "RichTextBox",
-        "page": "RichTextBox-target",
+        "page": "https://github.com/NLog/NLog.Windows.Forms/wiki/RichTextBoxTarget",
         "description": "Log text a Rich Text Box control in an existing or new form.",
         "package": "NLog.Windows.Forms",
         "platforms": [
@@ -395,7 +395,7 @@
     },
     {
         "name": "ToolStripItem",
-        "page": "ToolStripItem-target",
+        "page": "https://github.com/NLog/NLog.Windows.Forms/wiki/ToolStripItemTarget",
         "description": "Logs text to Windows.Forms.ToolStripItem property control of specified Name",
         "package": "NLog.Windows.Forms",
         "platforms": [
