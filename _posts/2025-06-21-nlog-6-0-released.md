@@ -14,13 +14,13 @@ NLog v6 includes the following major changes:
 
 NLog v6 has reduced its footprint by extracting features into separate nuget-packages:
 
-- [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) - ConcurrentWrites using atomic file-append from operating system API.
+- [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) - FileTarget with ConcurrentWrites using atomic file-append from operating system API.
 - [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile) - Legacy FileTarget from NLog v5 with ConcurrentWrites using global operating system mutex.
-- [NLog.Targets.GZipFile](https://www.nuget.org/packages/NLog.Targets.GZipFile) - EnableArchiveFileCompression using GZipStream for writing GZip compressed log-files.
-- [NLog.Targets.Mail](https://www.nuget.org/packages/NLog.Targets.Mail) - Depends on System.Net.Mail.SmtpClient.
-- [NLog.Targets.Network](https://www.nuget.org/packages/NLog.Targets.Network) - Depends on TCP and UDP Network Socket, and adds support for Syslog and Graylog.
-- [NLog.Targets.Trace](https://www.nuget.org/packages/NLog.Targets.Trace) - Depends on System.Diagnostics.TraceListener and System.Diagnostics.Trace.CorrelationManager.
-- [NLog.Targets.WebService](https://www.nuget.org/packages/NLog.Targets.WebService) - Depends on System.Net.Http.HttpClient.
+- [NLog.Targets.GZipFile](https://www.nuget.org/packages/NLog.Targets.GZipFile) - FileTarget with EnableArchiveFileCompression using GZipStream for writing GZip compressed log-files.
+- [NLog.Targets.Mail](https://www.nuget.org/packages/NLog.Targets.Mail) - MailTarget depends on System.Net.Mail.SmtpClient.
+- [NLog.Targets.Network](https://www.nuget.org/packages/NLog.Targets.Network) - NetworkTarget depends on TCP and UDP Network Socket, and adding support for Syslog and Graylog.
+- [NLog.Targets.Trace](https://www.nuget.org/packages/NLog.Targets.Trace) - TraceTarget and NLogTraceListener depends on System.Diagnostics.TraceListener and System.Diagnostics.Trace.CorrelationManager.
+- [NLog.Targets.WebService](https://www.nuget.org/packages/NLog.Targets.WebService) - WebServiceTarget depends on System.Net.Http.HttpClient.
 - [NLog.RegEx](https://www.nuget.org/packages/NLog.RegEx) - Depends on System.Text.RegularExpressions which is a huge dependency for a logging library.
 
 See also [List of major changes in NLog v6](https://nlog-project.org/2025/04/29/nlog-6-0-major-changes.html) for more details.

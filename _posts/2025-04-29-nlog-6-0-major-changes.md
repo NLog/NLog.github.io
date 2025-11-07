@@ -19,13 +19,13 @@ This can lead to overhead for AOT builds, as it must include and compile all the
 
 NLog v6 has reduced its footprint by extracting features into separate nuget-packages:
 
-- [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) - ConcurrentWrites using atomic file-append from operating system API.
-- [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile) - ConcurrentWrites using global mutex from operating system API.
-- [NLog.Targets.GZipFile](https://www.nuget.org/packages/NLog.Targets.GZipFile) - EnableArchiveFileCompression using GZipStream for writing GZip compressed log-files.
-- [NLog.Targets.Mail](https://www.nuget.org/packages/NLog.Targets.Mail) - Depends on System.Net.Mail.SmtpClient.
-- [NLog.Targets.Network](https://www.nuget.org/packages/NLog.Targets.Network) - Depends on TCP and UDP Network Socket, and adds support for Syslog and Graylog.
-- [NLog.Targets.Trace](https://www.nuget.org/packages/NLog.Targets.Trace) - Depends on System.Diagnostics.TraceListener and System.Diagnostics.Trace.CorrelationManager.
-- [NLog.Targets.WebService](https://www.nuget.org/packages/NLog.Targets.WebService) - Depends on System.Net.Http.HttpClient.
+- [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) - FileTarget with ConcurrentWrites using atomic file-append from operating system API.
+- [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile) - Legacy FileTarget from NLog v5 with ConcurrentWrites using global operating system mutex.
+- [NLog.Targets.GZipFile](https://www.nuget.org/packages/NLog.Targets.GZipFile) - FileTarget with EnableArchiveFileCompression using GZipStream for writing GZip compressed log-files.
+- [NLog.Targets.Mail](https://www.nuget.org/packages/NLog.Targets.Mail) - MailTarget depends on System.Net.Mail.SmtpClient.
+- [NLog.Targets.Network](https://www.nuget.org/packages/NLog.Targets.Network) - NetworkTarget depends on TCP and UDP Network Socket, and adding support for Syslog and Graylog.
+- [NLog.Targets.Trace](https://www.nuget.org/packages/NLog.Targets.Trace) - TraceTarget and NLogTraceListener depends on System.Diagnostics.TraceListener and System.Diagnostics.Trace.CorrelationManager.
+- [NLog.Targets.WebService](https://www.nuget.org/packages/NLog.Targets.WebService) - WebServiceTarget depends on System.Net.Http.HttpClient.
 - [NLog.RegEx](https://www.nuget.org/packages/NLog.RegEx) - Depends on System.Text.RegularExpressions which is a huge dependency for a logging library.
 
 NLog v6 also no longer depends on `System.Xml.XmlReader`, but now includes its own basic XmlParser for loading `NLog.config` files.
@@ -65,8 +65,8 @@ NLog FileTarget no longer has the following archive-options:
 
 - EnableArchiveFileCompression - Removed because of dependency on compression-libraries.
 - ArchiveOldFileOnStartupAboveSize - Instead use ArchiveAboveSize / ArchiveOldFileOnStartup.
-- ArchiveDateFormat - Marked as obsolete. Instead use new ArchiveSuffixFormat
-- ArchiveNumbering - Marked as obsolete. Instead use new ArchiveSuffixFormat (Rolling is unsupported).
+- ArchiveDateFormat - Marked as obsolete. Instead use new ArchiveSuffixFormat. Ex. `_{1:yyyyMMdd}_{0:00}`.
+- ArchiveNumbering - Marked as obsolete. Instead use new ArchiveSuffixFormat. Ex. `_{1:yyyyMMdd}_{0:00}`.
 - ArchiveFileKind - Removed because it is now implicit.
 - FileNameKind - Removed because it is now implicit.
 
