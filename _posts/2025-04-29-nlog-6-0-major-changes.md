@@ -109,7 +109,8 @@ NLog FileTarget no longer supports `ConcurrentWrites`-option, where multiple pro
 on the same machine can write to the same file with help from global operating-system-mutex.
 
 This feature was removed to simplify the NLog FileTarget, and not rely on features that was
-only supported on certain operating system platforms. Still there is support for `KeepFileOpen` = true / false.
+only supported on certain operating system platforms. There is still support for `KeepFileOpen` = true / false,
+where `KeepFileOpen = false` enables multiple processes to write to the same file, even when located on network-share.
 
 NLog FileTarget no longer has the following options:
 
