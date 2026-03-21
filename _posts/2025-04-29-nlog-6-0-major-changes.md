@@ -407,10 +407,10 @@ If the output from `JsonLayout` needs to be more human readable, then one can ex
 
 ### NLog ColoredConsoleTarget with Errors in red
 
-NLog `ColoredConsoleTarget` used the color Yellow for Errors and Magenta for Warnings.
-This has now been changed to color Red for Errors and Yellow for Warnings.
+NLog `ColoredConsoleTarget` has changed default highlight colors to be Red for Errors and Yellow for Warnings.
+Previously NLog colored console used the color Yellow for Errors and Magenta for Warnings.
 
-This is to align with the normal color standards that most other systems seems to be using.
+This is to align with the color standards that most other systems are using.
 
 ### NLog ColoredConsoleTarget without RegEx
 
