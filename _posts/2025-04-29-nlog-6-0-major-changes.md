@@ -454,7 +454,9 @@ Alternative one can setup custom subscriber to NLog `InternalLogger.InternalEven
 ### NLog RequiredParameter attribute ignored
 
 NLog has removed validation for properties marked with `[RequiredParameter]`, where NLog previously warned if target or layout option was missing a value.
-NLog now uses nullable reference types, so required options are non-nullable and therefore always expected to have a value.
+NLog now uses nullable reference types, so required properties are non-nullable and therefore always expected to have a value.
+
+NLog startup performance has become a little faster, as it now can skip reflection to find all properties marked with `[RequiredParameter]` and checking their values.
 
 This means that authors of NLog Targets or Layouts should not rely on the obsolete `[RequiredParameter]`,
 but should instead perform their own validation of options during initialization. Ex:
