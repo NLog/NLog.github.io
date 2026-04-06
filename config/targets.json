@@ -883,12 +883,20 @@
         "category": "Integrations (Cloud)"
     },
     {
+        "name": "NLog.Targets.MicrosoftTeams",
+        "package": "NLog.Targets.MicrosoftTeams",
+        "description": "Writes NLog messages to Microsoft Teams Channel via O365 Webhook Connector",
+        "page": "https://github.com/jedipi/NLog.Targets.MicrosoftTeams",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
         "name": "Microsoft Teams",
         "package": "NLog.Targets.Teams",
         "description": "Writes NLog messages to MS Teams incoming Webhook connectors",
         "page": "https://github.com/task-it/TaskIt.NLog.Targets.Teams",
         "external": true,
-        "category": "Integrations"
+        "category": "Integrations (Cloud)"
     },
     {
         "name": "Ntfy.sh",
