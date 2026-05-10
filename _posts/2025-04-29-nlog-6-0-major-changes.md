@@ -103,6 +103,31 @@ Alternative options for replacing `EnableArchiveFileCompression = true`:
 - Use the new nuget-package [NLog.Targets.GZipFile](https://www.nuget.org/packages/NLog.Targets.GZipFile) where GZipFileTarget writes directly to a compressed log-file using `GZipStream`.
 - Use the legacy nuget-package [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile) that is the original NLog v5 FileTarget with all features and complexity.
 
+### NLog FileTarget without ArchiveNumbering Rolling
+
+NLog FileTarget no longer supports `ArchiveNumbering`-option with rolling behavior, that prevented ever increasing archive sequence-numbers.
+
+There are some alternative options available:
+
+- `FileName = "LogFile_${date:format=ddd}.txt"` (Combined with `MaxArchiveDays = 6`)
+  - LogFile_Tue.txt
+  - LogFile_Wed.txt
+  - LogFile_Thu.txt
+   
+- `ArchiveSuffixFormat = "_{1:ddd}"` (Combined with `MaxArchiveFiles = 7`)
+  - LogFile.txt (Newest file)
+  - LogFile_Tue.txt
+  - LogFile_Wed.txt
+  - LogFile_Thu.txt
+
+- `ArchiveSuffixFormat = "_{1:yyyyMMdd}"` (Combined with `MaxArchiveFiles = 10`)
+  - LogFile.txt (Newest file)
+  - LogFile_20250429.txt
+  - LogFile_20250430.txt
+  - LogFile_20250501.txt
+
+If none of these approaches fit your needs, the legacy NuGet package [NLog.Targets.ConcurrentFile](https://www.nuget.org/packages/NLog.Targets.ConcurrentFile) is still available. It contains the original NLog v5 FileTarget implementation, including its full feature set and complexity.
+
 ### NLog FileTarget without ConcurrentWrites
 
 NLog FileTarget no longer supports `ConcurrentWrites`-option, where multiple processes running
