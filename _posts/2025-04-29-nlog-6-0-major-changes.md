@@ -161,8 +161,11 @@ that supports atomic file-append with help from the operating system, and suppor
 
 Extends the standard FileTarget and adds support for `ConcurrentWrites = true`, but without using global mutex.
 
-Linux users must use `dotnet publish` with `--configuration release --runtime linux-x64` to ensure
-correct publish of the `Mono.Posix.NETStandard`-nuget-package dependency.
+- NET on Windows rely on `FileSystemRights.AppendData`-flag
+- NET on Linux rely on `O_APPEND`-flag (`DllImport` calling `Open()` from `libc`)
+- NET on MacOX rely on `O_APPEND`-flag (`DllImport` calling `Open()` from `libc`)
+
+NLog ver. 6.1.5 stopped depending on `Mono.Posix.NETStandard`-nuget-package, instead changed to `DllImport` calling `open()` from `libc` to also support MacOSX and Arm64.
 
 ### NLog GZipFileTarget with GZipStream
 
