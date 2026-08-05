@@ -190,9 +190,9 @@
     },
     {
         "name": "OpenTelemetry",
-        "page": "https://github.com/juliuskoval/NLog.Targets.OpenTelemetryProtocol",
-        "package": "NLog.Targets.OpenTelemetryProtocol",
-        "description": "Exports log events to OpenTelemetry EndPoint via the official OpenTelemetry SDK.",
+        "page": "https://github.com/NLog/NLog.Targets.Network/tree/master/src/NLog.Targets.OpenTelemetryHttp",
+        "package": "NLog.Targets.OpenTelemetryHttp",
+        "description": "Exports log events to an OpenTelemetry Collector or any OTLP/HTTP-compatible endpoint.",
         "platforms": [
             "netstandard2.0",
             "net45"
@@ -201,10 +201,10 @@
         "external": true
     },
     {
-        "name": "OpenTelemetry",
-        "page": "https://github.com/NLog/NLog.Targets.Network/tree/master/src/NLog.Targets.OpenTelemetryHttp",
-        "package": "NLog.Targets.OpenTelemetryHttp",
-        "description": "Exports log events to an OpenTelemetry Collector or any OTLP/HTTP-compatible endpoint.",
+        "name": "OtlpTarget",
+        "page": "https://github.com/juliuskoval/NLog.Targets.OpenTelemetryProtocol",
+        "package": "NLog.Targets.OpenTelemetryProtocol",
+        "description": "Exports log events to OpenTelemetry EndPoint via the official OpenTelemetry SDK.",
         "platforms": [
             "netstandard2.0",
             "net45"
