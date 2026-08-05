@@ -97,6 +97,18 @@
         "external": true
     },
     {
+        "name": "HttpClient",
+        "page": "https://github.com/NLog/NLog.Targets.Network/tree/master/src/NLog.Targets.HttpClient",
+        "package": "NLog.Targets.HttpClient",
+        "description": "Sending log messages to HTTP or HTTPS endpoint, with support for batching and compression, and supports Splunk.",
+        "platforms": [
+            "netstandard2.0",
+            "net45"
+        ],
+        "category": "Integrations",
+        "external": true
+    },
+    {
         "name": "LogReceiverService",
         "page": "LogReceiverService-target",
         "package": "NLog.WCF",
@@ -175,6 +187,30 @@
         "page": "Null-target",
         "description": "Discards log messages. Used mainly for debugging and benchmarking.",
         "category": "Programmatically"
+    },
+    {
+        "name": "OpenTelemetry",
+        "page": "https://github.com/juliuskoval/NLog.Targets.OpenTelemetryProtocol",
+        "package": "NLog.Targets.OpenTelemetryProtocol",
+        "description": "Exports log events to OpenTelemetry EndPoint via the official OpenTelemetry SDK.",
+        "platforms": [
+            "netstandard2.0",
+            "net45"
+        ],
+        "category": "Integrations",
+        "external": true
+    },
+    {
+        "name": "OpenTelemetry",
+        "page": "https://github.com/NLog/NLog.Targets.Network/tree/master/src/NLog.Targets.OpenTelemetryHttp",
+        "package": "NLog.Targets.OpenTelemetryHttp",
+        "description": "Exports log events to an OpenTelemetry Collector or any OTLP/HTTP-compatible endpoint.",
+        "platforms": [
+            "netstandard2.0",
+            "net45"
+        ],
+        "category": "Integrations",
+        "external": true
     },
     {
         "name": "OutputDebugString",
