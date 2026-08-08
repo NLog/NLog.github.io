@@ -1,0 +1,16 @@
+site_name: NLog Wiki
+site_url: https://nlog-project.org/wiki
+repo_url: https://github.com/NLog/NLog/wiki
+docs_dir: wiki-src
+site_dir: ../wiki
+strict: false
+plugins:
+  - search
+  - ezlinks
+  - github-wiki-edit-url
+  - redirects:
+      redirect_maps:
+        index.md: Home.md
+theme:
+  name: readthedocs
+  logo: https://nlog-project.org/images/NLog-logo-only_small.png
