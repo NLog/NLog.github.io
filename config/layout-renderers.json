@@ -323,6 +323,12 @@
         "category": "Processes, threads and assemblies"
     },
     {
+        "name": "processstart",
+        "page": "ProcessStart-Layout-Renderer",
+        "description": "The process start time.",
+        "category": "Processes, threads and assemblies"
+    },
+    {
         "name": "registry",
         "page": "Registry-Layout-Renderer",
         "description": "A value from the Windows Registry.",
