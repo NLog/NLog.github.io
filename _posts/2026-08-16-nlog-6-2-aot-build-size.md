@@ -46,7 +46,7 @@ Alternative LayoutRenderers are available:
 
 NET11 includes optimizations for the .NET `Process` class, which further reduces the AOT build filesize.
 
-If process information is needed that is not provided by the existing LayoutRenderers, a [custom LayoutRenderer](https://github.com/NLog/NLog/wiki/How-to-write-a-custom-LayoutRenderer) can be registered.
+If process information is needed that is not provided by the existing LayoutRenderers, a [custom LayoutRenderer](https://github.com/NLog/NLog/wiki/How-to-write-a-custom-layout-renderer) can be registered.
 
 ## HttpClientTarget NuGet package
 
