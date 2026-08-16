@@ -98,4 +98,4 @@ Another area worth exploring is a non-allocating logging path for common logging
 
 NLog should not try to compete with Microsoft.Extensions.Logging as the standard `ILogger` abstraction or its use of source generators. NLog should remain a standalone logging framework while providing first-class integration with Microsoft.Extensions.Logging.
 
-NLog should complement and extend Microsoft.Extensions.Logging when applications need more than basic console output, providing advanced logging features, targets, layouts, and rich machine-readable output.
+NLog should complement and extend Microsoft.Extensions.Logging when applications need more than basic console output, providing rich logging features, targets, layouts, and flexible log output.
