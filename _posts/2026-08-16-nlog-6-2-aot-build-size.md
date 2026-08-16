@@ -15,11 +15,11 @@ FileTarget now supports `FileLifecycleHooks`, providing extension points for cus
 
 Lifecycle hooks can be used to:
 
-- **Customize initialization** — Run custom logic when the FileTarget is initialized.
-- **Customize file streams** — Wrap the underlying stream to add encryption, compression, buffering, or other processing.
-- **Process closed files** — Perform custom actions when NLog closes an individual log file.
-- **Process files before deletion** — Copy, compress, upload, or otherwise process a file before NLog deletes it.
-- **Perform target cleanup** — Execute custom cleanup logic when the FileTarget is shut down.
+- **Customize initialization** â€” Run custom logic when the FileTarget is initialized.
+- **Customize file streams** â€” Wrap the underlying stream to add encryption, compression, buffering, or other processing.
+- **Process closed files** â€” Perform custom actions when NLog closes an individual log file.
+- **Process files before deletion** â€” Copy, compress, upload, or otherwise process a file before NLog deletes it.
+- **Perform target cleanup** â€” Execute custom cleanup logic when the FileTarget is shut down.
 
 For example, `OnFileDeleting` can be used to create a ZIP archive of an old log file before NLog deletes it, while OnFileOpened can wrap the output stream to transparently encrypt log data.
 
