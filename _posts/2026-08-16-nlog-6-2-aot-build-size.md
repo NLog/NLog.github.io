@@ -78,7 +78,7 @@ Including features:
 - Batching, payload compression, and retry handling.
 
 `OpenTelemetryHttpTarget` automatically recognizes the standard `OTEL_EXPORTER_OTLP_*` environment variables when target properties are not explicitly configured,
-so able to export NLog logevents to OpenTelemetry deployments without adding the OpenTelemetry SDK.
+so able to export NLog logevents to OpenTelemetry Collector or any OTLP/HTTP-compatible endpoint without adding the OpenTelemetry SDK.
 
 ## NLog and next major version
 
@@ -94,7 +94,7 @@ Looking beyond NLog v6.x and towards a possible next major version, there are se
 
 Together these changes could lead to a new immutable logging pipeline that is both safer and more efficient, while still supporting the existing `LogEventInfo` pipeline for backwards compatibility.
 
-Another area worth exploring is a non-allocating logging path for common logging scenarios, without paying the cost of execution context, scope properties, and other features unless needed by the configured target output.
+Another area worth exploring is a non-allocating logging path for common logging scenarios, without paying the cost of capturing execution context, scope properties, and other features unless needed by the configured target output.
 
 NLog should not try to compete with Microsoft.Extensions.Logging as the standard `ILogger` abstraction or its use of source generators. NLog should remain a standalone logging framework while providing first-class integration with Microsoft.Extensions.Logging.
 
