@@ -27,7 +27,8 @@ For example, `OnFileDeleting` can be used to create a ZIP archive of an old log 
 
 `ScopeContext` has been modified to collect properties in reverse order, so the most recently added properties are processed first.
 
-This change allows the NLog `ScopeContext` compaction logic to write directly to the final dictionary instead of first allocating and populating a List to preserve dictionary ordering.
+`ScopeContext` has always been intended to be an unordered dictionary, with the latest value taking precedence. The new implementation allows
+the NLog `ScopeContext` compaction logic to write directly to the final dictionary instead of first allocating and populating a List to preserve dictionary ordering.
 
 When new properties are pushed to `ScopeContext`, they are pushed to a linked list that lives on the thread's execution context. The `ScopeContext` compaction logic prevents this linked list from growing indefinitely when a scope is not popped by the application.
 
