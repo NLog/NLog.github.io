@@ -48,6 +48,11 @@ NET11 includes optimizations for the .NET `Process` class, which further reduces
 
 If process information is needed that is not provided by the existing LayoutRenderers, a [custom LayoutRenderer](https://github.com/NLog/NLog/wiki/How-to-write-a-custom-layout-renderer) can be registered.
 
+## AtomicFileTarget supports Arm64
+The [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) NuGet package no longer depends on the old `Mono.Posix.NETStandard`-nuget-package, instead changed to `DllImport` calling `open()` from `libc` to also support MacOSX and Arm64.
+
+Also updated to include the open flag `O_CLOEXEC` to prevent leaking file descriptors into child processes.
+
 ## HttpClientTarget NuGet package
 
 New nuget-package [NLog.Targets.HttpClient](https://www.nuget.org/packages/NLog.Targets.HttpClient) provides `HttpClientTarget` for sending logevents to HTTP/HTTPS endpoint:
