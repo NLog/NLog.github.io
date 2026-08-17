@@ -49,13 +49,13 @@ NET11 includes additional AOT optimizations for the .NET `Process` class, which 
 If process information is needed that is not provided by the existing LayoutRenderers, a [custom LayoutRenderer](https://github.com/NLog/NLog/wiki/How-to-write-a-custom-layout-renderer) can be registered.
 
 ## AtomicFileTarget supports Arm64
-The [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) NuGet package no longer depends on the old `Mono.Posix.NETStandard`-nuget-package, instead changed to `DllImport` calling `open()` from `libc` to also support MacOSX and Arm64.
+The [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) NuGet package no longer depends on the old `Mono.Posix.NETStandard`-nuget-package. It now uses `open()` from `libc` via `DllImport` for adding support for MacOSX and Arm64.
 
-Also updated to include the open flag `O_CLOEXEC` to prevent leaking file descriptors into child processes.
+The file descriptor is also opened with the `O_CLOEXEC` flag to prevent it from leaking into child processes.
 
 ## HttpClientTarget NuGet package
 
-New nuget-package [NLog.Targets.HttpClient](https://www.nuget.org/packages/NLog.Targets.HttpClient) provides `HttpClientTarget` for sending logevents to HTTP/HTTPS endpoint:
+New nuget-package [NLog.Targets.HttpClient](https://www.nuget.org/packages/NLog.Targets.HttpClient) provides `HttpClientTarget` for sending NLog logevents to HTTP/HTTPS endpoints:
 
 Including features:
 - HTTP POST, GET, and custom HTTP methods.
@@ -82,16 +82,17 @@ Including features:
 - Standard OpenTelemetry environment variables for endpoint, headers, compression, timeout, service name, and resource attributes.
 - Batching, payload compression, and retry handling.
 
-`OpenTelemetryHttpTarget` automatically recognizes the standard `OTEL_EXPORTER_OTLP_*` environment variables when target properties are not explicitly configured,
-so able to export NLog logevents to OpenTelemetry Collector or any OTLP/HTTP-compatible endpoint without adding the OpenTelemetry SDK.
+`OpenTelemetryHttpTarget` automatically recognizes the standard `OTEL_EXPORTER_OTLP_*` environment variables when target properties are not explicitly configured.
 
-## NLog and next major version
+If one prefer the OpenTelemetry SDK-based approach, then there is also the awesome community driven [NLog.Targets.OpenTelemetryProtocol](https://www.nuget.org/packages/NLog.Targets.OpenTelemetryProtocol).
+
+## Looking beyond NLog v6
 
 NLog v6 seems to have reached a nice stable point, and the reduction of dependencies has been a move in the right direction. Most users seem happy about the modernizations, even though the rewrite of `FileTarget` has caused some friction.
 
 The release of the new [NLog.Targets.HttpClient](https://www.nuget.org/packages/NLog.Targets.HttpClient) and [NLog.Targets.OpenTelemetryHttp](https://www.nuget.org/packages/NLog.Targets.OpenTelemetryHttp) NuGet-packages should close some gaps and further strengthen the NLog ecosystem.
 
-Looking beyond NLog v6.x and towards a possible next major version, there are several ideas worth exploring:
+Looking further ahead there are several ideas worth exploring:
 - Immutable LogEvent/LogRecord to replace the existing `LogEventInfo`
 - Immutable collection of event properties captured only when actually needed.
 - High resolution UTC timestamps by default.
