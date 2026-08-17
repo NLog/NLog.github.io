@@ -44,7 +44,7 @@ Alternative LayoutRenderers are available:
 - `${processstart}` - Process Start Time with support for Format and Culture (New in NLog v6.2).
 - `${gc:WorkingSet}` - Process Memory Working Set (New in NLog v6.2).
 
-NET11 includes optimizations for the .NET `Process` class, which further reduces the AOT build filesize.
+NET11 includes additional AOT optimizations for the .NET `Process` class, which further reduces the AOT build filesize.
 
 If process information is needed that is not provided by the existing LayoutRenderers, a [custom LayoutRenderer](https://github.com/NLog/NLog/wiki/How-to-write-a-custom-layout-renderer) can be registered.
 
