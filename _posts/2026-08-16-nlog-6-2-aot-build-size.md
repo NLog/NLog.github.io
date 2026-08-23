@@ -43,7 +43,8 @@ Alternative LayoutRenderers are available:
 - `${processname}` - Process Name.
 - `${processtime}` - Time elapsed since process start.
 - `${processstart}` - Process Start Time with support for Format and Culture (New in NLog v6.2).
-- `${gc:WorkingSet}` - Process Memory Working Set (New in NLog v6.2).
+- `${gc:WorkingSet}` - Process Memory Working Set, including managed and unmanaged memory (New in NLog v6.2).
+- `${gc:TotalMemory}` - Process Memory Managed usage only.
 
 NET11 includes additional AOT optimizations for the .NET `Process` class, which further reduces the AOT build filesize.
 
