@@ -53,7 +53,10 @@ If process information is needed that is not provided by the existing LayoutRend
 ## AtomicFileTarget supports Arm64
 The [NLog.Targets.AtomicFile](https://www.nuget.org/packages/NLog.Targets.AtomicFile) NuGet package no longer depends on the old `Mono.Posix.NETStandard`-nuget-package. It now uses `open()` from `libc` via `DllImport` for adding support for MacOSX and Arm64.
 
-The file descriptor is also opened with the `O_CLOEXEC` flag to prevent it from leaking into child processes.
+- **Windows**: uses `FILE_APPEND_DATA` together with `SYNCHRONIZE`.
+- **Linux** and **macOS**: uses `open()` with `O_APPEND` and `O_CLOEXEC`.
+  - `O_APPEND` ensures that each write is positioned at the end of the file by the operating system.
+  - `O_CLOEXEC` prevents the file descriptor from being unintentionally inherited across `exec()`.
 
 ## HttpClientTarget NuGet package
 
