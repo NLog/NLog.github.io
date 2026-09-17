@@ -18,8 +18,7 @@
             </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID4RB')" onkeypress="SectionExpandCollapse_CheckKey('ID4RB', event)" tabindex="0"><img id="ID4RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Properties</span></div><div id="ID4RBSection" class="collapsibleSection"><table class="members" id="propertyList"><tr><th class="iconColumn">
 								 
 							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_AsyncTaskTarget_BatchSize.htm">BatchSize</a></td><td><div class="summary">
-            Gets or sets the number of log events that should be processed in a batch
-            by the lazy writer thread.
+            Gets or sets the number of log events processed in a single batch.
             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_TargetWithContext_ContextProperties.htm">ContextProperties</a></td><td><div class="summary">
             Gets the array of custom attributes to be passed into the logevent context
             </div> (Inherited from <a href="T_NLog_Targets_TargetWithContext.htm">TargetWithContext</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_TargetWithContext_ExcludeProperties.htm">ExcludeProperties</a></td><td><div class="summary">
@@ -29,7 +28,7 @@
             </div></td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_TargetWithContext_IncludeCallSite.htm">IncludeCallSite</a></td><td><div class="summary">
             Gets or sets a value indicating whether to include call site (class and method name) in the <a href="T_NLog_LogEventInfo.htm">LogEventInfo</a></div> (Inherited from <a href="T_NLog_Targets_TargetWithContext.htm">TargetWithContext</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_TargetWithContext_IncludeCallSiteStackTrace.htm">IncludeCallSiteStackTrace</a></td><td><div class="summary">
             Gets or sets a value indicating whether to include source info (file name and line number) in the <a href="T_NLog_LogEventInfo.htm">LogEventInfo</a></div> (Inherited from <a href="T_NLog_Targets_TargetWithContext.htm">TargetWithContext</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_TargetWithContext_IncludeEventProperties.htm">IncludeEventProperties</a></td><td><div class="summary">
-            Gets or sets the option to include all properties from the log events
+            Gets or sets whether to include the contents of the <a href="P_NLog_LogEventInfo_Properties.htm">Properties</a> dictionary.
             </div> (Inherited from <a href="T_NLog_Targets_TargetWithContext.htm">TargetWithContext</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_TargetWithContext_IncludeGdc.htm">IncludeGdc</a></td><td><div class="summary">
             Gets or sets a value indicating whether to include contents of the <a href="T_NLog_GlobalDiagnosticsContext.htm">GlobalDiagnosticsContext</a> dictionary
             </div> (Inherited from <a href="T_NLog_Targets_TargetWithContext.htm">TargetWithContext</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_TargetWithContext_IncludeScopeNested.htm">IncludeScopeNested</a></td><td><div class="summary">
@@ -61,6 +60,8 @@
             Task Scheduler used for processing async Tasks
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_NLog_Targets_AsyncTaskTarget_TaskTimeoutSeconds.htm">TaskTimeoutSeconds</a></td><td><div class="summary">
             How many seconds a Task is allowed to run before it is cancelled.
+            When the task timeout window expires, any remaining retries will be skipped,
+            but each retry attempt gets a fresh timeout window.
             </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID6RB')" onkeypress="SectionExpandCollapse_CheckKey('ID6RB', event)" tabindex="0"><img id="ID6RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Methods</span></div><div id="ID6RBSection" class="collapsibleSection"><table class="members" id="methodList"><tr><th class="iconColumn">
 								 
 							</th><th>Name</th><th>Description</th></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="M_NLog_Targets_TargetWithContext_CaptureContextGdc.htm">CaptureContextGdc</a></td><td><div class="summary">

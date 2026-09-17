@@ -228,45 +228,48 @@
 <span class="highlight-lineno"> 2</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span><span class="highlight-keyword">using</span> NLog.Config;
 <span class="highlight-lineno"> 3</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span><span class="highlight-keyword">using</span> NLog.Targets;
 <span class="highlight-lineno"> 4</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
-<span class="highlight-lineno"> 5</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span><span class="highlight-keyword">class</span> Example
+<span class="highlight-lineno"> 5</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span><span class="highlight-keyword">namespace</span> NLog
 <span class="highlight-lineno"> 6</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>{
-<span class="highlight-lineno"> 7</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    <span class="highlight-keyword">static</span> <span class="highlight-keyword">void</span> Main(<span class="highlight-keyword">string</span>[] args)
-<span class="highlight-lineno"> 8</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    {
-<span class="highlight-lineno"> 9</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        DatabaseTarget target = <span class="highlight-keyword">new</span> DatabaseTarget();
-<span class="highlight-lineno">10</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        DatabaseParameterInfo param;
-<span class="highlight-lineno">11</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
-<span class="highlight-lineno">12</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.DBProvider = <span class="highlight-literal">"mssql"</span>;
-<span class="highlight-lineno">13</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.DBHost = <span class="highlight-literal">"."</span>;
-<span class="highlight-lineno">14</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.DBUserName = <span class="highlight-literal">"nloguser"</span>;
-<span class="highlight-lineno">15</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.DBPassword = <span class="highlight-literal">"pass"</span>;
-<span class="highlight-lineno">16</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.DBDatabase = <span class="highlight-literal">"databasename"</span>;
-<span class="highlight-lineno">17</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.CommandText = <span class="highlight-literal">"insert into LogTable(time_stamp,level,logger,message) values(@time_stamp, @level, @logger, @message);"</span>;
-<span class="highlight-lineno">18</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
-<span class="highlight-lineno">19</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param = <span class="highlight-keyword">new</span> DatabaseParameterInfo();
-<span class="highlight-lineno">20</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param.Name = <span class="highlight-literal">"@time_stamp"</span>;
-<span class="highlight-lineno">21</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param.Layout = <span class="highlight-literal">"${date}"</span>;
-<span class="highlight-lineno">22</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.Parameters.Add(param);
-<span class="highlight-lineno">23</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
-<span class="highlight-lineno">24</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param = <span class="highlight-keyword">new</span> DatabaseParameterInfo();
-<span class="highlight-lineno">25</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param.Name = <span class="highlight-literal">"@level"</span>;
-<span class="highlight-lineno">26</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param.Layout = <span class="highlight-literal">"${level}"</span>;
-<span class="highlight-lineno">27</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.Parameters.Add(param);
-<span class="highlight-lineno">28</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
-<span class="highlight-lineno">29</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param = <span class="highlight-keyword">new</span> DatabaseParameterInfo();
-<span class="highlight-lineno">30</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param.Name = <span class="highlight-literal">"@logger"</span>;
-<span class="highlight-lineno">31</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param.Layout = <span class="highlight-literal">"${logger}"</span>;
-<span class="highlight-lineno">32</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.Parameters.Add(param);
-<span class="highlight-lineno">33</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
-<span class="highlight-lineno">34</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param = <span class="highlight-keyword">new</span> DatabaseParameterInfo();
-<span class="highlight-lineno">35</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param.Name = <span class="highlight-literal">"@message"</span>;
-<span class="highlight-lineno">36</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param.Layout = <span class="highlight-literal">"${message}"</span>;
-<span class="highlight-lineno">37</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.Parameters.Add(param);
-<span class="highlight-lineno">38</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
-<span class="highlight-lineno">39</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        LoggingConfiguration nlogConfig = <span class="highlight-keyword">new</span> LoggingConfiguration();
-<span class="highlight-lineno">40</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        nlogConfig.AddRuleForAllLevels(target);
-<span class="highlight-lineno">41</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        LogManager.Configuration = nlogConfig;
-<span class="highlight-lineno">42</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
-<span class="highlight-lineno">43</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        Logger logger = LogManager.GetLogger(<span class="highlight-literal">"Example"</span>);
-<span class="highlight-lineno">44</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        logger.Debug(<span class="highlight-literal">"log message"</span>);
-<span class="highlight-lineno">45</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>    }
-<span class="highlight-lineno">46</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>}</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID1EAAABA");</script></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID8RB')" onkeypress="SectionExpandCollapse_CheckKey('ID8RB', event)" tabindex="0"><img id="ID8RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID8RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="N_NLog_Targets.htm">NLog.Targets Namespace</a></div><h4 class="subHeading">Other Resources</h4><div class="seeAlsoStyle"><a href="https://github.com/nlog/nlog/wiki/Database-target" target="_blank" rel="noopener noreferrer">Documentation on NLog Wiki</a></div></div></div></div><div id="pageFooter" class="pageFooter"><p><a href="https://nlog-project.org/" target="_blank" rel="noopener noreferrer">Copyright (c) 2004-2024 NLog</a></p> </div></body></html>
+<span class="highlight-lineno"> 7</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>   <span class="highlight-keyword">class</span> Example
+<span class="highlight-lineno"> 8</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>   {
+<span class="highlight-lineno"> 9</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>      <span class="highlight-keyword">static</span> <span class="highlight-keyword">void</span> Main(<span class="highlight-keyword">string</span>[] args)
+<span class="highlight-lineno">10</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>      {
+<span class="highlight-lineno">11</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        DatabaseTarget target = <span class="highlight-keyword">new</span> DatabaseTarget();
+<span class="highlight-lineno">12</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        DatabaseParameterInfo param;
+<span class="highlight-lineno">13</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">14</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.DBProvider = <span class="highlight-literal">"mssql"</span>;
+<span class="highlight-lineno">15</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.DBHost = <span class="highlight-literal">"."</span>;
+<span class="highlight-lineno">16</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.DBUserName = <span class="highlight-literal">"nloguser"</span>;
+<span class="highlight-lineno">17</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.DBPassword = <span class="highlight-literal">"pass"</span>;
+<span class="highlight-lineno">18</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.DBDatabase = <span class="highlight-literal">"databasename"</span>;
+<span class="highlight-lineno">19</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.CommandText = <span class="highlight-literal">"insert into LogTable(time_stamp,level,logger,message) values(@time_stamp, @level, @logger, @message);"</span>;
+<span class="highlight-lineno">20</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">21</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param = <span class="highlight-keyword">new</span> DatabaseParameterInfo();
+<span class="highlight-lineno">22</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param.Name = <span class="highlight-literal">"@time_stamp"</span>;
+<span class="highlight-lineno">23</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param.Layout = <span class="highlight-literal">"${date}"</span>;
+<span class="highlight-lineno">24</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.Parameters.Add(param);
+<span class="highlight-lineno">25</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">26</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param = <span class="highlight-keyword">new</span> DatabaseParameterInfo();
+<span class="highlight-lineno">27</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param.Name = <span class="highlight-literal">"@level"</span>;
+<span class="highlight-lineno">28</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param.Layout = <span class="highlight-literal">"${level}"</span>;
+<span class="highlight-lineno">29</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.Parameters.Add(param);
+<span class="highlight-lineno">30</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">31</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param = <span class="highlight-keyword">new</span> DatabaseParameterInfo();
+<span class="highlight-lineno">32</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param.Name = <span class="highlight-literal">"@logger"</span>;
+<span class="highlight-lineno">33</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param.Layout = <span class="highlight-literal">"${logger}"</span>;
+<span class="highlight-lineno">34</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.Parameters.Add(param);
+<span class="highlight-lineno">35</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">36</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param = <span class="highlight-keyword">new</span> DatabaseParameterInfo();
+<span class="highlight-lineno">37</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param.Name = <span class="highlight-literal">"@message"</span>;
+<span class="highlight-lineno">38</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        param.Layout = <span class="highlight-literal">"${message}"</span>;
+<span class="highlight-lineno">39</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        target.Parameters.Add(param);
+<span class="highlight-lineno">40</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">41</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        LoggingConfiguration nlogConfig = <span class="highlight-keyword">new</span> LoggingConfiguration();
+<span class="highlight-lineno">42</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        nlogConfig.AddRuleForAllLevels(target);
+<span class="highlight-lineno">43</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        LogManager.Configuration = nlogConfig;
+<span class="highlight-lineno">44</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>
+<span class="highlight-lineno">45</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        Logger logger = LogManager.GetLogger(<span class="highlight-literal">"Example"</span>);
+<span class="highlight-lineno">46</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>        logger.Debug(<span class="highlight-literal">"log message"</span>);
+<span class="highlight-lineno">47</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>      }
+<span class="highlight-lineno">48</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>   }
+<span class="highlight-lineno">49</span><span class="highlight-lnborder"></span><span class="highlight-spacerShort"></span>}</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID1EAAABA");</script></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID8RB')" onkeypress="SectionExpandCollapse_CheckKey('ID8RB', event)" tabindex="0"><img id="ID8RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID8RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="N_NLog_Targets.htm">NLog.Targets Namespace</a></div><h4 class="subHeading">Other Resources</h4><div class="seeAlsoStyle"><a href="https://github.com/nlog/nlog/wiki/Database-target" target="_blank" rel="noopener noreferrer">Documentation on NLog Wiki</a></div></div></div></div><div id="pageFooter" class="pageFooter"><p><a href="https://nlog-project.org/" target="_blank" rel="noopener noreferrer">Copyright (c) 2004-2024 NLog</a></p> </div></body></html>
