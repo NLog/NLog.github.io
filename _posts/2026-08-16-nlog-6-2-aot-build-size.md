@@ -5,7 +5,7 @@ title: NLog 6.2 reduces AOT build size
 
 ## TypeConverter is legacy
 
-NLog v6.2 removes the legacy TypeConverter support for AOT builds, and reducing filesize by approximately 1 MB for AOT-builds.
+NLog v6.2 removes the legacy TypeConverter support for AOT builds, and continues the work started with [NLog v6.0](https://nlog-project.org/2025/04/29/nlog-6-0-major-changes.html) by reducing filesize by approximately 1 MB for AOT-builds.
 
 NLog used the TypeConverter to convert strings to objects, when loading configuration files. NLog already has built-in support for the common string-to-object conversions, making the general-purpose TypeConverter less needed.
 
