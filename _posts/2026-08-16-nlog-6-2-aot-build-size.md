@@ -76,7 +76,7 @@ The target also reuses `HttpClient` connections for efficient HTTP communication
 
 This makes HttpClientTarget suitable for sending NLog events to custom HTTP logging services as well as existing HTTP-based log collectors.
 For example, it can be combined with [SplunkLayout](https://github.com/NLog/NLog/wiki/SplunkLayout) to send events to the Splunk HTTP Event Collector (HEC).
-It can also be combined with [EcsLayout](https://www.nuget.org/packages/Elastic.CommonSchema.NLog) to export events to OpenSearch.
+It can also be combined with [EcsLayout](https://www.nuget.org/packages/Elastic.CommonSchema.NLog) to export events to OpenSearch Bulk API.
 
 ## OpenTelemetryHttpTarget NuGet package
 
