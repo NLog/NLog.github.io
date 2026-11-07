@@ -442,13 +442,6 @@
         "category": "Windows Forms"
     },
     {
-        "name": "Elmah",
-        "description": "Logs to Elmah",
-        "package": "NLog.Elmah",
-        "page": "https://github.com/NLog/NLog.elmah",
-        "category": "Integrations"
-    },
-    {
         "name": "ETW",
         "description": "Log to Event Tracing for Windows (ETW)",
         "package": "NLog.ETW",
