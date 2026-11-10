@@ -7,13 +7,13 @@ layout: default
             Welcome to NLog!
         </h1>
         <p class="lead">
-            NLog is a flexible and free logging platform for various .NET platforms, including .NET standard. 
-           
-            NLog makes it easy to write to several  <a href="{{ site.baseurl }}/config/?tab=targets">targets</a>. (database, file, console) and change the logging configuration on-the-fly.
+            NLog is a flexible and free logging platform for various .NET platforms, including .NET standard.
+
+            NLog makes it easy to write to several <a href="{{ site.baseurl }}/config/?tab=targets">targets</a>. (console, file, database, etc.) and change the logging configuration on-the-fly.
         </p>
       
         <p>
-            NLog has support for <a href="https://github.com/NLog/NLog/wiki/How-to-use-structured-logging">structured</a> 
+            NLog supports both <a href="https://github.com/NLog/NLog/wiki/How-to-use-structured-logging">structured</a>
             and traditional logging.
         </p>
 
@@ -29,14 +29,19 @@ layout: default
                     <h4>Easy to configure</h4>
                     <p>
                         NLog is very easy to configure, both through <a href="https://github.com/nlog/NLog/wiki/Configuration-file">configuration file</a>
-                        and <a href="https://github.com/nlog/NLog/wiki/Configuration-API">programmatically</a>.
+                        and <a href="https://github.com/NLog/NLog/wiki/Configure-from-code">programmatically</a>.
                         Even without restarting the application, the configuration can be changed.
                     </p>
                 </div>
                 <div class="col-sm-4">
-                    <h4>Templatable</h4>
+                    <h4>Output formats</h4>
                     <p>
-                        Every log message can be templated with various <a href="{{ site.baseurl }}/config/?tab=layout-renderers">layout renders</a>
+                        NLog Layouts are available for several output formats like
+                        <a href="https://github.com/NLog/NLog/wiki/SimpleLayout">Simple Text</a>,
+                        <a href="https://github.com/NLog/NLog/wiki/JsonLayout">JSON</a>,
+                        <a href="https://github.com/NLog/NLog/wiki/XmlLayout">XML</a>,
+                        <a href="https://github.com/NLog/NLog/wiki/CsvLayout">CSV</a> etc.,
+                        The logging output can be enriched with additional context details using <a href="{{ site.baseurl }}/config/?tab=layout-renderers">layout renders</a>.
                     </p>
                 </div>
                 <div class="col-sm-4">
@@ -78,10 +83,10 @@ layout: default
     <section>
         <h1 class="page-header" id="targets">Targets</h1>
         <p class="lead">
-            Targets are used to display, store or pass log messages to another destination. 
-            NLog can dynamically write to one of multiple targets for each log message.
+            NLog Targets handles the writing of log events to their destination, after having formatted the LogEvent using the configured NLog Layout.
+            NLog supports sending the same LogEvent to multiple destination targets, and each target can have their own unique output format.
         </p>
-        <p>There are more than 30 targets provided out-of-the-box, including:</p>
+        <p>There are more than 20 targets provided out-of-the-box, including:</p>
         <div id="targets-list">
             <div class="row">
                 <div class="col-sm-4">
@@ -136,8 +141,7 @@ layout: default
 
             The full list of targets is available on the <a href="{{ site.baseurl }}/config/?tab=targets">config options page</a>.
             If you didn't find the target to fit your needs, you can
-            <a href="https://github.com/nlog/NLog/wiki/How-to-write-a-Target">easily write a custom one</a>.
-
+            <a href="https://github.com/NLog/NLog/wiki/Extending-NLog">easily extend NLog with a custom target</a>.
 
         </p>
     </section>
@@ -146,11 +150,12 @@ layout: default
         <div>
             NLog supports the following platforms:
             <ul>
-                <li>.NET 5 &amp; 6 (.NET Standard 2.0)</li>
+                <li>.NET 6, 7, 8, 9 &amp; 10 (.NET Standard)</li>
                 <li>.NET Framework 3.5 - 4.8</li>
-                <li>.NET Core 1.0 - 3.1</li>
-                <li>Xamarin Android + iOS (.NET Standard)</li>
+                <li>.NET Core 2.0 - 3.1 (.NET Standard)</li>
+                <li>MAUI (.NET Standard)</li>
                 <li>UWP (.NET Standard)</li>
+                <li>Xamarin Android + iOS (.NET Standard)</li>
                 <li>Mono 4</li>
                 <li>ASP.NET Core (NLog.Web.AspNetCore package)</li>
                 <li>ASP.NET Classic (NLog.Web package)</li>

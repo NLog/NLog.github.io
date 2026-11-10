@@ -24,10 +24,7 @@ var app = new Vue({
         showInfo: false,
         platforms: {
             "net35": { name: ".NET 3.5" },
-            "net40": { name: ".NET 4" },
             "net45": { name: ".NET 4.5" },
-            "netstandard1.3": { name: ".NET Standard 1.3" },
-            "netstandard1.5": { name: ".NET Standard 1.5" },
             "netstandard2.0": { name: ".NET Standard 2.0" }
         },
         platformFilter: "",

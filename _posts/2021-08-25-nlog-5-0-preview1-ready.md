@@ -274,16 +274,17 @@ NLog LoggingProvider no longer follows the Microsoft Logger filtering configurat
 * **Reason:** It is confusing to have two seperate systems for filtering logging output. New users might
 think NLog is not working correctly after having configured NLog LoggingRules, because Microsoft LoggerFactory filters are interfering.
 
-* **Workaround:** Explicit specify `RemoveLoggerFactoryFilter = false` for NLogProviderOptions when calling `UseNLog()` to enable old behavior,
+* **Workaround:** Update NLog Logging rules to suppress the unwanted output using the new [finalMinLevel](https://github.com/NLog/NLog/wiki/Logging-Rules-FinalMinLevel)-option.
+Alternative specify `RemoveLoggerFactoryFilter = false` for NLogProviderOptions when calling `UseNLog()` to revert to old behavior,
 where Microsoft LoggerFactory filters specified in appsetting.json also applies to NLog.
 
-Alternatively the new `finalMinLevel`-option can be used to replicate the behavior of Microsoft Logging Filters:
+The new [finalMinLevel](https://github.com/NLog/NLog/wiki/Logging-Rules-FinalMinLevel)-option can be used to replicate the behavior of Microsoft Logging Filters:
 ```xml
 <rules>
     <logger name="System.*" finalMinLevel="Warn" />
     <logger name="Microsoft.*" finalMinLevel="Warn" />
     <logger name="Microsoft.Hosting.Lifetime*" finalMinLevel="Info" /> <!-- Overrides previous rule -->
-    <logger name="*" minLevel="Debug" writeTo="console" />
+    <logger name="*" minLevel="Debug" writeTo="console" /> <!-- Replace with your targets -->
 </rules>
 ```
 
@@ -580,8 +581,9 @@ FileTarget will now keep file handles open by default, and will not release file
   better performance, than to open/close the file handle for each write.
 
 * **Workaround:** Explicitly specify `KeepFileOpen=false` to enforce old behavior similar to log4net/log4j MinimalLock.
-  But if the problem comes from external application no longer being able to acquire exclusive file-lock, then it is better
-  to fix the external application to use `FileShare.ReadWrite`.
+  This is mostly important when FileName points to network-path on remote network-host, to avoid undetected invalidation of FileStream-handle.
+  But if having issues with external application on the local machine, that is no longer being able to acquire exclusive file-lock,
+  then it is better to fix the external application to use `FileShare.ReadWrite`.
 
 ### FileTarget ConcurrentWrites = false by default
 FileTarget will now by default not attempt to use operating system global mutexes for synchronized file-access between multiple applications on the same machine.
@@ -698,4 +700,10 @@ In NLog 4 this results in `'a'` and in NLog 5 this results in `a`.
 
 ## Many other improvements
 
-For a full list of all the enhancements and performance improvements: [NLog 5.0 PullRequests](https://github.com/NLog/NLog/pulls?q=is%3Apr+is%3Amerged+milestone:%225.0%20%28new%29%22)
+For full list of all changes: [NLog 5.0 Pull Requests](https://github.com/NLog/NLog/pulls?q=is%3Apr+is%3Amerged+milestone:%225.0%22)
+
+- [Breaking Changes](https://github.com/NLog/NLog/pulls?q=is%3Apr+label%3A%22breaking%20change%22+is%3Amerged+milestone:%225.0%22)
+- [Breaking Behavior Changes](https://github.com/NLog/NLog/pulls?q=is%3Apr+label%3A%22breaking%20behavior%20change%22+is%3Amerged+milestone:%225.0%22)
+- [Features](https://github.com/NLog/NLog/pulls?q=is%3Apr+label%3A%22Feature%22+is%3Amerged+milestone:%225.0%22)
+- [Improvements](https://github.com/NLog/NLog/pulls?q=is%3Apr+label%3A%22Enhancement%22+is%3Amerged+milestone:%225.0%22)
+- [Performance](https://github.com/NLog/NLog/pulls?q=is%3Apr+label%3A%22Performance%22+is%3Amerged+milestone:%225.0%22)

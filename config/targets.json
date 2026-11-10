@@ -3,11 +3,8 @@
         "name": "Chainsaw",
         "page": "Chainsaw-target",
         "description": "Sends log messages to the remote instance of Chainsaw application from log4j.",
-        "keywords": [
-            "tool",
-            "gui",
-            "java"
-        ],
+        "package": "NLog.Targets.Network",
+        "platform-notes": "For NLog 6.0: NLog.Targets.Network nuget package required",
         "category": "Integrations (GUI tools)"
     },
     {
@@ -16,13 +13,8 @@
         "description": "Writes log messages to the console with customizable coloring.",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
-        ],
-        "keywords": [
-            "cmd"
         ],
         "category": ""
     },
@@ -30,9 +22,6 @@
         "name": "Console",
         "page": "Console-target",
         "description": "Writes log messages to the console.",
-        "keywords": [
-            "cmd"
-        ],
         "category": ""
     },
     {
@@ -41,15 +30,6 @@
         "description": "Writes log messages to the database using an ADO.NET provider.",
         "package": "NLog.Database",
         "platform-notes": "For NLog 5.0: NLog.Database nuget package required",
-        "keywords": [
-            "sql",
-            "mysql",
-            "oracle",
-            "PostgreSQL",
-            "SQLite",
-            "Entity Framework",
-            "db"
-        ],
         "category": "Databases"
     },
     {
@@ -77,13 +57,8 @@
         "package": "NLog.WindowsEventLog",
         "description": "Writes log message to the Windows Event Log.",
         "platform-notes": "For .NET Standard: NLog.WindowsEventLog nuget package required",
-        "keywords": [
-            "event viewer",
-            "eventviewer"
-        ],
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
@@ -93,9 +68,20 @@
         "name": "File",
         "page": "File-target",
         "description": "Writes log messages to one or more files.",
-        "keywords": [
-            "document"
-        ],
+        "category": ""
+    },
+    {
+        "name": "Atomic File",
+        "page": "Atomic-File-Target",
+        "package": "NLog.Targets.AtomicFile",
+        "description": "Writes log messages to one or more files using O_APPEND.",
+        "category": ""
+    },
+    {
+        "name": "GZip File",
+        "page": "GZip-File-Target",
+        "package": "NLog.Targets.GZipFile",
+        "description": "Writes log messages to one or more files using GZipStream.",
         "category": ""
     },
     {
@@ -103,21 +89,23 @@
         "page": "https://github.com/DarekDan/NLog.Targets.HTTP/blob/master/README.md",
         "package": "NLog.Targets.Http",
         "description": "Sends messages to a designated HTTP target using POST by default. Combined with JSON Formatter supports Splunk.",
-        "keywords": [
-            "http",
-            "https",
-            "Splunk",
-            "Proxy",
-            "Nagle algorithm",
-            "GET",
-            "PUT",
-            "web"
-        ],
         "platforms": [
             "netstandard2.0",
             "net45"
         ],
-        "category": "Webservices and networking",
+        "category": "Integrations",
+        "external": true
+    },
+    {
+        "name": "HttpClient",
+        "page": "https://github.com/NLog/NLog.Targets.Network/tree/master/src/NLog.Targets.HttpClient",
+        "package": "NLog.Targets.HttpClient",
+        "description": "Sending log messages to HTTP or HTTPS endpoint, with support for batching and compression, and supports Splunk.",
+        "platforms": [
+            "netstandard2.0",
+            "net45"
+        ],
+        "category": "Integrations",
         "external": true
     },
     {
@@ -128,56 +116,36 @@
         "platform-notes": "For NLog 5.0 and .NET Standard: NLog.WCF nuget package required",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.3",
-            "netstandard1.5",
             "netstandard2.0"
         ],
-        "keywords": [
-            "http",
-            "https",
-            "SOAP",
-            "POST",
-            "web"
-        ],
-        "category": "Webservices and networking"
+        "category": "Integrations"
     },
     {
         "name": "Mail",
-        "aliases": ["E-mail", "SMTP", "SMTP-client"],
+        "aliases": ["Mail", "E-mail", "SMTP", "SMTP-client"],
         "page": "Mail-target",
-        "description": "Sends log messages by email using SMTP protocol or pickup folder.",
-        "keywords": [
-            "email",
-            "e-mail",
-            "pickup"
-        ],
+        "description": "Sends log messages with SmtpClient using SMTP protocol or pickup folder.",
+        "package": "NLog.Targets.Mail",
+        "platform-notes": "For NLog 6.0: NLog.Targets.Mail nuget package required",
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
-        "category": ""
+        "category": "Integrations"
     },
     {
-        "name": "Mail",
+        "name": "MailKit",
+        "aliases": ["Mail", "MailKit"],
         "page": "Mail-target",
         "package": "NLog.MailKit",
-        "description": "Mail Target using MailKit. Only SMTP supported.",
-        "platform-notes": "For .NET 4.5: NLog.MailKit ver. 3.4.0 nuget package required",
-        "keywords": [
-            "email",
-            "e-mail"
-        ],
+        "description": "Sends log messages with MailKit using SMTP protocol or pickup folder.",
         "platforms": [
             "net45",
-            "netstandard1.3",
-            "netstandard1.5",
             "netstandard2.0"
         ],
-        "category": ""
+        "category": "Integrations"
     },
     {
         "name": "Memory",
@@ -194,37 +162,55 @@
     {
         "name": "Network",
         "page": "Network-target",
-        "description": "Sends log messages over the network.",
-        "keywords": [
-            "tcp",
-            "udp",
-            "ip",
-            "ipv6",
-            "http",
-            "https",
-            "POST",
-            "web"
-        ],
-        "category": "Webservices and networking"
+        "description": "Sends log messages over the network using TCP / UDP / SSL / TLS.",
+        "package": "NLog.Targets.Network",
+        "platform-notes": "For NLog 6.0: NLog.Targets.Network nuget package required",
+        "category": "Integrations"
     },
     {
         "name": "NLogViewer",
         "page": "NLogViewer-target",
         "description": "Sends log messages to the remote instance of NLog Viewer.",
-        "keywords": [
-            "tool",
-            "gui"
-        ],
+        "package": "NLog.Targets.Network",
+        "platform-notes": "For NLog 6.0: NLog.Targets.Network nuget package required",
         "category": "Integrations (GUI tools)"
+    },
+    {
+        "name": "Log4JXml",
+        "page": "Log4JXml-target",
+        "description": "Sends log messages to the remote instance of Log4JXml Receiver.",
+        "package": "NLog.Targets.Network",
+        "category": "Integrations"
     },
     {
         "name": "Null",
         "page": "Null-target",
         "description": "Discards log messages. Used mainly for debugging and benchmarking.",
-        "keywords": [
-            "blackhole"
-        ],
         "category": "Programmatically"
+    },
+    {
+        "name": "OpenTelemetry",
+        "page": "https://github.com/NLog/NLog.Targets.Network/tree/master/src/NLog.Targets.OpenTelemetryHttp",
+        "package": "NLog.Targets.OpenTelemetryHttp",
+        "description": "Exports log events to an OpenTelemetry Collector or any OTLP/HTTP-compatible endpoint.",
+        "platforms": [
+            "netstandard2.0",
+            "net45"
+        ],
+        "category": "Integrations",
+        "external": true
+    },
+    {
+        "name": "OtlpTarget",
+        "page": "https://github.com/juliuskoval/NLog.Targets.OpenTelemetryProtocol",
+        "package": "NLog.Targets.OpenTelemetryProtocol",
+        "description": "Exports log events to OpenTelemetry EndPoint via the official OpenTelemetry SDK.",
+        "platforms": [
+            "netstandard2.0",
+            "net45"
+        ],
+        "category": "Integrations",
+        "external": true
     },
     {
         "name": "OutputDebugString",
@@ -234,7 +220,6 @@
         "platform-notes": "For NLog 5.0: NLog.OutputDebugString nuget package required",
         "platforms": [
             "net35",
-            "net40",
             "net45"
         ],
         "category": "Integrations"
@@ -245,13 +230,8 @@
         "description": "Updates specified Windows Performance Counter on each write.",
         "package": "NLog.PerformanceCounter",
         "platform-notes": "For NLog 5.0: NLog.PerformanceCounter nuget package required",
-        "keywords": [
-            "performance counter",
-            "Diagnostics"
-        ],
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
@@ -262,11 +242,11 @@
         "aliases": ["TraceSystem"],
         "page": "Trace-target",
         "description": "Sends log messages through System.Diagnostics.Trace.",
+        "package": "NLog.Targets.Trace",
+        "platform-notes": "For NLog 6.0: NLog.Targets.Trace nuget package required",
         "platforms": [
             "net35",
-            "net40",
             "net45",
-            "netstandard1.5",
             "netstandard2.0"
         ],
         "category": "Integrations"
@@ -275,29 +255,15 @@
         "name": "WebService",
         "page": "WebService-target",
         "description": "Calls the specified web service on each log message.",
-        "keywords": [
-            "SOAP",
-            "SOAP 1.1",
-            "SOAP 1.2",
-            "POST",
-            "https",
-            "proxy",
-            "Rfc3986",
-            "web",
-            "json",
-            "xml",
-            "WebServices"
-        ],
-        "category": "Webservices and networking"
+        "package": "NLog.Targets.WebService",
+        "platform-notes": "For NLog 6.0: NLog.Targets.WebService nuget package required",
+        "category": "Integrations"
     },
     {
         "name": "AsyncWrapper",
         "page": "AsyncWrapper-target",
         "description": "Provides asynchronous, buffered execution of target writes.",
         "wrapper": true,
-        "keywords": [
-            "performance"
-        ],
         "category": "Async and buffering"
     },
     {
@@ -319,9 +285,6 @@
         "page": "FallbackGroup-target",
         "description": "Provides fallback-on-error.",
         "wrapper": true,
-        "keywords": [
-            "alternative"
-        ],
         "category": "Filtering, throttling and error handling"
     },
     {
@@ -339,14 +302,10 @@
         "platform-notes": "For NLog 5.0: NLog.WindowsIdentity nuget package required",
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
         "wrapper": true,
-        "keywords": [
-            "security"
-        ],
         "category": "Security"
     },
     {
@@ -354,10 +313,6 @@
         "page": "LimitingWrapper-target",
         "description": "Limits number of log events sent to target.",
         "wrapper": true,
-        "keywords": [
-            "throtte",
-            "throttling"
-        ],
         "category": "Filtering, throttling and error handling"
     },
     {
@@ -409,13 +364,9 @@
         "package": "NLog.MSMQ",
         "platforms": [
             "net35",
-            "net40",
             "net45"
         ],
         "platform-notes": "For NLog 4.7 (and older) then NLog.Extended nuget package required",
-        "keywords": [
-            "message queue"
-        ],
         "category": "Integrations"
     },
     {
@@ -425,7 +376,6 @@
         "package": "NLog.Web",
         "platforms": [
             "net35",
-            "net40",
             "net45"
         ],
         "category": "Integrations"
@@ -438,23 +388,18 @@
         "wrapper": true,
         "platforms": [
             "net35",
-            "net40",
-            "net45"
+            "net45",
+            "netstandard2.0"
         ],
         "category": "Async and buffering"
     },
     {
         "name": "FormControl",
-        "page": "FormControl-target",
+        "page": "https://github.com/NLog/NLog.Windows.Forms/wiki/FormControlTarget",
         "description": "Logs text to Windows.Forms.Control.Text property control of specified Name.",
         "package": "NLog.Windows.Forms",
-        "keywords": [
-            "winforms",
-            "gui"
-        ],
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
@@ -462,16 +407,11 @@
     },
     {
         "name": "MessageBox",
-        "page": "MessageBox-target",
+        "page": "https://github.com/NLog/NLog.Windows.Forms/wiki/MessageBoxTarget",
         "description": "Pops up log messages as message boxes.",
         "package": "NLog.Windows.Forms",
-        "keywords": [
-            "winforms",
-            "gui"
-        ],
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
@@ -479,16 +419,11 @@
     },
     {
         "name": "RichTextBox",
-        "page": "RichTextBox-target",
+        "page": "https://github.com/NLog/NLog.Windows.Forms/wiki/RichTextBoxTarget",
         "description": "Log text a Rich Text Box control in an existing or new form.",
         "package": "NLog.Windows.Forms",
-        "keywords": [
-            "winforms",
-            "gui"
-        ],
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
@@ -496,30 +431,15 @@
     },
     {
         "name": "ToolStripItem",
-        "page": "ToolStripItem-target",
+        "page": "https://github.com/NLog/NLog.Windows.Forms/wiki/ToolStripItemTarget",
         "description": "Logs text to Windows.Forms.ToolStripItem property control of specified Name",
         "package": "NLog.Windows.Forms",
-        "keywords": [
-            "winforms",
-            "gui"
-        ],
         "platforms": [
             "net35",
-            "net40",
             "net45",
             "netstandard2.0"
         ],
         "category": "Windows Forms"
-    },
-    {
-        "name": "Elmah",
-        "description": "Logs to Elmah",
-        "package": "NLog.Elmah",
-        "page": "https://github.com/NLog/NLog.elmah",
-        "keywords": [
-            "errors"
-        ],
-        "category": "Integrations"
     },
     {
         "name": "ETW",
@@ -585,15 +505,20 @@
       "category": "Integrations"
     },
     {
+      "name": "Elastic Common Schema",
+      "page": "https://github.com/elastic/ecs-dotnet/tree/main/src/Elastic.NLog.Targets",
+      "description": "Writes logs directly to Elasticsearch or Elastic Cloud using the Elastic Common Schema (ECS)",
+      "package": "Elastic.NLog.Targets",
+      "external": true,
+      "category": "Integrations"
+    },
+    {
         "name": "Elastic Search",
         "page": "https://github.com/ReactiveMarkets/NLog.Targets.ElasticSearch",
         "description": "Writes to Elastic Search servers",
         "package": "NLog.Targets.ElasticSearch",
         "external": true,
-        "category": "Integrations",
-        "keywords": [
-            "Elasticsearch"
-        ]
+        "category": "Integrations"
     },
     {
         "name": "elmah.io",
@@ -629,8 +554,16 @@
     },
     {
         "name": "Gelf",
+        "page": "Gelf-target",
+        "description": "Writes NLog messages to GrayLog - Gelf UDP / TCP / HTTP",
+        "package": "NLog.Targets.Network",
+        "external": true,
+        "category": "Integrations"
+    },
+    {
+        "name": "NLog.Targets.Gelf",
         "page": "https://github.com/2020Legal/NLog.Targets.Gelf",
-        "description": "Writes NLog messages to GrayLog2 - Gelf",
+        "description": "Writes NLog messages to GrayLog - Gelf UDP",
         "package": "NLog.Targets.Gelf",
         "external": true,
         "category": "Integrations"
@@ -639,7 +572,7 @@
         "name": "Gelf4NLog",
         "page": "https://github.com/Certegy/Gelf4NLog",
         "package": "Gelf4NLog.Target",
-        "description": "Writes NLog messages to GrayLog2 - Gelf",
+        "description": "Writes NLog messages to GrayLog - Gelf UDP",
         "external": true,
         "category": "Integrations"
     },
@@ -647,25 +580,41 @@
         "name": "NLog.Gelf",
         "page": "https://github.com/mantasaudickas/NLog.Gelf",
         "package": "NLog.Gelf",
-        "description": "Writes NLog messages to GrayLog2 - Gelf",
+        "description": "Writes NLog messages to GrayLog - Gelf UDP / HTTP",
         "external": true,
         "category": "Integrations"
     },
     {
-        "name": "NLog.Targets.GraylogHttp",
+        "name": "GrayNLog",
+        "page": "https://gitlab.com/nlog/nlog-graylog",
+        "package": "GrayNLog",
+        "description": "Write log messages to Graylog - Gelf UDP.",
+        "external": true,
+        "category": "Integrations"
+    },
+    {
+        "name": "GraylogHttp",
         "page": "https://github.com/dustinchilson/NLog.Targets.GraylogHttp",
         "package": "NLog.Targets.GraylogHttp",
-        "description": "NLog target that pushes log messages to Graylog using the Http input.",
+        "description": "Write log messages to Graylog - Gelf HTTP.",
         "external": true,
         "category": "Integrations"
     },
     {
-        "name": "EasyGelf",
-        "page": "https://github.com/Pliner/EasyGelf",
-        "package": "EasyGelf.NLog",
-        "description": "Writes NLog messages to GrayLog2 - Gelf",
+        "name": "GelfAspNetCore",
+        "page": "https://github.com/GokGokalp/NLog.Web.AspNetCore.Targets.Gelf",
+        "package": "NLog.Web.AspNetCore.Targets.Gelf",
+        "description": "Write log messages to Graylog - Gelf UDP.",
         "external": true,
         "category": "Integrations"
+    },
+    {
+        "name": "InfluxDB",
+        "page": "https://github.com/tomcheney/nlog-influx-target",
+        "package": "NLog.Targets.InfluxDB",
+        "description": "Writes NLog messages to InfluxDB v2",
+        "external": true,
+        "category": "Databases"
     },
     {
         "name": "Glimpse",
@@ -717,9 +666,9 @@
     },
     {
         "name": "Loupe",
-        "page": "https://github.com/GibraltarSoftware/Gibraltar.Agent.NLog2",
-        "package": "Gibraltar.Agent.NLog4",
-        "description": "Writes NLog messages to Gibraltar https://www.onloupe.com",
+        "page": "https://github.com/gibraltarsoftware/gibraltar.agent.nlog2",
+        "package": "Loupe.Agent.NLog",
+        "description": "Writes NLog messages to Gibraltar Loupe Agent https://www.onloupe.com",
         "external": true,
         "category": "Integrations (Cloud)"
     },
@@ -753,9 +702,6 @@
         "package": "NLog.RabbitMQ.Target",
         "description": "Sends logs over a RabbitMQ message broker",
         "external": true,
-        "keywords": [
-            "message queue"
-        ],
         "category": "Integrations"
     },
     {
@@ -785,9 +731,9 @@
         "name": "RavenDB",
         "page": "https://github.com/kentcooper/NLog.Raven",
         "package": "NLog.Raven",
-        "description": "Writes NLog messages to https://ravendb.net",
+        "description": "Writes NLog messages to RavenDB",
         "external": true,
-        "category": "Integrations (Cloud)"
+        "category": "Databases"
     },
     {
         "name": "Sentry (Unified SDK)",
@@ -831,9 +777,17 @@
     },
     {
         "name": "Syslog",
+        "page": "Syslog-target",
+        "package": "NLog.Targets.Network",
+        "description": "Writes NLog messages to Syslog Server",
+        "external": true,
+        "category": "Integrations"
+    },
+    {
+        "name": "NLog.Targets.Syslog",
         "page": "https://github.com/graffen/NLog.Targets.Syslog",
         "package": "NLog.Targets.Syslog",
-        "description": "Writes NLog messages to Syslog",
+        "description": "[Discontinued] Writes NLog messages to Syslog Server",
         "external": true,
         "category": "Integrations"
     },
@@ -882,6 +836,14 @@
         "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage/blob/master/src/NLog.Extensions.AzureServiceBus/README.md",
         "package": "NLog.Extensions.AzureServiceBus",
         "description": "Batch writing of NLog messages to Azure Service Bus",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Microsoft Azure EventGrid",
+        "page": "https://github.com/JDetmar/NLog.Extensions.AzureStorage/blob/master/src/NLog.Extensions.AzureEventGrid/README.md",
+        "package": "NLog.Extensions.AzureEventGrid/",
+        "description": "Writing of NLog messages to Azure Event Grid",
         "external": true,
         "category": "Integrations (Cloud)"
     },
@@ -950,12 +912,20 @@
         "category": "Integrations (Cloud)"
     },
     {
+        "name": "NLog.Targets.MicrosoftTeams",
+        "package": "NLog.Targets.MicrosoftTeams",
+        "description": "Writes NLog messages to Microsoft Teams Channel via O365 Webhook Connector",
+        "page": "https://github.com/jedipi/NLog.Targets.MicrosoftTeams",
+        "external": true,
+        "category": "Integrations (Cloud)"
+    },
+    {
         "name": "Microsoft Teams",
         "package": "NLog.Targets.Teams",
         "description": "Writes NLog messages to MS Teams incoming Webhook connectors",
         "page": "https://github.com/task-it/TaskIt.NLog.Targets.Teams",
         "external": true,
-        "category": "Integrations"
+        "category": "Integrations (Cloud)"
     },
     {
         "name": "Ntfy.sh",
@@ -963,18 +933,38 @@
         "description": "Writes NLog messages to a topic on https://ntfy.sh/",
         "page": "https://github.com/MichelMichels/nlog-ntfy",
         "external": true,
-        "category": "Integrations",
-        "keywords": [
-            "ntfy",
-            "ntfy.sh"
-        ]
+        "category": "Integrations"
     },
-        {
+    {
         "name": "Bugsnag",
         "page": "https://github.com/lucaritossa/NLog.Targets.Bugsnag",
         "package": "NLog.Targets.Bugsnag",
         "description": "Writes NLog messages to https://www.bugsnag.com",
         "external": true,
         "category": "Integrations (Cloud)"
+    },
+    {
+        "name": "Kafka",
+        "page": "https://github.com/hayrullahcansu/nlog-kafka-target",
+        "package": "NLog.Targets.KafkaAppender",
+        "description": "Writes NLog messages to Kafka Queue Topic",
+        "external": true,
+        "category": "Integrations"
+    },
+    {
+        "name": "Nats",
+        "page": "https://github.com/Siqsuruq/NLog-Target.Nats",
+        "package": "NLog.Targets.Nats",
+        "description": "Writes NLog messages to NATS messaging server",
+        "external": true,
+        "category": "Integrations"
+    },
+    {
+        "name": "ActiveMQ",
+        "page": "https://github.com/YuraSidorets/NLog.Targets.ActiveMQ",
+        "package": "NLog.Targets.ActiveMQ",
+        "description": "Writes NLog messages using Apache ActiveMQ NMS native OpenWire protocol",
+        "external": true,
+        "category": "Integrations"
     }
 ]

@@ -10,7 +10,7 @@
              This class is to intercept the HTTP pipeline and to allow the AspNetBufferingTargetWrapper to function properly
             
              Usage: app.UseMiddleware&lt;NLogBufferingTargetWrapperMiddleware&gt;(); where app is an IApplicationBuilder
-             </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_NLog_Web_NLogBuilder.htm">NLogBuilder</a></td><td><div class="summary">
+             </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_NLog_Web_NLogBuilder.htm">NLogBuilder</a></td><td> <strong>Obsolete. </strong><div class="summary">
             NLog helpers to ensure registration of NLog.Web-extensions before loading NLog-configuration
             </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_NLog_Web_NLogHttpModule.htm">NLogHttpModule</a></td><td><div class="summary">
             ASP.NET HttpModule that enables NLog to hook BeginRequest and EndRequest events easily.
@@ -20,12 +20,8 @@
             HttpModule that writes all requests to Logger named "RequestLogging"
             </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_NLog_Web_NLogRequestLoggingOptions.htm">NLogRequestLoggingOptions</a></td><td><div class="summary">
             Options configuration for <a href="T_NLog_Web_NLogRequestLoggingMiddleware.htm">NLogRequestLoggingMiddleware</a></div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_NLog_Web_NLogRequestPostedBodyMiddleware.htm">NLogRequestPostedBodyMiddleware</a></td><td><div class="summary">
-             This class is to intercept the HTTP pipeline and to allow additional logging of the following
+             ASP.NET Core Middleware that enables ${aspnet-request-posted-body}
             
-             POST request body
-            
-             Usage: app.UseMiddleware&lt;NLogRequestPostBodyMiddleware&gt;(); where app is an IApplicationBuilder
-             
              Inject the NLogRequestPostBodyMiddlewareOption in the IoC if wanting to override default values for constructor
              </div></td></tr><tr data="class; public"><td><img src="../icons/pubclass.gif" alt="Public class" title="Public class" /></td><td><a href="T_NLog_Web_NLogRequestPostedBodyMiddlewareOptions.htm">NLogRequestPostedBodyMiddlewareOptions</a></td><td><div class="summary">
             Contains the configuration for the NLogRequestPostedBodyMiddleware
@@ -39,4 +35,4 @@
 					 
 				</th><th>Interface</th><th>Description</th></tr><tr data="interface; public"><td><img src="../icons/pubinterface.gif" alt="Public interface" title="Public interface" /></td><td><a href="T_NLog_Web_IHttpContextAccessor.htm">IHttpContextAccessor</a></td><td><div class="summary">
             Provides access to the HttpContext
-            </div></td></tr></table></div></div></div><div id="pageFooter" class="pageFooter"><p><a href="https://nlog-project.org/" target="_blank" rel="noopener noreferrer">Copyright (c) 2004-2022 NLog</a></p> </div></body></html>
+            </div></td></tr></table></div></div></div><div id="pageFooter" class="pageFooter"><p><a href="https://nlog-project.org/" target="_blank" rel="noopener noreferrer">Copyright (c) 2004-2024 NLog</a></p> </div></body></html>

@@ -47,16 +47,8 @@
                     "type": "string",
                     "enum": [
                         "net35",
-                        "net40",
                         "net45",
-                        "netstandard1.3",
-                        "netstandard1.5",
-                        "netstandard2.0",
-                        "ios",
-                        "android",
-                        "mono",
-                        "wp8",
-                        "sl"
+                        "netstandard2.0"
                     ]
                 }
             },

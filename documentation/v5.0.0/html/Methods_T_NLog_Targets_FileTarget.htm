@@ -3,7 +3,7 @@
 							</th><th>Name</th><th>Description</th></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_NLog_Targets_FileTarget_CalculateNextWeekday.htm">CalculateNextWeekday</a></td><td><div class="summary">
             Calculate the DateTime of the requested day of the week.
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_Targets_FileTarget_CleanupInitializedFiles.htm">CleanupInitializedFiles<span id="LST5ACFCD7F_0"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5ACFCD7F_0?cs=()|vb=|cpp=()|nu=()|fs=()");</script></a></td><td><div class="summary">
-            Removes records of initialized files that have not been 
+            Removes records of initialized files that have not been
             accessed in the last two days.
             </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_Targets_FileTarget_CleanupInitializedFiles_1.htm">CleanupInitializedFiles(DateTime)</a></td><td><div class="summary">
             Removes records of initialized files that have not been
@@ -42,7 +42,7 @@
             Writes the specified array of logging events to a file specified in the FileName
             parameter.
             </div> (Overrides <a href="M_NLog_Targets_Target_Write_2.htm">Target<span id="LST5ACFCD7F_15"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5ACFCD7F_15?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>Write(IList<span id="LST5ACFCD7F_16"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5ACFCD7F_16?cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=(");</script>AsyncLogEventInfo<span id="LST5ACFCD7F_17"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5ACFCD7F_17?cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)");</script>)</a>.)</td></tr><tr data="protected;declared;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="M_NLog_Targets_FileTarget_Write.htm">Write(LogEventInfo)</a></td><td><div class="summary">
-            Writes the specified logging event to a file specified in the FileName 
+            Writes the specified logging event to a file specified in the FileName
             parameter.
             </div> (Overrides <a href="M_NLog_Targets_Target_Write_1.htm">Target<span id="LST5ACFCD7F_18"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5ACFCD7F_18?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>Write(LogEventInfo)</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_Targets_Target_WriteAsyncLogEvent.htm">WriteAsyncLogEvent</a></td><td><div class="summary">
             Writes the log to the target.
@@ -51,19 +51,19 @@
             </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_NLog_Targets_Target_WriteAsyncLogEvents_1.htm">WriteAsyncLogEvents(IList<span id="LST5ACFCD7F_21"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5ACFCD7F_21?cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=(");</script>AsyncLogEventInfo<span id="LST5ACFCD7F_22"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5ACFCD7F_22?cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)");</script>)</a></td><td><div class="summary">
             Writes the array of log events.
             </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="M_NLog_Targets_Target_WriteAsyncThreadSafe.htm">WriteAsyncThreadSafe(AsyncLogEventInfo)</a></td><td><div class="summary">
-            Writes a log event to the log target, in a thread safe manner.
-            Any override of this method has to provide their own synchronization mechanism.
+             Writes a log event to the log target, in a thread safe manner.
+             Any override of this method has to provide their own synchronization mechanism.
             
-            !WARNING! Custom targets should only override this method if able to provide their
-            own synchronization mechanism. <a href="T_NLog_Layouts_Layout.htm">Layout</a>-objects are not guaranteed to be
-            thread-safe, so using them without a SyncRoot-object can be dangerous.
-            </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="M_NLog_Targets_Target_WriteAsyncThreadSafe_1.htm">WriteAsyncThreadSafe(IList<span id="LST5ACFCD7F_23"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5ACFCD7F_23?cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=(");</script>AsyncLogEventInfo<span id="LST5ACFCD7F_24"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5ACFCD7F_24?cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)");</script>)</a></td><td><div class="summary">
-            Writes an array of logging events to the log target, in a thread safe manner.
-            Any override of this method has to provide their own synchronization mechanism.
+             !WARNING! Custom targets should only override this method if able to provide their
+             own synchronization mechanism. <a href="T_NLog_Layouts_Layout.htm">Layout</a>-objects are not guaranteed to be
+             thread-safe, so using them without a SyncRoot-object can be dangerous.
+             </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="M_NLog_Targets_Target_WriteAsyncThreadSafe_1.htm">WriteAsyncThreadSafe(IList<span id="LST5ACFCD7F_23"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5ACFCD7F_23?cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=(");</script>AsyncLogEventInfo<span id="LST5ACFCD7F_24"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST5ACFCD7F_24?cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)");</script>)</a></td><td><div class="summary">
+             Writes an array of logging events to the log target, in a thread safe manner.
+             Any override of this method has to provide their own synchronization mechanism.
             
-            !WARNING! Custom targets should only override this method if able to provide their
-            own synchronization mechanism. <a href="T_NLog_Layouts_Layout.htm">Layout</a>-objects are not guaranteed to be
-            thread-safe, so using them without a SyncRoot-object can be dangerous.
-            </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="M_NLog_Targets_Target_WriteFailedNotInitialized.htm">WriteFailedNotInitialized</a></td><td><div class="summary">
+             !WARNING! Custom targets should only override this method if able to provide their
+             own synchronization mechanism. <a href="T_NLog_Layouts_Layout.htm">Layout</a>-objects are not guaranteed to be
+             thread-safe, so using them without a SyncRoot-object can be dangerous.
+             </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr><tr data="protected;inherited;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="M_NLog_Targets_Target_WriteFailedNotInitialized.htm">WriteFailedNotInitialized</a></td><td><div class="summary">
             LogEvent is written to target, but target failed to successfully initialize
-            </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID1RB')" onkeypress="SectionExpandCollapse_CheckKey('ID1RB', event)" tabindex="0"><img id="ID1RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID1RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="T_NLog_Targets_FileTarget.htm">FileTarget Class</a></div><div class="seeAlsoStyle"><a href="N_NLog_Targets.htm">NLog.Targets Namespace</a></div></div></div></div><div id="pageFooter" class="pageFooter"><p><a href="https://nlog-project.org/" target="_blank" rel="noopener noreferrer">Copyright (c) 2004-2022 NLog</a></p> </div></body></html>
+            </div> (Inherited from <a href="T_NLog_Targets_Target.htm">Target</a>.)</td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID1RB')" onkeypress="SectionExpandCollapse_CheckKey('ID1RB', event)" tabindex="0"><img id="ID1RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID1RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="T_NLog_Targets_FileTarget.htm">FileTarget Class</a></div><div class="seeAlsoStyle"><a href="N_NLog_Targets.htm">NLog.Targets Namespace</a></div></div></div></div><div id="pageFooter" class="pageFooter"><p><a href="https://nlog-project.org/" target="_blank" rel="noopener noreferrer">Copyright (c) 2004-2024 NLog</a></p> </div></body></html>
