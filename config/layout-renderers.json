@@ -730,6 +730,19 @@
         "category": "Web, ASP.NET and ASP.NET Core"
     },
     {
+        "name": "aspnet-request-aborted",
+        "page": "AspNetRequest-RequestAborted-Layout-Renderer",
+        "package": [
+            "NLog.Web",
+            "NLog.Web.AspNetCore"
+        ],
+        "description": "Indicates that the ASP.NET request was aborted. Can be used to filter errors and warnings when RequestAborted.",
+        "platforms": [
+            "netstandard2.0"
+        ],
+        "category": "Web, ASP.NET and ASP.NET Core"
+    },
+    {
         "name": "aspnet-request-duration",
         "page": "AspNet-Request-Duration-Layout-Renderer",
         "package": [
