@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://nlog-project.org/wiki/Tutorial/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Tutorial - NLog Wiki</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Tutorial";
+        var mkdocs_page_input_path = "Tutorial.md";
+        var mkdocs_page_url = "/wiki/Tutorial/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="https://nlog-project.org/images/NLog-logo-only_small.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../All-Event-Properties-Layout-Renderer/">All Event Properties Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AppDomain-Layout-Renderer/">AppDomain Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AppSetting-Layout-Renderer/">AppSetting Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-AppBasePath-layout-renderer/">AspNet AppBasePath layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Environment-layout-renderer/">AspNet Environment layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-HttpContext-Item-Layout-Renderer/">AspNet HttpContext Item Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-MVC-Action-Layout-Renderer/">AspNet MVC Action Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-MVC-Controller-Layout-Renderer/">AspNet MVC Controller Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-Bidirectional-Stream-Layout-Renderer/">AspNet Request Bidirectional Stream Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-Client-Certificate-Layout-Renderer/">AspNet Request Client Certificate Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-ConnectionId-Layout-Renderer/">AspNet Request ConnectionId Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-ContentLength-Layout-Renderer/">AspNet Request ContentLength Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-ContentType-layout-renderer/">AspNet Request ContentType layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-Duration-Layout-Renderer/">AspNet Request Duration Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-EndPoint-Group-Layout-Renderer/">AspNet Request EndPoint Group Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-EndPoint-Layout-Renderer/">AspNet Request EndPoint Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-EndPoint-Name-Layout-Renderer/">AspNet Request EndPoint Name Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-HTTP-Transport-Type-Layout-Renderer/">AspNet Request HTTP Transport Type Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-Has-Posted-Body-Layout-Renderer/">AspNet Request Has Posted Body Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-IP-Layout-Renderer/">AspNet Request IP Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-Inherent-KeepAlive-Layout-Renderer/">AspNet Request Inherent KeepAlive Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-IsWebSocket-Layout-Renderer/">AspNet Request IsWebSocket Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-Local-IP-Layout-Renderer/">AspNet Request Local IP Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-Local-Port-Layout-Renderer/">AspNet Request Local Port Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-Remote-Port-Layout-Renderer/">AspNet Request Remote Port Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-ServerVariable-Layout-Renderer/">AspNet Request ServerVariable Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-StreamId-Layout-Renderer/">AspNet Request StreamId Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-TLS-Handshake-Layout-Renderer/">AspNet Request TLS Handshake Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-TLS-Token-Bindng-Layout-Renderer/">AspNet Request TLS Token Bindng Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-Tracking-Consent-Layout-Renderer/">AspNet Request Tracking Consent Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-Trailers-Layout-Renderer/">AspNet Request Trailers Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-WebSocket-Requested-Protocols-Layout-Renderer/">AspNet Request WebSocket Requested Protocols Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Request-posted-body-layout-renderer/">AspNet Request posted body layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Response-ContentLength-Layout-Renderer/">AspNet Response ContentLength Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Response-ContentType-Layout-Renderer/">AspNet Response ContentType Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Response-Cookie-Layout-Renderer/">AspNet Response Cookie Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Response-HTTPS-Compression-Layout-Renderer/">AspNet Response HTTPS Compression Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Response-HasStarted-Layout-Renderer/">AspNet Response HasStarted Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Response-Headers-Layout-Renderer/">AspNet Response Headers Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-Response-Trailers-Layout-Renderer/">AspNet Response Trailers Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-User-Claim-Layout-Renderer/">AspNet User Claim Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-User-isAuthenticated-Layout-Renderer/">AspNet User isAuthenticated Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNet-WebRootPath-layout-renderer/">AspNet WebRootPath layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetApplication-layout-renderer/">AspNetApplication layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetBufferingWrapper-target/">AspNetBufferingWrapper target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetEnvironment-layout-renderer/">AspNetEnvironment layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetItem-layout-renderer/">AspNetItem layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetRequest-Cookie-Layout-Renderer/">AspNetRequest Cookie Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetRequest-Form-Layout-Renderer/">AspNetRequest Form Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetRequest-Headers-Layout-Renderer/">AspNetRequest Headers Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetRequest-Host-Layout-Renderer/">AspNetRequest Host Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetRequest-Method-Layout-Renderer/">AspNetRequest Method Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetRequest-QueryString-Layout-Renderer/">AspNetRequest QueryString Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetRequest-Referrer-Renderer/">AspNetRequest Referrer Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetRequest-RequestAborted-Layout-Renderer/">AspNetRequest RequestAborted Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetRequest-RouteParameters-Layout-Renderer/">AspNetRequest RouteParameters Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetRequest-Url-Layout-Renderer/">AspNetRequest Url Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetRequest-UserAgent-Layout-Renderer/">AspNetRequest UserAgent Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetRequest-layout-renderer/">AspNetRequest layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetResponse-StatusCode-Layout-Renderer/">AspNetResponse StatusCode Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetSession-Layout-Renderer/">AspNetSession Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetSessionId-Layout-Renderer/">AspNetSessionId Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetTrace-target/">AspNetTrace target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetTraceIdentifier-Layout-Renderer/">AspNetTraceIdentifier Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetUserAuthType-Layout-Renderer/">AspNetUserAuthType Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspNetUserIdentity-Layout-Renderer/">AspNetUserIdentity Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspRequest-layout-renderer/">AspRequest layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspResponse-target/">AspResponse target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AspSession-layout-renderer/">AspSession layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AssemblyVersion-Layout-Renderer/">AssemblyVersion Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AsyncWrapper-target/">AsyncWrapper target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Atomic-File-Target/">Atomic File Target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AutoFlushWrapper-target/">AutoFlushWrapper target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Basedir-layout-renderer/">Basedir layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../BufferingWrapper-target/">BufferingWrapper target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Cached-Layout-Renderer/">Cached Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Callsite-file-name-layout-renderer/">Callsite file name layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Callsite-layout-renderer/">Callsite layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Callsite-line-number-layout-renderer/">Callsite line number layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Chainsaw-target/">Chainsaw target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ColoredConsole-target/">ColoredConsole target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Combine-XML-config-with-C%23-config/">Combine XML config with C# config</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../CompoundLayout/">CompoundLayout</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Conditions/">Conditions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ConfigSetting-Layout-Renderer/">ConfigSetting Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Configuration-API/">Configuration API</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Configuration-file/">Configuration file</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Configure-NLog/">Configure NLog</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Configure-component-logging/">Configure component logging</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Configure-from-code/">Configure from code</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Console-target/">Console target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Context/">Context</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Counter-layout-renderer/">Counter layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../CsvLayout/">CsvLayout</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../CurrentDir-Layout-Renderer/">CurrentDir Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Custom-extension-of-Logger-interface/">Custom extension of Logger interface</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../DB-null-layout-renderer/">DB null layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Data-types/">Data types</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Database-target/">Database target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Date-layout-renderer/">Date layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Debug-target/">Debug target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../DebugSystem-target/">DebugSystem target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Debugger-target/">Debugger target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Dependency-injection-with-NLog/">Dependency injection with NLog</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Directory-separator/">Directory separator</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../DocumentUri-layout-renderer/">DocumentUri layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Elmah-target/">Elmah target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Environment-User-Layout-Renderer/">Environment User Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Environment-layout-renderer/">Environment layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Environment-specific-NLog-Logging-Configuration/">Environment specific NLog Logging Configuration</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Event-Context-Layout-Renderer/">Event Context Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../EventProperties-Layout-Renderer/">EventProperties Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Eventlog-target/">Eventlog target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Examples/">Examples</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Exception-layout-renderer/">Exception layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ExceptionData-Layout-Renderer/">ExceptionData Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Explicit-NLog-configuration-loading/">Explicit NLog configuration loading</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Extending-NLog/">Extending NLog</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../FAQ/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../FallbackGroup-target/">FallbackGroup target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../File-target/">File target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../FileContents-layout-renderer/">FileContents layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../FileTarget-Archive-Examples/">FileTarget Archive Examples</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Filesystem-Normalize-Layout-Renderer/">Filesystem Normalize Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Filtering-log-messages/">Filtering log messages</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../FilteringWrapper-target/">FilteringWrapper target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Fluent-API/">Fluent API</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Fluent-Configuration-API/">Fluent Configuration API</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Fluent-Logger-API/">Fluent Logger API</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../FormControl-target/">FormControl target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../GELF-Target/">GELF Target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../GZip-File-Target/">GZip File Target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Gc-layout-renderer/">Gc layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Gdc-layout-renderer/">Gdc layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../GelfLayout/">GelfLayout</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Getting-started-with-.NET-Core-2---Console-application/">Getting started with .NET Core 2   Console application</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Getting-started-with-.NET-Core-Console-application/">Getting started with .NET Core Console application</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Getting-started-with-ASP.NET-Core-2/">Getting started with ASP.NET Core 2</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Getting-started-with-ASP.NET-Core-3/">Getting started with ASP.NET Core 3</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Getting-started-with-ASP.NET-Core-5/">Getting started with ASP.NET Core 5</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Getting-started-with-ASP.NET-Core-6/">Getting started with ASP.NET Core 6</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../GroupByWrapper-target/">GroupByWrapper target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Guid-layout-renderer/">Guid layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../HTTP-target/">NLog.Targets.HTTP</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Home/">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Host-AppName-Layout-Renderer/">Host AppName Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Host-Environment-Layout-Renderer/">Host Environment Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Host-RootDir-Layout-Renderer/">Host RootDir Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../HostName-Layout-Renderer/">HostName Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../How-to-Log-Exceptions/">How to Log Exceptions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../How-to-create-Logger-for-sub-classes/">How to create Logger for sub classes</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../How-to-use-structured-logging/">How to use structured logging</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../How-to-write-a-Target/">How to write a Target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../How-to-write-a-custom-async-target/">How to write a custom async target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../How-to-write-a-custom-layout-renderer/">How to write a custom layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../How-to-write-a-custom-target-for-structured-logging/">How to write a custom target for structured logging</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../How-to-write-a-custom-target/">How to write a custom target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../IIS-site-name-Layout-Renderer/">IIS site name Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Identity-layout-renderer/">Identity layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ImpersonatingWrapper-target/">ImpersonatingWrapper target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../InstallContext-layout-renderer/">InstallContext layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Installing-targets/">Installing targets</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Internal-Logging/">Internal Logging</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../JSON-Encode-Layout-Renderer/">JSON Encode Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../JsonArrayLayout/">JsonArrayLayout</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../JsonLayout/">JsonLayout</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Layout-Renderers/">Layout Renderers</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Layout/">Layout</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../LayoutWithHeaderAndFooter/">LayoutWithHeaderAndFooter</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Layouts/">Layouts</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Left-layout-renderer/">Left layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Level-layout-renderer/">Level layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../LimitingWrapper-target/">LimitingWrapper target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Literal-Layout-Renderer/">Literal Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Local-IP-Address-Layout-Renderer/">Local IP Address Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Log-levels/">Log levels</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Log4JXMLEvent-Layout-Renderer/">Log4JXMLEvent Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Log4JXml-Target/">Log4JXml Target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Log4JXmlEventLayout/">Log4JXmlEventLayout</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../LogEvent-Context-Information/">LogEvent Context Information</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../LogReceiverService-target/">LogReceiverService target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Logger-Layout-Renderer/">Logger Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Logging-Rules-FinalMinLevel/">Logging Rules FinalMinLevel</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Logging-Troubleshooting/">Logging Troubleshooting</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Longdate-Layout-Renderer/">Longdate Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Lowercase-Layout-Renderer/">Lowercase Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../MDC-Layout-Renderer/">MDC Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../MDLC-Layout-Renderer/">MDLC Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../MSMQ-target/">MSMQ target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Machinename-Layout-Renderer/">Machinename Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Mail-target/">Mail target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Memory-target/">Memory target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Message-Layout-Renderer/">Message Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../MessageBox-target/">MessageBox target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../MethodCall-target/">MethodCall target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../MicrosoftConsoleJsonLayout/">MicrosoftConsoleJsonLayout</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../MicrosoftConsoleLayout/">MicrosoftConsoleLayout</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../MicrosoftILogger-Target/">MicrosoftILogger Target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../NDC-Layout-Renderer/">NDC Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../NDLC-Layout-Renderer/">NDLC Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../NLog-Install/">NLog Install</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../NLog-Trace-Listener-for-System-Diagnostics-Trace/">NLogTraceListener</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../NLog-config-Example/">NLog config Example</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../NLogDir-Layout-Renderer/">NLogDir Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../NLogViewer-target/">NLogViewer target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../NdlcTiming-Layout-Renderer/">NdlcTiming Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Network-target/">Network target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Newline-Layout-Renderer/">Newline Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../NoRawValue-layout-renderer/">NoRawValue layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Null-target/">Null target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ObjectPath-Layout-Renderer/">ObjectPath Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../OnException-Layout-Renderer/">OnException Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../OnHasProperties-Layout-Renderer/">OnHasProperties Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../OutputDebugString-target/">OutputDebugString target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Pad-Layout-Renderer/">Pad Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../PerfCounter-target/">PerfCounter target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Performance/">Performance</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../PerformanceCounter-Layout-Renderer/">PerformanceCounter Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Platform-Support/">Platform Support</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../PostFilteringWrapper-target/">PostFilteringWrapper target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ProcessDir-Layout-Renderer/">ProcessDir Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ProcessId-Layout-Renderer/">ProcessId Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ProcessInfo-Layout-Renderer/">ProcessInfo Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ProcessStart-Layout-Renderer/">ProcessStart Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Processname-Layout-Renderer/">Processname Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Processtime-Layout-Renderer/">Processtime Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Properties-constraints-for-custom-extensions/">Properties constraints for custom extensions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../QPC-Layout-Renderer/">QPC Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../RandomizeGroup-target/">RandomizeGroup target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../RegEx-Replace-Layout-Renderer/">RegEx Replace Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Register-your-custom-component/">Register your custom component</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Registry-Layout-Renderer/">Registry Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Reinitialize-NLog-configuration/">Reinitialize NLog configuration</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../RepeatingWrapper-target/">RepeatingWrapper target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Replace-Layout-Renderer/">Replace Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Replace-NewLines-Layout-Renderer/">Replace NewLines Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../RetryingWrapper-target/">RetryingWrapper target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../RichTextBox-target/">RichTextBox target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Right-layout-renderer/">Right layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Rot13-Layout-Renderer/">Rot13 Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../RoundRobinGroup-target/">RoundRobinGroup target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../SL-AppInfo-Layout-Renderer/">SL AppInfo Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ScopeIndent-Layout-Renderer/">ScopeIndent Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ScopeNested-Layout-Renderer/">ScopeNested Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ScopeProperty-Layout-Renderer/">ScopeProperty Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ScopeTiming-Layout-Renderer/">ScopeTiming Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../SequenceId-layout-renderer/">SequenceId layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ShortDate-Layout-Renderer/">ShortDate Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../SimpleLayout/">SimpleLayout</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Special-Folder-Layout-Renderer/">Special Folder Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../SplitGroup-target/">SplitGroup target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Splunk-Target/">Splunk Target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../SplunkLayout/">SplunkLayout</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Stack-Trace-Layout-Renderer/">Stack Trace Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Substring-layout-renderer/">Substring layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Syslog-Target/">Syslog Target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../SyslogLayout/">SyslogLayout</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Targets-and-Wrappers/">Targets and Wrappers</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Targets/">Targets</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../TempDir-Layout-Renderer/">TempDir Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../TextLayout/">TextLayout</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ThreadId-Layout-Renderer/">ThreadId Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ThreadName-Layout-Renderer/">ThreadName Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Ticks-Layout-Renderer/">Ticks Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Time-Layout-Renderer/">Time Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Time-Source/">Time Source</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ToolStripItem-Target/">ToolStripItem Target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Tools/">Tools</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Trace-Activity-Id-Layout-Renderer/">Trace Activity Id Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Trace-target/">Trace target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Trim-Whitespace-Layout-Renderer/">Trim Whitespace Layout Renderer</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Tutorial</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Uppercase-Layout-Renderer/">Uppercase Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Url-Encode-Layout-Renderer/">Url Encode Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Var-Layout-Renderer/">Var Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Visual-Studio-Support/">Visual Studio Support</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../W3CExtendedLogLayout/">W3CExtendedLogLayout</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Web-resources/">Web resources</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../WebService-target---Workaround-for-url-variables/">WebService target   Workaround for url variables</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../WebService-target/">WebService target</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Webservice-Target-for-Splunk/">Webservice Target for Splunk</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../When-Filter/">When Filter</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../When-Layout-Renderer/">When Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../WhenContains-filter/">WhenContains filter</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../WhenEmpty-Layout-Renderer/">WhenEmpty Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../WhenEqual-filter/">WhenEqual filter</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../WhenNotContains-filter/">WhenNotContains filter</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../WhenNotEqual-filter/">WhenNotEqual filter</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../WhenRepeated-Filter/">WhenRepeated Filter</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Who-Is-Using-NLog/">Who Is Using NLog</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Windows-Identity-Layout-Renderer/">Windows Identity Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../WrapLine-layout-renderer/">WrapLine layout renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../XML-config-include-Example/">XML config include Example</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Xml-Encode-Layout-Renderer/">Xml Encode Layout Renderer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../XmlLayout/">XmlLayout</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../_Sidebar/"> Sidebar</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../filters/">Filters</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">NLog Wiki</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Tutorial</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/NLog/NLog/wiki/Tutorial/_edit" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>NLog can be setup with the following steps:</p>
+<ol>
+<li><a href="../NLog-Install/">Install NLog nuget package</a></li>
+<li><a href="./#configure-nlog-targets-for-output">Configure NLog Targets for output</a></li>
+<li><a href="./#writing-log-messages">Writing log messages</a></li>
+</ol>
+<p>After having setup NLog, then make sure to explore:</p>
+<ul>
+<li><a href="./#layouts-and-layoutrenderers">Layouts and LayoutRenderers</a></li>
+<li><a href="./#target-wrappers">Target Wrappers</a></li>
+<li><a href="./#best-practices-for-using-nlog">Best practices for using NLog</a></li>
+<li><a href="faq">Frequently Asked Questions</a></li>
+</ul>
+<p>If something is not working as expected then check the <a href="../NLog-Install/#Troubleshooting">Troubleshooting</a> section.</p>
+<p>If wanting to use Microsoft Extension Logging (MEL) then check <a href="https://github.com/NLog/NLog/wiki/Getting-started-with-.NET-Core-2---Console-application">.NET Core</a> and <a href="https://github.com/NLog/NLog/wiki/Getting-started-with-ASP.NET-Core-6">ASP.NET Core</a> tutorials.</p>
+<h2 id="configure-nlog-targets-for-output">Configure NLog Targets for output</h2>
+<p>NLog will only produce output if having configured one (or more) NLog targets.</p>
+<p>NLog can be configured using XML by adding a <code>NLog.config</code> file to your application project (File Properties: Copy If newer). NLog will automatically load the NLog.config by <a href="../Configuration-file/#configuration-file-locations">searching multiple file locations</a>. This is a simple example of the content for <code>NLog.config</code>:</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;nlog xmlns=&quot;http://www.nlog-project.org/schemas/NLog.xsd&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+      xsi:schemaLocation=&quot;http://www.nlog-project.org/schemas/NLog.xsd NLog.xsd&quot;&gt;
+
+    &lt;targets&gt;
+        &lt;target name=&quot;logfile&quot; xsi:type=&quot;File&quot; fileName=&quot;logfile.txt&quot; /&gt;
+        &lt;target name=&quot;logconsole&quot; xsi:type=&quot;Console&quot; /&gt;
+    &lt;/targets&gt;
+
+    &lt;rules&gt;
+        &lt;logger name=&quot;*&quot; minlevel=&quot;Info&quot; writeTo=&quot;logconsole&quot; /&gt;
+        &lt;logger name=&quot;*&quot; minlevel=&quot;Debug&quot; writeTo=&quot;logfile&quot; /&gt;
+    &lt;/rules&gt;
+&lt;/nlog&gt;
+</code></pre>
+<p>Alternative one can configure programmatically by doing this in code:</p>
+<pre><code class="language-csharp">var config = new NLog.Config.LoggingConfiguration();
+
+// Targets where to log to: File and Console
+var logfile = new NLog.Targets.FileTarget(&quot;logfile&quot;) { FileName = &quot;logfile.txt&quot; };
+var logconsole = new NLog.Targets.ConsoleTarget(&quot;logconsole&quot;);
+
+// Rules for mapping loggers to targets            
+config.AddRule(LogLevel.Info, LogLevel.Fatal, logconsole);
+config.AddRule(LogLevel.Debug, LogLevel.Fatal, logfile);
+
+// Apply config           
+NLog.LogManager.Configuration = config;
+</code></pre>
+<p>NLog 5.0 introduces a <a href="fluent-configuration-api" title="Fluent-Configuration-API">Fluent-Configuration-API</a> so you can do this instead:</p>
+<pre><code class="language-csharp">NLog.LogManager.Setup().LoadConfiguration(builder =&gt; {
+   builder.ForLogger().FilterMinLevel(LogLevel.Info).WriteToConsole();
+   builder.ForLogger().FilterMinLevel(LogLevel.Debug).WriteToFile(fileName: &quot;logfile.txt&quot;);
+});
+</code></pre>
+<p>The <a href="../Configuration-file/#rules">rules</a> redirects logger output to the wanted output targets. The rules also provides <a href="../Filtering-log-messages/#routing">filtering options</a> to output only relevant logevents. Usually based on logger-name and loglevel (Ex. <code>name="*" minlevel="Trace"</code> means everything).</p>
+<p>See also <a href="../Configuration-file/">Configuration File</a> or <a href="../Configure-from-code/">Configure from code</a></p>
+<p>See also <a href="../Targets/#available-targets">Available NLog Targets</a> for output.</p>
+<p><a name="Writing-log-messages" /></p>
+<h2 id="writing-log-messages">Writing log messages</h2>
+<pre><code class="language-csharp">public static class Program
+{
+    private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
+
+    public static void Main()
+    {
+        try
+        {
+           Logger.Info(&quot;Hello world&quot;);
+           System.Console.ReadKey();
+        }
+        catch (Exception ex)
+        {
+           Logger.Error(ex, &quot;Goodbye cruel world&quot;);
+        }
+    }
+}  
+</code></pre>
+<p>The Logger can write messages with different LogLevels, which is used by the logging-rules (See <code>minLevel</code> in configuration example above) so only relevant messages are redirected to the wanted targets. The LogLevel identifies how important/detailed the message is. NLog can route log messages based primarily on their logger name and log level.</p>
+<p>The <a href="../Configuration-file/#log-levels">log levels</a> ordered by severity:</p>
+<table>
+<thead>
+<tr>
+<th>LogLevel</th>
+<th>Severity</th>
+<th>Typical Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trace</td>
+<td>Most verbose level. Used for development and seldom enabled in production.</td>
+<td>Ex. Request-payload, Response-payload, Begin-method-X or End-method-X</td>
+</tr>
+<tr>
+<td>Debug</td>
+<td>Debugging the application behavior from internal events of interest.</td>
+<td>Ex. Executed query, User authenticated, Session expired</td>
+</tr>
+<tr>
+<td>Info</td>
+<td>Information about application lifetime events like starting/stopping and configuration changes.</td>
+<td></td>
+</tr>
+<tr>
+<td>Warn</td>
+<td>Warnings about validation issues or temporary failures that can be recovered.</td>
+<td></td>
+</tr>
+<tr>
+<td>Error</td>
+<td>Errors where functionality has failed or Exception have been caught.</td>
+<td></td>
+</tr>
+<tr>
+<td>Fatal</td>
+<td>Most critical level. Application is about to abort.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The logger is not tied to a specific target. The messages written to one logger can reach multiple targets based on the <a href="logging-rules-configuration" title="Configuration-file#rules">Configuration-file#rules</a>. Maintaining this separation lets you keep logging statements in your code and easily change how and where the logs are written, just by updating the configuration in one place. See also <a href="../Filtering-log-messages/">Filtering log messages</a>.</p>
+<p>Instead of using NLog Logger directly, then NLog also supports logging abstractions like <a href="https://github.com/NLog/NLog.Extensions.Logging/wiki">Microsoft Extension Logging</a> or <a href="https://github.com/damianh/LibLog">LibLog</a>.</p>
+<h3 id="layouts-and-layoutrenderers">Layouts and LayoutRenderers</h3>
+<p>NLog allows you to customize how log messages are written to a NLog target. This shows the default <code>SimpleLayout</code> used by most NLog targets:</p>
+<pre><code class="language-xml">&lt;target name=&quot;logfile&quot; xsi:type=&quot;File&quot; fileName=&quot;file.txt&quot; layout=&quot;`${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}`&quot; /&gt;
+</code></pre>
+<p>This can be configured to include extra context information (Ex <code>${threadid}</code>):</p>
+<pre><code class="language-xml">&lt;target name=&quot;logfile&quot; xsi:type=&quot;File&quot; fileName=&quot;file.txt&quot; layout=&quot;${longdate}|${level:uppercase=true}|${logger}|${threadid}|${message}|${exception:format=tostring}&quot; /&gt;
+</code></pre>
+<p>See full list here: <a href="../Layout-Renderers/">Layout Renderers</a></p>
+<p>One can also use a more complex Layout instead of <code>SimpleLayout</code>:
+* <a href="csvlayout" title="CsvLayout">CsvLayout</a>
+* <a href="jsonlayout" title="JsonLayout">JsonLayout</a>
+* <a href="xmllayout" title="XmlLayout">XmlLayout</a></p>
+<p>See full list here: <a href="layouts" title="Layouts">Layouts</a></p>
+<h3 id="target-wrappers">Target Wrappers</h3>
+<p>NLog supports special kinds of targets which do not do any logging by themselves, but extends the behavior of destination target. Those targets are called wrappers. The most commonly used ones are:
+* <a href="../AsyncWrapper-target/">AsyncWrapper</a> - Improves <a href="performance" title="Performance">Performance</a> by providing asynchronous, buffered execution of target writes.
+* <a href="../BufferingWrapper-target/">BufferingWrapper</a> - Simple batching of log messages. Maybe only send batch when certain log event occurs (Ex. Exception).
+* <a href="../FallbackGroup-target/">FallbackGroup</a> - Provides fallback-on-error.
+* <a href="../RetryingWrapper-target/">RetryingWrapper</a> - Provides retry-on-error.</p>
+<p>See full list here: <a href="../Targets/#wrappers">Target Wrappers</a></p>
+<p>There is a shortcut for enabling the AsyncWrapper for all targets, by adding <code>async="true"</code>:</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;nlog xmlns=&quot;http://www.nlog-project.org/schemas/NLog.xsd&quot;
+      xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+
+    &lt;targets async=&quot;true&quot;&gt;
+        &lt;target name=&quot;logfile&quot; xsi:type=&quot;File&quot; fileName=&quot;file.txt&quot; /&gt;
+    &lt;/targets&gt;
+
+    &lt;rules&gt;
+        &lt;logger name=&quot;*&quot; minlevel=&quot;Info&quot; writeTo=&quot;logfile&quot; /&gt;
+    &lt;/rules&gt;
+&lt;/nlog&gt;
+</code></pre>
+<p>This will make all writes to the file be asynchronous, which will improve responsiveness of the calling thread.</p>
+<h3 id="best-practices-for-using-nlog">Best practices for using NLog</h3>
+<h4 id="1-logger-should-be-a-static-variable-in-each-class">1. Logger should be a static variable in each class</h4>
+<p>When using <code>LogManager.GetCurrentClassLogger</code>:</p>
+<p>Creating a new Logger has a small overhead, as it has to acquire locks and allocate objects.</p>
+<p>Therefore it is recommended to create the logger like this:</p>
+<pre><code class="language-csharp">namespace MyNamespace
+{
+  public class MyClass
+  {
+    private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+  }
+}
+</code></pre>
+<h4 id="2-logger-should-handle-string-formatting">2. Logger should handle string formatting</h4>
+<p>Avoid performing string allocation or string concatenation upfront, but instead let the Logger do the formatting. This will allow NLog to defer the formatting and improve <a href="performance" title="performance">performance</a>.</p>
+<p>Either using <a href="../How-to-use-structured-logging/">Structured logging</a> that captures parameters as named properties:</p>
+<pre><code class="language-csharp">logger.Info(&quot;Hello {World}&quot;, &quot;Earth&quot;);
+</code></pre>
+<p>Or using string-format syntax:</p>
+<pre><code class="language-csharp">logger.Info(&quot;Hello {0}&quot;, &quot;Earth&quot;);
+</code></pre>
+<h4 id="3-logger-should-be-given-the-exception">3. Logger should be given the Exception</h4>
+<p>Avoid giving the Exception as formatting parameter, but instead provide it explicitly as first parameter. This will help the NLog targets to provide better logging.</p>
+<pre><code class="language-csharp">try
+{
+}
+catch (Exception ex)
+{
+    logger.Error(ex, &quot;Something bad happened&quot;);
+}
+</code></pre>
+<h4 id="4-validate-xml-configuration-from-nlogconfig">4. Validate XML configuration from <code>NLog.config</code></h4>
+<p>NLog swallows by default all exceptions, so problems with logging will not cause the application to break. But for many application the logging is very critical, so if the initial NLog configuration fails, then it is fatal.</p>
+<p>Adding <code>throwConfigExceptions="true"</code> will make NLog complain when something is wrong with the configuration:</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;nlog xmlns=&quot;http://www.nlog-project.org/schemas/NLog.xsd&quot;
+      xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+      throwConfigExceptions=&quot;true&quot;&gt;
+&lt;/nlog&gt;
+</code></pre>
+<p>There is also a setting called <code>throwExceptions="true"</code>, which should never be used in production as it can cause havoc for your application. It is intended for unit testing and local troubleshooting. See also <a href="../Configuration-file/#troubleshooting-logging">Troubleshooting Configuration</a></p>
+<p>It is also a good idea to check output from <a href="../Internal-Logging/">NLog InternalLogger</a>, as it can give alerts when detecting problems with the NLog configuration.</p>
+<h4 id="5-remember-to-flush">5. Remember to Flush</h4>
+<p>NLog will by default attempt to flush automatically at application shutdown. Microsoft Windows give .NET applications a limited amount of time to perform shutdown (usually 2 sec) before being terminated. If having a NLog configuration with NLog Targets that requires network-traffic (Http, Mail, Tcp), then it is a really good idea to perform a manual Flush/Shutdown independent on running on Linux/Windows.</p>
+<pre><code class="language-C#">NLog.LogManager.Shutdown(); // Flush and close down internal threads and timers
+</code></pre>
+<p>NET Application running on Mono/Linux are required to stop threads/timers before entering application shutdown phase. Failing to do this will cause unhandled exceptions and segmentation faults, and other unpredictable behavior.</p>
+<p><a href="https://learn.microsoft.com/dotnet/core/compatibility/core-libraries/10.0/sigterm-signal-handler">NET 10.0</a> (and newer) no longer signals <a href="https://learn.microsoft.com/dotnet/api/system.appdomain.processexit#system-appdomain-processexit">AppDomain.ProcessExit</a> or <a href="https://learn.microsoft.com/dotnet/api/system.runtime.loader.assemblyloadcontext.unloading#system-runtime-loader-assemblyloadcontext-unloading">AssemblyLoadContext.Unloading</a> independent on running on Windows/Linux. So just like using <code>LogManager.AutoShutdown = false</code>.</p>
+<h4 id="6-unhandled-exeptions">6. Unhandled exeptions</h4>
+<p>When non-background threads dies because of unhandled Exception, then the entire application will die. For better diagnostics, then one can listen for unhandled exceptions and forward to NLog at application startup:</p>
+<pre><code class="language-csharp">AppDomain.CurrentAppDomain.UnhandledException += (s, e) =&gt; {
+   NLog.LogManager.GetLogger(&quot;Application&quot;).Error(e.ExceptionObject as Exception, &quot;Unhandled Application Exception&quot;);
+   NLog.LogManager.Flush();  // Ensure logs are written before application dies
+};
+</code></pre>
+<p>When async Tasks dies because of unobserved Exception and finalized, then the application will continue without making any noise. For better diagnostics, then one can listen for unobserved exceptions and forward to NLog at application startup:</p>
+<pre><code class="language-csharp">System.Threading.Tasks.TaskScheduler.UnobservedTaskException += (s, e) =&gt; {
+   if (e.Exception is System.OperationCanceledException)
+      NLog.LogManager.GetLogger(&quot;Application&quot;).Info(e.Exception, &quot;Unobserved Task Cancellation&quot;);
+   else
+      NLog.LogManager.GetLogger(&quot;Application&quot;).Warn(e.Exception, &quot;Unobserved Task Exception&quot;);
+};
+</code></pre>
+<p>Notice that <code>TaskScheduler.UnobservedTaskException</code> cannot be used with partial-trust .NET Framework applications, where registration will throw <code>MethodAccessException</code>.</p>
+<p>Notice there is also <code>AppDomain.CurrentDomain.FirstChanceException</code> but one should avoid doing logging in this event-handler, since it will result in recursive-loop when NLog Target experience any Exception.</p>
+<h4 id="7-environment-specific-target-options">7. Environment specific target options</h4>
+<p>Most NLog-Target options supports <a href="../Layouts/">NLog Layout</a>, which means the NLog-Target options can be assigned from <a href="https://github.com/NLog/NLog/wiki/Environment-Layout-Renderer">environment-variables</a>, <a href="https://github.com/NLog/NLog/wiki/ConfigSetting-Layout-Renderer">configuration-files</a> or <a href="https://github.com/NLog/NLog/wiki/Gdc-Layout-Renderer">global diagnotic context (GDC)</a>.</p>
+<p>Thus one only have to maintain a single NLog-configuration, and all environment-specific options can be extracted to a dedicated location. See also <a href="https://github.com/NLog/NLog/wiki/Environment-specific-NLog-Logging-Configuration">Environment specific NLog Logging Configuration</a></p>
+<p>If wanting different output levels/targets depending on environment, then one can also use NLog <a href="https://github.com/NLog/NLog/wiki/Filtering-log-messages#semi-dynamic-routing-rules">Layout in the Logger-rules</a>, thus having different <code>minLevel="${configsetting:DefaultLevel:whenEmpty=Warn}"</code> depending on environment (Where LogLevel <code>Off</code> can disable output).</p>
+<p>If having multiple targets, and the targets are using the same NLog Layout for output, then one can use NLog <a href="https://github.com/NLog/NLog/wiki/Configuration-file#variables">config variables</a> to define the NLog Layout. Instead of maintaining the NLog Layout for each target, then assign target layout to the config-variable. NLog v5 adds support for using more advanced Layouts like the <a href="https://github.com/NLog/NLog/wiki/JsonLayout">JsonLayout</a>, <a href="https://github.com/NLog/NLog/wiki/XmlLayout">XmlLayout</a>, <a href="https://github.com/NLog/NLog/wiki/CsvLayout">CsvLayout</a> or <a href="https://nlog-project.org/config/?tab=layouts">other</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Trim-Whitespace-Layout-Renderer/" class="btn btn-neutral float-left" title="Trim Whitespace Layout Renderer"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Uppercase-Layout-Renderer/" class="btn btn-neutral float-right" title="Uppercase Layout Renderer">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/NLog/NLog/wiki" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../Trim-Whitespace-Layout-Renderer/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Uppercase-Layout-Renderer/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

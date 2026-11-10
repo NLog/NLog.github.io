@@ -1,0 +1,2 @@
+- [[Troubleshooting Guide|Logging-troubleshooting]]
+- See available NLog Targets and Layouts: https://nlog-project.org/config
