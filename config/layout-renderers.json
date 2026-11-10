@@ -736,7 +736,7 @@
             "NLog.Web",
             "NLog.Web.AspNetCore"
         ],
-        "description": "Indicates that the ASP.NET request was aborted. Can be used to filter errors and warnings when RequestAborted.",
+        "description": "Indicates that the ASP.NET request was aborted.",
         "platforms": [
             "netstandard2.0"
         ],
